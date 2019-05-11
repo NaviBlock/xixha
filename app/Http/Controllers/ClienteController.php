@@ -22,7 +22,15 @@ class ClienteController extends Controller
    {
    	if ($request) {
    		$consulta=trim($request->get('searchText'));
-        $personas=DB::table('persona')->where('nombre','LIKE','%'.$consulta.'%')->where('tipo_persona','=','cliente')->orwhere('num_documento','LIKE','%'.$consulta.'%')->where('tipo_persona','=','cliente')->orwhere('telefono','LIKE','%'.$consulta.'%')->where('tipo_persona','=','cliente')->orderBy('idpersona','desc')->paginate(5);
+        $personas=DB::table('persona')
+        ->where('nombre','LIKE','%'.$consulta.'%')
+        ->where('tipo_persona','=','cliente')
+        ->orwhere('num_documento','LIKE','%'.$consulta.'%')
+        ->where('tipo_persona','=','cliente')
+        ->orwhere('telefono','LIKE','%'.$consulta.'%')
+        ->where('tipo_persona','=','cliente')
+        ->orderBy('idpersona','desc')
+        ->paginate(5);
    		return view('ventas.cliente.index',['personas'=>$personas,'searchText'=>$consulta]);
    	}
 
@@ -38,7 +46,7 @@ class ClienteController extends Controller
    public function store(PersonaFormRequest $request)
    {
    		$persona = new Persona;
-        $persona->tipo_persona=$request->get('Cliente');
+        $persona->tipo_persona='cliente';
         $persona->nombre=$request->get('nombre');
         $persona->tipo_documento=$request->get('tipo_documento');
         $persona->num_documento=$request->get('num_documento');
