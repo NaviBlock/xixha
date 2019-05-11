@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     protected $table = 'categoria';
-    protected $primaryKey = 'idcategoria';
 
-    public $timestamps = false;
+    protected $primaryKey='idcategoria';
 
-    protected $fillable = [
-        'nombre',
-        'descrpcion',
-        'condicion'
+    public $timestamps=false;
+
+    protected $fillable =[
+
+    	'nombre',
+    	'descripcion',
+    	'estado'
+
     ];
 
-    protected $guarded = [
-
-    ];
 }

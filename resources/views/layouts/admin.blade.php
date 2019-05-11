@@ -9,7 +9,8 @@
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
+    <!-- link rel="stylesheet" href="{{asset('css/font-awesome.css')}}"-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -86,58 +87,58 @@
             
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fas fa-warehouse"></i>
                 <span>Almacén</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="{{asset('almacen/categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                <li><a href="articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                <li><a href="categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>
               </ul>
             </li>
 
             <li class="treeview">
                 <a href="#">
-                  <i class="fa fa-laptop"></i>
+                  <i class="fas fa-chalkboard-teacher"></i>
                   <span>Apicultor</span>
                   <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i> Administrar</a></li>
+                  <li><a href="registro/apicultor"><i class="fas fa-address-book"></i> Registro</a></li>
                 </ul>
               </li>
             
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-th"></i>
+                <i class="fas fa-cash-register"></i>
                 <span>Compras</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="compras/ingreso"><i class="fa fa-circle-o"></i> Ingresos</a></li>
-                <li><a href="compras/proveedor"><i class="fa fa-circle-o"></i> Proveedores</a></li>
+                <li><a href="compras/ingreso"><i class="fas fa-wallet"></i> Ingresos</a></li>
+                <li><a href="compras/proveedor"><i class="fas fa-truck-moving"></i> Proveedores</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-shopping-cart"></i>
+                <i class="fas fa-store-alt"></i>
                 <span>Ventas</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="ventas/venta"><i class="fa fa-circle-o"></i> Ventas</a></li>
-                <li><a href="ventas/cliente"><i class="fa fa-circle-o"></i> Clientes</a></li>
+                <li><a href="ventas/venta"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
+                <li><a href="ventas/cliente"><i class="fas fa-user-circle"></i> Clientes</a></li>
               </ul>
             </li>
                        
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-folder"></i> <span>Acceso</span>
+                <i class="fas fa-cog"></i> <span>Acceso</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-                
+                <li>
+                  <a href="configuracion/usuario"><i class="fas fa-user-astronaut"></i>Usuarios</a></li>
               </ul>
             </li>
              <!--li>

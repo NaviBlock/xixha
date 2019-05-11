@@ -23,13 +23,13 @@
                     </thead>
                     @foreach($articulos as $art)
                         <tr>
-                            <td>{{ $art->idarticulo}}</td>
+                            <td>{{ $art->idarticulo}}</td> 
                             <td>{{ $art->nombre}}</td>
                             <td>{{ $art->codigo}}</td>
                             <td>{{ $art->categoria}}</td>
                             <td>{{ $art->stock}}</td>
                             <td>
-                                <img src="{{asset('imagenes/articulos/'.$art->imagen)}}" alt="{{$art->nombre}}" height="100px" width="100px" class="img-thumbnail">
+                                <img src="{{asset('imagenes/articulos/'.$art->imagen)}}" alt="{{$art->imagen}}" height="100px" width="100px" class=" img-fluid">
                             </td>
                             <td>{{$art->estado}}</td>
                             <td>

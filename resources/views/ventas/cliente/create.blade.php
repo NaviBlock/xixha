@@ -3,7 +3,8 @@
 
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Nueva Articulo</h3>
+			<h3>Nuevo Cliente</h3>
+
 			@if (count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
@@ -12,56 +13,57 @@
 						@endforeach
 					</ul> 
 				</div>
-			@endif
+			@endif 
 		</div> 
-	</div>
+	</div> 
 
-	{!!Form::open(array('url'=>'almacen/articulo','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}{{Form::token()}}
+	{!!Form::open(array('url'=>'ventas/cliente','method'=>'POST','autocomplete'=>'off'))!!}
+	{{Form::token()}}
 		<div class="row">
 
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="nombre">Nombre</label>
-					<input type="text" name="nombre" required value="{{old('nombre')}}" class="form-control" placeholder="Nombre...">
+					<input type="text" name="nombre" require value="{{old('nombre')}}" class="form-control" placeholder="Ingrese el Nombre...">
 				</div>
 			</div>
 
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
-					<label>Categoría</label>
-					<select name="idcategoria" class="form-control">
-						@foreach ($categorias as $cat)
-							<option value="{{$cat->idcategoria}}">{{$cat->nombre}}</option>
-						@endforeach
+					<label for="direccion">Dirección</label>
+					<input type="text" name="direccion" value="{{old('direccion')}}" class="form-control" placeholder="Dirección...">
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+				<div class="form-group">
+					<label>Tipo de Documento</label>
+					<select name="tipo_documento" class="form-control">
+						<option value="RFC">RFC</option>
+						<option value="CURP">CURP</option>
+						<option value="INE">INE</option>
 					</select>
 				</div>
 			</div>
 
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
-					<label for="codigo">Código</label>
-					<input type="text" name="codigo" required value="{{old('codigo')}}" class="form-control" placeholder="Codigo del artículo">
+					<label for="num_documento">Numero de documento</label>
+					<input type="text" name="num_documento" value="{{old('num_documento')}}" class="form-control" placeholder="Numero del Documento...">
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+				<div class="form-group">
+					<label for="telefono">Telefono</label>
+					<input type="text" name="telefono" value="{{old('telefono')}}" class="form-control" placeholder="Telefono...">
 				</div>			
 			</div>
 
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
-					<label for="stock">Stock</label>
-					<input type="text" name="stock" required value="{{old('stock')}}" class="form-control" placeholder="stock">
-				</div>
-			</div>
-
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="descripcion">Descripción</label>
-					<input type="text" name="descripcion" value="{{old('descripcion')}}" class="form-control" placeholder="Descripción del articulo">
-				</div>
-			</div>
-
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="imagen">Imagen</label>
-					<input type="file" name="imagen" class="form-control">
+					<label for="email">Email</label>
+					<input type="text" name="email" value="{{old('email')}}" class="form-control" placeholder="Correo Electronico...">
 				</div>
 			</div>
 
