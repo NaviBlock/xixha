@@ -11,11 +11,11 @@ class IngresoFormRequest extends Request
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize() 
     {
-        return false;
+        return true;
     }
-
+ 
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,7 +24,14 @@ class IngresoFormRequest extends Request
     public function rules()
     {
         return [
-            //
+            'idproveedor'=>'required',
+            'tipo_comprobante'=>'required|max:20',
+            'serie_comprobante'=>'max:7',
+            'num_comprobante'=>'required',
+            'idarticulo'=>'required',
+            'cantidad'=>'required',
+            'precio_compra'=>'required',
+            'precio_venta'=>'required'
         ];
     }
 }

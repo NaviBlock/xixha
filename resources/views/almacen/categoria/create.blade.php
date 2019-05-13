@@ -27,8 +27,7 @@
             	<button class="btn btn-primary" type="submit">Guardar</button>
             	<button class="btn btn-danger" type="reset">Cancelar</button>
             </div>
-
-			{!!Form::close()!!}		
+			{!!Form::Close()!!}		
             
 		</div>
 	</div>

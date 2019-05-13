@@ -17,7 +17,7 @@
 					<button type="submit" class="btn btn-primary">Confirmar</button>
 				</div>
 			</div>
-		</div>
-	{{Form::close()}}
+		</div> 
+	{{Form::Close()}}
 	
-</div>
+</div>  

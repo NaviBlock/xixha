@@ -8,12 +8,11 @@ class Articulo extends Model
 {
     protected $table = 'articulo';
 
-    protected $primaryKey='idarticulo';
+    protected $primaryKey ='idarticulo';
 
-    public $timestamps=false;
+    public $timestamps = false;
 
-    protected $fillable =[
-
+    protected $fillable = [
     	'idcategoria',
     	'codigo',
     	'nombre',
@@ -21,6 +20,8 @@ class Articulo extends Model
     	'descripcion',
     	'imagen',
     	'estado'
-
+	];
+	
+	protected $guarded=[
     ];
 }

@@ -78,5 +78,5 @@
 			</div>
 		</div>
 	</div>
-	{!!Form::close()!!}		
+	{!!Form::Close()!!}		
 @endsection

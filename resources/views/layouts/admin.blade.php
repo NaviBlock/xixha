@@ -8,6 +8,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css')}}">
     <!-- Font Awesome -->
     <!-- link rel="stylesheet" href="{{asset('css/font-awesome.css')}}"-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -37,7 +38,7 @@
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Navegación</span>
+            <span class="fas fa-user-check "></span>
           </a>
           <!-- Navbar Right Menu -->
           <div class="navbar-custom-menu">
@@ -92,19 +93,19 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                <li><a href="{{asset('almacen/articulo')}}"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                <li><a href="{{asset('almacen/categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
               </ul>
             </li>
 
             <li class="treeview">
                 <a href="#">
                   <i class="fas fa-chalkboard-teacher"></i>
-                  <span>Apicultor</span>
+                  <span>Proveedor</span>
                   <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="registro/apicultor"><i class="fas fa-address-book"></i> Registro</a></li>
+                  <li><a href="{{asset('compras/proveedor')}}"><i class="fas fa-address-book"></i> Registro</a></li>
                 </ul>
               </li>
             
@@ -115,8 +116,8 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="compras/ingreso"><i class="fas fa-wallet"></i> Ingresos</a></li>
-                <li><a href="compras/proveedor"><i class="fas fa-truck-moving"></i> Proveedores</a></li>
+                <li><a href="{{asset('compras/ingreso')}}"><i class="fas fa-wallet"></i> Ingresos</a></li>
+                <li><a href="{{asset('compras/proveedor')}}"><i class="fas fa-truck-moving"></i> Proveedores</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -126,8 +127,8 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="ventas/venta"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
-                <li><a href="ventas/cliente"><i class="fas fa-user-circle"></i> Clientes</a></li>
+                <!--li><a href="{{asset('ventas/venta')}}"><i class="fas fa-shopping-cart"></i> Ventas</a></li-->
+                <li><a href="{{asset('ventas/cliente')}}"><i class="fas fa-user-circle"></i> Clientes</a></li>
               </ul>
             </li>
                        
@@ -138,7 +139,7 @@
               </a>
               <ul class="treeview-menu">
                 <li>
-                  <a href="configuracion/usuario"><i class="fas fa-user-astronaut"></i>Usuarios</a></li>
+                  <!--a href="{{asset('configuracion/usuario')}}"><i class="fas fa-user-astronaut"></i>Usuarios</a></li-->
               </ul>
             </li>
              <!--li>
@@ -212,10 +213,12 @@
       
     <!-- jQuery 2.1.4 -->
     <script src="{{asset('js/jQuery-2.1.4.min.js')}}"></script>
+    @stack('scripts')
     <!-- Bootstrap 3.3.5 -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('js/app.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
     
   </body>
 </html>

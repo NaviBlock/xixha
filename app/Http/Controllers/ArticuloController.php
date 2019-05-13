@@ -22,11 +22,12 @@ class ArticuloController extends Controller
 	   public function index(Request $request)
 	   {
 	   	if ($request) {
-	   		$consulta=trim($request->get('searchText'));
-	   		$articulos=DB::table('articulo as a')
+	   		$consulta = trim($request->get('searchText'));
+	   		$articulos = DB::table('articulo as a')
 	   		->join('categoria as c','a.idcategoria','=','c.idcategoria')
 	   		->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.imagen','a.estado')
-	   		->where('a.nombre','LIKE','%'.$consulta.'%')
+			->where('a.nombre','LIKE','%'.$consulta.'%')
+			->where('estado','=','Activo')   
 	   		->orderBy('a.idarticulo','desc')
 	   		->paginate(5);
 
@@ -101,10 +102,8 @@ class ArticuloController extends Controller
 	   public function destroy($id)
 	   {
 			$articulo=Articulo::findOrFail($id);
-			$articulo->estado='desactivo';
+			$articulo->estado='Inactivo';
 	   		$articulo->update();
 	   		return Redirect::to('almacen/articulo');	
 	   }
-
-
 }

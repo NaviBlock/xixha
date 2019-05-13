@@ -8,12 +8,11 @@ class Persona extends Model
 {
     protected $table = 'persona';
 
-    protected $primaryKey='idpersona';
+    protected $primaryKey ='idpersona';
 
-    public $timestamps=false;
+    public $timestamps = false;
 
-    protected $fillable =[
- 
+    protected $fillable = [
     	'tipo_persona',
     	'nombre',
     	'tipo_documento',
@@ -21,10 +20,8 @@ class Persona extends Model
     	'direccion',
     	'telefono',
     	'email'
-
     ];
 
-    protected $guarded=[
-        
+    protected $guarded = [       
     ];
 }

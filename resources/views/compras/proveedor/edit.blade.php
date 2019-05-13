@@ -37,18 +37,18 @@
 			<div class="form-group">
 				<label for="docummento">Tipo de Documento</label>
 				<select name="tipo_documento" class="form-control">
-					@if($persona->tipo_documento=='rfc')
-						<option value="rfc" selected>RFC</option>
-						<option value="curp">CURP</option>
-						<option value="ine">INE</option>
-					@elseif($persona->tipo_documento=='curp')
-						<option value="rfc">RFC</option>
-						<option value="curp" selected>CURP</option>
-						<option value="ine">INE</option>
+					@if($persona->tipo_documento=='RFC')
+						<option value="RFC" selected>RFC</option>
+						<option value="CURP">CURP</option>
+						<option value="INR">INE</option>
+					@elseif($persona->tipo_documento=='CURP')
+						<option value="RFC">RFC</option>
+						<option value="CURP" selected>CURP</option>
+						<option value="INE">INE</option>
 					@else
-						<option value="rfc">RFC</option>
-						<option value="curp">CURP</option>
-						<option value="ine" selected>INE</option>
+						<option value="RFC">RFC</option>
+						<option value="CURP">CURP</option>
+						<option value="INE" selected>INE</option>
 					@endif
 				</select>
 			</div>
@@ -82,5 +82,5 @@
 			</div>
 		</div>
 	</div>
-	{!!Form::close()!!}		
+	{!!Form::Close()!!}		
 @endsection

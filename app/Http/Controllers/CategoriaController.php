@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Redirect;
 use xixha\Http\Requests\CategoriaFormRequest;
 use DB;
 
-
 class CategoriaController extends Controller
 {
    public function __construct()
@@ -22,8 +21,9 @@ class CategoriaController extends Controller
    public function index(Request $request)
    {
    	if ($request) {
-   		$consulta=trim($request->get('searchText'));
-   		$categorias=DB::table('categoria')->where('nombre','LIKE','%'.$consulta.'%')
+   		$consulta = trim($request->get('searchText'));
+         $categorias = DB::table('categoria')
+         ->where('nombre','LIKE','%'.$consulta.'%')
    		->where('condicion','=','1')
    		->orderBy('idcategoria','desc')
    		->paginate(5);
@@ -75,8 +75,9 @@ class CategoriaController extends Controller
    /* recibe como parametro un ID | cambiar el estado de la categoria*/
    public function destroy($id)
    {
-   		$categoria=Categoria::findOrFail($id);
-   		$categoria->delete();
+   		$categoria = Categoria::findOrFail($id);
+         $categoria->condicion = 0;
+         $categoria->update();
    		return Redirect::to('almacen/categoria');	
    }
 }
