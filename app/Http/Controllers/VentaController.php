@@ -1,7 +1,7 @@
 <?php
 
 namespace xixha\Http\Controllers;
-
+ 
 use Illuminate\Http\Request;
 use xixha\Http\Requests;
 
@@ -19,7 +19,6 @@ use Illuminate\Support\Collection;
 class VentaController extends Controller
 {
     public function __construct(){
-        
     } 
 
     public function index(Request $request){
@@ -41,11 +40,12 @@ class VentaController extends Controller
         $personas = DB::table('persona')
         ->where('tipo_persona','=','cliente')
         ->get();
+
         $articulos = DB::table('articulo as art')
         ->join('detalle_ingreso as di','art.idarticulo','=','di.idarticulo')
         ->select(DB::raw('CONCAT(art.codigo, " ",art.nombre) as articulo'),'art.idarticulo','art.stock',DB::raw('avg(di.precio_venta) as precio_promedio'))
         ->where('art.estado','=','Activo')
-        ->where('art-stock','=','0')
+        ->where('art.stock','=','0')
         ->groupBy('articulo','art.idarticulo','art.stock')
         ->get();
         return view('ventas.venta.create',['personas'=>$personas,'articulos'=>$articulos]);

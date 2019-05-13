@@ -1,9 +1,14 @@
 language: php
+php:
+  -7.3.3
 
-language: ruby
+before_script:
+  - mkdir bootstrap/cache
+  - cp .env.travis .env
+  - mysql -e 'create database xconnect;'
+  - composer self-update
+  - composer install --no-interaction
+  - php artisan key:generate
 
-language: pLpgsql
-
-language: html
-
-language: javaScript
+script:
+  - vendor/bin/phpunit
