@@ -1,4 +1,4 @@
-# Laravel PHP Framework
+# XIXHA DEVELOPERS
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
@@ -12,7 +12,7 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 ## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Documentation for the framework can be found on the [Laravel website](http://xixha.com).
 
 ## Contributing
 

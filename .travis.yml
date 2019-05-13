@@ -1,0 +1,9 @@
+lenguage: php
+php:
+  -"7.3.3"
+#comando de instalacion de dependencies
+install:
+  -pip install -r requirements.txt
+#comandos para run test
+script:
+  -pytest
