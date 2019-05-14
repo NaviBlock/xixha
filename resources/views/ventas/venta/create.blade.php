@@ -1,12 +1,12 @@
-@extends('layouts.admin')
-@section('contenido')
+@extends ('layouts.admin')
+@section ('contenido')
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Nueva Venta</h3>
-			@if(count($errors)>0)
+			<h3>Nuevo Venta</h3>
+			@if (count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
-						@foreach($errors->all() as $error)
+						@foreach ($errors->all() as $error)
 							<li>{{$error}}</li>
 						@endforeach
 					</ul> 
@@ -14,6 +14,7 @@
 			@endif 
 		</div> 
 	</div> 
+
 	{!!Form::open(array('url'=>'ventas/venta','method'=>'POST','autocomplete'=>'off'))!!}
 	{{Form::token()}}
 		<div class="row">
@@ -21,17 +22,17 @@
 				<div class="form-group">
 					<label for="cliente">Cliente</label>
 					<select name="idcliente" id="idcliente" class="form-control selectpicker" data-live-search="true">
-                        @foreach($personas as $persona)
+                        @foreach ($personas as $persona)
                             <option value="{{$persona->idpersona}}">{{$persona->nombre}}</option>
                         @endforeach
                     </select>
 				</div>
 			</div>
+
 			<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 				<div class="form-group">
 					<label>Tipo de Comprobante</label>
-					<select name="tipo_comprobante" class="form-control selectpicker" data-live-search="true">
-						<option value="Boleta">Boleta</option>
+					<select name="tipo_comprobante" class="form-control">
 						<option value="Factura">Factura</option>
 						<option value="Ticket">Ticket</option>
 					</select>
@@ -58,8 +59,8 @@
                         <div class="form-group">
                             <label>Artículo</label>
                                 <select name="pidarticulo" id="pidarticulo"  class="form-control selectpicker" data-live-search="true">
-                                @foreach($articulos as $art)
-                                    <option value="{{$art->idarticulo}}, {{$art->stock}}, {{$art->precio_venta}}">{{$art->articulo}}</option>
+                                @foreach($articulos as $articulo)
+                                    <option value="{{$articulo->idarticulo}}_{{$articulo->stock}}_{{$articulo->precio_promedio}}">{{$articulo->articulo}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -72,8 +73,21 @@
 					</div>
 					<div class="col-lg-2 col-sm-2 col-md-2 col-xs-12">
 						<div class="form-group">
+							<label for="stock">Stock</label>
+							<input type="number" disabled name="pstock" id="pstock" class="form-control" placeholder="Stock">
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-sm-2 col-md-2 col-xs-12">
+						<div class="form-group">
 							<label for="precio_venta">Precio Venta</label>
-							<input type="number" name="pprecio_venta" id="pprecio_venta" class="form-control" placeholder="Precio de Venta">
+							<input type="number" disabled name="pprecio_venta" id="pprecio_venta" class="form-control" placeholder="Precio de Venta">
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-3 col-md-2 col-xs-12">
+						<div class="form-group">
+							<label for="descuento">Descuento</label>
+							<input type="number" name="pdescuento" id="pdescuento" class="form-control" placeholder="Descuento">
 						</div>
 					</div>
 					<div class="col-lg-2 col-sm-2 col-md-2 col-xs-12">
@@ -98,25 +112,24 @@
 								<th></th>
 								<th></th>
 								<th></th>
-								<th><h4 id="total">$/. 0.00</h4>
-								<input type="hidden" name="total_venta" id="total_venta">
-								</th>
+								<th><h4 id="total">$/. 0.00</h4><input type="hidden" name="total_venta" id="total_venta"></th>
 							</tfoot>
-							<tbody></tbody>
+							<tbody>
+							</tbody>
 						</table>
 					</div>
 				</div>
-    		</div>
-		</div>
-		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" id="guardar">
-			<div class="form-group">
-				<input name="_token" value="{{ csrf_token() }}" type="hidden">
-				<button class="btn btn-primary" type="submit">Guardar</button>
-				<button class="btn btn-danger" type="reset">Cancelar</button>
+                </div>
+            </div>
+			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" id="guardar">
+				<div class="form-group">
+					<input name="_token" value="{{ csrf_token() }}" type="hidden">
+					<button class="btn btn-primary" type="submit">Guardar</button>
+					<button class="btn btn-danger" type="reset">Cancelar</button>
+				</div>
 			</div>
 		</div>
-	</div>
-	{!!Form::close()!!}
+	{!!Form::Close()!!}	
 	@push('scripts')
 		<script>
 			$(document).ready(function(){
@@ -128,22 +141,41 @@
 			total=0;
 			subtotal=[];
 			$("#guardar").hide();
+			$("#pidarticulo").change(mostrarValores);
+
+			function mostrarValores(){
+				datosArticulo=document.getElementById('pidarticulo').value.split('_');
+				$("#pprecio_venta").val(datosArticulo[2]);
+				$("#pstock").val(datosArticulo[1]);
+			}
 
 			function agregar(){
-				idarticulo=$("#pidarticulo").val();
+				datosArticulo=document.getElementById('pidarticulo').value.split('_');
+				idarticulo=datosArticulo[0]);
 				articulo=$("#pidarticulo option:selected").text();
 				cantidad=$("#pcantidad").val();
+				
+				descuento=$("#pdescuento").val();
 				precio_venta=$("#pprecio_venta").val();
+				stock=$("#pstock").val();
 
-				if(idarticulo!="" && cantidad!="" && cantidad>0 && precio_venta!=""){
+				if(idarticulo!="" && cantidad!="" && cantidad>0 && descuento!="" && precio_venta!=""){
 					subtotal[cont]=(cantidad*precio_venta);
+
+					if(stock>=cantidad){
+
+					}else{
+
+					}
+
+
 					total=total+subtotal[cont];
 
-       				var fila='<tr class="selected" id="fila'+cont+'"><td><button type="button" class="btn btn-warning" onclick="eliminar('+cont+');">X</button></td><td><input type="hidden" name="idarticulo[]" value="'+idarticulo+'">'+articulo+'</td><td><input type="number" name="cantidad[]" value="'+cantidad+'"></td><td><input type="number" name="precio_venta[]" value="'+precio_venta+'"></td><td><input type="number" value=></td><td>'+subtotal[cont]+'</td></tr>';
+       				var fila='<tr class="selected" id="fila'+cont+'"><td><button type="button" class="btn btn-warning" onclick="eliminar('+cont+');">X</button></td><td><input type="hidden" name="idarticulo[]" value="'+idarticulo+'">'+articulo+'</td><td><input type="number" name="cantidad[]" value="'+cantidad+'"></td><td><input type="number" name="precio_compra[]" value="'+precio_compra+'"></td><td><input type="number" name="precio_venta[]" value="'+precio_venta+'"></td><td>'+subtotal[cont]+'</td></tr>';
 					
 					cont++;
 					limpiar();
-					$('#total').html("$/. " + total);
+					$('#total').html("S/. " + total);
 					evaluar();
 					$('#detalles').append(fila);
 				}else{
@@ -153,6 +185,7 @@
 
 			function limpiar(){
 				$("#pcantidad").val("");
+				$("#pprecio_compra").val("");
 				$("#pprecio_venta").val("");
 			}
 
@@ -166,7 +199,7 @@
 
 			function eliminar(index){
 				total=total-subtotal[index];
-				$("#total").html("$/. " + total);
+				$("#total").html("S/. " + total);
 				$("#fila" + index).remove();
 				evaluar();
 			}
