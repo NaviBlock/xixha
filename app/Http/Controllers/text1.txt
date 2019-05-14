@@ -1,10 +1,9 @@
-VENTACONTROLLER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 <?php
 
 namespace prueba\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+ 
 use prueba\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
@@ -260,7 +259,7 @@ CREATE TRIGGER `tr_uppStockVentaAnulada` AFTER UPDATE ON `venta`
      INNER JOIN venta
      ON detalleventa.idVentaDetalleVenta = NEW.idVenta
      SET producto.stockProducto = producto.stockProducto + detalleventa.cantidadProductoVenta;
-     END﻿
+     END
 
 
 

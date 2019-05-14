@@ -12,7 +12,7 @@ use DB;
 
 class ProveedorController extends Controller
 {
-    public function __construct()
+    public function __construc()
     {
   
     }

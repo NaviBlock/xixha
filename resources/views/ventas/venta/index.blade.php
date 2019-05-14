@@ -18,7 +18,7 @@
 						<th>Total</th>
 						<th>Opciones</th>
 					</thead>
-				@foreach($ventas as $ven)
+					@foreach($ventas as $ven)
 					<tr>
 						<td>{{ $ven->fecha_hora }}</td>
 						<td>{{ $ven->nombre}}</td>

@@ -12,9 +12,8 @@ use DB;
 
 class ClienteController extends Controller
 {
-    public function __construct()
-   {
- 
+    public function __construc(){
+
    }
 
    /*recibe como parametro un objeto del tipo request*/

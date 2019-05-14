@@ -14,7 +14,6 @@
 			@endif 
 		</div> 
 	</div> 
-
 	{!!Form::open(array('url'=>'compras/ingreso','method'=>'POST','autocomplete'=>'off'))!!}
 	{{Form::token()}}
 		<div class="row">
@@ -33,7 +32,6 @@
 				<div class="form-group">
 					<label>Tipo de Comprobante</label>
 					<select name="tipo_comprobante" class="form-control">
-						<option value="Boleta">Boleta</option>
 						<option value="Factura">Factura</option>
 						<option value="Ticket">Ticket</option>
 					</select>

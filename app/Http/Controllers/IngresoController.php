@@ -18,7 +18,7 @@ use Illuminate\Support\Collection;
 
 class IngresoController extends Controller
 {
-    public function __construct(){
+    public function __construc(){
         
     } 
 

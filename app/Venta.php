@@ -25,4 +25,4 @@ class Venta extends Model
  
     protected $guarded=[
     ]; 
-} 
+}  
