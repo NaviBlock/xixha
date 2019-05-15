@@ -45,7 +45,7 @@
 							<tfoot>
 								<th></th>
 								<th></th>
-								<th></th>
+								<th></th>  
 								<th></th>
                                 <th>
                                     <h4 id="total">{{$venta->total_venta}}</h4>
@@ -54,16 +54,15 @@
 							<tbody>
                                 @foreach($detalles as $det)
                                     <tr>
-                                        <td>{{$det->articulo}}</td>
-                                        <td>{{$det->cantidad}}</td>
-                                        <td>{{$det->precio_venta}}</td>
-                                        <td>{{$det->descuento}}</td>
+                                        <td>{{ $det->articulo}}</td>
+                                        <td>{{ $det->cantidad}}</td>
+                                        <td>{{ $det->precio_venta}}</td>
+                                         <td>{{ $det->descuento}}</td>
                                         <td>{{$det->cantidad*$det->precio_venta-$det->descuento}}</td>
                                     </tr>
                                 @endforeach
 							</tbody>
 						</table>
-
 					</div>
 				</div>
 

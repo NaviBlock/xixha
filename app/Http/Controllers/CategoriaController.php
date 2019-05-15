@@ -9,7 +9,7 @@ use xixha\Categoria;
 use Illuminate\Support\Facades\Redirect;
 use xixha\Http\Requests\CategoriaFormRequest;
 use DB;
-
+ 
 class CategoriaController extends Controller
 {
    public function __construct()

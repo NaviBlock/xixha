@@ -1,5 +1,4 @@
 <div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$ing->idingreso}}">
-
 	{{Form::Open(array('action'=>array('IngresoController@destroy',$ing->idingreso),'method'=>'delete'))}}
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -18,6 +17,6 @@
 				</div>
 			</div>
 		</div>  
-	{{Form::Close()}}
+	{{Form::Close()}} 
 	
 </div>  

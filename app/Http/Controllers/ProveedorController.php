@@ -14,7 +14,7 @@ class ProveedorController extends Controller
 {
     public function __construct()
     {
-  
+   
     }
  
     /*recibe como parametro un objeto del tipo request*/
@@ -85,8 +85,8 @@ class ProveedorController extends Controller
     /* recibe como parametro un ID | cambiar el estado de la categoria*/
     public function destroy($id)
     {
-        $persona=Persona::findOrFail($id);
-        $persona->tipo_persona='Inactivo';
+        $persona = Persona::findOrFail($id);
+        $persona->tipo_persona ='Inactivo';
         $persona->update();
         return Redirect::to('compras/proveedor');	
     }

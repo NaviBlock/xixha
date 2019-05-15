@@ -27,7 +27,7 @@
                         @endforeach
                     </select>
 				</div>
-			</div>
+			</div> 
 
 			<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 				<div class="form-group">
@@ -142,7 +142,7 @@
 			subtotal=[];
 			$("#guardar").hide();
 			$("#pidarticulo").change(mostrarValores);
-
+ 
 			function mostrarValores(){
 				datosArticulo=document.getElementById('pidarticulo').value.split('_');
 				$("#pprecio_venta").val(datosArticulo[2]);
@@ -203,4 +203,4 @@
 			}
 		</script>
 	@endpush	
-@endsection
+@endsection 

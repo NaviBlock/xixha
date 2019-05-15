@@ -1,0 +1,36 @@
+body, html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+} 
+
+body{
+    background: linear-gradient(to right, #ffff, #0288D1);
+    background-size: cover;
+    background-position: center;
+    color: #ffff;
+}
+
+img{
+    border-radius: 10%;
+}
+
+.logo{ 
+    height: 120px;
+    margin-top: 5px;
+}
+
+.text-description{
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+
+.form-control{
+    background: transparent !important;
+    color:#ffff !important;
+}
+
+.perfill{
+    height: 80%;
+    width: 80%;
+}

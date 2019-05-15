@@ -10,13 +10,13 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="table-responsive">
 				<table class="table table-striped table-bordered table-condesed table-hover">
-					<thead>
+					<thead> 
 						<th>Fecha</th> 
 						<th>Cliente</th>
 						<th>Comprobante</th>
 						<th>Impuesto</th>
 						<th>Total</th>
-						<th>Opciones</th>
+						<th>Opciones</th> 
 					</thead>
 					@foreach($ventas as $ven)
 					<tr>
@@ -37,4 +37,4 @@
 			{{$ventas->render()}}
 		</div>
 	</div>
-@endsection 
+@endsection

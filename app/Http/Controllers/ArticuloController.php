@@ -9,7 +9,7 @@ use xixha\Articulo;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use xixha\Http\Requests\ArticuloFormRequest;
-use DB;
+use DB; 
  
 class ArticuloController extends Controller
 {

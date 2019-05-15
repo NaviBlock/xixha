@@ -9,7 +9,7 @@ use xixha\Persona;
 use Illuminate\Support\Facades\Redirect;
 use xixha\Http\Requests\PersonaFormRequest;
 use DB;
-
+ 
 class ClienteController extends Controller
 {
     public function __construct(){

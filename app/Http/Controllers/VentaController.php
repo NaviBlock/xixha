@@ -9,14 +9,12 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\input;
 use xixha\Http\Requests\VentaFormRequest;
 
-
 use xixha\Venta;
 use xixha\DetalleVenta;
-
 use DB;
 
 use Carbon\Carbon;
-use Response; 
+use Response;
 use Illuminate\Support\Collection;
 
 class VentaController extends Controller
@@ -33,7 +31,8 @@ class VentaController extends Controller
             ->join('persona as p','v.idcliente','=','p.idpersona')
             ->join('detalle_venta as dv','v.idventa','=','dv.idventa')
             ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado','v.total_venta')
-            ->where('v.num_comprobante','LIKE','%'.$query.'%')
+            ->where('v.serie_comprobante','LIKE','%'.$query.'%')
+            ->where('v.estado','=','A')
            ->orderBy('v.idventa','desc')
            ->groupBy('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado')
             ->paginate(5);
@@ -65,7 +64,6 @@ class VentaController extends Controller
             $venta->serie_comprobante=$request->get('serie_comprobante');
             $venta->num_comprobante=$request->get('num_comprobante');
             $venta->total_venta=$request->get('total_venta');
-        
             $mytime = Carbon::now('America/Mexico_City');
             $venta->fecha_hora = $mytime->toDateTimeString();
             $venta->impuesto = '16';
@@ -109,10 +107,10 @@ class VentaController extends Controller
             ->where('d.idventa','=',$id)
             ->get();
 
-        return view("ventas.venta.show", ["venta"=>$venta,"detalles"=>$detalles]);
-}
-
-    public function destroy($id){
+        return view("ventas.venta.show",["venta"=>$venta,"detalles"=>$detalles]);
+} 
+    public function destroy($id)
+    {
         $venta = Venta::findOrFail($id);
         $venta->estado = 'C';
         $venta->update();

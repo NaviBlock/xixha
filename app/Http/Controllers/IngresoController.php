@@ -18,24 +18,36 @@ use Illuminate\Support\Collection;
 
 class IngresoController extends Controller
 {
-    public function __construct(){
-        
+    public function __construct(){    
     } 
 
     public function index(Request $request){
         if($request){
-            $query = trim($request->get('searchText'));
-            $ingresos = DB::table('ingreso as i')->join('persona as p','i.idproveedor','=','p.idpersona')->join('detalle_ingreso as di','i.idingreso','=','di.idingreso')->select('i.idingreso','i.fecha_hora','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado', DB::raw('sum(di.cantidad*precio_compra) as total'))->where('i.num_comprobante','LIKE','%'.$query.'%')->orwhere('i.serie_comprobante','LIKE','%'.$query.'%')->orderBy('i.idingreso','desc')->groupBy('i.idingreso','i.fecha_hora','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado')->paginate(5);
+            $query = trim($request
+            ->get('searchText'));
+
+            $ingresos = DB::table('ingreso as i')
+            ->join('persona as p','i.idproveedor','=','p.idpersona')
+            ->join('detalle_ingreso as di','i.idingreso','=','di.idingreso')
+            ->select('i.idingreso','i.fecha_hora','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado', DB::raw('sum(di.cantidad*precio_compra) as total'))
+            ->where('i.num_comprobante','LIKE','%'.$query.'%')->orwhere('i.serie_comprobante','LIKE','%'.$query.'%')->orderBy('i.idingreso','desc')
+            ->groupBy('i.idingreso','i.fecha_hora','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado')
+            ->paginate(5);
             return view('compras.ingreso.index',['ingresos'=>$ingresos,'searchText'=>$query]);
         }
     }
 
     public function create(){
-        $personas = DB::table('persona')->where('tipo_persona','=','proveedor')->get();
-        $articulos = DB::table('articulo as art')->select(DB::raw('CONCAT(art.codigo, " ",art.nombre) as articulo'),'art.idarticulo')->where('art.estado','=','Activo')->get();
+        $personas = DB::table('persona')
+        ->where('tipo_persona','=','proveedor')
+        ->get();
+        $articulos = DB::table('articulo as art')
+        ->select(DB::raw('CONCAT(art.codigo, " ",art.nombre) as articulo'),'art.idarticulo')
+        ->where('art.estado','=','Activo')
+        ->get();
         return view('compras.ingreso.create',['personas'=>$personas,'articulos'=>$articulos]);
     }
-    
+     
     public function store(IngresoFormRequest $request){
         try{
             DB::beginTransaction();
