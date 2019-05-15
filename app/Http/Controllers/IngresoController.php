@@ -18,7 +18,7 @@ use Illuminate\Support\Collection;
 
 class IngresoController extends Controller
 {
-    public function __construc(){
+    public function __construct(){
         
     } 
 
@@ -79,7 +79,7 @@ class IngresoController extends Controller
     }
 
     public function destroy($id){
-        $ingreso = Ingreso::findOrFaild($id);
+        $ingreso = Ingreso::findOrFail($id);
         $ingreso->estado = 'C';
         $ingreso->update();
         return Redirect::to('compras/ingreso');

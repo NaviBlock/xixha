@@ -25,7 +25,6 @@
 						<td>{{ $ven->tipo_comprobante.': '.$ven->serie_comprobante.'-'.$ven->num_comprobante}}</td>
 						<td>{{ $ven->impuesto }}</td>
 						<td>{{ $ven->total_venta }}</td>
-						<td>{{ $ven->estado }}</td>
 						<td>
 							<a href="{{URL::action('VentaController@show',$ven->idventa)}}"><button class="btn btn-primary">Detalles</button></a>
 							<a href="" data-target="#modal-delete-{{$ven->idventa}}" data-toggle="modal"> <button class="btn btn-danger">Anular</button> </a>

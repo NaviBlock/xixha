@@ -13,7 +13,7 @@ use DB;
  
 class ArticuloController extends Controller
 {
-	    public function __construc()
+	    public function __construct()
 	   {
 	   	
 	   }

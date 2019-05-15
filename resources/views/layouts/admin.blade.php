@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Xixha Connect</title>
+    
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css">
+    
     <!--link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css')}}"-->
     
     <!-- Font Awesome -->
     <!-- link rel="stylesheet" href="{{asset('css/font-awesome.css')}}"-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('css/AdminLTE.min.css')}}">
+    
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
@@ -23,13 +29,12 @@
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
 
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+
+  <body class="hold-transition -blue sidebar-mini">
     <div class="wrapper">
-
       <header class="main-header">
-
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="#" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>xixha</b>connect</span>
           <!-- logo for regular state and mobile devices -->
@@ -39,8 +44,8 @@
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="fas fa-user-check "></span>
+          <!--a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"-->
+            <!--span class="fas fa-user-check"></span-->
           </a>
           <!-- Navbar Right Menu -->
           <div class="navbar-custom-menu">
@@ -78,13 +83,13 @@
 
         </nav>
       </header>
-      <!-- Left side column. contains the logo and sidebar -->
+      <!-- Left side column. contains the logo and sidebar>
       <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
+        <-- sidebar: style can be found in sidebar.less --
         <section class="sidebar">
-          <!-- Sidebar user panel -->
+          <-- Sidebar user panel --
                     
-          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <-- sidebar menu: : style can be found in sidebar.less --
           <ul class="sidebar-menu">
             <li class="header"></li>
             
@@ -141,26 +146,33 @@
               </a>
               <ul class="treeview-menu">
                 <li>
-                  <!--a href="{{asset('configuracion/usuario')}}"><i class="fas fa-user-astronaut"></i>Usuarios</a></li-->
+                  <--a href="{{asset('configuracion/usuario')}}"><i class="fas fa-user-astronaut"></i>Usuarios</a></li--
               </ul>
-            </li>
-             <!--li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
-                <small class="label pull-right bg-red">PDF</small>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
-                <small class="label pull-right bg-yellow">IT</small>
-              </a>
-            </li-->
-                        
+            </li>                        
           </ul>
         </section>
-        <!-- /.sidebar -->
-      </aside>
+        <-- /.sidebar -->
+
+    <aside>
+    <div class="pos-f-t sidebar">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-white p-4">
+                <ul class="list-group nav navbar-white bg-white header">
+                    <li class="list-group-item active bg-white treeview"><a href="index.html" title="Inicio">Inicio</a></li>
+                    <li class="list-group-item treeview"><a href="admin.html" title="">Administración</a></li>
+                    <li class="list-group-item treeview"><a href="nuevo_producto.html" title="">Añadir Ficha Técnica</a></li>
+                    <li class="list-group-item treeview"><a href="editar_producto.html" title="">Actualizar</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+  </aside>
 
 
 
@@ -174,7 +186,7 @@
         <section class="content">
           
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title">Sistema de Ventas</h3>
@@ -187,7 +199,7 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                   	<div class="row">
-	                  	<div class="col-md-12">
+	                  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		                          <!--Contenido-->
                               <!--h3>Contenido</h3-->
                               @yield('contenido')

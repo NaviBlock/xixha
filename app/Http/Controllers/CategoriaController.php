@@ -12,7 +12,7 @@ use DB;
 
 class CategoriaController extends Controller
 {
-   public function __construc()
+   public function __construct()
    {
       
    }
