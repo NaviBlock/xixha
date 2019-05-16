@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Xixha Connect</title>
-   
+    
   <!--Bootstrap 4.3-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css">
 
+  <!--Code Jquery-->
   <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
         
   <!-- Font Awesome -->
@@ -34,73 +35,189 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="{{asset('img/mstile-144x144.png')}}">
   <meta name="theme-color" content="#ffffff">
+
+<!-- Icons-->
+<link href="{{asset('node_modules/@coreui/icons/css/coreui-icons.min.css')}}" rel="stylesheet">
+    <link href="{{asset('node_modules/flag-icon-css/css/flag-icon.min.css')}}" rel="stylesheet">
+    <link href="{{asset('node_modules/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('node_modules/simple-line-icons/css/simple-line-icons.css')}}" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('vendors/pace-progress/css/pace.min.css')}}" rel="stylesheet">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      // Shared ID
+      gtag('config', 'UA-118965717-3');
+      // Bootstrap ID
+      gtag('config', 'UA-118965717-5');
+    </script>
 <!---------------------------------------------------------------------------------------------->
 </head>
-<body>         
-    <div class="pos-f-t text-primary textc">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-primary p-4">
-                <ul class="list-group nav navbar-warnig bg-primary">
-                  <!--Lista Almacén->Artículos->Categorías-->
-                    <li class="list-group-item active-primary bg-dark fas fa-store-alt">
-                      <a href="#" title="almacen">Almacén</a><br>
-                      <ul class="treeview-menu">
-                        <li><a href="{{asset('almacen/articulo')}}"><i class="fas fa-solar-panel"></i> Artículos</a></li><br>
-                        <li><a href="{{asset('almacen/categoria')}}"><i class="fas fa-expand"></i> Categorías</a></li><br>
-                      </ul>
-                    </li>
-
-                    <!--Lista Proveedor->Registro-->
-                    <li class="list-group-item active-primary bg-white fas fa-store-alt">
-                      <a href="#" title="proveedor">Proveedor</a><br>
-                      <ul class="treeview-menu">
-                        <li><a href="{{asset('compras/proveedor/create')}}"><i class="fas fa-solar-panel"></i> Registro</a></li><br>
-                      </ul>
-                    </li>
-
-                    <!--Lista Compras->Ingresos->Proveedores-->
-                    <li class="list-group-item bg-dark fas fa-store-alt">
-                      <a href="#" title="almacen">Compras</a><br>
-                      <ul class="treeview-menu">
-                        <li><a href="{{asset('compras/ingreso')}}"><i class="fas fa-solar-panel"></i>Ingreso</a></li><br>
-                        <li><a href="{{asset('compras/proveedor')}}"><i class="fas fa-expand"></i>Proveedor</a></li><br>
-                      </ul>
-                    </li>
-
-                    <!--Ventas->Venta->Clientes-->
-                    <li class="list-group-item bg-white fas fa-store-alt">
-                      <a href="#" title="almacen">Ventas</a><br>
-                      <ul class="treeview-menu fas fa--shopping-cart">
-                        <li><a href="{{asset('ventas/venta')}}"><i class="fas fa-user-circle"></i>Venta</a></li><br>
-                        <li><a href="{{asset('venta/cliente')}}"><i class="fas fa-expand"></i>Clientes</a></li><br>
-                      </ul>
-                    </li>
-
-                    <!--Acceso->Usuario-->
-                    <li class="list-group-item bg-dark fas fa-cog">
-                      <a href="#" title="almacen">Acceso</a><br>
-                      <ul class="treeview-menu">
-                        <li><a href="{{asset('configuracion/usuario')}}"><i class="fas fa-user-astronaut"></i> Usuario</a></li>
-                      </ul>
-                    </li>
-                </ul>
-            </div>
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">        
+<header class="app-header navbar">
+  <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+    <img class="navbar-brand-full" src="{{asset('img/brand/logo.svg')}}" width="100" height="95" alt="Xixha Logo">
+    <img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="30" height="30" alt="CoreUI Logo">
+  </a>
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Usuario</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Configuraciones</a>
+    </li>
+  </ul>
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item d-md-down-none">
+        <a class="nav-link" href="#">
+          <i class="icon-list"></i>
+        </a>
+      </li>
+      <li class="nav-item d-md-down-none">
+        <a class="nav-link" href="#">
+          <i class="icon-location-pin"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <img class="img-avatar" src="{{asset('img/avatars/7.jpg')}}" alt="alejandrohernandezvalle@gmail.com">
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown-header text-center">
+          <strong>Cuenta</strong>
         </div>
-        <nav class="navbar navbar-dark bg-primary">
+        <a class="dropdown-item" href="#">
+          <i class="fa fa-user"></i> Perfil</a>
+        <a class="dropdown-item" href="#">
+          <i class="fa fa-wrench"></i> Configuraciones</a>
+          <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{asset('logout')}}">
+              <i class="fa fa-lock"></i> Salir</a>
+          </div>
+        </li>
+      </ul>
+
+      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+</header>  
+<div class="app-body">
+  <div class="sidebar">
+    <div class="sidebar-nav">
+      <div class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="nav-icon icon-speedometer"></i> Dashboard
+              <span class="badge badge-primary">Xixhá</span>
+            </a>
+          </li>
+        <div class="pos-f-t contrainer-fluid">
+        <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <li class="nav-title">Almacé</li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('almacen/articulo')}}">
+              <i class="nav-icon icon-drop"></i> Artículos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('almacen/categoria')}}">
+              <i class="nav-icon icon-drop"></i> Categorías
+            </a>
+          </li>
+          <li class="nav-title">Compras</li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('compras/ingreso')}}">
+              <i class="nav-icon icon-drop"></i> Ingreso
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('compras/proveedor')}}">
+              <i class="nav-icon icon-drop"></i> Proveedor
+            </a>
+          </li>
+
+          <li class="nav-title">Vetas</li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('ventas/venta')}}">
+              <i class="nav-icon icon-drop"></i> Venta
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('ventas/cliente')}}">
+              <i class="nav-icon icon-drop"></i> Cliente
+            </a>
+          </li>
+
+          <!--li class="nav-title">Acceso</li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{asset('configuracion/usuario')}}">
+              <i class="nav-icon icon-drop"></i> Usuarios
+            </a>
+          </li--->
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-        </nav>  
+        </nav>
     </div>
-<!------------------------------------------------------------------------------------------------------------->
-    <div class="box-body">
-      <div class="row">
-        <div class = "col-lg-12 col-sm-12 col-md-12 col-xs-12">
-          @yield('contenido')
+
         </div>
       </div>
     </div>
+  </div>
+<div class="content-wrapper">
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title">XIXHÁ</h3>
+            <div class="box-tools pull-right">
+              <button class="btn btn-box-tool" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+              </button>
+              <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="box-body">
+              <div class="row">
+                <div class = "col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                  @yield('contenido')
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!------------------------------------------------------------------------------------------------------------->
+    <footer class="app-footer">
+      <div>
+        <a href="#">Xixhá</a>
+        <span>&copy; 2019 Xixhá.</span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="h#">Xixhá</a>
+      </div>
+    </footer>
+    <!----------------------------------------------------------------------------------------------->
     <!-- jQuery 2.1.4 -->
     <script src="{{asset('js/jQuery-2.1.4.min.js')}}"></script>
     @stack('scripts')
@@ -116,5 +233,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- CoreUI and necessary plugins-->
+    <script src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
+    <script src="{{asset('node_modules/popper.js/dist/umd/popper.min.js')}}"></script>
+    <script src="{{asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('node_modules/pace-progress/pace.min.js')}}"></script>
+    <script src="{{asset('node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{asset('node_modules/@coreui/coreui/dist/js/coreui.min.js')}}"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>
+    <script src="{{asset('node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
   </body>
 </html>

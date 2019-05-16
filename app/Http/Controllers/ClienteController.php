@@ -68,7 +68,7 @@ class ClienteController extends Controller
    		return view('ventas.cliente.edit',['persona'=>Persona::findOrFail($id)]);
    }
 
-   /* recibe 2 parametro de tipo formRequest*/
+   /* recibe 2 paramet ro de tipo formRequest*/
    public function update(PersonaFormRequest $request,$id)
    {
    		$persona = Persona::findOrFail($id); // categoria que quiero modificar 

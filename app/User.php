@@ -2,9 +2,12 @@
 
 namespace xixha;
 
+use Illuminate\Auth\Authenticatable as AuthenticatableTrait;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
 class User extends Authenticatable
 {
-
+    use AuthenticatableTrait; 
     /**
      * The attributes that are mass assignable.
      *
