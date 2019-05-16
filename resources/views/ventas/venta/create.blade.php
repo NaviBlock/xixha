@@ -2,7 +2,7 @@
 @section ('contenido')
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Nuevo Venta</h3>
+			<h3>Nueva Venta</h3>
 			@if (count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
@@ -155,7 +155,6 @@
         		idarticulo = datosArticulo[0];
 				articulo = $("#pidarticulo option:selected").text();
 				cantidad = parseInt($("#pcantidad").val());
-				
 				descuento = $("#pdescuento").val();
 				precio_venta = $("#pprecio_venta").val();
 				stock = parseInt($("#pstock").val());
@@ -168,8 +167,7 @@
 						var fila = '<tr class="selected" id="fila'+cont+'"><td><button type="button" class="btn btn-warning" onclick="eliminar('+cont+');">X</button></td><td><input type="hidden" name="idarticulo[]" value="'+idarticulo+'">'+articulo+'</td><td><input type="number" name="cantidad[]" value="'+cantidad+'"></td><td><input type="number" name="precio_venta[]" value="'+precio_venta+'"></td><td><input type="number" name="descuento[]" value="'+descuento+'"></td><td>'+subtotal[cont]+'</td></tr>';
                 		cont++;
 		                limpiar();
-
-                		$("#total").html("$ "+total);
+                		$("#total").html("$/.  "+total);
                 		$("#total_venta").val(total);
 		                evaluar();
 		                $('#detalles').append(fila);
@@ -183,8 +181,8 @@
 
 			function limpiar(){
 				$("#pcantidad").val("");
-				$("#pprecio_compra").val("");
 				$("#pprecio_venta").val("");
+				$("#pdescuento").val("");
 			}
 
 			function evaluar(){
@@ -198,6 +196,7 @@
 			function eliminar(index){
 				total=total-subtotal[index];
 				$("#total").html("$/. " + total);
+				$("#total_venta").val(total);
 				$("#fila" + index).remove();
 				evaluar();
 			}
