@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/ventas/venta';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new authentication controller instance.
@@ -69,7 +69,8 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-    /*protected function showRegistrationForm(){
+
+    protected function showRegistrationForm(){
         return redirect('login');
-    }*/
+    }
 }

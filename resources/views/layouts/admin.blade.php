@@ -69,13 +69,7 @@
   </a>
   <ul class="nav navbar-nav d-md-down-none">
     <li class="nav-item px-3">
-      <a class="nav-link" href="#">Dashboard</a>
-    </li>
-    <li class="nav-item px-3">
-      <a class="nav-link" href="#">Usuario</a>
-    </li>
-    <li class="nav-item px-3">
-      <a class="nav-link" href="#">Configuraciones</a>
+      <a class="nav-link" href="{{asset('home')}}">Dashboard</a>
     </li>
   </ul>
     <ul class="nav navbar-nav ml-auto">
@@ -107,7 +101,6 @@
           </div>
         </li>
       </ul>
-
       <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
         <span class="navbar-toggler-icon"></span>
       </button>
