@@ -154,12 +154,12 @@
             </a>
           </li>
 
-          <!--li class="nav-title">Acceso</li>
+          <li class="nav-title">Acceso</li>
           <li class="nav-item">
-            <a class="nav-link" href="{{asset('configuracion/usuario')}}">
+            <a class="nav-link" href="{{asset('seguridad/usuario')}}">
               <i class="nav-icon icon-drop"></i> Usuarios
             </a>
-          </li--->
+          </li>
         </div>
       </div>
       <nav class="navbar navbar-dark bg-dark">
