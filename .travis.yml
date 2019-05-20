@@ -3,4 +3,4 @@ language: php
 php:
   -7.3
 script:
-  -phpenv
+  -phpenv global -7.3
