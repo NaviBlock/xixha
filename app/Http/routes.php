@@ -13,4 +13,4 @@ Route::resource('compras/ingreso','IngresoController');
 Route::resource('seguridad/usuario','UsuarioController');
 Route::auth();
 Route::get('/home', 'HomeController@index');
-Route::get('/{slug?}', 'HomeController@index');
+//Route::get('/{slug?}', 'HomeController@index');
