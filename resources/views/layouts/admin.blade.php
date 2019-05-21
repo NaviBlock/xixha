@@ -36,14 +36,32 @@
   <link rel="stylesheet" href="{{asset('css/stylehome.css')}}">
 <!---------------------------------------------------------------------------------------------->
 </head>
-<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show col-lg-12 col-md-12 col-sm-12 col-xs-12"> container">       
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show col-lg-12 col-md-12 col-sm-12 col-xs-12 container">       
   <header class="app-header navbar">
 
     <!-- Buton de menu logo de perfil-->
-    <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+  <nav class="navbar navbar-expand-lg">
+  <div id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{url('almacen/articulo')}}">Artículo</a>
+          <a class="dropdown-item" href="{{url('almacen/categoria')}}">Categoría</a>
+          <a class="dropdown-item" href="{{url('compras/ingreso')}}">Ingreso</a>
+          <a class="dropdown-item" href="{{url('/compras/proveedor')}}">Proveedor </a>
+          <a class="dropdown-item" href="{{url('/ventas/venta')}}">Venta</a>
+          <a class="dropdown-item" href="{{url('/ventas/cliente')}}">Cliente</a>
+          <a class="dropdown-item" href="{{url('/seguridad/usuario')}}">Usuario</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!------------------------------------------------------------------------------------------------------------------------------------------->
     <a class="navbar-brand" href="#">
       <img class="navbar-brand-full" src="{{asset('img/brand/logo.svg')}}" width="100" height="95" alt="Xixha Logo">
       <img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="30" height="30" alt="Xixha Logo">
@@ -70,13 +88,15 @@
             <img class="img-avatar" src="{{asset('img/avatars/7.jpg')}}" alt="alejandrohernandezvalle@gmail.com">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-          <div class="dropdown-header text-center">
-            <strong>Cuenta</strong>
-          </div>
-          <a class="dropdown-item" href="#">
-            <i class="fa fa-user"></i> Perfil</a>
-          <a class="dropdown-item" href="#">
-            <i class="fa fa-wrench"></i> Configuraciones</a>
+            <div class="dropdown-header text-center">
+              <strong>Cuenta</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-user"></i> Perfil
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-wrench"></i> Configuraciones
+            </a>
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{url('/logout')}}">
                 <i class="fa fa-lock"></i> Salir
@@ -88,7 +108,6 @@
   <div class="app-body">
     <div class="sidebar">
       <div class="sidebar-nav">
-
         <div class="nav">
           <li class="nav-item">
             <a class="nav-link" href="#">
@@ -142,6 +161,7 @@
             </li>
           </div>
         </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------->
         <nav class="navbar navbar-dark bg-dark">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

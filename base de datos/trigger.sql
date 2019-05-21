@@ -17,9 +17,11 @@ FOR EACH ROW BEGIN
     WHERE articulo.idarticulo = NEW.idarticulo;
 END
 //
-DELIMITER;
+DELIMITER ;
 /*********************************************************************/
 
+
+/*
 https://www.youtube.com/redirect?event=comments&stzid=UggiYAyLBRL1kHgCoAEC.8KmiY4iIqiA8Lq2IhUIcg8&redir_token=Hti7cpXzUPZnHnMpVkciuZouUyR8MTU1ODA5NjA4MkAxNTU4MDA5Njgy&q=https%3A%2F%2Flaravel.com%2Fdocs%2F5.3%2Fauthentication
 
 para cada controller
@@ -45,7 +47,7 @@ use Illuminate\Auth\Middleware\Authenticate;﻿
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 en las rutas y en el link <a href="{{ route('logout') }}" class="btn btn-default btn-flat">Cerrar</a>﻿
 
-/*Trigger para la tabla de venta*/
+/*Trigger para la tabla de venta/
 DELIMITER //
 CREATE TRIGGER tr_uppStockVentaAnulada
     AFTER UPDATE ON venta
@@ -99,7 +101,7 @@ FOR EACH ROW
 
 
 /*********************************************************************/
-/*Trigger de Compra*/
+/*Trigger de Compra/
 CREATE TRIGGER `tr_uppStockCompraAnulada` AFTER UPDATE ON `ingreso`
  FOR EACH ROW BEGIN 
  UPDATE producto 
