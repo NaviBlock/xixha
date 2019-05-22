@@ -14,7 +14,7 @@
 				    <thead>
                         <th>Id</th>
                         <th>Nombre</th>
-                        <th>Tipo Doc.</th>
+                        <th>Tipo Doc</th>
                         <th>Numero Doc</th>
                         <th>direccion</th>
                         <th>Telefono</th>
@@ -34,12 +34,26 @@
                     </thead> 
                     @foreach($personas as $per)
                         <tr>
-                            <td>{{ $per->idpersona}}</td> 
-                            <td>{{ $per->nombre}}</td>
-                            <td>{{ $per->tipo_documento}}</td>
-                            <td>{{ $per->num_documento}}</td>
-                            <td>{{ $per->telefono}}</td>
-                            <td>{{ $per->email}}</td>
+                            <td>{{ $per->idpersona }}</td> 
+                            <td>{{ $per->nombre }}</td>
+                            <td>{{ $per->tipo_documento }}</td>
+                            <td>{{ $per->num_documento }}</td>
+                            <td>{{ $per->telefono }}</td>
+                            <td>{{ $per->email }}</td>
+<!----------------------------------------------------------------------------------------------------------------------------------------->    
+                            <td>{{ $per->num_colmena }} </td>
+                            <td>{{ $per->geoloc_apiario }} </td>
+                            <td>{{ $per->prod_anual }} </td>
+                            <td>{{ $per->temp_cosecha }} </td>
+                            <td>{{ $per->tipo_certificacion }} </td>
+                            <td>{{ $per->mueve_sus_colmena }} </td>
+                            <td>{{ $per->a_donde }} </td>
+                            <td>{{ $per->observaciones }} </td>
+                            <td>{{ $per->upp }} </td>
+                            <td>{{ $per->idpersona }} </td>
+                            <td>{{ $per->pgn }} </td>
+                            <td>{{ $per->clave_rast }} </td>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
                             <td>
                                 <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-info">Editar</button></a>
                                 <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

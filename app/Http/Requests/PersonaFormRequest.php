@@ -13,7 +13,7 @@ class PersonaFormRequest extends Request
 
     public function rules()
     {
-        return [
+        return [    
             'nombre'=>'required|max:100',
             'tipo_documento'=>'required|max:20',
             'num_documento'=>'required|max:15',

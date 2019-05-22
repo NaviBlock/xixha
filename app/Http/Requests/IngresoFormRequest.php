@@ -3,7 +3,7 @@
 namespace xixha\Http\Requests;
 
 use xixha\Http\Requests\Request;
-
+ 
 class IngresoFormRequest extends Request
 {
     public function authorize() 

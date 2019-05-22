@@ -17,9 +17,14 @@ class Api extends Model
     	'num_colmena',
     	'geoloc_apiario',
     	'prod_anual',
-    	'direccion',
-    	'telefono',
-    	'email'
+    	'temp_cosecha',
+    	'tipo_certificacion',
+        'mueve_sus_colmena',
+        'a_donde',
+        'observaciones',
+        'upp',
+        'pgn',
+        'clave_rast'
     ];
 
     protected $guarded = [       

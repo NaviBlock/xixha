@@ -24,8 +24,10 @@ class ClienteController extends Controller
         $personas=DB::table('persona')
         ->where('nombre','LIKE','%'.$consulta.'%')
         ->where('tipo_persona','=','cliente')
+
         ->orwhere('num_documento','LIKE','%'.$consulta.'%')
         ->where('tipo_persona','=','cliente')
+        
         ->orwhere('telefono','LIKE','%'.$consulta.'%')
         ->where('tipo_persona','=','cliente')
         ->orderBy('idpersona','desc')
