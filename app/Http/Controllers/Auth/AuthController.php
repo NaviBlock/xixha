@@ -71,7 +71,7 @@ class AuthController extends Controller
     }
     
     //Acceso a login
-    protected function showRegistrationForm(){
+   /* protected function showRegistrationForm(){
         return redirect('login');
-    }
+    }*/
 }

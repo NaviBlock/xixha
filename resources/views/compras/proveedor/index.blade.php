@@ -16,8 +16,20 @@
                         <th>Nombre</th>
                         <th>Tipo Doc.</th>
                         <th>Numero Doc</th>
+                        <th>direccion</th>
                         <th>Telefono</th>
                         <th>Email</th>
+                        <th>num_colmena</th>
+                        <th>geoloc_apiario</th>
+                        <th>prod_anual</th>
+                        <th>temp_cosech</th>
+                        <th>tipo_certificacion</th>
+                        <th>mueve_sus_colmena</th>
+                        <th>a_donde</th>
+                        <th>observaciones</th>
+                        <th>upp</th>
+                        <th>pgn</th>
+                        <th>clave_rast</th>
                         <th>Opciones</th>
                     </thead> 
                     @foreach($personas as $per)

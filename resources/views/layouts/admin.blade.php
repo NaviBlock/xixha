@@ -120,43 +120,44 @@
           <div class="bg-dark p-4">
             <li class="nav-title">Almacé</li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/almacen/articulo')}}">
-                <i class="nav-icon icon-drop"></i> Artículos
+              <a class="nav-link" href="{{url('/almacen/categoria')}}">
+                <i class="nav-icon icon-drop"></i>1.-Categorías
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/almacen/categoria')}}">
-                <i class="nav-icon icon-drop"></i> Categorías
+              <a class="nav-link" href="{{url('/almacen/articulo')}}">
+                <i class="nav-icon icon-drop"></i> 2.-Artículos
               </a>
             </li>
+            
             <li class="nav-title">Compras</li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/compras/ingreso')}}">
-                <i class="nav-icon icon-drop"></i> Ingreso
+              <a class="nav-link" href="{{url('/compras/proveedor')}}">
+                <i class="nav-icon icon-drop"></i>1.-Proveedor
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/compras/proveedor')}}">
-                <i class="nav-icon icon-drop"></i> Proveedor
+              <a class="nav-link" href="{{url('/compras/ingreso')}}">
+                <i class="nav-icon icon-drop"></i>2.-Ingreso
               </a>
             </li>
 
             <li class="nav-title">Vetas</li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/ventas/venta')}}">
-                <i class="nav-icon icon-drop"></i> Venta
+              <a class="nav-link" href="{{url('/ventas/cliente')}}">
+                <i class="nav-icon icon-drop"></i>1.-Cliente
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/ventas/cliente')}}">
-                <i class="nav-icon icon-drop"></i> Cliente
+              <a class="nav-link" href="{{url('/ventas/venta')}}">
+                <i class="nav-icon icon-drop"></i>2.-Venta
               </a>
             </li>
 
             <li class="nav-title">Acceso</li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('seguridad/usuario')}}">
-                <i class="nav-icon icon-drop"></i> Usuarios
+                <i class="nav-icon icon-drop"></i> :D Usuarios
               </a>
             </li>
           </div>
@@ -217,7 +218,7 @@
     <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
 
     <!--Bootsap Select-->
-    <script src="{{asset('js/bootstrap-select-2.min.js')}}"></script>
+    <!--script src="{{asset('js/bootstrap-select-2.min.js')}}"></script-->
     <!--Jquery 3.4-->
     <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     @stack('scripts')

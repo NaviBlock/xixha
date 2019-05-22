@@ -1,3 +1,9 @@
 .textc,a{
     color: #0288D1;
 }
+
+@media (min-width: 992px){
+    .header-fixed .app-body {
+        margin-top: 55px;
+    }
+}

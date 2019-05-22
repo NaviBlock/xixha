@@ -55,7 +55,7 @@
         <div class="row">
             <div class="panel panel-primary">
                 <div class="panel-body">
-                    <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                         <div class="form-group">
                             <label>Artículo</label>
                                 <select name="pidarticulo" id="pidarticulo"  class="form-control selectpicker" data-live-search="true">
@@ -65,32 +65,32 @@
                             </select>
                         </div>
 					</div>
-					<div class="col-lg-2 col-sm-2 col-md-2 col-xs-12">
+					<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 						<div class="form-group">
 							<label for="cantidad">Cantidad</label>
 							<input type="number" name="pcantidad" id="pcantidad" class="form-control" placeholder="Cantidad">
 						</div>
 					</div>
-					<div class="col-lg-2 col-sm-2 col-md-2 col-xs-12">
+					<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 						<div class="form-group">
 							<label for="stock">Stock</label>
 							<input type="number" disabled name="pstock" id="pstock" class="form-control" placeholder="Stock">
 						</div>
 					</div>
 
-					<div class="col-lg-2 col-sm-2 col-md-2 col-xs-12">
+					<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 						<div class="form-group">
 							<label for="precio_venta">Precio Venta</label>
 							<input type="number" disabled name="pprecio_venta" id="pprecio_venta" class="form-control" placeholder="Precio de Venta">
 						</div>
 					</div>
-					<div class="col-lg-2 col-sm-3 col-md-2 col-xs-12">
+					<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 						<div class="form-group">
 							<label for="descuento">Descuento</label>
 							<input type="number" name="pdescuento" id="pdescuento" class="form-control" placeholder="Descuento">
 						</div>
 					</div>
-					<div class="col-lg-2 col-sm-2 col-md-2 col-xs-12">
+					<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 						<div class="form-group">
 							<button class="btn btn-primary" type="button" id="bt_add" >Agregar</button>
 						</div>
@@ -121,7 +121,7 @@
 				</div>
                 </div>
             </div>
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" id="guardar">
+			<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" id="guardar">
 				<div class="form-group">
 					<input name="_token" value="{{ csrf_token() }}" type="hidden">
 					<button class="btn btn-primary" type="submit">Guardar</button>

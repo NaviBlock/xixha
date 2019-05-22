@@ -6,6 +6,7 @@
 			@include('compras.ingreso.search')
 		</div>
 	</div>
+
 	<div class="row"> 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="table-responsive">
@@ -18,7 +19,7 @@
 						<th>Total</th>
 						<th>Opciones</th>
 					</thead>
-				@foreach($ingresos as $ing)
+					@foreach($ingresos as $ing)
 					<tr>
 						<td>{{ $ing->fecha_hora }}</td>
 						<td>{{ $ing->nombre}}</td>
