@@ -5,11 +5,17 @@ namespace xixha\Http\Controllers;
 use Illuminate\Http\Request;
 use xixha\Http\Requests;
 
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\input;
+use xixha\Http\Requests\PersonaFormRequest;
+
 use xixha\Persona; 
 use xixha\Api;
-use Illuminate\Support\Facades\Redirect;
-use xixha\Http\Requests\PersonaFormRequest;
 use DB;
+
+use Response;
+use Illuminate\Support\Collection;
+use Illuminate\Database\DatabaseManager;
 
 class ProveedorController extends Controller
 { 
@@ -22,41 +28,45 @@ class ProveedorController extends Controller
     public function index(Request $request)
     {
         if ($request) {
-            $consulta=trim($request->get('searchText'));
-            $personas=DB::table('persona as p')
+            $query = trim($request->get('searchText'));
+            $personas = DB::table('persona as p')
             ->join('apicultor as ap', 'p.idpersona','=','ap.idpersona')
-            ->select('p.nombre','p.tipo_documento','p.num_documento','p.direccion','p.telefono','p.email',
-            
-            'ap.num_colmena','ap.geoloc_apiario','ap.prod_anual','ap.temp_cosecha','ap.tipo_certificacion','ap.mueve_sus_colmeda','ap.a_donde','ap.observaciones','ap.upp','ap.pgn','ap.clave_rast')
-            ->where('p.nombre','LIKE','%'.$consulta.'%')
+            ->select('p.tipo_persona','p.nombre','p.tipo_documento','p.num_documento','p.direccion','p.telefono','p.email','ap.num_colmena','ap.geoloc_apiario','ap.prod_anual','ap.temp_cosecha','ap.tipo_certificacion','ap.mueve_sus_colmena','ap.a_donde','ap.observaciones','ap.upp','ap.pgn','ap.clave_rast')
+
+            //Consulta por Tipo de Persona
+            ->where('p.nombre','LIKE','%'.$query.'%')
             ->orwhere('p.tipo_persona','=','proveedor')
-            ->where('p.telefono','LIKE','%'.$consulta.'%')
+             //Consulta por Telefono
+            ->where('p.telefono','LIKE','%'.$query.'%')
             ->orwhere('p.tipo_persona','=','proveedor')
-            ->where('ap.upp','LIKE','%'.$consulta.'%')
+             //Consulta por UPP
+            ->where('ap.upp','LIKE','%'.$query.'%')
             ->orwhere('p.tipo_persona','=','proveedor')
-            ->where('ap.pgn','LIKE','%'.$consulta.'%')
+             //Consulta por PGN
+            ->where('ap.pgn','LIKE','%'.$query.'%')
             ->orwhere('p.tipo_persona','=','proveedor')
-            ->where('ap.clave_rast','LIKE','%'.$consulta.'%')
+             //Consulta por Clave de Rasteabilidad
+            ->where('ap.clave_rast','LIKE','%'.$query.'%')
             ->orwhere('p.tipo_persona','=','proveedor')
-            ->where('ap.tipo_certificacion','LIKE','%'.$consulta.'%')
+             //Consulta por Temporada de Cosecha
+            ->where('ap.temp_cosecha','LIKE','%'.$query.'%')
             ->orwhere('p.tipo_persona','=','proveedor')
-            ->where('ap.temp_cosecha','LIKE','%'.$consulta.'%')
-            ->orwhere('p.tipo_persona','=','proveedor')
-            ->orderBy('ap.idpersona','desc')
+            //Ordenado por el idpersona
+            ->orderBy('p.idpersona','desc')
             ->paginate(5);
-            return view('compras.proveedor.index',['personas'=>$personas,'searchText'=>$consulta]);
+            return view('compras.proveedor.index',['personas'=>$personas,'searchText'=>$query]);
         }
     }
  
     /* retornar a una vista */
     public function create()
-    {
-        return view('compras.proveedor.create');
+    {   
+        return view("compras.proveedor.create");
     }
  
-    /* almacenar el objeto del modelo categoria | tabla categoria de la BD  | validacion formrequest */
-    public function store(PersonaFormRequest $request)
-    {
+    
+    public function store(PersonaFormRequest $request){
+        
         $persona = new Persona;
         $persona->tipo_persona='proveedor';
         $persona->nombre=$request->get('nombre');
@@ -65,23 +75,23 @@ class ProveedorController extends Controller
         $persona->direccion=$request->get('direccion');
         $persona->telefono=$request->get('telefono');
         $persona->email=$request->get('email');
-/*----------------------------------------------------------------------------------------------------*/
-        $apicultor
-        $persona->num_colmena = 'num_colmena';
-        $persona->geoloc_apiario = 'geoloc_apiario';
-        $persona->prod_anual = 'prod_anual';
-        $persona->temp_cosecha = 'temp_cosecha';
-        $persona->tipo_certificacion = 'tipo_certificacion';
-        $persona->mueve_sus_colmeda = 'mueve_sus_colmeda';
-        $persona->a_donde = 'a_donde';
-        $persona->observaciones = 'observaciones';
-        $persona->upp = 'upp';
-        $persona->pgn = 'pgn';
-        $persona->clave_rast = 'clave_rast';
-/*----------------------------------------------------------------------------------------------------*/
         $persona->save();
+
+        $apicultor = new Api;
+        $apicultor->num_colmena = $request->get('num_colmena');
+        $apicultor->geoloc_apiario = $request->get('geoloc_apiario');
+        $apicultor->prod_anual = $request->get('prod_anual');
+        $apicultor->temp_cosecha = $request->get('temp_cosecha');
+        $apicultor->tipo_certificacion = $request->get('tipo_certificacion');
+        $apicultor->mueve_sus_colmena = $request->get('mueve_sus_colmena');
+        $apicultor->a_donde = $request->get('a_donde');
+        $apicultor->observaciones = $request->get('observaciones');
+        $apicultor->upp = $request->get('upp');
+        $apicultor->pgn = $request->get('pgn');
+        $apicultor->clave_rast = $request->get('clave_rast');
+        $apicultor->save();
+
         return Redirect::to('compras/proveedor'); 
-        /* direcciona al listado del ventas ciente */
     }
  
     /* recibe un parametro de una categoria | retorna una vista*/
@@ -106,20 +116,21 @@ class ProveedorController extends Controller
         $persona->direccion=$request->get('direccion');
         $persona->telefono=$request->get('telefono');
         $persona->email=$request->get('email');
-/*----------------------------------------------------------------------------------------------------*/
-        $persona->num_colmena = 'num_colmena';
-        $persona->geoloc_apiario = 'geoloc_apiario';
-        $persona->prod_anual = 'prod_anual';
-        $persona->temp_cosecha = 'temp_cosecha';
-        $persona->tipo_certificacion = 'tipo_certificacion';
-        $persona->mueve_sus_colmeda = 'mueve_sus_colmeda';
-        $persona->a_donde = 'a_donde';
-        $persona->observaciones = 'observaciones';
-        $persona->upp = 'upp';
-        $persona->pgn = 'pgn';
-        $persona->clave_rast = 'clave_rast';
-/*----------------------------------------------------------------------------------------------------*/
         $persona->update();
+
+        $apicultor = Api::findOrFail($id);
+        $apicultor->num_colmena = $request->get('num_colmena');
+        $apicultor->geoloc_apiario = $request->get('geoloc_apiario');
+        $apicultor->prod_anual = $request->get('prod_anual');
+        $apicultor->temp_cosecha = $request->get('temp_cosecha');
+        $apicultor->tipo_certificacion = $request->get('tipo_certificacion');
+        $apicultor->mueve_sus_colmena = $request->get('mueve_sus_colmena');
+        $apicultor->a_donde = $request->get('a_donde');
+        $apicultor->observaciones = $request->get('observaciones');
+        $apicultor->upp = $request->get('upp');
+        $apicultor->pgn = $request->get('pgn');
+        $apicultor->clave_rast = $request->get('clave_rast');
+        $apicultor->save();
         return Redirect::to('compras/proveedor');
     }
  
