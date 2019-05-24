@@ -25,9 +25,20 @@ class ArticuloController extends Controller
 	   		$consulta = trim($request->get('searchText'));
 	   		$articulos = DB::table('articulo as a')
 	   		->join('categoria as c','a.idcategoria','=','c.idcategoria')
-	   		->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.imagen','a.estado')
+			   ->select('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria','a.descripcion','a.imagen','a.estado')
+			   
 			->where('a.nombre','LIKE','%'.$consulta.'%')
-			->where('estado','=','Activo')   
+			->where('estado','=','Activo')  
+			
+			->orwhere('a.codigo','LIKE','%'.$consulta.'%')
+            ->where('estado','=','Activo')  
+
+            ->orwhere('a.stock','LIKE','%'.$consulta.'%')
+			->where('estado','=','Activo') 
+			
+			->orwhere('c.nombre','LIKE','%'.$consulta.'%')
+            ->where('estado','=','Activo') 
+					
 	   		->orderBy('a.idarticulo','desc')
 	   		->paginate(5);
 

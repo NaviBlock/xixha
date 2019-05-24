@@ -4,6 +4,7 @@ namespace xixha\Http\Controllers\Auth;
 
 use xixha\User;
 use Validator;
+use xixha\Persona;
 use xixha\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -71,7 +72,7 @@ class AuthController extends Controller
     }
     
     //Acceso a login
-   /* protected function showRegistrationForm(){
+   /*protected function showRegistrationForm(){
         return redirect('login');
     }*/
 }

@@ -22,6 +22,7 @@ class UsuarioController extends Controller
             $query = trim($request->get('searchText'));
             $usuarios = DB::table('users')
             ->where('name','LIKE','%'.$query.'%')  
+            ->orwhere('email','LIKE','%'.$query.'%')  
             ->orderBy('id','desc')
             ->paginate(5);
             return view('seguridad.usuario.index',['usuarios'=>$usuarios,'searchText'=>$query]);

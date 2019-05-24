@@ -33,8 +33,26 @@ class VentaController extends Controller
             ->join('persona as p','v.idcliente','=','p.idpersona')
             ->join('detalle_venta as dv','v.idventa','=','dv.idventa')
             ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado','v.total_venta')
+
             ->where('v.serie_comprobante','LIKE','%'.$query.'%')
             ->where('v.estado','=','A')
+
+            ->orwhere('v.fecha_hora','LIKE','%'.$query.'%')
+            ->where('v.estado','=','A')
+
+            ->orwhere('v.total_venta','LIKE','%'.$query.'%')
+            ->where('v.estado','=','A')
+
+            ->orwhere('p.nombre','LIKE','%'.$query.'%')
+            ->where('v.estado','=','A')
+
+            ->orwhere('v.tipo_comprobante','LIKE','%'.$query.'%')
+            ->where('v.estado','=','A')
+
+            ->orwhere('v.num_comprobante','LIKE','%'.$query.'%')
+            ->where('v.estado','=','A')
+
+
            ->orderBy('v.idventa','desc')
            ->groupBy('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado')
             ->paginate(5);

@@ -30,12 +30,15 @@ class ClienteController extends Controller
         
         ->orwhere('telefono','LIKE','%'.$consulta.'%')
         ->where('tipo_persona','=','cliente')
+
+        ->orwhere('email','LIKE','%'.$consulta.'%')
+        ->where('tipo_persona','=','cliente')
+
         ->orderBy('idpersona','desc')
         ->paginate(5);
    		return view('ventas.cliente.index',['personas'=>$personas,'searchText'=>$consulta]);
    	}
-
-   }
+}
 
    /* retornar a una vista */
    public function create()
