@@ -53,7 +53,7 @@ class ArticuloController extends Controller
 	   		$categorias=DB::table('categoria')->where('condicion','=','1')->get();
 	   		return view('almacen.articulo.create',['categorias'=>$categorias]);
 	   }
-
+ 
 	   /* almacenar el objeto del modelo categoria | tabla categoria de la BD  | validacion formrequest */
 	   public function store(ArticuloFormRequest $request)
 	   {

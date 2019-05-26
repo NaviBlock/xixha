@@ -76,7 +76,7 @@
 							<input type="number" disabled name="pstock" id="pstock" class="form-control" placeholder="Stock">
 						</div>
 					</div>
-
+ 
 					<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 						<div class="form-group">
 							<label for="precio_venta">Precio Venta</label>
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 		</div>
-	{!!Form::Close()!!}	
+	{!!Form::Close()!!}
 	@push('scripts')
 		<script>
 			$(document).ready(function(){		
