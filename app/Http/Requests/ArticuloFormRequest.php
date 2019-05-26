@@ -10,7 +10,6 @@ class ArticuloFormRequest extends FormRequest
     {
         return true;
     }
-
     public function rules()
     {
         return [
@@ -20,7 +19,6 @@ class ArticuloFormRequest extends FormRequest
         'stock'=>'required|numeric',
         'descripcion'=>'max:250',
         'imagen'=>'mimes:jpeg,jpg,bmp,png',
-
         ];
     }
 }

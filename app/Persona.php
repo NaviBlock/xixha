@@ -19,9 +19,19 @@ class Persona extends Model
     	'num_documento',
     	'direccion',
     	'telefono',
-    	'email'
+        'email',
+        'num_colmena',
+        'geoloc_apiario',
+        'prod_anual',
+        'temp_cosecha',
+        'tipo_certifcacion',
+        'mueve_sus_colmena',
+        'a_donde',
+        'observaciones',
+        'upp',
+        'pgn',
+        'clave_rast',
     ]; 
-
     protected $guarded = [       
     ];
-}
+} 

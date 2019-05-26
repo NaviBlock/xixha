@@ -19,4 +19,4 @@
 		</div>
 	</div>
 	{{Form::Close()}}
-</div>  
+</div>

@@ -44,4 +44,4 @@
             {{$articulos->render()}}
         </div>
     </div>
-@endsection
+@endsection 

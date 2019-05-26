@@ -17,7 +17,7 @@ class ArticuloController extends Controller
 	   {
 		   $this->middleware('auth');
 	   }
-
+ 
 	   /*recibe como parametro un objeto del tipo request*/
 	   public function index(Request $request)
 	   {

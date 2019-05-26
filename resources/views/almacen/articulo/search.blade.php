@@ -7,4 +7,4 @@
 		</span>
 	</div>
 </div>
-{{Form::Close()}} 
+{{Form::Close()}}

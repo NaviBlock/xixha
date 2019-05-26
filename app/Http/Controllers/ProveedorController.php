@@ -29,7 +29,7 @@ class ProveedorController extends Controller
         if ($request) {
             $query = trim($request->get('searchText'));
             $personas = DB::table('persona')
-            ->select('idpersona','tipo_persona','nombre','tipo_documento','num_documento','direccion','telefono','email')
+            ->select('idpersona','tipo_persona','nombre','tipo_documento','num_documento','direccion','telefono','email', 'num_colmena','geoloc_apiario','prod_anual','temp_cosecha','tipo_certifcacion','mueve_sus_colmena','a_donde','observaciones','upp','pgn','clave_rast')
 
             ->where('nombre','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','proveedor')
@@ -44,6 +44,15 @@ class ProveedorController extends Controller
             ->where('tipo_persona','=','proveedor')
 
             ->orwhere('email','LIKE','%'.$query.'%')
+            ->where('tipo_persona','=','proveedor')
+
+            ->orwhere('upp','LIKE','%'.$query.'%')
+            ->where('tipo_persona','=','proveedor')
+
+            ->orwhere('pgn','LIKE','%'.$query.'%')
+            ->where('tipo_persona','=','proveedor')
+
+            ->orwhere('clave_rast','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','proveedor')
 
             ->orderBy('idpersona','desc')
@@ -68,6 +77,17 @@ class ProveedorController extends Controller
         $persona->direccion=$request->get('direccion');
         $persona->telefono=$request->get('telefono');
         $persona->email=$request->get('email');
+        $persona->num_colmena=$request->get('num_colmena');
+        $persona->geoloc_apiario=$request->get('geoloc_apiario');
+        $persona->prod_anual=$request->get('prod_anual');
+        $persona->temp_cosecha=$request->get('temp_cosecha');
+        $persona->tipo_certifcacion=$request->get('tipo_certifcacion');
+        $persona->mueve_sus_colmena=$request->get('mueve_sus_colmena');
+        $persona->a_donde=$request->get('a_donde');
+        $persona->observaciones=$request->get('observaciones');
+        $persona->upp=$request->get('upp');
+        $persona->pgn=$request->get('pgn');
+        $persona->clave_rast=$request->get('clave_rast');
         $persona->save();
         return Redirect::to('compras/proveedor'); 
     }
@@ -94,6 +114,17 @@ class ProveedorController extends Controller
         $persona->direccion=$request->get('direccion');
         $persona->telefono=$request->get('telefono');
         $persona->email=$request->get('email');
+        $persona->num_colmena=$request->get('num_colmena');
+        $persona->geoloc_apiario=$request->get('geoloc_apiario');
+        $persona->prod_anual=$request->get('prod_anual');
+        $persona->temp_cosecha=$request->get('temp_cosecha');
+        $persona->tipo_certifcacion=$request->get('tipo_certifcacion');
+        $persona->mueve_sus_colmena=$request->get('mueve_sus_colmena');
+        $persona->a_donde=$request->get('a_donde');
+        $persona->observaciones=$request->get('observaciones');
+        $persona->upp=$request->get('upp');
+        $persona->pgn=$request->get('pgn');
+        $persona->clave_rast=$request->get('clave_rast');
         $persona->update();
         return Redirect::to('compras/proveedor');
     }
@@ -106,4 +137,4 @@ class ProveedorController extends Controller
         $persona->update();
         return Redirect::to('compras/proveedor');	
     }
-}
+}  

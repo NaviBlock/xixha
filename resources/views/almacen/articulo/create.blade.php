@@ -71,4 +71,4 @@
 			</div>
 		</div>
 		{!!Form::Close()!!}		
-	@endsection
+	@endsection 
