@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\input;
 use xixha\Http\Requests\PersonaFormRequest;
 
 use xixha\Persona; 
-use xixha\Api;
 use DB;
 
 use Response;

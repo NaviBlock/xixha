@@ -13,7 +13,6 @@ class Api extends Model
     public $timestamps = false;
 
     protected $fillable = [
-    	'idpersona',
     	'num_colmena',
     	'geoloc_apiario',
     	'prod_anual',
@@ -24,7 +23,8 @@ class Api extends Model
         'observaciones',
         'upp',
         'pgn',
-        'clave_rast'
+        'clave_rast',
+        'estado'
     ];
 
     protected $guarded = [       

@@ -175,6 +175,15 @@
   </div>
 <!------------------------------------------------------------------------------------------------------------->
 <!--Colocar mas contenido para el inicio-->
+<div class="content-wrapper">
+  <section class="content">
+    <div class="row">
+      <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>Hola: Usuario</h1>
+      </div>
+    </div>
+  </section>
+</div>  
 <!------------------------------------------------------------------------------------------------------------->
     <footer class="app-footer">
       <div>

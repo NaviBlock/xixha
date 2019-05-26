@@ -22,6 +22,9 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load.--> 
   <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
   <!--icon-->
   <link rel="apple-touch-icon" sizes="144x144" href="{{asset('img/apple-touch-icon.png')}}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{asset('img/favicon-32x32.png')}}">
@@ -170,7 +173,7 @@
         </nav>
       </div>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   <div class="content-wrapper">
@@ -219,7 +222,14 @@
 
     <!--Bootsap Select-->
     <!--script src="{{asset('js/bootstrap-select-2.min.js')}}"></script-->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
     <!--Jquery 3.4-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-es_ES.min.js"></script>
     <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     @stack('scripts')
     

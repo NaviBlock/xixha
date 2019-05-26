@@ -35,7 +35,7 @@
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label>Tipo de Documento</label>
-					<select name="tipo_documento" class="form-control">
+					<select name="tipo_documento" class="form-control  selectpicker" data-live-search="true">
 						<option value="RFC">RFC</option>
 						<option value="CURP">CURP</option>
 						<option value="INE">INE</option>

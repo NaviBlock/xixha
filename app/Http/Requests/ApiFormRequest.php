@@ -10,11 +10,10 @@ class ApiFormRequest extends Request
     {
         return true;
     } 
- 
+  
     public function rules()
     {
         return [
-            'idpersona'=>'required',
             'num_colmena'=>'required',
             'geoloc_apiario'=>'required|max:256',
             'prod_anual'=>'required|max:256',
@@ -25,7 +24,7 @@ class ApiFormRequest extends Request
             'observaciones'=>'required|max:256',
             'upp'=>'required|max:100',
             'pgn'=>'required|max:100',
-            'clave_rast'=>'required|max:100'
+            'clave_rast'=>'required|max:20'
         ];
     }
 }
