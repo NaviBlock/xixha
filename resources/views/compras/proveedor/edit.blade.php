@@ -1,7 +1,7 @@
 @extends ('layouts.admin')
 @section ('contenido')
 	<div class = "row"> 
-		<div class = "col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 			<h3>Editar Proveedor Apicultor: {{ $persona->nombre}}</h3>
 			@if(count($errors)>0)
 				<div class="alert alert-danger">
@@ -35,19 +35,9 @@
 			<div class="form-group">
 				<label for="docummento">Tipo de Documento</label>
 				<select name="tipo_documento" class="form-control">
-					@if($persona->tipo_documento=='RFC')
 						<option value="RFC" selected>RFC</option>
 						<option value="CURP">CURP</option>
-						<option value="INR">INE</option>
-					@elseif($persona->tipo_documento=='CURP')
-						<option value="RFC">RFC</option>
-						<option value="CURP" selected>CURP</option>
 						<option value="INE">INE</option>
-					@else
-						<option value="RFC">RFC</option>
-						<option value="CURP">CURP</option>
-						<option value="INE" selected>INE</option>
-					@endif
 				</select>
 			</div>
 		</div>		
@@ -75,19 +65,19 @@
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="num_colmena">Numero de Colmena</label>
-					<input type="text" name="num_colmena" value="{{old('num_colmena')}}" class="form-control" placeholder="Numero de Colmena...">
+					<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" class="form-control" placeholder="Numero de Colmena...">
 				</div>
 		</div>
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="geoloc_apiario">Geolocalización de Apiarios</label>
-					<input type="text" name="geoloc_apiario" value="{{old('geoloc_apiario')}}" class="form-control" placeholder="Geolocalización de Apiarios...">
+					<input type="text" name="geoloc_apiario" value="{{$persona->geoloc_apiario}}" class="form-control" placeholder="Geolocalización de Apiarios...">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="prod_anual">Produccion anual</label>
-					<input type="text" name="prod_anual" value="{{old('prod_anual')}}" class="form-control" placeholder="Produccion anual...">
+					<input type="text" name="prod_anual" value="{{$persona->prod_anual}}"class="form-control" placeholder="Produccion anual...">
 				</div>
 			</div>  
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
@@ -101,11 +91,14 @@
 					</select>
 				</div>
 			</div>
+
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
-					<label for="tipo_certificacion">Tipo de Certificación</label>
-					<input type="text" name="tipo_certificacion" value="{{old('tipo_certificacion')}}" class="form-control" placeholder="Tipo de Certificación...">
+					<label for="tipo_certifcacion">Tipo de Certificación</label>
+					<input type="text" name="tipo_certifcacion" value="{{$persona->tipo_certifcacion}}" class="form-control" placeholder="Tipo de Certificación...">
 				</div>
+			</div>
+
 			</div>
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
@@ -119,48 +112,40 @@
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="a_donde">A Donde</label>
-					<input type="text" name="a_donde" value="{{old('a_donde')}}" class="form-control" placeholder="A Donde...">
+					<input type="text" name="a_donde" value="{{$persona->a_donde}}" class="form-control" placeholder="A Donde...">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="observaciones">Observaciones</label>
-					<input type="text" name="observaciones" value="{{old('observaciones')}}" class="form-control" placeholder="Observaciones...">
+					<input type="text" name="observaciones" value="{{$persona->observaciones}}" class="form-control" placeholder="Observaciones...">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="upp">UPP</label>
-					<input type="text" name="upp" value="{{old('upp')}}" class="form-control" placeholder="UPP...">
+					<input type="text" name="upp" value="{{$persona->upp}}" class="form-control" placeholder="UPP...">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="pgn">PGN</label>
-					<input type="text" name="pgn" value="{{old('pgn')}}" class="form-control" placeholder="PGN...">
+					<input type="text" name="pgn" value="{{$persona->pgn}}" class="form-control" placeholder="PGN...">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="clave_rast">Clave de Rasteabilidad</label>
-					<input type="text" name="clave_rast" value="{{old('lave_rast')}}" class="form-control" placeholder="Clave de Rasteabilidad...">
+					<input type="text" name="clave_rast" value="{{$persona->clave_rast}}" class="form-control" placeholder="Clave de Rasteabilidad...">
 				</div>
 			</div>
 		
-
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 			<div class="form-group">
 				<button class="btn btn-primary" type="submit">Guardar</button>
 				<button class="btn btn-danger" type="reset">Cancelar</button>
 			</div>
 		</div> 
-		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<button class="btn bg-warning" >
-						<a class="text-white" href="{{url('compras/apicultores')}}">Apicultores</a>
-					</button>
-				</div>
-			</div>
 	</div>
 	{!!Form::Close()!!}		
 @endsection

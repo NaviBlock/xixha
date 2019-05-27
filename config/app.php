@@ -156,7 +156,7 @@ return [
         xixha\Providers\AuthServiceProvider::class,
         xixha\Providers\EventServiceProvider::class,
         xixha\Providers\RouteServiceProvider::class,
-
+        
     ],
 
     /*

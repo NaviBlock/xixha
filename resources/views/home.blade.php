@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,49 +119,50 @@
         <div class="pos-f-t contrainer-fluid">
         <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
-          <li class="nav-title">Almacé</li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('almacen/articulo')}}">
-              <i class="nav-icon icon-drop"></i> Artículos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('almacen/categoria')}}">
-              <i class="nav-icon icon-drop"></i> Categorías
-            </a>
-          </li>
-          <li class="nav-title">Compras</li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('compras/ingreso')}}">
-              <i class="nav-icon icon-drop"></i> Ingreso
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('compras/proveedor')}}">
-              <i class="nav-icon icon-drop"></i> Proveedor
-            </a>
-          </li>
+        <li class="nav-title">Almacé</li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/almacen/categoria')}}">
+                <i class="nav-icon icon-drop"></i>1.-Categorías
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/almacen/articulo')}}">
+                <i class="nav-icon icon-drop"></i> 2.-Artículos
+              </a>
+            </li>
+            
+            <li class="nav-title">Compras</li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/compras/proveedor')}}">
+                <i class="nav-icon icon-drop"></i>1.-Proveedor
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/compras/ingreso')}}">
+                <i class="nav-icon icon-drop"></i>2.-Ingreso
+              </a>
+            </li>
 
-          <li class="nav-title">Vetas</li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('ventas/venta')}}">
-              <i class="nav-icon icon-drop"></i> Venta
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('ventas/cliente')}}">
-              <i class="nav-icon icon-drop"></i> Cliente
-            </a>
-          </li>
+            <li class="nav-title">Vetas</li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/ventas/cliente')}}">
+                <i class="nav-icon icon-drop"></i>1.-Cliente
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/ventas/venta')}}">
+                <i class="nav-icon icon-drop"></i>2.-Venta
+              </a>
+            </li>
 
-          <li class="nav-title">Acceso</li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('seguridad/usuario')}}">
-              <i class="nav-icon icon-drop"></i> Usuarios
-            </a>
-          </li>
+            <li class="nav-title">Acceso</li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('seguridad/usuario')}}">
+                <i class="nav-icon icon-drop"></i> :D Usuarios
+              </a>
+            </li>
+          </div>
         </div>
-      </div>
       <nav class="navbar navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
