@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Xixha Connect</title>
+  <title>SSAX</title>
 
   <!--Bootstrap 4.3-->
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
@@ -34,17 +34,15 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="{{asset('img/mstile-144x144.png')}}">
   <meta name="theme-color" content="#ffffff">
-
   <!--Code in-->
   <link rel="stylesheet" href="{{asset('css/stylehome.css')}}">
 <!---------------------------------------------------------------------------------------------->
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show col-lg-12 col-md-12 col-sm-12 col-xs-12 container">       
-  <header class="app-header navbar">
-
-    <!-- Buton de menu logo de perfil-->
+<header class="app-header navbar">
+<!-- Buton de menu logo de perfil-->
 <!------------------------------------------------------------------------------------------------------------------------------------------->
-  <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
   <div id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 
@@ -58,7 +56,6 @@
           <a class="dropdown-item" href="{{url('/compras/proveedor')}}">Proveedor </a>
           <a class="dropdown-item" href="{{url('/ventas/venta')}}">Venta</a>
           <a class="dropdown-item" href="{{url('/ventas/cliente')}}">Cliente</a>
-          <a class="dropdown-item" href="{{url('/seguridad/usuario')}}">Usuario</a>
         </div>
       </li>
     </ul>
@@ -97,7 +94,7 @@
             <a class="dropdown-item" href="#">
               <i class="fa fa-user"></i> Perfil
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="{{url('/seguridad/usuario')}}">
               <i class="fa fa-wrench"></i> Configuraciones
             </a>
             <div class="dropdown-divider"></div>
@@ -113,7 +110,7 @@
       <div class="sidebar-nav">
         <div class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{asset('home')}}">
               <i class="nav-icon icon-speedometer"></i> Dashboard
                 <span class="badge badge-primary">Xixhá</span>
               </a>
@@ -121,7 +118,7 @@
           <div class="pos-f-t contrainer-fluid">
           <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <li class="nav-title">Almacé</li>
+            <li class="nav-title">Almacén</li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('/almacen/categoria')}}">
                 <i class="nav-icon icon-drop"></i>1.-Categorías
@@ -154,13 +151,6 @@
             <li class="nav-item">
               <a class="nav-link" href="{{url('/ventas/venta')}}">
                 <i class="nav-icon icon-drop"></i>2.-Venta
-              </a>
-            </li>
-
-            <li class="nav-title">Acceso</li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{url('seguridad/usuario')}}">
-                <i class="nav-icon icon-drop"></i> :D Usuarios
               </a>
             </li>
           </div>

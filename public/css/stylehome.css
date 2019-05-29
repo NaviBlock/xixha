@@ -7,3 +7,12 @@
         margin-top: 55px;
     }
 }
+
+.app-body{
+    display: flexbox;
+    flex-grow: 0;
+}
+
+.content {
+    min-height: 550px;
+}
