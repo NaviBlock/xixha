@@ -18,5 +18,4 @@
 			</div>
 		</div>  
 	{{Form::Close()}} 
-	
 </div>  

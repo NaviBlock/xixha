@@ -21,11 +21,12 @@
                         <th>Producción Anual</th>
                         <th>Tipo Certificación</th>
                         <th>Opciones</th>
+                        <th>Transacción</th>
                     </thead> 
                     @foreach($personas as $per)
                         <tr>
-                            <td>{{ $per->folio }}</td> 
-                            <td>{{ $per->perfil }}</td> 
+                            <td>{{ $per->folio }}</td>
+                            <td>{{ $per->img_perfil }}</td>
                             <td>{{ $per->nombre }}</td>
                             <td>{{ $per->direccion }}</td>
                             <td>{{ $per->telefono }}</td>
@@ -33,9 +34,16 @@
                             <td>{{ $per->num_colmena }} </td>
                             <td>{{ $per->prod_anual }} </td>
                             <td>{{ $per->tipo_certifcacion }} </td>
+                       
                             <td>
-                                <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-info">Editar</button></a>
-                                <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+                                <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-info btn-block">Detalles</button></a>
+                                <br>
+                                <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger btn-block">Eliminar</button></a>
+                            </td>
+                            <td>
+                                <br>
+                                    <a href="{{asset('compras/ingreso')}}"><button class="btn btn-success btn-block">Realizar Transacción</button>
+                                </a>
                             </td>
                         </tr>
                         @include('compras.proveedor.modal')

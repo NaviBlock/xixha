@@ -13,7 +13,9 @@ class PersonaFormRequest extends Request
  
     public function rules()
     {
-        return [    
+        return [ 
+            'folio'=>'required',
+            'tipo_persona'=>'required',
             'nombre'=>'required|max:256',
             'tipo_documento'=>'required|max:20',
             'num_documento'=>'required|max:15',
@@ -30,7 +32,15 @@ class PersonaFormRequest extends Request
             'observaciones'=>'max:256',
             'upp'=>'max:100',
             'pgn'=>'max:100',
-            'clave_rast'=>'max:100'
+            'clave_rast'=>'max:100',
+            'estado'=>'max:100',
+            'img_perfil'=>'mimes:jpeg,jpg,bmp,png',
+            'img_upp'=>'mimes:jpeg,jpg,bmp,png',
+            'img_pgn'=>'mimes:jpeg,jpg,bmp,png',
+            'img_clave_rast'=>'mimes:jpeg,jpg,bmp,png',
+            'img_rfc'=>'mimes:jpeg,jpg,bmp,png',
+            'img_curp'=>'mimes:jpeg,jpg,bmp,png',
+            'img_ine'=>'mimes:jpeg,jpg,bmp,png'
         ]; 
     }
 }

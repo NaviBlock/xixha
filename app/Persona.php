@@ -13,6 +13,7 @@ class Persona extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'folio',
     	'tipo_persona',
     	'nombre',
     	'tipo_documento',
@@ -31,6 +32,14 @@ class Persona extends Model
         'upp',
         'pgn',
         'clave_rast',
+        'estado',
+        'img_perfil',
+        'img_upp',
+        'img_pgn',
+        'img_clave_rast',
+        'img_rfc',
+        'img_curp',
+        'img_ine'
     ]; 
     protected $guarded = [       
     ];

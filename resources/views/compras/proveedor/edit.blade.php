@@ -2,7 +2,7 @@
 @section ('contenido')
 	<div class = "row"> 
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<h3>Editar Proveedor Apicultor: {{ $persona->nombre}}</h3>
+			<h3>Editar datos del Apicultor: {{ $persona->nombre}}</h3>
 			@if(count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
@@ -68,6 +68,7 @@
 					<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" class="form-control" placeholder="Numero de Colmena...">
 				</div>
 		</div>
+
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="geoloc_apiario">Geolocalización de Apiarios</label>

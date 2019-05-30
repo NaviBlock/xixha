@@ -28,8 +28,11 @@ class ProveedorController extends Controller
     {
         if ($request) {
             $query = trim($request->get('searchText'));
-            $personas = DB::table('persona')
-            ->select('idpersona','tipo_persona','nombre','tipo_documento','num_documento','direccion','telefono','email', 'num_colmena','geoloc_apiario','prod_anual','temp_cosecha','tipo_certifcacion','mueve_sus_colmena','a_donde','observaciones','upp','pgn','clave_rast')
+            $personas = DB::table('persona as p')
+            ->join('ingreso as i','i.idproveedor','=','p.idpersona')
+            ->select('i.idingreso','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.fecha_hora','i.impuesto','i.estado','p.idpersona',
+                
+            'p.folio','p.tipo_persona','p.nombre','p.tipo_documento','p.num_documento','p.direccion','p.telefono','p.email', 'p.num_colmena','p.geoloc_apiario','p.prod_anual','p.temp_cosecha','p.tipo_certifcacion','p.mueve_sus_colmena','p.a_donde','p.observaciones','p.upp','p.pgn','p.clave_rast','p.estado','p.img_perfil','p.img_upp','p.img_pgn','p.img_clave_rast','img_rfc','p.img_curp','p.img_ine')
 
             ->where('nombre','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','proveedor')
@@ -69,7 +72,7 @@ class ProveedorController extends Controller
  
     public function store(PersonaFormRequest $request){
         
-        $persona = new Persona;
+        /*$persona = new Persona;
         $persona->tipo_persona='proveedor';
         $persona->nombre=$request->get('nombre');
         $persona->tipo_documento=$request->get('tipo_documento');
@@ -88,7 +91,7 @@ class ProveedorController extends Controller
         $persona->upp=$request->get('upp');
         $persona->pgn=$request->get('pgn');
         $persona->clave_rast=$request->get('clave_rast');
-        $persona->save();
+        $persona->save();*/
         return Redirect::to('compras/proveedor'); 
     }
  
@@ -107,7 +110,7 @@ class ProveedorController extends Controller
     /* recibe 2 parametro de tipo formRequest*/
     public function update(PersonaFormRequest $request,$id)
     {
-        $persona = Persona::findOrFail($id); // categoria que quiero modificar 
+        /*$persona = Persona::findOrFail($id); // categoria que quiero modificar 
         $persona->nombre=$request->get('nombre');
         $persona->tipo_documento=$request->get('tipo_documento');
         $persona->num_documento=$request->get('num_documento');
@@ -125,7 +128,7 @@ class ProveedorController extends Controller
         $persona->upp=$request->get('upp');
         $persona->pgn=$request->get('pgn');
         $persona->clave_rast=$request->get('clave_rast');
-        $persona->update();
+        $persona->update();*/
         return Redirect::to('compras/proveedor');
     }
  

@@ -12,7 +12,7 @@
   <!-- Main styles for this application-->
   <link href="{{asset('css/style.css')}}" rel="stylesheet">
   <link href="{{asset('vendors/pace-progress/css/pace.min.css')}}" rel="stylesheet">
-        
+         
   <!-- Font Awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     
@@ -53,7 +53,7 @@
           <a class="dropdown-item" href="{{url('almacen/articulo')}}">Artículo</a>
           <a class="dropdown-item" href="{{url('almacen/categoria')}}">Categoría</a>
           <a class="dropdown-item" href="{{url('compras/ingreso')}}">Ingreso</a>
-          <a class="dropdown-item" href="{{url('/compras/proveedor')}}">Proveedor </a>
+          <a class="dropdown-item" href="{{url('/compras/proveedor')}}">Apicultores </a>
           <a class="dropdown-item" href="{{url('/ventas/venta')}}">Venta</a>
           <a class="dropdown-item" href="{{url('/ventas/cliente')}}">Cliente</a>
         </div>
@@ -121,36 +121,36 @@
             <li class="nav-title">Almacén</li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('/almacen/categoria')}}">
-                <i class="nav-icon icon-drop"></i>1.-Categorías
+                <i class="nav-icon icon-drop"></i>Categorías
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('/almacen/articulo')}}">
-                <i class="nav-icon icon-drop"></i> 2.-Artículos
+                <i class="nav-icon icon-drop"></i> Artículos
               </a>
             </li>
             
-            <li class="nav-title">Compras</li>
+            <li class="nav-title">Registro</li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('/compras/proveedor')}}">
-                <i class="nav-icon icon-drop"></i>1.-Proveedor
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{url('/compras/ingreso')}}">
-                <i class="nav-icon icon-drop"></i>2.-Ingreso
+                <i class="nav-icon icon-drop"></i>Apicultores
               </a>
             </li>
 
-            <li class="nav-title">Vetas</li>
+            <li class="nav-title">transacciones de compras y ventas</li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('/ventas/cliente')}}">
-                <i class="nav-icon icon-drop"></i>1.-Cliente
+                <i class="nav-icon icon-drop"></i>Cliente
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('/ventas/venta')}}">
-                <i class="nav-icon icon-drop"></i>2.-Venta
+                <i class="nav-icon icon-drop"></i>Venta
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/compras/ingreso')}}">
+                <i class="nav-icon icon-drop"></i>Compras
               </a>
             </li>
           </div>

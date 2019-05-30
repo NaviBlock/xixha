@@ -2,7 +2,7 @@
 @section ('contenido')
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Nuevo Proveedor</h3>
+			<h3>Registro del nuevo Apicultor</h3>
 			@if (count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
@@ -56,14 +56,12 @@
 					<input type="text" name="telefono" value="{{old('telefono')}}" class="form-control" placeholder="Telefono...">
 				</div>			
 			</div>
-
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="email">Email</label>
 					<input type="text" name="email" value="{{old('email')}}" class="form-control" placeholder="Correo Electronico...">
 				</div>
 			</div>
-
 
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 					<div class="form-group">

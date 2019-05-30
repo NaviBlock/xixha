@@ -19,7 +19,18 @@ END
 //
 DELIMITER ;
 /*********************************************************************/
-
+/*TRIGGER para detalle para generar folio*/
+DELIMITER //
+CREATE TRIGGER tr_upfolio 
+    AFTER INSERT ON persona
+        FOR EACH ROW 
+        BEGIN 
+            NEW.folio < 0 THEN SET
+            NEW.folio = 0;END IF;
+        END
+//
+DELIMITER ;
+/*********************************************************************/
 
 /*
 https://www.youtube.com/redirect?event=comments&stzid=UggiYAyLBRL1kHgCoAEC.8KmiY4iIqiA8Lq2IhUIcg8&redir_token=Hti7cpXzUPZnHnMpVkciuZouUyR8MTU1ODA5NjA4MkAxNTU4MDA5Njgy&q=https%3A%2F%2Flaravel.com%2Fdocs%2F5.3%2Fauthentication
