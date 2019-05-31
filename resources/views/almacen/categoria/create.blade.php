@@ -1,8 +1,8 @@
 @extends ('layouts.admin')
 @section ('contenido')
 	<div class="row">
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Nueva Categoría</h3>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3 class="text-center">Nuevas Categoria Xixhá</h3>
 			@if (count($errors)>0)
 			<div class="alert alert-danger">
 				<ul>
@@ -12,23 +12,19 @@
 				</ul> 
 			</div>
 			@endif
-
 			{!!Form::open(array('url'=>'almacen/categoria','method'=>'POST','autocomplete'=>'off'))!!}
-            {{Form::token()}}
-            <div class="form-group">
+			{{Form::token()}}
+            <div class="form-group md-form amber-textarea active-amber-textarea-2">
             	<label for="nombre">Nombre</label>
-            	<input type="text" name="nombre" class="form-control" placeholder="Nombre...">
+            	<input type="text" name="nombre" required value="{{old('nombre')}}" class="md-textarea form-control lineA">
             </div>
-            <div class="form-group">
-            	<label for="descripcion">Descripción</label>
-            	<input type="text" name="descripcion" class="form-control" placeholder="Descripción...">
-            </div>
-            <div class="form-group">
-            	<button class="btn btn-primary" type="submit">Guardar</button>
-            	<button class="btn btn-danger" type="reset">Cancelar</button>
-            </div>
-			{!!Form::Close()!!}		
-            
-		</div>
+			<div class="form-group md-form amber-textarea active-amber-textarea-2">
+				<label for="descripcion">Descripción</label>
+  				<textarea id="descripcion" class="md-textarea form-control" rows="4	" required value="{{old('descripcion')}}" name="descripcion"></textarea>
+			</div>
+		</div><br><br><br><br><br><br>
+		<button class="btn btn-primary btn-block" type="submit">Guardar</button><br>
+		<button class="btn btn-danger btn-block" type="reset">Cancelar</button>
 	</div>
+{!!Form::Close()!!}		
 @endsection

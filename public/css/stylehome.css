@@ -16,3 +16,39 @@
 .content {
     min-height: 550px;
 }
+
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*Codigo para animar textarea para los formulario*/
+.amber-textarea textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ffa000;
+    box-shadow: 0 1px 0 0 #ffa000;
+}
+.active-amber-textarea.md-form label.active {
+    color: #ffa000;
+}
+
+.active-amber-textarea-2 textarea.md-textarea {
+    border-bottom: 1px solid #ffa000;
+    box-shadow: 0 1px 0 0 #ffa000;
+}
+.active-amber-textarea-2.md-form label.active{
+    color: #ffa000;
+}
+.active-amber-textarea-2.md-form label input{
+    color: #ffa000;
+}
+.lineA{
+    border-bottom: 1px solid #ffa000;
+    box-shadow: 0 1px 0 0 #ffa000;
+} 
+.search{
+    border-bottom: 1px solid #ffa000;
+    box-shadow: 0 1px 0 1px #ffa000;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+.file-field.big .file-path-wrapper {
+    height: 3.2rem; }
+    .file-field.big .file-path-wrapper .file-path {
+    height: 3rem; }
+/*---------------------------------------------------------------------------------------------------------*/
