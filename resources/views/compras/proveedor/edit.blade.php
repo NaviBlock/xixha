@@ -74,7 +74,7 @@
 					<label for="geoloc_apiario">Geolocalización de Apiarios</label>
 					<input type="text" name="geoloc_apiario" value="{{$persona->geoloc_apiario}}" class="form-control" placeholder="Geolocalización de Apiarios...">
 				</div>
-			</div>
+			</div> 
 			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 				<div class="form-group">
 					<label for="prod_anual">Produccion anual</label>

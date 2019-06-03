@@ -5,7 +5,7 @@
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" 
 				aria-label="Close">
-                     <span aria-hidden="true">×</span>
+                     <span aria-hidden="true">X</span>
                 </button>
                 <h4 class="modal-title">Eliminar Apicultor</h4>
 			</div>
@@ -18,4 +18,5 @@
 			</div>
 		</div>
 	</div>
+	{{Form::Close()}}
 </div>

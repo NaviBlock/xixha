@@ -50,12 +50,12 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{url('almacen/articulo')}}">Artículo</a>
           <a class="dropdown-item" href="{{url('almacen/categoria')}}">Categoría</a>
-          <a class="dropdown-item" href="{{url('compras/ingreso')}}">Ingreso</a>
+          <a class="dropdown-item" href="{{url('almacen/articulo')}}">Artículo</a>
           <a class="dropdown-item" href="{{url('/compras/proveedor')}}">Apicultores </a>
-          <a class="dropdown-item" href="{{url('/ventas/venta')}}">Venta</a>
           <a class="dropdown-item" href="{{url('/ventas/cliente')}}">Cliente</a>
+          <a class="dropdown-item" href="{{url('/ventas/venta')}}">Venta</a>
+          <a class="dropdown-item" href="{{url('compras/ingreso')}}">Compras</a>
         </div>
       </li>
     </ul>

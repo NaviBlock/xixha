@@ -21,7 +21,7 @@ USE `dbconnectx` ;
 -- Table `dbconnectx`.`categoria`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dbconnectx`.`categoria` (
-  `idcategoria` INT(6) NOT NULL zerofill AUTO_INCREMENT,
+  `idcategoria` INT(6) NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NOT NULL,
   `descripcion` VARCHAR(256) NULL,
   `condicion` TINYINT NOT NULL,

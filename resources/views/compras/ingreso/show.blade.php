@@ -7,21 +7,20 @@
                 <p class="text-primary">{{$ingreso->nombre}}</p>
 			</div>
         </div>
-        
-		<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 		    <div class="form-group">
 			    <label class="text-light bg-dark" for="tipo_comprobante">Tipo de Comprobante</label>
                 <p class="text-primary">{{$ingreso->tipo_comprobante}}</p>
 			</div>
-		</div>
-		<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+		</div> 
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 			<div class="form-group">
 				<label  class="text-light bg-dark" for="serie_comprobante">Serie Comprobante</label>
 				<p class="text-primary">{{$ingreso->serie_comprobante}}</p>
 			</div>
         </div>
         
-        <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
             <div class="form-group">
                 <label class="text-light bg-dark" for="num_comprobante">Numero Comprobante</label>
                 <p class="text-primary">{{$ingreso->num_comprobante}}</p >

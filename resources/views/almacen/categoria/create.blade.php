@@ -10,7 +10,7 @@
 					<li>{{$error}}</li>
 				@endforeach
 				</ul> 
-			</div>
+			</div> 
 			@endif
 			{!!Form::open(array('url'=>'almacen/categoria','method'=>'POST','autocomplete'=>'off'))!!}
 			{{Form::token()}}
@@ -23,8 +23,10 @@
   				<textarea id="descripcion" class="md-textarea form-control" rows="4	" required value="{{old('descripcion')}}" name="descripcion"></textarea>
 			</div>
 		</div><br><br><br><br><br><br>
-		<button class="btn btn-primary btn-block" type="submit">Guardar</button><br>
-		<button class="btn btn-danger btn-block" type="reset">Cancelar</button>
+		<div class="container-fluid">
+			<button class="btn btn-primary btn-block" type="submit">Guardar</button><br>
+			<button class="btn btn-danger btn-block" type="reset">Cancelar</button>
+		</div>
 	</div>
 {!!Form::Close()!!}		
 @endsection

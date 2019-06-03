@@ -5,13 +5,13 @@
 			<h3 class="text-center">Editar Producto: {{ $articulo->nombre}}</h3>
 			@if(count($errors)>0)
 				<div class="alert alert-danger">
-					<ul>
+					<ul> 
 						@foreach($errors->all() as $error)
 							<li>{{$error}}</li>
 						@endforeach
-					</ul>
+					</ul> 
 				</div>
-			@endif
+			@endif    
 	{!!Form::model($articulo,['method'=>'PATCH','route'=>['almacen.articulo.update',$articulo->idarticulo], 'files'=>'true' ]) !!}
 	{{Form::token()}}
 	<div class="row">
