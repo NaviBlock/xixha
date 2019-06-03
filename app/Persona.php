@@ -13,34 +13,27 @@ class Persona extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'tipo_persona',
         'folio',
-    	'tipo_persona',
-    	'nombre',
-    	'tipo_documento',
-    	'num_documento',
+        'nombre',
     	'direccion',
     	'telefono',
         'email',
-        'num_colmena',
-        'geoloc_apiario',
+        'curp',
+        'img_curp',
+        'recibo',
+        'tipo_certificacion',
         'prod_anual',
-        'temp_cosecha',
-        'tipo_certifcacion',
-        'mueve_sus_colmena',
-        'a_donde',
-        'observaciones',
         'upp',
+        'img_upp',
         'pgn',
+        'img_pgn',
         'clave_rast',
+        'img_clave_rast',
         'estado',
         'img_perfil',
-        'img_upp',
-        'img_pgn',
-        'img_clave_rast',
-        'img_rfc',
-        'img_curp',
-        'img_ine'
     ]; 
+    
     protected $guarded = [       
     ];
 } 

@@ -41,7 +41,7 @@
                             <td>{{ $per->email }}</td>
                             <td>{{ $per->num_colmena }} </td>
                             <td>{{ $per->prod_anual }} </td>
-                            <td>{{ $per->tipo_certifcacion }}</td>
+                            <td>{{ $per->tipo_certificacion }}</td>
                             <td>
                                 <div class="btn-group mr-4" role="group" aria-label="Buton Detalle">
                                     <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-info btn-block">Detalles</button></a>

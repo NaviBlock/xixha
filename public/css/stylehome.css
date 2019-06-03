@@ -42,6 +42,11 @@
     border-bottom: 1px solid #ffa000;
     box-shadow: 0 1px 0 0 #ffa000;
 } 
+
+.lineB{
+    border-bottom: 1px solid #00c853;
+    box-shadow: 0 1px 0 0 #00c853;
+} 
 .search{
     border-bottom: 1px solid #ffa000;
     box-shadow: 0 1px 0 1px #ffa000;
@@ -51,4 +56,53 @@
     height: 3.2rem; }
     .file-field.big .file-path-wrapper .file-path {
     height: 3rem; }
+/*---------------------------------------------------------------------------------------------------------*/
+@media (min-width: 768px) {
+    .col-md-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px){
+    .col-sm-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%; 
+        max-width: 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 0px;
+    position: relative;
+}
+
+.content {
+    padding:0px;
+}
+
+@media (max-width: 991.98px){
+    .app-header {
+    margin: 5px;
+    }
+}
+
+.right-side, .main-footer {
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------*/
