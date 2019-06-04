@@ -76,12 +76,12 @@
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2">
 				<label for="clave_rast">Clave de Rasteabilidad</label>
-				<input type="text" name="clave_rast" value="{{old('lave_rast')}}" class="md-textarea form-control lineB" placeholder="Clave de Rasteabilidad...">
+				<input type="text" name="clave_rast" value="{{old('clave_rast')}}" class="md-textarea form-control lineB" placeholder="Clave de Rasteabilidad...">
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2">
-				<label for="clave_rast">Imagen Clave de Rasteabilidad</label>
-				<input type="file" name="clave_rast" value="{{old('lave_rast')}}" class="md-textarea form-control lineB" placeholder="Clave de Rasteabilidad...">
+				<label for="img_clave_rast">Imagen Clave de Rasteabilidad</label>
+				<input type="file" name="img_clave_rast" value="{{old('img_clave_rast')}}" class="md-textarea form-control lineB" placeholder="Clave de Rasteabilidad...">
 			</div>
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2">
 				<label for="prod_anual">Produccion anual</label>
