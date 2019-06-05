@@ -14,24 +14,26 @@ class Persona extends Model
 
     protected $fillable = [
         'tipo_persona',
-        'folio',
         'nombre',
     	'direccion',
     	'telefono',
         'email',
-        'curp',
-        'img_curp',
         'recibo',
-        'tipo_certificacion',
         'prod_anual',
         'upp',
-        'img_upp',
         'pgn',
-        'img_pgn',
         'clave_rast',
-        'img_clave_rast',
+        'num_colmena',
         'estado',
+        'tipo_certificacion',
         'img_perfil',
+        'img_curp',   
+        'img_pgn',
+        'img_upp',
+        'img_clave_rast',
+        'curp',
+        'folio',
+        'img_clave_rast',
     ]; 
     
     protected $guarded = [       

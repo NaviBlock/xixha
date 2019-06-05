@@ -54,6 +54,11 @@ return [
             'visibility' => 'public',
         ],
 
+        'local'=>[
+            'drive'=>'local',
+            'root'=>public_path().'/storage',
+        ],
+
         'perfil' =>[
             'driver' => 'local',
             'root'   => storage_path('perfil'),

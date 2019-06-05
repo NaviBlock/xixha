@@ -85,9 +85,10 @@ class ProveedorController extends Controller
         $personas->prod_anual=$request->get('prod_anual');
         $personas->num_colmena=$request->get('num_colmena');
         $personas->curp=$request->get('curp');
+
         if (Input::hasFile('img_curp')) {
             $file=Input::file('img_curp');
-            $file->move(public_path().'/storage/perfil',$file->getClientOriginalName());
+            $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
             $personas->img_curp=$file->getClientOriginalName();
         }
 
@@ -96,41 +97,23 @@ class ProveedorController extends Controller
         $personas->pgn=$request->get('pgn');
         $personas->clave_rast=$request->get('clave_rast');
 
-        if (Input::hasFile('img_perfil')){
+        /*if (Input::hasFile('img_perfil')){
             $file=Input::file('img_perfil');
             $nombre_original=$file->getClientOriginalName();
             $extension=$file->getClientOriginalExtension();
-            $nuevo_nombre="userxixha-.".$extension;
+            $nuevo_nombre="userxixha-".$id.$extension;
+            $file->move(public_path().'/imagenes/perfil', $file->getClientOriginalName());
+            $personas->img_perfil=$file->getClientOriginalName();
+        }*/
+
+        if (Input::hasFile('img_perfil')) {
+            $file=Input::file('img_perfil');
+            $nombre_original=$file->getClientOriginalName();
+            $extension=$file->getClientOriginalExtension();
+            $file="userxixha-".$id.$extension;
             $file->move(public_path().'/storage/perfil',$file->getClientOriginalName());
             $personas->img_perfil=$file->getClientOriginalName();
         }
-
-            /*$id=$request->input('idpersona');
-            $archivo = $request->file('img_perfil');
-            $input  = array('image' => $archivo) ;
-            $reglas = array('image' => 'required|image|mimes:jpeg,jpg,bmp,png,gif|');
-            $validacion = Validator::make($input,  $reglas);
-            if ($validacion->fails())
-            {
-              return view("mensajes.msj_rechazado")->with("msj","El archivo no es una imagen valida");
-            }
-            else
-            {
-                $nombre_original=$archivo->getClientOriginalName();
-                $extension=$archivo->getClientOriginalExtension();
-                $nuevo_nombre="userxixha-".$id.".".$extension;
-                $r1=Storage::disk('perfil')->put($nuevo_nombre,  \File::get($archivo) );
-                $rutadelaimagen="../storage/perfil/".$nuevo_nombre;
-            
-                if ($r1){
-                    $usuario=User::find($id);
-                    $usuario->imagenurl=$rutadelaimagen;
-                    $r2=$usuario->save();
-                    return view("mensajes.msj_correcto")->with("msj","Imagen agregada correctamente");
-                }else{
-                    return view("mensajes.msj_incorrecto")->with("msj","Imagen no es agregada correctamente");
-                }
-            }*/
      
         if (Input::hasFile('img_upp')) {
             $file=Input::file('img_upp');
