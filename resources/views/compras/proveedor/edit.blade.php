@@ -21,14 +21,14 @@
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 			<div class="form-group">
 				<label for="nombre">Nombre</label>
-				<input type="text" name="nombre" required value="{{$persona->nombre}}" class="form-control" placeholder="Ingrese el nombre...">
+				<input type="text" name="nombre" value="{{$persona->nombre}}" class="form-control" placeholder="Ingrese el nombre...">
 			</div>
 		</div>
 		
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 			<div class="form-group">
 				<label for="direccion">Dirección</label>
-				<input type="text" name="direccion" required value="{{$persona->direccion}}" class="form-control" placeholder="Direccion...">
+				<input type="text" name="direccion" value="{{$persona->direccion}}" class="form-control" placeholder="Direccion...">
 			</div>			
 		</div>	
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">

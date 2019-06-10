@@ -13,7 +13,7 @@ class PersonaFormRequest extends Request
  
     public function rules()
     {
-        return [ 
+        /*return [ 
             'folio'=>'',
             'nombre'=>'required|max:256',
             'direccion'=>'max:70',
@@ -33,8 +33,17 @@ class PersonaFormRequest extends Request
             'curp'=>'required|max:50',
             'img_curp'=>'mimes:jpeg,jpg,bmp,png,pdf',
             'num_colmena',
-            'tipo_persona'
-
+            'tipo_persona'*         
+        ]; */
+        return [ 
+            'folio'=>'',
+            'tipo_persona'=>'',
+            'nombre'=>'',
+            'apellidopa'=>'',
+            'apellidoma'=>'',
+            'curp'=>'',
+            'recibo'=>'',
+            'estado'=>''
         ]; 
     }
 }

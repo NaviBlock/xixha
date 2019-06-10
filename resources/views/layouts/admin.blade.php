@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es"> 
-<head>
+<head> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,16 +46,23 @@
   <div id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 
+      <!--li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{ {url('almacen/categoria')}}">Categoría</a>
+          <a class="dropdown-item" href="{ {url('almacen/articulo')}}">Artículo</a>
+          <a class="dropdown-item" href="{ {url('/compras/proveedor')}}">Apicultores </a>
+          <a class="dropdown-item" href="{ {url('/ventas/cliente')}}">Cliente</a>
+          <a class="dropdown-item" href="{ {url('/ventas/venta')}}">Venta</a>
+          <a class="dropdown-item" href="{ {url('compras/ingreso')}}">Compras</a>
+        </div>
+      </li-->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{url('almacen/categoria')}}">Categoría</a>
-          <a class="dropdown-item" href="{{url('almacen/articulo')}}">Artículo</a>
           <a class="dropdown-item" href="{{url('/compras/proveedor')}}">Apicultores </a>
-          <a class="dropdown-item" href="{{url('/ventas/cliente')}}">Cliente</a>
-          <a class="dropdown-item" href="{{url('/ventas/venta')}}">Venta</a>
-          <a class="dropdown-item" href="{{url('compras/ingreso')}}">Compras</a>
         </div>
       </li>
     </ul>
@@ -85,18 +92,18 @@
         <!-- Etiqueta de activacion de boton logo perfil-->
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="img-avatar" src="{{asset('img/avatars/10.jpg')}}" alt="alejandrohernandezvalle@gmail.com">
+            <img class="img-avatar" src="{{asset('img/avatars/10.jpg')}}" alt="Logo de perfil">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
               <strong>Cuenta</strong>
             </div>
-            <a class="dropdown-item" href="#">
+            <!--a class="dropdown-item" href="#">
               <i class="fa fa-user"></i> Perfil
             </a>
-            <a class="dropdown-item" href="{{url('/seguridad/usuario')}}">
+            <a class="dropdown-item" href="{ {url('/seguridad/usuario')}}">
               <i class="fa fa-wrench"></i> Configuraciones
-            </a>
+            </a-->
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{url('/logout')}}">
                 <i class="fa fa-lock"></i> Salir
@@ -118,17 +125,17 @@
           <div class="pos-f-t contrainer-fluid">
           <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <li class="nav-title">Almacén</li>
+            <!--li class="nav-title">Almacén</li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/almacen/categoria')}}">
+              <a class="nav-link" href="{ {url('/almacen/categoria')}}">
                 <i class="nav-icon icon-drop"></i>Categorías
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/almacen/articulo')}}">
+              <a class="nav-link" href="{ {url('/almacen/articulo')}}">
                 <i class="nav-icon icon-drop"></i> Artículos
               </a>
-            </li>
+            </li-->
             
             <li class="nav-title">Registro</li>
             <li class="nav-item">
@@ -137,22 +144,22 @@
               </a>
             </li>
 
-            <li class="nav-title">transacciones de compras y ventas</li>
+            <!--li class="nav-title">transacciones de compras y ventas</li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/ventas/cliente')}}">
+              <a class="nav-link" href="{ {url('/ventas/cliente')}}">
                 <i class="nav-icon icon-drop"></i>Cliente
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/ventas/venta')}}">
+              <a class="nav-link" href="{ {url('/ventas/venta')}}">
                 <i class="nav-icon icon-drop"></i>Venta
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/compras/ingreso')}}">
+              <a class="nav-link" href="{ {url('/compras/ingreso')}}">
                 <i class="nav-icon icon-drop"></i>Compras
               </a>
-            </li>
+            </li-->
           </div>
         </div>
 <!------------------------------------------------------------------------------------------------------------------------------------------->
@@ -211,7 +218,7 @@
     <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
 
     <!--Bootsap Select-->
-    <!--script src="{{asset('js/bootstrap-select-2.min.js')}}"></script-->
+    <!--script src="{ {asset('js/bootstrap-select-2.min.js')}}"></script-->
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
@@ -220,12 +227,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
     <!--Jquery 3.4-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-es_ES.min.js"></script>
-    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
-    @stack('scripts')
-    
+   
     <!-- Bootstrap 3.3.5-->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!--AdminLTE App-->
     <script src="{{asset('js/app.min.js')}}"></script>
+    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+    @stack('scripts')
   </body>
 </html>

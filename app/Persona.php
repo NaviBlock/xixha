@@ -13,7 +13,7 @@ class Persona extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'tipo_persona',
+       /* 'tipo_persona',
         'nombre',
     	'direccion',
     	'telefono',
@@ -34,8 +34,17 @@ class Persona extends Model
         'curp',
         'folio',
         'img_clave_rast',
+    ]; */
+        'folio',
+        'tipo_persona',
+        'nombre',
+        'apellidopa',
+        'apellidoma',
+        'curp',
+        'recibo',
+        'estado'
     ]; 
-    
+ 
     protected $guarded = [       
     ];
 } 
