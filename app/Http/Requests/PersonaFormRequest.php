@@ -11,7 +11,7 @@ class PersonaFormRequest extends Request
         return true;
     }
  
-    public function rules()
+    public function rules() 
     {
         /*return [ 
             'folio'=>'',
@@ -43,7 +43,20 @@ class PersonaFormRequest extends Request
             'apellidoma'=>'',
             'curp'=>'',
             'recibo'=>'',
-            'estado'=>''
+            'estado'=>'',
+            'direccion'=>'',
+            'telefono'=>'',
+            'email'=>'',
+            'upp'=>'',
+            'pgn'=>'',
+            'clave_rast'=>'',
+            'num_colmena'=>'',
+            'prod_anual'=>'',
+            'certificacion'=>'',
+            'temp_cosecha'=>'',
+            'loc_api'=>'',
+            'mov_api'=>'',
+            'observacion'=>'',
         ]; 
     }
 }

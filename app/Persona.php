@@ -9,7 +9,7 @@ class Persona extends Model
     protected $table = 'persona';
 
     protected $primaryKey ='idpersona';
-
+ 
     public $timestamps = false;
 
     protected $fillable = [
@@ -42,7 +42,20 @@ class Persona extends Model
         'apellidoma',
         'curp',
         'recibo',
-        'estado'
+        'estado',
+        'direccion',
+        'telefono',
+        'email',
+        'upp',
+        'pgn',
+        'clave_rast',
+        'num_colmena',
+        'prod_anual',
+        'certificacion',
+        'temp_cosecha',
+        'loc_api',
+        'mov_api',
+        'observacion'
     ]; 
  
     protected $guarded = [       

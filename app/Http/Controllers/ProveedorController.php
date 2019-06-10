@@ -1,5 +1,5 @@
 <?php
-
+//https://jsfiddle.net/boilerplate/jquery
 namespace xixha\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use xixha\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\input;
 use xixha\Http\Requests\PersonaFormRequest;
-
+ 
 use xixha\Persona; 
 use DB;
 use Storage;
@@ -78,9 +78,11 @@ class ProveedorController extends Controller
         $personas->upp=$request->get('upp');
         $personas->pgn=$request->get('pgn');
         $personas->clave_rast=$request->get('clave_rast');
+        $personas->loc_api=$request->get('loc_api');
+        $personas->mov_api=$request->get('mov_api');
+        $personas->observacion=$request->get('observacion');
         $personas->save();
-
-        
+ 
         /*if (Input::hasFile('img_curp')) {
             $file=Input::file('img_curp');
             $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
@@ -122,8 +124,8 @@ class ProveedorController extends Controller
             $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
             $personas->img_clave_rast=$file->getClientOriginalName();
         }*/
-        
-        return Redirect::to('compras/proveedor'); 
+        return Redirect::to('compras/proveedor');
+       // return view('compras/proveedor',['personas'=>$personas]); 
     }
  
     public function show($id){
