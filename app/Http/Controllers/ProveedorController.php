@@ -85,14 +85,14 @@ class ProveedorController extends Controller
         $personas->prod_anual=$request->get('prod_anual');
         $personas->num_colmena=$request->get('num_colmena');
         $personas->curp=$request->get('curp');
-
+/*
         if (Input::hasFile('img_curp')) {
             $file=Input::file('img_curp');
             $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
             $personas->img_curp=$file->getClientOriginalName();
-        }
+        }*/
 
-        $personas->tipo_certificacion=$request->get('tipo_certificacion');
+        //$personas->tipo_certificacion=$request->get('tipo_certificacion');
         $personas->upp=$request->get('upp');
         $personas->pgn=$request->get('pgn');
         $personas->clave_rast=$request->get('clave_rast');
@@ -106,7 +106,7 @@ class ProveedorController extends Controller
             $personas->img_perfil=$file->getClientOriginalName();
         }*/
 
-        if (Input::hasFile('img_perfil')) {
+       /* if (Input::hasFile('img_perfil')) {
             $file=Input::file('img_perfil');
             $nombre_original=$file->getClientOriginalName();
             $extension=$file->getClientOriginalExtension();
@@ -131,7 +131,7 @@ class ProveedorController extends Controller
             $file=Input::file('img_clave_rast');
             $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
             $personas->img_clave_rast=$file->getClientOriginalName();
-        }
+        }*/
 
         $personas->save();
         return Redirect::to('compras/proveedor'); 
