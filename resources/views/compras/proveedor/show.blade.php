@@ -13,7 +13,7 @@
 				</div>
 			@endif
 		</div> 
-	</div>  
+	</div>
 	{!!Form::model($persona,['method'=>'PATCH','route'=>['compras.proveedor.update',$persona->idpersona]]) !!}
 	{{Form::token()}}
  

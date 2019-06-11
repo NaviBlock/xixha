@@ -60,7 +60,7 @@
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="rfc" pattern="[0-9,a-z,A-Z]" value="{{old('rfc')}}" id="rfc" class="md-textarea form-control lineA" placeholder="RFC...">
+				<input type="text" name="rfc" value="{{old('rfc')}}" id="rfc" class="md-textarea form-control lineA" placeholder="RFC...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">RFC</span>
 				</div>
@@ -71,36 +71,35 @@
 					<span class="input-group-text" id="basic-addon2">Estado</span>
 				</div>			
 				<select  name="estadoP" value="{{old('estadoP')}}" id="estadoP" class="md-textarea form-control lineA">
-					<option value="Hombre">AGUASCALIENTES</option>
-					<option value="Mujer">BAJA CALIFORNIA</option>
-					<option value="Hombre">BAJA CALIFORNIA SUR</option>
-					<option value="Mujer">CAMPECHE</option>
-					<option value="Hombre">CHIAPAS</option>
-					<option value="Mujer">CHIHUAHUA</option>
-					<option value="Hombre">COAHUILA</option>
-					<option value="Mujer">COLIMA</option>
-					<option value="Hombre">DISTRITO FEDERAL</option>
-					<option value="Mujer">DURANGO</option>
-					<option value="Hombre">GUANAJUATO</option>
-					<option value="Mujer">GUERRERO</option>
-					<option value="Hombre">HIDALGO</option>
-					<option value="Mujer">MICHOACAN</option>
-					<option value="Hombre">MORELOS</option>
-					<option value="Mujer">NAYARIT</option>
-					<option value="Hombre">NUEVO LEON</option>
-					<option value="Mujer">OAXACA</option>
-					<option value="Hombre">PUEBLA</option>
-					<option value="Mujer">QUERETARO</option>
-					<option value="Hombre">QUINTANA ROO</option>
-					<option value="Mujer">SINALOA</option>
-					<option value="Hombre">SONORA</option>
-					<option value="Mujer">TABASCO</option>
-					<option value="Hombre">TAMAULIPAS</option>
-					<option value="Mujer">Mujer</option>
-					<option value="Hombre">TLAXCALA</option>
-					<option value="Mujer">VERACURZ</option>
-					<option value="Hombre">YUCATÁN</option>
-					<option value="Mujer">ZACATECAS</option>
+					<option value="aguascalientes">AGUASCALIENTES</option>
+					<option value="bajacalifornia">BAJA CALIFORNIA</option>
+					<option value="bajacaliforniasur">BAJA CALIFORNIA SUR</option>
+					<option value="campeche">CAMPECHE</option>
+					<option value="chiapas">CHIAPAS</option>
+					<option value="chihuahua">CHIHUAHUA</option>
+					<option value="coahuila">COAHUILA</option>
+					<option value="colima">COLIMA</option>
+					<option value="df">DISTRITO FEDERAL</option>
+					<option value="durango">DURANGO</option>
+					<option value="guanajuato">GUANAJUATO</option>
+					<option value="guerrero">GUERRERO</option>
+					<option value="hidalgo">HIDALGO</option>
+					<option value="michoacan">MICHOACAN</option>
+					<option value="morelos">MORELOS</option>
+					<option value="nayarit">NAYARIT</option>
+					<option value="nuevoleon">NUEVO LEON</option>
+					<option value="oaxaca">OAXACA</option>
+					<option value="puebla">PUEBLA</option>
+					<option value="queretaro">QUERETARO</option>
+					<option value="quintanaroo">QUINTANA ROO</option>
+					<option value="sinaloa">SINALOA</option>
+					<option value="sonora">SONORA</option>
+					<option value="tabasco">TABASCO</option>
+					<option value="tamaluipas">TAMAULIPAS</option>
+					<option value="tlaxcala">TLAXCALA</option>
+					<option value="veracruz">VERACURZ</option>
+					<option value="yucatán">YUCATÁN</option>
+					<option value="zacatecas">ZACATECAS</option>
 				</select>
 			</div>
 
@@ -108,29 +107,24 @@
 			<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">MUNICIPIO</span>
 				</div>
-				<input type="text" name="municipio" pattern="[0-9,a-z,A-Z]" value="{{old('municipio')}}" id="municipio" class="md-textarea form-control lineA" placeholder="MUNICIPIO...">
+				<input type="text" name="municipio" value="{{old('municipio')}}" id="municipio" class="md-textarea form-control lineA" placeholder="MUNICIPIO...">
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="calle" pattern="[0-9,a-z,A-Z]" value="{{old('calle')}}" id="calle" class="md-textarea form-control lineA" placeholder="CALLE...">
+				<input type="text" name="calle" value="{{old('calle')}}" id="calle" class="md-textarea form-control lineA" placeholder="CALLE...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">CALLE</span>
 				</div>
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="colonia" pattern="[0-9,a-z,A-Z]" value="{{old('colonia')}}" id="colonia" class="md-textarea form-control lineA" placeholder="COLONIA/LOCALIDAD...">
+				<input type="text" name="colonia" value="{{old('colonia')}}" id="colonia" class="md-textarea form-control lineA" placeholder="COLONIA/LOCALIDAD...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">COLONIA/LOCALIDAD</span>
 				</div>
 			</div>
 			
-			<!--
-				idxixha x000001
-				mueve sus colmenas
-				a dónde 
-				observaciones
-			-->
+
 				
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
@@ -149,12 +143,12 @@
 				<input type="text" name="email" value="{{old('email')}}" id="email" class="md-textarea form-control lineA" placeholder="Correo Electronico..." aria-label="Username" aria-describedby="addon-wrapping">
 			</div><br>
 
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3 data">
+			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3 data">
 				<input type="date" name="fecha_hora" value="{{old('fecha_hora')}}" id="fecha_hora" class="md-textarea form-control lineA" placeholder="Fecha de Nacimiento...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">Fecha de Nacimiento</span>
 				</div>
-			</div>
+			</div-->
 
 			<div><br><br><h3 class="text-center">Datos de Rastreabilidad</h3></div>
 			<br>
@@ -220,6 +214,10 @@
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">¿Mueve sus Colmenas?</span>
 				</div>
+				<select>
+					<option value="si">si</option>
+					<option value="no">no</option>
+				</select>
 				<textarea rows="3" name="mov_col" value="{{old('mov_col')}}" class="form-control lineB" placeholder="¿Mueve sus Colmenas?..."></textarea>
 
 				<!--input type="text" name="mov_col" value="{{old('mov_col')}}" class="md-textarea form-control lineB" placeholder="¿Mueve sus Colmenas?..."-->
@@ -235,7 +233,7 @@
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
-			<textarea rows="3" name="donde" value="{{old('observacion')}}" class="form-control lineB" placeholder="¿A Dónde?..."></textarea>		
+			<textarea rows="3" name="donde" value="{{old('observacion')}}" class="form-control lineB" placeholder="Observación..."></textarea>		
 				<!--input type="text" name="observacion" value="{{old('observacion')}}" class="md-textarea form-control lineB" placeholder="OBSERVACIÓN..."-->
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">Observación</span>

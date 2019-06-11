@@ -59,7 +59,7 @@
                                 <div class="btn-group mr-4" role="group" aria-label="Boton de Eliminar">
                                     <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger btn-block">Eliminar</button></a>
                                 </div>
-                            </div>
+                            </div> 
                             </td>
                             <!--td><br>
                                 <a href="{ {asset('compras/ingreso')}}"><button class="btn btn-success btn-block">Realizar Transacción</button>
