@@ -31,28 +31,28 @@ class ProveedorController extends Controller
         if ($request){
             $query = trim($request->get('searchText'));
             $personas = DB::table('persona')
-            ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','direccion','telefono','email','upp','pgn','clave_rast','certificacion','prod_anual','num_colmena')
+            ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','estado','direccion','telefono','email','upp','pgn','clave_rast','num_colmena','prod_anual','certificacion','fecha_hora')
 
             ->where('nombre','LIKE','%'.$query.'%')
-            ->where('tipo_persona','=','proveedor')
+            ->where('tipo_persona','=','Apicultor')
 
             ->orwhere('telefono','LIKE','%'.$query.'%')
-            ->where('tipo_persona','=','proveedor')
+            ->where('tipo_persona','=','Apicultor')
 
             ->orwhere('curp','LIKE','%'.$query.'%')
-            ->where('tipo_persona','=','proveedor')
+            ->where('tipo_persona','=','Apicultor')
 
             ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('tipo_persona','=','proveedor')
+            ->where('tipo_persona','=','Apicultor')
 
             ->orwhere('upp','LIKE','%'.$query.'%')
-            ->where('tipo_persona','=','proveedor')
+            ->where('tipo_persona','=','Apicultor')
 
             ->orwhere('pgn','LIKE','%'.$query.'%')
-            ->where('tipo_persona','=','proveedor')
+            ->where('tipo_persona','=','Apicultor')
 
             ->orwhere('clave_rast','LIKE','%'.$query.'%')
-            ->where('tipo_persona','=','proveedor')
+            ->where('tipo_persona','=','Apicultor')
 
             ->orderBy('idpersona','desc')
             ->paginate(5);
@@ -66,22 +66,29 @@ class ProveedorController extends Controller
   
     public function store(PersonaFormRequest $request){
         $personas = new Persona;
-        $personas->tipo_persona='proveedor';
+        //$personas->tipo_persona='proveedor';
         $personas->nombre=$request->get('nombre');
+        $personas->apellidopa=$request->get('apellidopa');
+        $personas->apellidoma=$request->get('apellidoma');
+        $personas->curp=$request->get('curp');
         $personas->direccion=$request->get('direccion');
         $personas->telefono=$request->get('telefono');
         $personas->email=$request->get('email');
-        $personas->prod_anual=$request->get('prod_anual');
-        $personas->num_colmena=$request->get('num_colmena');
-        $personas->curp=$request->get('curp');
         $personas->certificacion=$request->get('certificacion');
+        $personas->clave_rast=$request->get('clave_rast');
         $personas->upp=$request->get('upp');
         $personas->pgn=$request->get('pgn');
-        $personas->clave_rast=$request->get('clave_rast');
-        $personas->loc_api=$request->get('loc_api');
-        $personas->mov_api=$request->get('mov_api');
-        $personas->observacion=$request->get('observacion');
+        $personas->prod_anual=$request->get('prod_anual');
+        $personas->num_colmena=$request->get('num_colmena');
+        //$personas->temp_cosecha=$request->get('temp_cosecha');
+        $persona->fecha_hora = $mytime->toDateTimeString();
+        $personas->tipo_persona ='Apicultor';
+        $personas->estado ='Activo';
         $personas->save();
+        //$personas->loc_api=$request->get('loc_api');
+        //$personas->mov_api=$request->get('mov_api');
+        //$personas->observacion=$request->get('observacion');
+       
  
         /*if (Input::hasFile('img_curp')) {
             $file=Input::file('img_curp');
@@ -135,27 +142,28 @@ class ProveedorController extends Controller
     public function edit($id){
         return view('compras.proveedor.edit',['persona'=>Persona::findOrFail($id)]);
     }
+
+    /*public function apic($id){
+        return view('compras.proveedor.apic',['persona'=>Persona::findOrFail($id)]);
+    }*/
  
     public function update(PersonaFormRequest $request,$id){
-        /*$persona = Persona::findOrFail($id); // categoria que quiero modificar 
-        $persona->nombre=$request->get('nombre');
-        $persona->tipo_documento=$request->get('tipo_documento');
-        $persona->num_documento=$request->get('num_documento');
-        $persona->direccion=$request->get('direccion');
-        $persona->telefono=$request->get('telefono');
-        $persona->email=$request->get('email');
-        $persona->num_colmena=$request->get('num_colmena');
-        $persona->geoloc_apiario=$request->get('geoloc_apiario');
-        $persona->prod_anual=$request->get('prod_anual');
-        $persona->temp_cosecha=$request->get('temp_cosecha');
-        $persona->certificacion=$request->get('certificacion');
-        $persona->mueve_sus_colmena=$request->get('mueve_sus_colmena');
-        $persona->a_donde=$request->get('a_donde');
-        $persona->observaciones=$request->get('observaciones');
-        $persona->upp=$request->get('upp');
-        $persona->pgn=$request->get('pgn');
-        $persona->clave_rast=$request->get('clave_rast');
-        $persona->update();*/
+        $persona = Persona::findOrFail($id); // categoria que quiero modificar 
+        $personas->nombre=$request->get('nombre');
+        $persona->apellidopa=$request->get('apellidopa');
+        $persona->apellidoma=$request->get('apellidoma');
+        $persona->curp=$request->get('curp');
+        $personas->direccion=$request->get('direccion');
+        $personas->telefono=$request->get('telefono');
+        $personas->email=$request->get('email');
+        $personas->certificacion=$request->get('certificacion');
+        $personas->clave_rast=$request->get('clave_rast');
+        $personas->upp=$request->get('upp');
+        $personas->pgn=$request->get('pgn');
+        $personas->prod_anual=$request->get('prod_anual');
+        $personas->num_colmena=$request->get('num_colmena');
+        //$personas->temp_cosecha=$request->get('temp_cosecha');
+        $persona->update();
         return Redirect::to('compras/proveedor');
     }
  

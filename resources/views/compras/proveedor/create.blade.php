@@ -28,6 +28,8 @@
 					<input type="text" name="apellidoma" required value="{{old('apellidoma')}}" class="md-textarea form-control lineA " placeholder="Apellido Marteno..." aria-describedby="basic-addon2">
 				</div>
 			</div>
+
+
 			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<input type="text" name="apellidopa" required value="{{old('apellidopa')}}" class="md-textarea form-control lineA " placeholder="Apellido Parteno..." aria-describedby="basic-addon2">
 				<div class="input-group-append">
@@ -41,18 +43,95 @@
 			</div-->
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">SEXO</span>
+				</div>			
+				<select  name="sexo" value="{{old('sexo')}}" id="sexo" class="md-textarea form-control lineA">
+					<option value="Hombre">Hombre</option>
+					<option value="Mujer">Mujer</option>
+				</select>
+			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<input type="text" name="curp" pattern="[0-9,a-z,A-Z]{18}" value="{{old('curp')}}" id="curp" class="md-textarea form-control lineA" placeholder="CURP...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">CURP 18 caracteres</span>
 				</div>
 			</div>
 
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
-				<input type="text" name="direccion" value="{{old('direccion')}}" class="md-textarea form-control lineA" placeholder="Dirección...">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="rfc" pattern="[0-9,a-z,A-Z]" value="{{old('rfc')}}" id="rfc" class="md-textarea form-control lineA" placeholder="RFC...">
 				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Dirección Completa</span>
+					<span class="input-group-text" id="basic-addon2">RFC</span>
 				</div>
 			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Estado</span>
+				</div>			
+				<select  name="estadoP" value="{{old('estadoP')}}" id="estadoP" class="md-textarea form-control lineA">
+					<option value="Hombre">AGUASCALIENTES</option>
+					<option value="Mujer">BAJA CALIFORNIA</option>
+					<option value="Hombre">BAJA CALIFORNIA SUR</option>
+					<option value="Mujer">CAMPECHE</option>
+					<option value="Hombre">CHIAPAS</option>
+					<option value="Mujer">CHIHUAHUA</option>
+					<option value="Hombre">COAHUILA</option>
+					<option value="Mujer">COLIMA</option>
+					<option value="Hombre">DISTRITO FEDERAL</option>
+					<option value="Mujer">DURANGO</option>
+					<option value="Hombre">GUANAJUATO</option>
+					<option value="Mujer">GUERRERO</option>
+					<option value="Hombre">HIDALGO</option>
+					<option value="Mujer">MICHOACAN</option>
+					<option value="Hombre">MORELOS</option>
+					<option value="Mujer">NAYARIT</option>
+					<option value="Hombre">NUEVO LEON</option>
+					<option value="Mujer">OAXACA</option>
+					<option value="Hombre">PUEBLA</option>
+					<option value="Mujer">QUERETARO</option>
+					<option value="Hombre">QUINTANA ROO</option>
+					<option value="Mujer">SINALOA</option>
+					<option value="Hombre">SONORA</option>
+					<option value="Mujer">TABASCO</option>
+					<option value="Hombre">TAMAULIPAS</option>
+					<option value="Mujer">Mujer</option>
+					<option value="Hombre">TLAXCALA</option>
+					<option value="Mujer">VERACURZ</option>
+					<option value="Hombre">YUCATÁN</option>
+					<option value="Mujer">ZACATECAS</option>
+				</select>
+			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+			<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">MUNICIPIO</span>
+				</div>
+				<input type="text" name="municipio" pattern="[0-9,a-z,A-Z]" value="{{old('municipio')}}" id="municipio" class="md-textarea form-control lineA" placeholder="MUNICIPIO...">
+			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="calle" pattern="[0-9,a-z,A-Z]" value="{{old('calle')}}" id="calle" class="md-textarea form-control lineA" placeholder="CALLE...">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">CALLE</span>
+				</div>
+			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="colonia" pattern="[0-9,a-z,A-Z]" value="{{old('colonia')}}" id="colonia" class="md-textarea form-control lineA" placeholder="COLONIA/LOCALIDAD...">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">COLONIA/LOCALIDAD</span>
+				</div>
+			</div>
+			
+			<!--
+				idxixha x000001
+				mueve sus colmenas
+				a dónde 
+				observaciones
+			-->
+				
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
 			<div class="input-group-append">
@@ -67,8 +146,14 @@
 					<!--small id="emailHelp" class="form-text text-muted"></small-->
 					<span class="input-group-text" id="email">@</span>
 				</div>
-
 				<input type="text" name="email" value="{{old('email')}}" id="email" class="md-textarea form-control lineA" placeholder="Correo Electronico..." aria-label="Username" aria-describedby="addon-wrapping">
+			</div><br>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3 data">
+				<input type="date" name="fecha_hora" value="{{old('fecha_hora')}}" id="fecha_hora" class="md-textarea form-control lineA" placeholder="Fecha de Nacimiento...">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Fecha de Nacimiento</span>
+				</div>
 			</div>
 
 			<div><br><br><h3 class="text-center">Datos de Rastreabilidad</h3></div>
@@ -95,38 +180,76 @@
 					<span class="input-group-text" id="basic-addon2">PGN</span>
 				</div>			
 				<input type="text" name="pgn" value="{{old('pgn')}}" class="md-textarea form-control lineB" placeholder="PGN...">
-			</div>			
-
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
-				<input type="text" name="prod_anual" value="{{old('prod_anual')}}" class="md-textarea form-control lineB" placeholder="Producción anual...">
-				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Producción Anual en Kg</span>
-				</div>
-				<input type="text" name="num_colmena" value="{{old('num_colmena')}}" class="md-textarea form-control lineB" placeholder="Numero de Colmena...">
-				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Numeros de Colmenas</span>
-				</div>
-			</div>
+			</div>	
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input-group mb-3 aol">
 				<div class="input-group-prepend">
 					<span class="input-group-text" id="basic-addon2 text-center" for="inputGroupSelect01">Temporada de Cosecha</span>
 				</div>	
-				<select class="custom-select" id="inputGroupSelect01">
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control lineB">primavera</option>
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control lineB">verano</option>
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control lineB">otoño</option>
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control lineB">invierno</option>
+				<select class="custom-select lineB" id="inputGroupSelect01">
+					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">primavera</option>
+					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">verano</option>
+					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">otoño</option>
+					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">invierno</option>
 				</select>
 			</div>
-			<div><br><br><h3 class="text-center">Localizacion de los Apiarios</h3></div>
-			<br><br>
-<!--------------------------------------------------------------------------------------------------------------->
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
+				<input type="text" name="prod_anual" value="{{old('prod_anual')}}" class="md-textarea form-control lineB" placeholder="Producción anual de miel...">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Producción Anual de Miel en Kg</span>
+				</div>
+			</div>
+
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="num_colmena" value="{{old('num_colmena')}}" class="md-textarea form-control lineB" placeholder="Numero de Colmena o Chapetas...">			
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Numeros de Colmenas o Chapetas</span>
+				</div>
+			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Localización de los Apiarios</span>
+				</div>
+				<textarea rows="3" name="loc_api" value="{{old('loc_api')}}" class="form-control lineB" placeholder="Localización de los Apiarios..."></textarea>
+				<!--input type="text" name="loc_api" value="{{old('loc_api')}}" class="md-textarea form-control lineB" placeholder="LOCALIZACIÓN DE LOS APIARIOS..."-->
+			</div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">¿Mueve sus Colmenas?</span>
+				</div>
+				<textarea rows="3" name="mov_col" value="{{old('mov_col')}}" class="form-control lineB" placeholder="¿Mueve sus Colmenas?..."></textarea>
+
+				<!--input type="text" name="mov_col" value="{{old('mov_col')}}" class="md-textarea form-control lineB" placeholder="¿Mueve sus Colmenas?..."-->
+			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+			<textarea rows="3" name="donde" value="{{old('donde')}}" class="form-control lineB" placeholder="¿A Dónde?..."></textarea>
+
+				<!--input type="text" name="donde" value="{{old('donde')}}" class="md-textarea form-control lineB" placeholder="¿A Dónde?..."-->
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">¿A Dónde?</span>
+				</div>
+			</div>
+
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
+			<textarea rows="3" name="donde" value="{{old('observacion')}}" class="form-control lineB" placeholder="¿A Dónde?..."></textarea>		
+				<!--input type="text" name="observacion" value="{{old('observacion')}}" class="md-textarea form-control lineB" placeholder="OBSERVACIÓN..."-->
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Observación</span>
+				</div>
+			</div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+			<!--div><br><br><h3 class="text-center">Localizacion de los Apiarios</h3></div>
+			<br><br-->
+<!--------------------------------------------------------------------------------------------------------------->
+			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<table class="table">
 					<thead>
 						<tr>
-							<!--th>id</th-->
+							<--th>id</th>
 							<th>Localizacion</th>
 							<th>¿Movio sus Apiarios?
 								
@@ -170,7 +293,7 @@
 					
 				</table>
 				</div>
-			</div>
+			</div-->
 <!--------------------------------------------------------------------------------------------------------------->
 			<!--
 									<td>{ { $reg->idapiarios }}</td>
@@ -309,6 +432,7 @@
 							</script>
 			@endpush-->	
 <!--------------------------------------------------------------------------------------------------------------->
+			</div>
 			</div>
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2">			
 				<button class="btn btn-primary btn-block btn-lg" type="submit">Guardar</button><br>

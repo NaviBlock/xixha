@@ -47,6 +47,10 @@
                                 <div class="btn-group mr-4" role="group" aria-label="Boton Editar">
                                     <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-primary btn-block">Editar</button></a>
                                 </div>
+                                <!--div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="btn-group mr-4" role="group" aria-label="Boton apiarios">
+                                    <a href="{ {URL::action('ProveedorController@apic',$per->idpersona)}}"><button class="btn btn-primary btn-block">Apiarios</button></a-->
+                                </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="btn-group mr-4" role="group" aria-label="Boton Detalles">
                                     <a href="{{URL::action('ProveedorController@show',$per->idpersona)}}"><button class="btn btn-success btn-block">Detalles</button></a>

@@ -11,7 +11,7 @@ class Persona extends Model
     protected $primaryKey ='idpersona';
  
     public $timestamps = false;
-
+ 
     protected $fillable = [
        /* 'tipo_persona',
         'nombre',
@@ -35,13 +35,13 @@ class Persona extends Model
         'folio',
         'img_clave_rast',
     ]; */
-        'folio',
+        //'folio',
         'tipo_persona',
         'nombre',
         'apellidopa',
         'apellidoma',
         'curp',
-        'recibo',
+        //'recibo',
         'estado',
         'direccion',
         'telefono',
@@ -52,10 +52,10 @@ class Persona extends Model
         'num_colmena',
         'prod_anual',
         'certificacion',
-        'temp_cosecha',
-        'loc_api',
-        'mov_api',
-        'observacion'
+        //'temp_cosecha',
+        //'loc_api',
+        //'mov_api',
+        //'observacion'
     ]; 
  
     protected $guarded = [       
