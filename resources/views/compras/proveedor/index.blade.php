@@ -17,8 +17,8 @@
             <div class="table-responsive lineA">
 			    <table class="table table-striped table-bordered table-condensed table-hover text-center">
 				    <thead>
-                        <th>Folio</th>
-                        <th>Perfil</th>
+                        <!--th>Folio</th>
+                        <th>Perfil</th-->
                         <th>Nombre</th>
                         <th>Dirección</th>
                         <th>Telefono</th>
@@ -31,10 +31,10 @@
                     </thead>
                     @foreach($personas as $per)
                         <tr>
-                            <td>{{ $per->folio }}</td>
+                            <!--td>{ { $per->folio }}</td>
                             <td>
-                                <img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid">
-                            </td>
+                                <img src="{ {asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid">
+                            </td-->
                             <td>{{ $per->nombre }}</td>
                             <td>{{ $per->direccion }}</td>
                             <td>{{ $per->telefono }}</td>
