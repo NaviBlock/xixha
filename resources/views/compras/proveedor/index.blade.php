@@ -30,13 +30,13 @@
                         <!--th>Transacción</th-->
                     </thead>
                     @foreach($personas as $per)
-                        <!--tr>ffff
-                            <td>{ { $per->folio }}</td>
-                            <td>
+                        <tr>
+                            <td>{{ $per->folio }}</td>
+                            <!--td>
                                 <img src="{ {asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{ {$per->img_perfil}}" height="100px" width="100px" class="img-fluid">
                             </td-->
                             <td>{{ $per->nombre }}</td>
-                            <td>{{ $per->direccion }}</td>
+                            <td>{{ $per->estadoP }}</td>
                             <td>{{ $per->telefono }}</td>
                             <td>{{ $per->email }}</td>
                             <td>{{ $per->num_colmena }} </td>

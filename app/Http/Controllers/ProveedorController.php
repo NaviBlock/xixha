@@ -33,7 +33,7 @@ class ProveedorController extends Controller
         if ($request){
             $query = trim($request->get('searchText'));
             $personas = DB::table('persona')
-            ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','estado','direccion','telefono','email','upp','pgn','clave_rast','num_colmena','prod_anual','certificacion','fecha_hora','sexo','rfc','estadoP','municipio','calle','colonia','temp_cosecha','loc_api','mov_col','donde','observacion')
+            ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','estado','telefono','email','upp','pgn','clave_rast','num_colmena','prod_anual','certificacion','fecha_hora','sexo','rfc','estadoP','municipio','calle','colonia','temp_cosecha','loc_api','mov_col','donde','observacion','folio')
 
             ->where('nombre','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')
@@ -68,11 +68,6 @@ class ProveedorController extends Controller
     public function create(){  
         return view("compras.proveedor.create");
     }
-  
-    public static function random(){
-        $length = 16;
-    }
-
 
     public function store(PersonaFormRequest $request){
             $personas = new Persona;
@@ -80,8 +75,7 @@ class ProveedorController extends Controller
             $personas->nombre=$request->get('nombre');
             $personas->apellidopa=$request->get('apellidopa');
             $personas->apellidoma=$request->get('apellidoma');
-            $personas->curp=$request->get('curp');
-            $personas->direccion=$request->get('direccion');
+            $personas->curp=$request->get('curp');    
             $personas->telefono=$request->get('telefono');
             $personas->email=$request->get('email');
             $personas->certificacion=$request->get('certificacion');
@@ -91,12 +85,27 @@ class ProveedorController extends Controller
             $personas->prod_anual=$request->get('prod_anual');
             $personas->num_colmena=$request->get('num_colmena');
             $personas->temp_cosecha=$request->get('temp_cosecha');
+            $personas->estadoP=$request->get('estadoP');
+            $personas->sexo=$request->get('sexo');
+            $personas->rfc=$request->get('rfc');
+            $personas->municipio=$request->get('municipio');
+            $personas->calle=$request->get('calle');
+            $personas->colonia=$request->get('colonia');
+            $personas->loc_api=$request->get('loc_api');
+            $personas->mov_col=$request->get('mov_col');
+            $personas->donde=$request->get('donde');
+            $personas->observacion=$request->get('observacion');
             //$mytime = Carbon::now('America/Mexico_City');
             //$persona->fecha_hora = $mytime->toDateTimeString();
             $personas->tipo_persona ='Apicultor';
             $personas->estado ='Activo';
             
-            $personas->folio ='xi00'.random();
+            if(isset($folio)){
+                echo "Folio repetido";
+            }else{
+                $personas->folio = 'xi0'.(rand(1,100000));
+            }
+            //$personas->folio->gmp_strval(gmp_random_range(0,100000));
             $personas->save();
 
         //$personas->loc_api=$request->get('loc_api');
@@ -146,7 +155,7 @@ class ProveedorController extends Controller
             $personas->img_clave_rast=$file->getClientOriginalName();
         }*/
         return Redirect::to('compras/proveedor');
-       // return view('compras/proveedor',['personas'=>$personas]); 
+       //return view('compras/proveedor')->whit(['personas'=>$personas]); 
     }
  
     public function show($id){
@@ -166,8 +175,7 @@ class ProveedorController extends Controller
         $personas->nombre=$request->get('nombre');
         $persona->apellidopa=$request->get('apellidopa');
         $persona->apellidoma=$request->get('apellidoma');
-        $persona->curp=$request->get('curp');
-        $personas->direccion=$request->get('direccion');
+        $persona->curp=$request->get('curp');        
         $personas->telefono=$request->get('telefono');
         $personas->email=$request->get('email');
         $personas->certificacion=$request->get('certificacion');
@@ -177,6 +185,17 @@ class ProveedorController extends Controller
         $personas->prod_anual=$request->get('prod_anual');
         $personas->num_colmena=$request->get('num_colmena');
         $personas->temp_cosecha=$request->get('temp_cosecha');
+        $personas->estadoP=$request->get('estadoP');
+        $personas->sexo=$request->get('sexo');
+        $personas->rfc=$request->get('rfc');
+        $personas->municipio=$request->get('municipio');
+        $personas->calle=$request->get('calle');
+        $personas->colonia=$request->get('colonia');
+        $personas->loc_api=$request->get('loc_api');
+        $personas->mov_col=$request->get('mov_col');
+        $personas->donde=$request->get('donde');
+        $personas->observacion=$request->get('observacion');
+
         $persona->update();
         return Redirect::to('compras/proveedor');
     }

@@ -29,19 +29,6 @@
 				</div>
 			</div>
 
-
-			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="apellidopa" required value="{{old('apellidopa')}}" class="md-textarea form-control lineA " placeholder="Apellido Parteno..." aria-describedby="basic-addon2">
-				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Apellido Parteno</span>
-				</div>
-
-				<input type="text" name="apellidoma" required value="{{old('apellidoma')}}" class="md-textarea form-control lineA " placeholder="Apellido Marteno..." aria-describedby="basic-addon2">
-				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Apellido Marteno</span>
-				</div>
-			</div-->
-
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">SEXO</span>
@@ -53,7 +40,7 @@
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="curp" pattern="[0-9,a-z,A-Z]{18}" value="{{old('curp')}}" id="curp" class="md-textarea form-control lineA" placeholder="CURP...">
+				<input type="text" name="curp" pattern="[0-9,a-z,A-Z]{18}"  value="{{old('curp')}}" id="curp" class="md-textarea form-control lineA" placeholder="CURP...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">CURP 18 caracteres</span>
 				</div>
@@ -123,10 +110,7 @@
 					<span class="input-group-text" id="basic-addon2">COLONIA/LOCALIDAD</span>
 				</div>
 			</div>
-			
-
-				
-
+		
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
 			<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">Teléfono 10 Dígitos</span>
@@ -144,7 +128,7 @@
 			</div><br>
 
 			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3 data">
-				<input type="date" name="fecha_hora" value="{{old('fecha_hora')}}" id="fecha_hora" class="md-textarea form-control lineA" placeholder="Fecha de Nacimiento...">
+				<input type="date" name="fecha_hora" value="{ {old('fecha_hora')}}" id="fecha_hora" class="md-textarea form-control lineA" placeholder="Fecha de Nacimiento...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">Fecha de Nacimiento</span>
 				</div>
@@ -180,11 +164,11 @@
 				<div class="input-group-prepend">
 					<span class="input-group-text" id="basic-addon2 text-center" for="inputGroupSelect01">Temporada de Cosecha</span>
 				</div>	
-				<select class="custom-select lineB" id="inputGroupSelect01">
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">primavera</option>
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">verano</option>
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">otoño</option>
-					<option name="temp_cosecha" value="{{old('temp_cosecha')}}" class="md-textarea form-control ">invierno</option>
+				<select name="temp_cosecha" value="{{old('temp_cosecha')}}" class="custom-select md-textarea form-control lineB" id="inputGroupSelect01">
+					<option value="primavera">primavera</option>
+					<option value="verano">verano</option>
+					<option value="otoño">otoño</option>
+					<option value="invierno">invierno</option>
 				</select>
 			</div>
 
@@ -207,230 +191,32 @@
 					<span class="input-group-text" id="basic-addon2">Localización de los Apiarios</span>
 				</div>
 				<textarea rows="3" name="loc_api" value="{{old('loc_api')}}" class="form-control lineB" placeholder="Localización de los Apiarios..."></textarea>
-				<!--input type="text" name="loc_api" value="{{old('loc_api')}}" class="md-textarea form-control lineB" placeholder="LOCALIZACIÓN DE LOS APIARIOS..."-->
 			</div>
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
+
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">¿Mueve sus Colmenas?</span>
+				</div>	 
+				<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+					<button type="button" onclick="datoxx();" name="SI" class="btn btn-outline-primary btn-lg">SI</button>
+								
+					<button type="button" onclick="datox();" name="NO" class="btn btn-outline-danger btn-lg">NO</button>
 				</div>
-				<select>
-					<option value="si">si</option>
-					<option value="no">no</option>
-				</select>
-				<textarea rows="3" name="mov_col" value="{{old('mov_col')}}" class="form-control lineB" placeholder="¿Mueve sus Colmenas?..."></textarea>
-
-				<!--input type="text" name="mov_col" value="{{old('mov_col')}}" class="md-textarea form-control lineB" placeholder="¿Mueve sus Colmenas?..."-->
 			</div>
 
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+			<div class="amber-textarea active-amber-textarea-2 aolq" id="datoy">
 			<textarea rows="3" name="donde" value="{{old('donde')}}" class="form-control lineB" placeholder="¿A Dónde?..."></textarea>
-
-				<!--input type="text" name="donde" value="{{old('donde')}}" class="md-textarea form-control lineB" placeholder="¿A Dónde?..."-->
 				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">¿A Dónde?</span>
-				</div>
-			</div>
+					
+				</div> 
+			</div> 
+			<br><br>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
-			<textarea rows="3" name="donde" value="{{old('observacion')}}" class="form-control lineB" placeholder="Observación..."></textarea>		
-				<!--input type="text" name="observacion" value="{{old('observacion')}}" class="md-textarea form-control lineB" placeholder="OBSERVACIÓN..."-->
+			<textarea rows="3" name="observacion" value="{{old('observacion')}}" class="form-control lineB" placeholder="Observación..."></textarea>	
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">Observación</span>
 				</div>
-			</div>
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-			<!--div><br><br><h3 class="text-center">Localizacion de los Apiarios</h3></div>
-			<br><br-->
-<!--------------------------------------------------------------------------------------------------------------->
-			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<table class="table">
-					<thead>
-						<tr>
-							<--th>id</th>
-							<th>Localizacion</th>
-							<th>¿Movio sus Apiarios?
-								
-							</th>
-							<th>comentario</th>
-							<th>observaciones</th>
-						</tr>
-					</thead>
-					<td>test1</td>
-					<td>
-						<select class="custom-select" id="mov_sele">
-							<option value="si">si</option>
-							<option value="no">no</option>
-						</select></td>
-					<td>test1</td>
-					<td>test1</td>
-					<td>test1</td>
-
-
-					<td>test1</td>
-					<td>
-						<select class="custom-select" id="mov_sele">
-							<option value="si">si</option>
-							<option value="no">no</option>
-						</select></td>
-					<td>test1</td>
-					<td>test1</td>
-					<td>test1</td>
-
-
-					<td>test1</td>
-					<td>
-						<select class="custom-select" id="mov_sele">
-							<option value="si">si</option>
-							<option value="no">no</option>
-						</select></td>
-					<td>test1</td>
-					<td>test1</td>
-					<td>test1</td>
-
-					
-				</table>
-				</div>
-			</div-->
-<!--------------------------------------------------------------------------------------------------------------->
-			<!--
-									<td>{ { $reg->idapiarios }}</td>
-									<td>{ { $reg->loc_api }}</td>
-									<td>{ { $reg->mov_api }}</td>
-									<td>{ { $reg->observacion }}</td>
-								-->
-
-								<!--</*?php
-									$host = 'localhost';
-									$basededatos = 'dbconnectx';
-									$usuario = 'root';
-									$contraseña = '';
-
-									$conexion = new mysqli($host, $usuario,$contraseña, $basededatos);
-									if ($conexion -> connect_errno) {
-									die( "Fallo la conexión : (" . $conexion -> mysqli_connect_errno() 
-									. ") " . $conexion -> mysqli_connect_error());
-									}
-									$reg="SELECT * FROM apiarios order by idapiarios";
-									$query= $conexion->query($reg);
-
-									foreach ($personas as $per) {
-										echo '<tr>
-										<td>'.$per['idapiarios'].'</td>
-										<td>'.$per['loc_api'].'</td>
-										<td>'.$per['mov_api'].'</td>
-										<td>'.$per['observacion'].'</td>
-									</tr>';
-									}
-								?>
-							</table>
-								<form method="post">
-									<h3 class="bg-primary text-center pad-basic no-btm">Agregar</h3>
-									<table class="table bg-info"  id="tabla">
-										<tr class="fila-fija">
-											<td><input name="idapiarios[]" placeholder="ID"/></td>
-											<td><input name="loc_api[]" placeholder="Localización del apiario"/></td>
-											<td><input name="mov_api[]" placeholder="Si o No, lo Movio"/></td>
-											<td><input name="observacion[]" placeholder="Observaciones"/></td>
-											<td class="eliminar"><input type="button"   value="Menos -"/></td>
-										</tr>
-									</table>
-									<div class="btn-der">
-										<input type="submit" name="insertar" value="Insertar" class="btn btn-info"/>
-										<button id="adicional" name="adicional" type="button" class="btn btn-warning"> Más + </button>
-									</div>
-								</form>
-								<! ?php
-									//////////////////////// PRESIONAR EL BOTÓN //////////////////////////
-									if(isset($_POST['insertar']))
-									{
-										$items1 = ($_POST['idapiarios']);
-										$items2 = ($_POST['loc_api']);
-										$items3 = ($_POST['mov_api']);
-										$items4 = ($_POST['observacion']);			 
-									///////////// SEPARAR VALORES DE ARRAYS, EN ESTE CASO SON 4 ARRAYS UNO POR CADA INPUT (ID, NOMBRE, CARRERA Y GRUPO////////////////////)
-									while(true) {
-										//// RECUPERAR LOS VALORES DE LOS ARREGLOS ////////
-										$item1 = current($items1);
-										$item2 = current($items2);
-										$item3 = current($items3);
-										$item4 = current($items4);
-										////// ASIGNARLOS A VARIABLES ///////////////////
-										$ida=(( $item1 !== false) ? $item1 : ", &nbsp;");
-										$loc=(( $item2 !== false) ? $item2 : ", &nbsp;");
-										$mov=(( $item3 !== false) ? $item3 : ", &nbsp;");
-										$com=(( $item4 !== false) ? $item4 : ", &nbsp;");
-										//// CONCATENAR LOS VALORES EN ORDEN PARA SU FUTURA INSERCIÓN ////////
-										$valores='('.$ida.',"'.$loc.'","'.$mov.'","'.$com.'"),';
-										//////// YA QUE TERMINA CON COMA CADA FILA, SE RESTA CON LA FUNCIÓN SUBSTR EN LA ULTIMA FILA /////////////////////
-										$valoresQ= substr($valores, 0, -1);				    
-										///////// QUERY DE INSERCIÓN ////////////////////////////
-										$sql = "INSERT INTO apiarios (id_apiarios, loc_api, mov_api, observacion) 
-										VALUES $valoresQ";
-										$sqlRes=$conexion->query($sql) or mysql_error();				    
-										// Up! Next Value
-										$item1 = next( $items1 );
-										$item2 = next( $items2 );
-										$item3 = next( $items3 );
-										$item4 = next( $items4 );				    
-										// Check terminator
-										if($item1 === false && $item2 === false && $item3 === false && $item4 === false) break;    
-										}		
-									}
-									</div>
-								?-->
-								
-									<!--/div-->
-									<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-										<input type="text" name="loc_api" value="{ {old('loc_api')}}" class="md-textarea form-control lineB" placeholder="Localización de Apiarios...">
-									</div-->
-									<!--<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-										<input type="text" name="num_loc_api" value="{ {old('loc_api')}}" class="md-textarea form-control lineB" placeholder="Localización de Apiarios...">
-										<div class="input-group-append">
-											<span class="input-group-text" id="basic-addon2">Localización de Apiarios</span>
-										</div>
-									</div>--->
-									<!--div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
-										<h3>Listado de Apiarios</h3>
-									</div>
-									</div class="table-responsible col-lg-12 col-md-12 col-sm-12 col-xs-12">
-										<table class="table table-bordered table-hover table-condensed">
-											<thead>
-												<tr>
-													<th>Localización del Apiario</th>
-													<th><¿Movió sus Colmenas?/th>
-													<th>Observaciones</th>
-													<th>Opcion</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<th>Localización del Apiario<input type="text" for="loc_api" name="loc_api" id="loc_api"></th>
-													<th><¿Movió sus Colmenas?<input type="text" for="mov_col" name="mov_col" id="mov_col"></th>
-													<th>Observaciones<input type="text"  for="observacion" name="observacion" id="observacion"></th>
-													<th>Opcion</th>
-												</tr>
-											</tbody>
-										</table>
-									</div-->
-							<!--@push('scripts')
-							<script>			
-								$(function(){
-									// Clona la fila oculta que tiene los campos base, y la agrega al final de la tabla
-									$("#adicional").on('click', function(){
-										$("#tabla tbody tr:eq(0)").clone().removeClass('fila-fija').appendTo("#tabla");
-									});
-								
-									// Evento que selecciona la fila y la elimina 
-									$(document).on("click",".eliminar",function(){
-										var parent = $(this).parents().get(0);
-										$(parent).remove();
-									});
-								});
-							</script>
-			@endpush-->	
-<!--------------------------------------------------------------------------------------------------------------->
-			</div>
 			</div>
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2">			
 				<button class="btn btn-primary btn-block btn-lg" type="submit">Guardar</button><br>
