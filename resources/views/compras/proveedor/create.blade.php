@@ -34,8 +34,8 @@
 					<span class="input-group-text" id="basic-addon2">SEXO</span>
 				</div>			
 				<select  name="sexo" value="{{old('sexo')}}" id="sexo" class="md-textarea form-control lineA">
-					<option value="Hombre">Hombre</option>
-					<option value="Mujer">Mujer</option>
+					<option value="HOMBRE">HOMBRE</option>
+					<option value="MUJER">MUJER</option>
 				</select>
 			</div>
 
@@ -58,35 +58,35 @@
 					<span class="input-group-text" id="basic-addon2">Estado</span>
 				</div>			
 				<select  name="estadoP" value="{{old('estadoP')}}" id="estadoP" class="md-textarea form-control lineA">
-					<option value="aguascalientes">AGUASCALIENTES</option>
-					<option value="bajacalifornia">BAJA CALIFORNIA</option>
-					<option value="bajacaliforniasur">BAJA CALIFORNIA SUR</option>
-					<option value="campeche">CAMPECHE</option>
-					<option value="chiapas">CHIAPAS</option>
-					<option value="chihuahua">CHIHUAHUA</option>
-					<option value="coahuila">COAHUILA</option>
-					<option value="colima">COLIMA</option>
-					<option value="df">DISTRITO FEDERAL</option>
-					<option value="durango">DURANGO</option>
-					<option value="guanajuato">GUANAJUATO</option>
-					<option value="guerrero">GUERRERO</option>
-					<option value="hidalgo">HIDALGO</option>
-					<option value="michoacan">MICHOACAN</option>
-					<option value="morelos">MORELOS</option>
-					<option value="nayarit">NAYARIT</option>
-					<option value="nuevoleon">NUEVO LEON</option>
-					<option value="oaxaca">OAXACA</option>
-					<option value="puebla">PUEBLA</option>
-					<option value="queretaro">QUERETARO</option>
-					<option value="quintanaroo">QUINTANA ROO</option>
-					<option value="sinaloa">SINALOA</option>
-					<option value="sonora">SONORA</option>
-					<option value="tabasco">TABASCO</option>
-					<option value="tamaluipas">TAMAULIPAS</option>
-					<option value="tlaxcala">TLAXCALA</option>
-					<option value="veracruz">VERACURZ</option>
-					<option value="yucatán">YUCATÁN</option>
-					<option value="zacatecas">ZACATECAS</option>
+					<option value="AGUASCALIENTES">AGUASCALIENTES</option>
+					<option value="BAJA CALIFORNIA">BAJA CALIFORNIA</option>
+					<option value="BAJA CALIFORNIA SUR">BAJA CALIFORNIA SUR</option>
+					<option value="CAMPECHE">CAMPECHE</option>
+					<option value="CHIAPAS">CHIAPAS</option>
+					<option value="CHIHUAHUA">CHIHUAHUA</option>
+					<option value="COAHUILA">COAHUILA</option>
+					<option value="COLIMA">COLIMA</option>
+					<option value="DISTRITO FEDERAL">DISTRITO FEDERAL</option>
+					<option value="DURANGO">DURANGO</option>
+					<option value="GUANAJUATO">GUANAJUATO</option>
+					<option value="GUERRERO">GUERRERO</option>
+					<option value="HIDALGO">HIDALGO</option>
+					<option value="MICHOACAN">MICHOACAN</option>
+					<option value="MORELOS">MORELOS</option>
+					<option value="NAYARIT">NAYARIT</option>
+					<option value="NUEVO LEO">NUEVO LEON</option>
+					<option value="OAXACA">OAXACA</option>
+					<option value="PUEBLA">PUEBLA</option>
+					<option value="QUERETARO">QUERETARO</option>
+					<option value="QUINTANA ROO">QUINTANA ROO</option>
+					<option value="SINALOA">SINALOA</option>
+					<option value="SONORA">SONORA</option>
+					<option value="TABASCO">TABASCO</option>
+					<option value="TAMAULIPAS">TAMAULIPAS</option>
+					<option value="TLAXCALA">TLAXCALA</option>
+					<option value="VERACRUZ">VERACRUZ</option>
+					<option value="YUCATAN">YUCATÁN</option>
+					<option value="ZACATECAS">ZACATECAS</option>
 				</select>
 			</div>
 
@@ -165,10 +165,10 @@
 					<span class="input-group-text" id="basic-addon2 text-center" for="inputGroupSelect01">Temporada de Cosecha</span>
 				</div>	
 				<select name="temp_cosecha" value="{{old('temp_cosecha')}}" class="custom-select md-textarea form-control lineB" id="inputGroupSelect01">
-					<option value="primavera">primavera</option>
-					<option value="verano">verano</option>
-					<option value="otoño">otoño</option>
-					<option value="invierno">invierno</option>
+					<option value="PRIMAVERA">PRIMAVERA</option>
+					<option value="VERANO">VERANO</option>
+					<option value="OTOÑO">OTOÑO</option>
+					<option value="INVIERNO">INVIERNO</option>
 				</select>
 			</div>
 
@@ -207,7 +207,6 @@
 			<div class="amber-textarea active-amber-textarea-2 aolq" id="datoy">
 			<textarea rows="3" name="donde" value="{{old('donde')}}" class="form-control lineB" placeholder="¿A Dónde?..."></textarea>
 				<div class="input-group-append">
-					
 				</div> 
 			</div> 
 			<br><br>

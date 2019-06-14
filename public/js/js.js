@@ -4,5 +4,5 @@ function datox(){
 
 function datoxx(){
     document.getElementById('datoy').style.display='block';   
-    document.getElementById('datoy').style.white='100%'; 
-} 
+    //document.getElementById('datoy').style.white='100%'; 
+}  

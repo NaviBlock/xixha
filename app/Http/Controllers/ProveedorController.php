@@ -170,6 +170,11 @@ class ProveedorController extends Controller
         return view('compras.proveedor.apic',['persona'=>Persona::findOrFail($id)]);
     }*/
  
+    public function updateAPI(PersonaFormRequest $request,$id){
+        return Redirect::to('compras/proveedor');
+    }
+
+
     public function update(PersonaFormRequest $request,$id){
         $persona = Persona::findOrFail($id); // categoria que quiero modificar 
         $personas->nombre=$request->get('nombre');
