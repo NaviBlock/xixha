@@ -212,11 +212,12 @@
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Donde</span><br>
+					<span class="input-group-text" id="basic-addon2">Nota de Ubicación</span><br>
 				</div>
 				<input type="text" name="donde" value="{{$persona->donde}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
 			</div>
 		</div>
+
 
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 			<div class="form-group">

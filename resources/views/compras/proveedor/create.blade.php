@@ -197,10 +197,10 @@
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">¿Mueve sus Colmenas?</span>
 				</div>	 
-				<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3" selected	>
-					<button type="button" onclick="datoxx();" value="{{mov_col}}"  name="SI" class="btn btn-outline-primary btn-lg">SI</button>
-								
-					<button type="button" onclick="datox();" name="NO" value="{{mov_col}}" class="btn btn-outline-danger btn-lg">NO</button>
+				<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3" selected>
+
+					<button type="button" onclick="datoxx();" value="{('mov_loc')}}" name="SI" class="btn btn-outline-primary btn-lg">SI</button>			
+					<button type="button" onclick="datox();" value="{('mov_loc')}" name="NO" class="btn btn-outline-danger btn-lg">NO</button>
 				</div>
 			</div>
 
