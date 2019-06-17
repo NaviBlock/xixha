@@ -14,7 +14,7 @@
 			@endif
 		</div> 
 	</div>
-	{!!Form::model($persona,['method'=>'PATCH','route'=>['compras.proveedor.updateAPI',$persona->idpersona]]) !!}
+	{!!Form::model($persona,['method'=>'PATCH','route'=>['compras.proveedor.update',$persona->idpersona]]) !!}
 	{{Form::token()}}
  
 	<div class="row">
@@ -23,16 +23,11 @@
 		</div>
 		
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-			<div class="form-group mf-form amber-textarea 	active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="nombre" value="{{$persona->nombre}}" disabled ="true" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
-	
-				<input type="text" name="apellidopa" value="{{$persona->apellidopa}}" disabled ="true" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
-
-				<input type="text" name="apellidoma" value="{{$persona->apellidoma}}" disabled ="true" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
-
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Nombre completo</span><br>
+					<span class="input-group-text" id="basic-addon2">Folio: {{$persona->nombre}}." ".{{$persona->apellidopa}}." ".{{$persona->apellidoma}}</span><br>
 				</div>
+				<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
 			</div>
 		</div>
 			
@@ -68,6 +63,16 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="sexo" value="{{$persona->sexo}}" disabled ="true" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">SEXO</span><br>
+				</div>
+			</div>
+		</div>
+
 	
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
@@ -191,12 +196,6 @@
 		</div>
 		
 		</div>
-		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<!--a href="{{url('compras/proveedor')}}"><button class="btn btn-primary">Regresar</button></a-->
-				<a href="{{url()->previous()}}"><button class="btn btn-primary">Regresar</button></a>
-			</div>
-		</div> 
 	</div>
 	{!!Form::Close()!!}		
 @endsection

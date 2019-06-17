@@ -26,14 +26,10 @@
                         <th>Producción Anual en KG</th>
                         <th>Certificación</th>
                         <th>Opciones</th>
-                        <!--th>Transacción</th-->
                     </thead>
                     @foreach($personas as $per)
                         <tr>
                             <td>{{ $per->folio }}</td>
-                            <!--td>
-                                <img src="{ {asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{ {$per->img_perfil}}" height="100px" width="100px" class="img-fluid">
-                            </td-->
                             <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>
                             <td>{{ $per->estadoP }}</td>
                             <td>{{ $per->telefono }}</td>
@@ -51,21 +47,14 @@
                                 <div class="btn-group mr-4" role="group" aria-label="Boton Editar">
                                     <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-primary btn-block">Editar</button></a>
                                 </div>
-                                <!--div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="btn-group mr-4" role="group" aria-label="Boton apiarios">
-                                    <a href="{ {URL::action('ProveedorController@apic',$per->idpersona)}}"><button class="btn btn-primary btn-block">Apiarios</button></a-->
-                                </div>
 
+                                </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="btn-group mr-4" role="group" aria-label="Boton de Eliminar">
                                     <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal"><button class="btn btn-danger btn-block">Eliminar</button></a>
                                 </div>
                             </div> 
                             </td>
-                            <!--td><br>
-                                <a href="{ {asset('compras/ingreso')}}"><button class="btn btn-success btn-block">Realizar Transacción</button>
-                                </a>
-                            </td-->
                         </tr>
                         @include('compras.proveedor.modal')
                     @endforeach

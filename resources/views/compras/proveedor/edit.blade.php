@@ -18,129 +18,206 @@
 	{{Form::token()}}
  
 	<div class="row">
-		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<div class="form-group">
-				<label for="nombre">Nombre</label>
-				<input type="text" name="nombre" value="{{$persona->nombre}}" class="form-control" placeholder="Ingrese el nombre...">
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<h3 class="text-center">Datos Personales del Apicultor</h3><br>
+		</div>
+		
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Folio:{{$persona->folio}} {{$persona->nombre}}." ".{{$persona->apellidopa}}." ".{{$persona->apellidoma}}</span><br>
+				</div>
+				<input type="text" name="nombre" value="{{$persona->nombre}}" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<input type="text" name="apellidopa" value="{{$persona->apellidopa}}" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<input type="text" name="apellidoma" value="{{$persona->apellidoma}}" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
 			</div>
 		</div>
 		
-		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<div class="form-group">
-				<label for="direccion">Dirección</label>
-				<input type="text" name="direccion" value="{{$persona->direccion}}" class="form-control" placeholder="Direccion...">
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="estadoP" value="{{$persona->estadoP}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Estado</span><br>
+				</div>
+
+				<input type="text" name="municipio" value="{{$persona->municipio}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Municipio</span><br>
+				</div>
+
+				<input type="text" name="colonia" value="{{$persona->colonia}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Colonia</span><br>
+				</div>
+
+				<input type="text" name="calle" value="{{$persona->calle}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Calle</span><br>
+				</div>
 			</div>			
-		</div>	
+		</div>
+
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<div class="form-group">
-				<label for="docummento">Tipo de Documento</label>
-				<select name="tipo_documento" class="form-control">
-						<option value="RFC" selected>RFC</option>
-						<option value="CURP">CURP</option>
-						<option value="INE">INE</option>
-				</select>
-			</div>
-		</div>		
-		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<div class="form-group">
-				<label for="num_documento">Numero de Documento</label>
-				<input type="text" name="num_documento" value="{{$persona->num_documento}}" class="form-control" placeholder="Numero de documento">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="telefono" value="{{$persona->telefono}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Telefono</span><br>
+				</div>
 			</div>
 		</div>
 
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<div class="form-group">
-				<label for="telefono">Telefono</label>
-				<input type="text" name="telefono" value="{{$persona->telefono}}" class="form-control" placeholder="Numero de telefono">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="sexo" value="{{$persona->sexo}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">SEXO</span><br>
+				</div>
+			</div>
+		</div>
+
+	
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="email" value="{{$persona->email}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<span class="input-group-text" id="basic-addon2">Correo electronico</span><br>
+					</div>
+			</div>
+		</div>
+	
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="curp" value="{{$persona->curp}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<span class="input-group-text" id="basic-addon2">CURP</span><br>
+					</div>
 			</div>
 		</div>
 
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="text" name="email" value="{{$persona->email}}" class="form-control" placeholder="Correo electronico...">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="rfc" value="{{$persona->rfc}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<span class="input-group-text" id="basic-addon2">RFC</span><br>
+					</div>
+			</div>
+		</div>
+	
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<br><h3 class="text-center">Datos de Rastreabilidad</h3><br>
+		</div>
+
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Folio</span><br>
+				</div>
+				<input type="text" name="folio" value="{{$persona->folio}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
 			</div>
 		</div>
 
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="num_colmena">Numero de Colmena</label>
-					<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" class="form-control" placeholder="Numero de Colmena...">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="certificacion" value="{{$persona->certificacion}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Tipo de Certificación</span><br>
 				</div>
+			</div>
 		</div>
 
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="geoloc_apiario">Geolocalización de Apiarios</label>
-					<input type="text" name="geoloc_apiario" value="{{$persona->geoloc_apiario}}" class="form-control" placeholder="Geolocalización de Apiarios...">
-				</div>
-			</div> 
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="prod_anual">Produccion anual</label>
-					<input type="text" name="prod_anual" value="{{$persona->prod_anual}}"class="form-control" placeholder="Produccion anual...">
-				</div>
-			</div>  
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label>Temporada de Cosech</label>
-					<select name="temp_cosecha" class="form-control selectpicker" data-live-search="true">
-						<option value="primavera">primavera</option>
-						<option value="verano">verano</option>
-						<option value="otoño">otoño</option>
-						<option value="invierno">invierno</option>
-					</select>
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="temp_cosecha" value="{{$persona->temp_cosecha}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Temporada de Cosecha</span><br>
 				</div>
 			</div>
+		</div> 
 
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="tipo_certifcacion">Tipo de Certificación</label>
-					<input type="text" name="tipo_certifcacion" value="{{$persona->tipo_certifcacion}}" class="form-control" placeholder="Tipo de Certificación...">
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Numeros de Colmenas o Chapetas</span>
 				</div>
+				<input type="text" name="num_colmena" value="{{$persona->num_colmena}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
 			</div>
-
-			</div>
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label>Mueves sus Colmena</label>
-					<select name="mueve_sus_colmena" class="form-control selectpicker" data-live-search="true">
-						<option value="si">si</option>
-						<option value="no">no</option>
-					</select>
+		</div>
+	
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">UPP</span><br>
 				</div>
+				<input type="text" name="upp" value="{{$persona->upp}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
 			</div>
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="a_donde">A Donde</label>
-					<input type="text" name="a_donde" value="{{$persona->a_donde}}" class="form-control" placeholder="A Donde...">
-				</div>
-			</div>
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="observaciones">Observaciones</label>
-					<input type="text" name="observaciones" value="{{$persona->observaciones}}" class="form-control" placeholder="Observaciones...">
-				</div>
-			</div>
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="upp">UPP</label>
-					<input type="text" name="upp" value="{{$persona->upp}}" class="form-control" placeholder="UPP...">
-				</div>
-			</div>
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="pgn">PGN</label>
-					<input type="text" name="pgn" value="{{$persona->pgn}}" class="form-control" placeholder="PGN...">
-				</div>
-			</div>
-			<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-				<div class="form-group">
-					<label for="clave_rast">Clave de Rasteabilidad</label>
-					<input type="text" name="clave_rast" value="{{$persona->clave_rast}}" class="form-control" placeholder="Clave de Rasteabilidad...">
-				</div>
-			</div>
+		</div> 
 		
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+			<input type="text" name="pgn" value="{{$persona->pgn}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">PGN</span><br>
+				</div>
+			</div>
+		</div>
+	
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<input type="text" name="prod_anual" value="{{$persona->prod_anual}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Produccion anual</span><br>
+				</div>
+			</div>
+		</div>  
+		
+		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Clave de Rasteabilidad</span><br>
+				</div>
+				<input type="text" name="clave_rast" value="{{$persona->clave_rast}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+			</div>
+		</div>
+
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addto2">Localización de los Apiarios</span><br>
+				</div>	
+				<input type="text" name="loc_api" value="{{$persona->loc_api}}"  class="md-textarea form-control lineA" aria-describedby="basic-addto2">
+			</div>
+		</div>
+
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Observación</span><br>
+				</div>
+				<input type="text" name="observacion" value="{{$persona->observacion}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+			</div>
+		</div>
+
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">¿Mueve sus Colmenas?</span><br>
+				</div>
+			</div>
+			<select name="mov_col" class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3 selectpicker" data-live-search="true">
+				<option value="SI">SI</option>
+				<option value="NO">NO</option>
+			</select>
+		</div>
+
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Donde</span><br>
+				</div>
+				<input type="text" name="donde" value="{{$persona->donde}}"  class="md-textarea form-control lineA" aria-describedby="basic-addon2">
+			</div>
+		</div>
+
 		<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
 			<div class="form-group">
 				<button class="btn btn-primary" type="submit">Guardar</button>
@@ -148,5 +225,8 @@
 			</div>
 		</div> 
 	</div>
+	</div>
+	</div>
+
 	{!!Form::Close()!!}		
 @endsection

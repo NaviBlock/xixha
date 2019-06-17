@@ -104,58 +104,10 @@ class ProveedorController extends Controller
                 echo "Folio repetido";
             }else{
                 $personas->folio = 'xi0'.(rand(1,100000));
-            }
-            //$personas->folio->gmp_strval(gmp_random_range(0,100000));
+                $personas->save();
+            }        
             $personas->save();
-
-        //$personas->loc_api=$request->get('loc_api');
-        //$personas->mov_api=$request->get('mov_api');
-        //$personas->observacion=$request->get('observacion');
-       
- 
-        /*if (Input::hasFile('img_curp')) {
-            $file=Input::file('img_curp');
-            $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
-            $personas->img_curp=$file->getClientOriginalName();
-        }*/
-
-        /*if (Input::hasFile('img_perfil')){
-            $file=Input::file('img_perfil');
-            $nombre_original=$file->getClientOriginalName();
-            $extension=$file->getClientOriginalExtension();
-            $nuevo_nombre="userxixha-".$id.$extension;
-            $file->move(public_path().'/imagenes/perfil', $file->getClientOriginalName());
-            $personas->img_perfil=$file->getClientOriginalName();
-        }
-
-        if (Input::hasFile('img_perfil')) {
-            $file=Input::file('img_perfil');
-            $nombre_original=$file->getClientOriginalName();
-            $extension=$file->getClientOriginalExtension();
-            $file="userxixha-".$id.$extension;
-            $file->move(public_path().'/storage/perfil',$file->getClientOriginalName());
-            $personas->img_perfil=$file->getClientOriginalName();
-        }
-     
-        if (Input::hasFile('img_upp')) {
-            $file=Input::file('img_upp');
-            $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
-            $personas->img_upp=$file->getClientOriginalName();
-        }
-        
-        if (Input::hasFile('img_pgn')) {
-            $file=Input::file('img_pgn');
-            $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
-            $personas->img_pgn=$file->getClientOriginalName();
-        }
-
-        if (Input::hasFile('img_clave_rast')) {
-            $file=Input::file('img_clave_rast');
-            $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
-            $personas->img_clave_rast=$file->getClientOriginalName();
-        }*/
         return Redirect::to('compras/proveedor');
-       //return view('compras/proveedor')->whit(['personas'=>$personas]); 
     }
  
     public function show($id){
@@ -170,37 +122,35 @@ class ProveedorController extends Controller
         return view('compras.proveedor.apic',['persona'=>Persona::findOrFail($id)]);
     }*/
  
-    public function updateAPI(PersonaFormRequest $request,$id){
+    /*public function updateAPI(PersonaFormRequest $request,$id){
         return Redirect::to('compras/proveedor');
-    }
-
+    }*/
 
     public function update(PersonaFormRequest $request,$id){
         $persona = Persona::findOrFail($id); // categoria que quiero modificar 
-        $personas->nombre=$request->get('nombre');
+        $persona->nombre=$request->get('nombre');
         $persona->apellidopa=$request->get('apellidopa');
         $persona->apellidoma=$request->get('apellidoma');
         $persona->curp=$request->get('curp');        
-        $personas->telefono=$request->get('telefono');
-        $personas->email=$request->get('email');
-        $personas->certificacion=$request->get('certificacion');
-        $personas->clave_rast=$request->get('clave_rast');
-        $personas->upp=$request->get('upp');
-        $personas->pgn=$request->get('pgn');
-        $personas->prod_anual=$request->get('prod_anual');
-        $personas->num_colmena=$request->get('num_colmena');
-        $personas->temp_cosecha=$request->get('temp_cosecha');
-        $personas->estadoP=$request->get('estadoP');
-        $personas->sexo=$request->get('sexo');
-        $personas->rfc=$request->get('rfc');
-        $personas->municipio=$request->get('municipio');
-        $personas->calle=$request->get('calle');
-        $personas->colonia=$request->get('colonia');
-        $personas->loc_api=$request->get('loc_api');
-        $personas->mov_col=$request->get('mov_col');
-        $personas->donde=$request->get('donde');
-        $personas->observacion=$request->get('observacion');
-
+        $persona->telefono=$request->get('telefono');
+        $persona->email=$request->get('email');
+        $persona->certificacion=$request->get('certificacion');
+        $persona->clave_rast=$request->get('clave_rast');
+        $persona->upp=$request->get('upp');
+        $persona->pgn=$request->get('pgn');
+        $persona->prod_anual=$request->get('prod_anual');
+        $persona->num_colmena=$request->get('num_colmena');
+        $persona->temp_cosecha=$request->get('temp_cosecha');
+        $persona->estadoP=$request->get('estadoP');
+        $persona->sexo=$request->get('sexo');
+        $persona->rfc=$request->get('rfc');
+        $persona->municipio=$request->get('municipio');
+        $persona->calle=$request->get('calle');
+        $persona->colonia=$request->get('colonia');
+        $persona->loc_api=$request->get('loc_api');
+        $persona->mov_col=$request->get('mov_col');
+        $persona->donde=$request->get('donde');
+        $persona->observacion=$request->get('observacion');
         $persona->update();
         return Redirect::to('compras/proveedor');
     }
