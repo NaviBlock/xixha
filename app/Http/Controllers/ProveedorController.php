@@ -121,7 +121,8 @@ class ProveedorController extends Controller
                 //coloca el archivo en la carpeta imagenes/perfil 
                 //deberia poner el nombre.....? alarchivo 
                 $newnombre = 'xi0'.(rand(1,100000)).".".$extension; 
-                //fechacomunidad,usa el ine,
+                //fechacomunidad,usa el ine, 
+                //xi-curp-a
                 $file->move(public_path().'/imagenes/perfil',$newnombre);
                 
                 //registra el nombre a la referencia de imagen a la DB
