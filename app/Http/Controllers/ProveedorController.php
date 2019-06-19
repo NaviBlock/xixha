@@ -1,5 +1,4 @@
 <?php
-//https://jsfiddle.net/boilerplate/jquery
 namespace xixha\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -22,6 +21,8 @@ use Illuminate\Database\DatabaseManager;
 use xixha\User;
 use xixha\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Illuminate\Database\Eloquent\Model;
 
 class ProveedorController extends Controller
 { 
@@ -33,7 +34,7 @@ class ProveedorController extends Controller
         if ($request){
             $query = trim($request->get('searchText'));
             $personas = DB::table('persona')
-            ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','estado','telefono','email','upp','pgn','clave_rast','num_colmena','prod_anual','certificacion','fecha_hora','sexo','rfc','estadoP','municipio','calle','colonia','temp_cosecha','loc_api','mov_col','donde','observacion','folio')
+            ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','estado','telefono','email','upp','pgn','clave_rast','num_colmena','prod_anual','certificacion','fecha_hora','sexo','rfc','estadoP','municipio','calle','colonia','temp_cosecha','loc_api','mov_col','donde','observacion','folio','img_perfil')
 
             ->where('nombre','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')
@@ -100,12 +101,33 @@ class ProveedorController extends Controller
             $personas->tipo_persona ='Apicultor';
             $personas->estado ='Activo';
             
+            //Codigo para los Folios
             if(isset($folio)){
                 echo "Folio repetido";
             }else{
                 $personas->folio = 'xi0'.(rand(1,100000));
                 $personas->save();
-            }        
+            }   
+            
+            //Cdigo para subir la imagen de perfil
+           if(Input::hasFile('img_perfil')) {
+                $file=Input::file('img_perfil');    
+
+                //Obtener el Nombre
+                //$nombre_original=$file->getClientOriginalName();
+                //Otener la Extension
+                $extension=$file->getClientOriginalExtension();
+
+                //coloca el archivo en la carpeta imagenes/perfil 
+                //deberia poner el nombre.....? alarchivo 
+                $newnombre = 'xi0'.(rand(1,100000)).".".$extension;  
+                $file->move(public_path().'/imagenes/perfil',$newnombre);
+                
+                //registra el nombre a la referencia de imagen a la DB
+                $personas->img_perfil=$file->getClientOriginalName($newnombre); 
+                $personas->img_perfil=$newnombre;                                                         
+            }
+
             $personas->save();
         return Redirect::to('compras/proveedor');
     }
@@ -117,14 +139,6 @@ class ProveedorController extends Controller
     public function edit($id){
         return view('compras.proveedor.edit',['persona'=>Persona::findOrFail($id)]);
     }
-
-    /*public function apic($id){
-        return view('compras.proveedor.apic',['persona'=>Persona::findOrFail($id)]);
-    }*/
- 
-    /*public function updateAPI(PersonaFormRequest $request,$id){
-        return Redirect::to('compras/proveedor');
-    }*/
 
     public function update(PersonaFormRequest $request,$id){
         $persona = Persona::findOrFail($id); // categoria que quiero modificar 
@@ -151,6 +165,13 @@ class ProveedorController extends Controller
         $persona->mov_col=$request->get('mov_col');
         $persona->donde=$request->get('donde');
         $persona->observacion=$request->get('observacion');
+        //$persona->img_perfil=$request->get('img_perfil');
+        /*if (Input::hasFile('img_perfil')) {
+            $file=Input::file('img_perfil');
+            $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
+            $persona->img_perfil=$file->getClientOriginalName();
+        }*/
+
         $persona->update();
         return Redirect::to('compras/proveedor');
     }

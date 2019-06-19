@@ -13,37 +13,12 @@ class Persona extends Model
     public $timestamps = false;
  
     protected $fillable = [
-       /* 'tipo_persona',
-        'nombre',
-    	'direccion',
-    	'telefono',
-        'email',
-        'recibo',
-        'prod_anual',
-        'upp',
-        'pgn',
-        'clave_rast',
-        'num_colmena',
-        'estado',
-        'tipo_certificacion',
-        'img_perfil',
-        'img_curp',   
-        'img_pgn',
-        'img_upp',
-        'img_clave_rast',
-        'curp',
-        'folio',
-        'img_clave_rast',
-    ]; */
-        //'folio',
         'tipo_persona',
         'nombre',
         'apellidopa',
         'apellidoma',
         'curp',
-        //'recibo',
         'estado',
-        'direccion',
         'telefono',
         'email',
         'upp',
@@ -52,11 +27,21 @@ class Persona extends Model
         'num_colmena',
         'prod_anual',
         'certificacion',
-        //'temp_cosecha',
-        //'loc_api',
-        //'mov_api',
-        //'observacion'
-    ]; 
+        'fecha_hora',
+        'sexo',
+        'rfc',
+        'estadoP',
+        'municipio',
+        'calle',
+        'colonia',
+        'temp_cosecha',
+        'loc_api',
+        'mov_col',
+        'donde',
+        'observacion',
+        'folio',
+        'img_perfil'
+    ];   
  
     protected $guarded = [       
     ];

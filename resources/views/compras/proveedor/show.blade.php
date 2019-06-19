@@ -16,7 +16,6 @@
 	</div>
 	{!!Form::model($persona,['method'=>'PATCH','route'=>['compras.proveedor.update',$persona->idpersona]]) !!}
 	{{Form::token()}}
- 
 	<div class="row">
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 			<h3 class="text-center">Datos Personales del Apicultor</h3><br>
@@ -194,7 +193,13 @@
 				<input type="text" name="observacion" value="{{$persona->observacion}}" disabled ="true" class="md-textarea form-control lineA" aria-describedby="basic-addon2">
 			</div>
 		</div>
-		
+
+		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<label for="img_perfil">Imagen de Perfil</label>
+				<input type="file" name="img_perfil" value="{{$persona->img_perfil}}" disabled ="true" class="md-textarea form-control lineB" aria-describedby="basic-addon2">
+			</div>
+		</div>	
 		</div>
 	</div>
 	{!!Form::Close()!!}		

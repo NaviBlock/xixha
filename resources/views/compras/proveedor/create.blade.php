@@ -15,8 +15,14 @@
 					</ul> 
 				</div>
 			@endif  
-			{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 			{{Form::token()}}	
+			
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">			
+				<span class="input-group-text" id="basic-addon2">Imagen de Perfil</span>
+				<input type="file" name="img_perfil" value="{{('img_perfil')}}" class="md-textarea form-control lineA" placeholder="img_perfil...">
+			</div>
+
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 				<div class="aol input-group-prepend col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<span class="input-group-text" id="basic-addon2">Nombre del Apicultor</span>
@@ -40,7 +46,7 @@
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="curp" pattern="[0-9,a-z,A-Z]{18}"  value="{{old('curp')}}" id="curp" class="md-textarea form-control lineA" placeholder="CURP...">
+				<input type="text" name="curp" pattern="[0-9a-zA-Z]{18}"  value="{{old('curp')}}" id="curp" class="md-textarea form-control lineA" placeholder="CURP...">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">CURP 18 caracteres</span>
 				</div>

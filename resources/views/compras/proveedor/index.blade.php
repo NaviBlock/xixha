@@ -18,6 +18,7 @@
 			    <table class="table table-striped table-bordered table-condensed table-hover text-center">
 				    <thead>
                         <th>Folio</th>
+                        <th>Perfil</th>                        
                         <th>Nombre Completo</th>
                         <th>Estado</th>
                         <th>Telefono</th>
@@ -30,6 +31,9 @@
                     @foreach($personas as $per)
                         <tr>
                             <td>{{ $per->folio }}</td>
+                            <td>
+                                <img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid">
+                            </td>                           
                             <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>
                             <td>{{ $per->estadoP }}</td>
                             <td>{{ $per->telefono }}</td>

@@ -45,7 +45,8 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            //'root' => storage_path('app'),
+            'root' => public_path(),
         ],
 
         'public' => [
@@ -78,15 +79,15 @@ return [
             // 'timeout'  => 30,
         ],
 
-        's3' => [
+        /*'s3' => [
             'driver' => 's3',
             'key' => 'your-key',
             'secret' => 'your-secret',
             'region' => 'your-region',
             'bucket' => 'your-bucket',
-        ],
+        ],*/
 
-        'rackspace' => [
+        /*'rackspace' => [
             'driver'    => 'rackspace',
             'username'  => 'your-username',
             'key'       => 'your-key',
@@ -94,8 +95,6 @@ return [
             'endpoint'  => 'https://identity.api.rackspacecloud.com/v2.0/',
             'region'    => 'IAD',
             'url_type'  => 'publicURL',
-        ],
-
+        ],*/
     ],
-
 ];
