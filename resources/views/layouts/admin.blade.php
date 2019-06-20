@@ -78,34 +78,6 @@
   </header>  
 
   <div class="app-body">
-  
-    <!--div class="sidebar">
-      <div class="sidebar-nav">
-        <div class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="{{asset('home')}}">
-              <i class="nav-icon icon-speedometer"></i> Dashboard
-              <span class="badge badge-primary">Xixhá</span>
-            </a>
-          </li-->
-          
-          <!--div class="pos-f-t contrainer-fluid">
-            <div class="collapse" id="navbarToggleExternalContent">
-              <div class="bg-dark p-4">            
-                <li class="nav-title">Registro</li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{url('/compras/proveedor')}}">
-                    <i class="nav-icon icon-drop"></i>Apicultores
-                  </a>
-                </li>
-              </div>
-            </div-->
-
-            <!--nav class="navbar navbar-dark bg-dark">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </nav-->
           </div>
         </div>
       </div> 

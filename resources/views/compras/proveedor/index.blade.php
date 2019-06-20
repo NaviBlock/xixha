@@ -30,6 +30,7 @@
                     </thead>
                     @foreach($personas as $per)
                         <tr>
+                        <!--mark-->
                             <td>{{ $per->folio }}</td>
                             <td>
                                 <img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid">
