@@ -110,7 +110,7 @@ class ProveedorController extends Controller
             }   
             
             //Cdigo para subir la imagen de perfil
-           if(Input::hasFile('img_perfil')) {
+           /*if(Input::hasFile('img_perfil')) {
                 $file=Input::file('img_perfil');    
 
                 //Obtener el Nombre
@@ -119,16 +119,28 @@ class ProveedorController extends Controller
                 $extension=$file->getClientOriginalExtension();
 
                 //coloca el archivo en la carpeta imagenes/perfil 
-                //deberia poner el nombre.....? alarchivo 
+               
                 $newnombre = 'xi0'.(rand(1,100000)).".".$extension; 
-                //fechacomunidad,usa el ine, 
-                //xi-curp-a
                 $file->move(public_path().'/imagenes/perfil',$newnombre);
                 
                 //registra el nombre a la referencia de imagen a la DB
                 $personas->img_perfil=$file->getClientOriginalName($newnombre); 
                 $personas->img_perfil=$newnombre;                                                         
-            }
+           }*/
+
+            //fechacomunidad,usa el ine, 
+            //xi-curp-a //deberia poner el nombre.....? alarchivo 
+            //xix-heva092404grllt4j5-ha
+            if(Input::hasFile('img_perfil')) {
+                $file=Input::file('img_perfil');                    
+                $extension=$file->getClientOriginalExtension();               
+               
+                //$personas->curp=$request->get('curp');    
+                $newnombre = 'xi0'.get('curp').".".$extension; 
+                $file->move(public_path().'/imagenes/perfil',$newnombre);                
+                $personas->img_perfil=$file->getClientOriginalName($newnombre); 
+                $personas->img_perfil=$newnombre;                                                         
+           }
 
             $personas->save();
         return Redirect::to('compras/proveedor');
