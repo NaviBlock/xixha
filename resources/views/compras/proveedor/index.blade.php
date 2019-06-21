@@ -1,6 +1,6 @@
 @extends ('layouts.admin')
 @section ('contenido')
-    <div class="row"> 
+    <div class="row">  
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h3 class="text-center">Padrón de Apicultores</h3><br><br>
         </div>
