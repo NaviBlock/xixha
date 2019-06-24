@@ -5,137 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SSAX</title>
-  <!--Bootstrap 4.3-->
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
-  <!-- Main styles for this application-->
-  <link href="{{asset('css/style.css')}}" rel="stylesheet">
-  <link href="{{asset('vendors/pace-progress/css/pace.min.css')}}" rel="stylesheet">         
-  <!-- Font Awesome-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">    
-  <!-- Theme style--> 
-  <link rel="stylesheet" href="{{asset('css/AdminLTE.min.css')}}">    
-  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load.--> 
-  <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-  <!--icon-->
-  <link rel="apple-touch-icon" sizes="144x144" href="{{asset('img/apple-touch-icon.png')}}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{asset('img/favicon-32x32.png')}}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/favicon-16x16.png')}}">
-  <link rel="manifest" href="{{asset('img/site.webmanifest')}}">
-  <link rel="mask-icon" href="{{asset('img/safari-pinned-tab.svg')}}" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="{{asset('img/mstile-144x144.png')}}">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="{{asset('css/stylehome.css')}}">
+  <link rel="stylesheet" href="{{asset('css/iman.css')}}">
 </head>
-<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show col-lg-12 col-md-12 col-sm-12 col-xs-12 container">       
-  <header class="app-header navbar">
-
-    <a class="navbar-brand" href="/">
-      <img class="navbar-brand-full" src="{{asset('img/brand/logo.svg')}}" width="100" height="95" alt="Xixha Logo">
-      <img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="30" height="30" alt="Xixha Logo">
-    </a>
-
-    <ul class="nav navbar-nav d-md-down-none">
-      <li class="nav-item px-3">
-        <a class="nav-link" href="{{asset('home')}}">Dashboard</a>
-      </li>
-    </ul>
-
-    <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item d-md-down-none">
-        <a class="nav-link">
-          <i class="icon-list"></i>
-        </a>
-      </li>
-
-      <li class="nav-item d-md-down-none">
-        <a class="nav-link">
-          <i class="icon-location-pin"></i>
-        </a>
-      </li>
-      
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <img class="img-avatar" src="{{asset('img/avatars/10.jpg')}}" alt="Logo de perfil">
-        </a>
-
-        <div class="dropdown-menu dropdown-menu-right">
-          <div class="dropdown-header text-center">
-            <strong>Cuenta</strong>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo">     
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">                   
+          <a class="nav-link" href="{{asset('home')}}">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{asset('home')}}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Perfil
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="{{asset('home')}}">Usuario</a>
+            <a class="dropdown-item"  href="{{url('/logout')}}">Salir</a>
           </div>
-
-          <div class="dropdown-divider">
-            <a class="dropdown-item" href="{{url('/logout')}}">
-              <i class="fa fa-lock"></i> Salir
-            </a>
-          </div>
-                    
-        </div>    
-      </li>
-    </ul> 
-  </header>  
-
-  <div class="app-body">
-          </div>
-        </div>
-      </div> 
+        </li>
+      </ul>
     </div>
-  </div>
-  <div class="content-wrapper">
-    <section class="content">
-      <div class="row">
-        <div class = "col-lg-12 col-sm-12 col-md-12 col-xs-12">
-          <div class="box">
-            <div class="box-header with-border">         
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse">
-                  <i class="fa fa-minus"></i>
-                </button>
-                <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-              <div class="box-body">
-                <div class="row">
-                  <div class = "col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                    @yield('contenido')
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <footer class="app-footer">
-  <div>
-    <a href="#">Xixhá</a>
-    <span>&copy; 2019 Xixhá.</span>
-  </div>
-  <div class="ml-auto">
-    <span>Powered by</span>
-    <a href="#">Xixhá</a>
-  </div>
-</footer>
-  <!--Bootsap 4.3-->
+  </nav>
+  @yield('contenido')
   <script src="{{asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
   <script src="{{asset('js/popper-cnd.min.js')}}"></script>
   <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
-
-  <!--Jquery 3.4-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-es_ES.min.js"></script>
-    
-  <!-- Bootstrap 3.3.5-->
-  <script src="{{asset('js/bootstrap.min.js')}}"></script>
-  <!--AdminLTE App-->
-  <script src="{{asset('js/app.min.js')}}"></script>
-  <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
-  @stack('scripts')
-  <script src="{{asset('js/js.js')}}"></script>
   @stack('scripts')
 </body>
 </html>
