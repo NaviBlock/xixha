@@ -7,6 +7,8 @@
   <title>SSAX</title>
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/iman.css')}}">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,10 +33,13 @@
       </ul>
     </div>
   </nav>
-  @yield('contenido')
+  <div class="container-fluid"> 
+    @yield('contenido')
+  </div>
   <script src="{{asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
   <script src="{{asset('js/popper-cnd.min.js')}}"></script>
   <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
+  <script src="{{asset('js/js.js')}}"></script>
   @stack('scripts')
 </body>
 </html>

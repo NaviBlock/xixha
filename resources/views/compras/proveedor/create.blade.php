@@ -17,22 +17,15 @@
 			@endif  
 			{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 			{{Form::token()}}	
-			
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">			
-				<span class="input-group-text" id="basic-addon2">Imagen de Perfil</span>
-				<input type="file" name="img_perfil" value="{{('img_perfil')}}" class="md-textarea form-control lineA" placeholder="img_perfil...">
-			</div>
 
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<div class="aol input-group-prepend col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">			
 					<span class="input-group-text" id="basic-addon2">Nombre del Apicultor</span>
 					
 					<input type="text" name="nombre" required value="{{old('nombre')}}" class="md-textarea form-control lineA " placeholder="Nombre..." aria-describedby="basic-addon2">
 
 					<input type="text" name="apellidopa" required value="{{old('apellidopa')}}" class="md-textarea form-control lineA " placeholder="Apellido Parteno..." aria-describedby="basic-addon2">
 
-					<input type="text" name="apellidoma" required value="{{old('apellidoma')}}" class="md-textarea form-control lineA " placeholder="Apellido Marteno..." aria-describedby="basic-addon2">
-				</div>
+					<input type="text" name="apellidoma" required value="{{old('apellidoma')}}" class="md-textarea form-control lineA " placeholder="Apellido Marteno..." aria-describedby="basic-addon2">		
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
@@ -124,30 +117,17 @@
 				<input type="tel" name="telefono" pattern="[0-9]{10}" value="{{old('telefono')}}" class="md-textarea form-control lineA" placeholder="Teléfono...">
 			</div>
 
-			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3"-->
 			<div class="input-group flex-nowrap">
 				<div class="input-group-prepend">
-					<!--small id="emailHelp" class="form-text text-muted"></small-->
 					<span class="input-group-text" id="email">@</span>
 				</div>
 				<input type="text" name="email" value="{{old('email')}}" id="email" class="md-textarea form-control lineA" placeholder="Correo Electronico..." aria-label="Username" aria-describedby="addon-wrapping">
 			</div><br>
 
-			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3 data">
-				<input type="date" name="fecha_hora" value="{ {old('fecha_hora')}}" id="fecha_hora" class="md-textarea form-control lineA" placeholder="Fecha de Nacimiento...">
-				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Fecha de Nacimiento</span>
-				</div>
-			</div-->
+
 
 			<div><br><br><h3 class="text-center">Datos de Rastreabilidad</h3></div>
 			<br>
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
-				<input type="text" name="certificacion" value="{{old('certificacion')}}" class="md-textarea form-control lineB" placeholder="Tipo de Certificación...">
-				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Tipo de Certificación</span>
-				</div>
-			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
 			<div class="input-group-append">
@@ -166,29 +146,38 @@
 				<input type="text" name="pgn" value="{{old('pgn')}}" class="md-textarea form-control lineB" placeholder="PGN...">
 			</div>	
 
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input-group mb-3 aol">
+			<div class="input-group mb-3 aol">
 				<div class="input-group-prepend">
 					<span class="input-group-text" id="basic-addon2 text-center" for="inputGroupSelect01">Temporada de Cosecha</span>
 				</div>	
 				<select name="temp_cosecha" value="{{old('temp_cosecha')}}" class="custom-select md-textarea form-control lineB" id="inputGroupSelect01">
 					<option value="PRIMAVERA">PRIMAVERA</option>
+					<option value="PRIMAVERA-VERANO">PRIMAVERA-VERANO</option>
 					<option value="VERANO">VERANO</option>
+					<option value="VERANO-OTOÑO">VERANO-OTOÑO</option>
 					<option value="OTOÑO">OTOÑO</option>
+					<option value="OTOÑO-INVIERNO">OTOÑO-INVIERNO</option>
 					<option value="INVIERNO">INVIERNO</option>
+					<option value="INVIERNO-PRIMAVERA">INVIERNO-PRIMAVERA</option>
 				</select>
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
-				<input type="text" name="prod_anual" value="{{old('prod_anual')}}" class="md-textarea form-control lineB" placeholder="Producción anual de miel...">
+				<input type="text" name="prod_anual" value="{{old('prod_anual')}}" class="md-textarea form-control lineB" placeholder="Producción en Kg...">
 				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Producción Anual de Miel en Kg</span>
+					<span class="input-group-text" id="basic-addon2">Producción en Kg</span>
+				</div>
+			
+				<input type="text" name="num_colmena" value="{{old('num_colmena')}}" class="md-textarea form-control lineB" placeholder="Numero de Colmena...">			
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">Numeros de Colmenas o Chapetas</span>
 				</div>
 			</div>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
-				<input type="text" name="num_colmena" value="{{old('num_colmena')}}" class="md-textarea form-control lineB" placeholder="Numero de Colmena o Chapetas...">			
+				<input type="text" name="certificacion" value="{{old('certificacion')}}" class="md-textarea form-control lineB" placeholder="Tipo de Certificación...">
 				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">Numeros de Colmenas o Chapetas</span>
+					<span class="input-group-text" id="basic-addon2">Tipo de Certificación</span>
 				</div>
 			</div>
 
@@ -198,31 +187,53 @@
 				</div>
 				<textarea rows="3" name="loc_api" value="{{old('loc_api')}}" class="form-control lineB" placeholder="Localización de los Apiarios..."></textarea>
 			</div>
-
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+ 
+			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group">
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">¿Mueve sus Colmenas?</span>
 				</div>	 
-				<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3" selected>
-
-					<button type="button" onclick="datoxx();" value="{('mov_loc')}}" name="SI" class="btn btn-outline-primary btn-lg">SI</button>			
-					<button type="button" onclick="datox();" value="{('mov_loc')}" name="NO" class="btn btn-outline-danger btn-lg">NO</button>
+				<div class="" selected>
+					<button type="button" onclick="datoxx();" name="SI" class="btn btn-outline-primary">SI</button>			
+					<button type="button" onclick="datox();"  name="NO" class="btn btn-outline-danger">NO</button>
 				</div>
 			</div>
-
+		
 			<div class="amber-textarea active-amber-textarea-2 aolq" id="datoy">
 			<textarea rows="3" name="donde" value="{{old('donde')}}" class="form-control lineB" placeholder="¿A Dónde?..."></textarea>
 				<div class="input-group-append">
 				</div> 
 			</div> 
-			<br><br>
+			<br>
 
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">	
-			<textarea rows="3" name="observacion" value="{{old('observacion')}}" class="form-control lineB" placeholder="Observación..."></textarea>	
+				<textarea rows="3" name="observacion" value="{{old('observacion')}}" class="form-control lineB" placeholder="Observación..."></textarea>	
 				<div class="input-group-append">
 					<span class="input-group-text" id="basic-addon2">Observación</span>
 				</div>
 			</div>
+
+			<!--div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">
+				<div class="input-group">
+					<label class="input-group-btn">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<span class="btn btn-primary btn-file" id="basic-addon22">Imagen de Perfil			
+							</label>
+						</span>
+					</div>
+				</div>
+			</div-->
+			<div class="form-group mf-form">
+				<div class="input-group-btn">
+					<input accept=".jpg, .png, .jpeg, .gif" id="img_perfil" name="img_perfil" type="file" class="file hidden lineA form-control md-textarea btn btn-primary btn-file" data-browse-on-zone-click="true" readonly="readonly" value="{{('img_perfil')}}">
+				</div>
+			</div>
+
+			<!--div>
+				<select name="listaDeDispositivos" id="listaDeDispositivos"></select>
+				<button id="boton">Tomar foto</button>
+				<p id="estado"></p>
+			</div-->
+
 			<div class="form-group mf-form amber-textarea active-amber-textarea-2">			
 				<button class="btn btn-primary btn-block btn-lg" type="submit">Guardar</button><br>
 				<button class="btn btn-danger btn-block btn-lg" type="reset">Cancelar</button>
@@ -231,4 +242,17 @@
 		{!!Form::Close()!!}	
 	</div> 
 </div>
+<!--@push('scripts')
+	<script>
+		$(document).on('ready', function() {
+			$("#input-b9").fileinput({
+				showPreview: false,
+				showUpload: false,
+				elErrorContainer: '#kartik-file-errors',
+				allowedFileExtensions: ["jpg", "png", "gif"]
+				//uploadUrl: '/site/file-upload-single'
+			});
+		});
+	</script>
+@endpush-->
 @endsection

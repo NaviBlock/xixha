@@ -14,9 +14,9 @@ class PersonaFormRequest extends Request
     public function rules() 
     {
         return [ 
-            'nombre'=>'required|max:45',
-            'apellidopa'=>'required|max:45',
-            'apellidoma'=>'required|max:45',
+            'nombre'=>'max:45',
+            'apellidopa'=>'max:45',
+            'apellidoma'=>'max:45',
             'telefono'=>'required|max:10',
             'email'=>'required|max:256',
             'upp'=>'required|max:45',
