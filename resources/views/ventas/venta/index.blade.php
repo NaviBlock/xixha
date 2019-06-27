@@ -13,7 +13,7 @@
 					<thead> 
 						<th>Fecha</th> 
 						<th>Cliente</th>
-						<th>Comprobante</th>
+						<th>Comprobante</th> 
 						<th>Impuesto</th>
 						<th>Total</th>
 						<th>Opciones</th> 

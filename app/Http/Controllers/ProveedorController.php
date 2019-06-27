@@ -162,6 +162,7 @@ class ProveedorController extends Controller
 
             $personas->save();
         return Redirect::to('compras/proveedor');
+
     }
  
     public function show($id){

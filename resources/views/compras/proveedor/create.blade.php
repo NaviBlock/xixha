@@ -1,5 +1,6 @@
 @extends ('layouts.admin')
 @section ('contenido')
+
 <div class="container-fluid"> 
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -7,6 +8,7 @@
 			<h3 class="text-center">Alta del Apicultor</h3>
 			<br>
 			@if(count($errors)>0)
+
 				<div class="alert alert-danger">
 					<ul>
 						@foreach ($errors->all() as $error)
@@ -14,6 +16,7 @@
 						@endforeach
 					</ul> 
 				</div>
+
 			@endif  
 			{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 			{{Form::token()}}	
@@ -255,4 +258,5 @@
 		});
 	</script>
 @endpush-->
+
 @endsection
