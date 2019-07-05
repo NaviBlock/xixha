@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav{
     position: fixed;
     top: 20px;
     left: 20px;
-    display:flex;
+    display: flex;
     justify-content: flex-start;
 }
 
@@ -22,13 +22,13 @@ nav a{
 
 th,tr td{
     color:#fff;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .icono{
     display: block;
-    animation: moverIzquierda 1s ease-in ;
-    z-index: 1000000000;
+    z-index: 100000000;
+    animation: moverIzquierda 1s ease-in ; 
 }
 
 header{
@@ -41,36 +41,45 @@ header{
 }
 
 .container{
-    /*width:95%;*/
-   /* max-width: 1210px;*/
+    width:95%;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: auto;
 }
 
-img, table{
-    display: block;
-    height:450px;
-    object-fit: cover;
-    animation: arriba 1s ease-in ;
-}
-
 img{
-    width: 600px;
-    height: 600px;
+    width: 50%;
+    height: 50%;
 }
 
 table{
     text-align: center;
-    padding-left: 100px;
+    padding-left: 50px;
+    padding-right: 100px;
     padding-top: 100px;
-    border-style: none;
+    height:550px;
+    width: 400px; 
+    border-style: 1px solid #fff;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+}
+
+th,td{
+    border: 1px solid #fff;
+    width: 25%;
+}
+
+img, table{
+    display: block;
+    object-fit: cover;
+    animation: arriba 1s ease-in ;
 }
 
 .iniciar a{
    padding: 0px;
-   margin: 0px 0px;
+   margin: 0px;
 }
 
 .textos{
@@ -86,25 +95,26 @@ table{
 .textos h2{
     font-size: 30px;
     animation: moverIzquierda 1s ease-in ;
-    padding-bottom: 120px;
+    padding-bottom: 100px;
 }
 
 .textos a{
     display: inline-block;
     color:#fff;
     font-weight: 300;
-    text-decoration: 1px solid #fff;
+    text-decoration: none;
     margin-top:30px;
     border:1px solid #fff;
     width: 150px;
     border-radius: 3px;
     text-align: center;
     padding: 10px 0;
+    margin-left: 90px;
     animation: arriba 1s ease-in ;
 }
 
 .wave{
-    height: 110px;
+    height: 100px;
     width: 100%;  
     background: #F7971E;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
@@ -119,9 +129,9 @@ table{
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    left: 0;
-    flex-direction: column;
     width: 100%;
+    right: 0;
+    flex-direction: column;
     transition: all 1s ease;
     background: #f12711;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
@@ -141,7 +151,7 @@ table{
 @keyframes moverIzquierda{
     0%{
         opacity:0;
-        transform:translatex(-100px);
+        transform:translateX(-100px);
     }
     100%{
         opacity: 1;
@@ -152,7 +162,7 @@ table{
 @keyframes moverDerecha{
     0%{
         opacity:0;
-        transform:translatex(100px);
+        transform:translateX(100px);
     }
     100%{
         opacity: 1;
@@ -163,7 +173,7 @@ table{
 @keyframes arriba{
     0%{
         opacity:0;
-        transform:translatey(100px);
+        transform:translateY(100px);
     }
     100%{
         opacity: 1;
@@ -171,7 +181,13 @@ table{
     }
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1024px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
     img{
         height: 400px; 
     }
@@ -189,22 +205,24 @@ table{
         align-content: space-around;
         display: block;
         padding-right: -10px;
+        padding-bottom: 30px;
     }
 
     table{
         text-align: center;
-        padding-left: 2px;
-        padding-right: 5px;
-        padding-top: 5px;
-        width: 100%;
+        width: 80%;
+    }
+
+    img{
+        height: auto;
+        width: auto;
     }
 
     img, table{
-        height: 250px;
-        padding-top: 80px;
+        height: 400px;
+        padding-top: 10px;
         margin: 60px;
     }
-    
 }
 
 @media screen and (max-width:800px){
@@ -221,7 +239,7 @@ table{
 }
 
 @media screen and (max-width:700px){
-    img
+    img{
         height: 250px;
     }
     .textos h1{
@@ -234,14 +252,14 @@ table{
         margin-left: -20px;
     }
 
-    .iniciar a{
+   .iniciar a{
         padding: 0px;
         margin: 0px 0px;
         margin-left: -20px;
      }
 
     header{
-        padding: 60px;
+        padding: 40px;
     }
 }
 
@@ -259,18 +277,17 @@ table{
     .textos h1{
         font-size: 60px;
         padding-right: 50px;
-      
     }
 
     .textos h2{
         font-size: 25px;
-        padding-top: 25px;  
+        padding-top: 300px;  
         padding-bottom: 25px;   
     }
 
     img{
-        padding-top: 50px;
-        margin: 0px;
+        padding-top: 15px;
+        margin: 10px;
         width: 200px;
         height: 200px;
     }
@@ -278,6 +295,8 @@ table{
     table{
         text-align: center;
         padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 10px;
         padding-top: 20px;
         margin: 0px;
     }
@@ -285,12 +304,12 @@ table{
     img, table{
         height: 200px;
     }
-
 }
 
 @media screen and (max-width:340px){
     img{
-        height: 160px;
+        height: 100px;
+        width: auto;
     }
     .textos h1{
         font-size: 35px;
@@ -301,14 +320,15 @@ table{
     }
 
     .textos h2{
-        font-size: 25px;
+        font-size: 15px;
     }
 
     table{
         text-align: center;
-        padding-left: 2px;
-        padding-right: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
         padding-top: 5px;
+        margin-left: 10px;
         width: 100%;
     }
 
@@ -318,6 +338,5 @@ table{
 
     tr{
         padding: 0px;
-    }
-    
+    } 
 }
