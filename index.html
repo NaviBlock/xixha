@@ -1,102 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<!---------------------------------------------------------------------------------------------------------------------->    
+<html lang="es">    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SSAX</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/iman.css">
-</head>
-<!---------------------------------------------------------------------------------------------------------------------->    
-<body>    
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">MENU</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">XIXHÁ<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Inicio</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Perfil
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Usuario</a>
-          <a class="dropdown-item" href="#">Salir</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>        
-<!---------------------------------------------------------------------------------------------------------------------->
-    <div class="container"> 
-        <div class="row">
-            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning">
-                <img src="public/img/android-chrome-144x144.png" alt="Card xixhá" class="card-img-top logo-img-a">
-                    <div class="card-body text-warning">
-                        <h5 class="card-title">Padrón de Apicultores.</h5>                    
-                        <input type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <br><br>
-                        <div class="text-center"> 
-                            <button type="button" class="btn btn-outline-warning">
-                                <span class="alingT">Buscar</span>
-                            </button>
+    <title>SIPAX</title>
+    <link rel="stylesheet" href="public/css/estilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+</head>    
+<body>   
+    <div class="container-fluid">
+        <div class="row ">
+            <header class="hestilo textos"> 
+                    <div class="dos float-left">
+                        <h2>Padrón de apicultores</h2>
+                    </div>  
+                    <!--Menu--->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light float-right">                    
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto ">
+                                <li class="nav-item dropdown ">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MENU</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="card-footer mx-auto">
-                        <span class="text-muted">XIXHÁ 2019</span>
-                    </div>
-<!---------------------------------------------------------------------------------------------------------------------->                
-                <table class="table table-hover table-condensed table-responsive">
-                    <thead class="table-color">
-                        <th>Folio</th>
-                        <th>Perfil</th>
-                        <th>Nombre Completo</th>
-                        <th>Estado</th>
-                        <th>Telefono</th>
-                        <th>Email</th>                        
-                        <th>N° Colmenas</th>
-                        <th>Producción Anual en KG</th>
-                        <th>Certificación</th>
-                        <th>Opciones</th>
-                    </thead>
-                    <tbody>
+                    <nav>
+                    <!----button class="botonE btn btn-warning navbar navbar-expand-lg navbar-light bg-light dropdown-toggle float-right" type="button" id="menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="menu2">
+                        <button class="dropdown-item" type="button">Iniciar Sesión</button>
+                        <button class="dropdown-item" type="button">Registro</button>
+                        <button class="dropdown-item" type="button">Contacto</button>
+                    </div-->    
+       
+                <!----div class="iniciar">
+                    <a href="#">Iniciar Sesión</a>   
+                </div---->     
+        </header>  
+        </div>   
+        <div class="row">
+                <table class="table table-sm table-hover testilo mx-auto justify-content-center:">   
+                        <thead class="thead-light ">
+                            <th colspan="2">Municipio de Apicultores Activo</th>
+                        </thead>                                        
                         <tr>
-                            <td>Folio de Test:xix-heva040404glrdleof740f-ha</td>
-                            <td>Perfil de Test:Mi Perfil</td>
-                            <td>Nombre de Test:Alejandro Hernández Valle</td>
-                            <td>Estado de Test:Guerrero</td>
-                            <td>Telefono de Test:7444543456</td>
-                            <td>Email de Test:ale@gmail.com</td>
-                            <td>N° de Test:24234</td>
-                            <td>Producción anual de Test:50kg</td>
-                            <td>Certificado TIF</td>
-                            <td>
-                                <button class="btnA btn btn-primary">Opción 1</button>
-                                <button class="btnA btn btn-danger">Opción 2</button>           
-                                <button class="btnA btn btn-success">Opción 3</button>
-                            </td>
+                            <td >Municipio</td>
+                            <td >N°</td>
                         </tr>
-                    </tbody>
-                </table>
+                        <tr>
+                            <td>Acapulco de Juarez</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>San Luis Acatlán</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Azoyú</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>20</td>
+                        </tr>                                
+                    </table>   
+        </div>
+        
+
+        <div class="row">
+            <img class="img-fluid imgg" src="public/img/android-chrome-144x144.png" alt="img">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!----
+                <header>       
+                    <nav class="navbar navbar-expand-lg navbar-white bg-white text-white">
+                        <a class="navbar-brand" href="#">MENU</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                    <i class="fas fa-bars"></i>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-white text-white" href="#">XIXHÁ<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-white text-white" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-white text-white dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Usuario</a>
+                                    <a class="dropdown-item" href="#">Salir</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>                              
+           ---->
+            <div class="wave">
+                <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
             </div>
-        </div>
-        <br>        
-        <div>           
-            <span class="spanB spanC badge badge-warning"><h4>1 2 3 4 5</h4></span>
-        </div>
     </div>
-<!---------------------------------------------------------------------------------------------------------------------->    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
