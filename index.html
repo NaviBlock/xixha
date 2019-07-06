@@ -5,151 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SIPAX</title>
-    <link rel="stylesheet" href="public/css/estilo.css">
+    <!--EStilos-->
+    <link rel="stylesheet" href="./public/css/estilo.css">
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
 </head>    
-<body>   
-    <div class="container-fluid">
-        <div class="row ">
-            <header class="hestilo textos"> 
-                    <div class="dos float-left">
-                        <h2>Padrón de apicultores</h2>
-                    </div>  
-                    <!--Menu--->
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light float-right">                    
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto ">
-                                <li class="nav-item dropdown ">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MENU</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    <nav>
-                    <!----button class="botonE btn btn-warning navbar navbar-expand-lg navbar-light bg-light dropdown-toggle float-right" type="button" id="menu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Menu
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="menu2">
-                        <button class="dropdown-item" type="button">Iniciar Sesión</button>
-                        <button class="dropdown-item" type="button">Registro</button>
-                        <button class="dropdown-item" type="button">Contacto</button>
-                    </div-->    
-       
-                <!----div class="iniciar">
-                    <a href="#">Iniciar Sesión</a>   
-                </div---->     
-        </header>  
-        </div>   
-        <div class="row">
-                <table class="table table-sm table-hover testilo mx-auto justify-content-center:">   
-                        <thead class="thead-light ">
-                            <th colspan="2">Municipio de Apicultores Activo</th>
-                        </thead>                                        
-                        <tr>
-                            <td >Municipio</td>
-                            <td >N°</td>
-                        </tr>
-                        <tr>
-                            <td>Acapulco de Juarez</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>San Luis Acatlán</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td>Azoyú</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td>20</td>
-                        </tr>                                
-                    </table>   
-        </div>
-        
-
-        <div class="row">
-            <img class="img-fluid imgg" src="public/img/android-chrome-144x144.png" alt="img">
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!----
-                <header>       
-                    <nav class="navbar navbar-expand-lg navbar-white bg-white text-white">
-                        <a class="navbar-brand" href="#">MENU</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon">
-                                    <i class="fas fa-bars"></i>
-                            </span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-white text-white" href="#">XIXHÁ<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-white text-white" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-white text-white dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Usuario</a>
-                                    <a class="dropdown-item" href="#">Salir</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>                              
-           ---->
-            <div class="wave">
-                <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="./public/img/logos.png" style="width:20%" alt="Logo site"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://xixha.com">Xixhá</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Iniciar Sesión</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+    <div class="background-overlay text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center justify-content-center align-self-center">
+                    <h1 class="e-titulo">Municipio de Apicultores Activo</h1>
+                    <div class="table-responsive">
+                        <table class="table text-white table-hover e-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Municipio</th>
+                                    <th scope="col">N°</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Acapulco de Juarez</td>
+                                    <td>2</td>
+                                </tr></tr>
+                                <tr>
+                                    <td>San Luis Acatlán</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>Azoyú</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>20</td>
+                                </tr>    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center py-2">                
+                    <img src="./public/img/mapa.png" alt="Logo Estado" class="img-fluid e-mapa">     
+                </div>
+            </div>
+        </div>
     </div>
+    <footer>
+        <div class="container p-3 text-center text-white">
+            <p>xixhá &copy; 2019</p>
+        </div>
+    </footer>
+    </header>
+    <div class="wave">
+        <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </div> 
+    <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
