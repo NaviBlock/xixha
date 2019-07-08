@@ -12,7 +12,7 @@ Route::resource('ventas/venta','VentaController'); */
 
 Route::auth();
 Route::get('/home','ProveedorController@index');
-Route::get('layouts/index','ProveedorController@index');
+Route::get('/','ProveedorController@index');
 Route::resource('compras/proveedor','ProveedorController');
 
 /*Route::resource('compras/ingreso','IngresoController');
