@@ -1,7 +1,6 @@
 @extends ('layouts.admin')
 @section ('contenido')
     <div class="row">
-
         <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning">        
             <div class="card-body text-warning">
                 <h5 class="card-title">Padrón de Apicultores.</h5>
@@ -24,7 +23,7 @@
             </div>
         </div>
     </div>
-
+<div class="row">
     <div class="table-responsive"> 
         <table class="table table-striped table-hover table-condensed">
             <thead class="table-color">
@@ -53,7 +52,7 @@
                     <td>{{ $per->num_colmena }}</td>
                     <td>{{ $per->prod_anual."Kg" }}</td>
                     <td>{{ $per->certificacion }}</td>
-                    <td class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                            
+                    <td class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:100px height:100px">                            
                         <div>
                             <div class="btn-group mr-4" role="group" aria-label="Boton Detalles">
                                 <a href="{{URL::action('ProveedorController@show',$per->idpersona)}}">
@@ -83,5 +82,6 @@
         </table>
         {{$personas->render()}}
     </div>
+</div>
     
 @endsection

@@ -3,8 +3,6 @@ body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
     line-height: 15px;
 }
 
-
-
 .table td, .table th {
     padding: .75rem;
     vertical-align: top;
@@ -72,6 +70,20 @@ p {
     margin-bottom: 0px;
 }
 
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
+    line-height: 15px;
+    height: 10px;
+    margin-left: 50px;
+}
 
 /* Para 960px*/
 @media only screen and (max-width: 980px) and (min-width: 821px) {  
