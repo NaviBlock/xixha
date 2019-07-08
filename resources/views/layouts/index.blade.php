@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">    
 <head>
@@ -5,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SIPAX</title>
-    <!--EStilos-->
-    <link rel="stylesheet" href="./public/css/estilo.css">
+    <!--EStilos--> 
+    <link rel="stylesheet" href="{{asset('css/estilo.css')}}">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>    
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="./public/img/logos.png" style="width:20%" alt="Logo site"></a>
+            <a class="navbar-brand" href="/"><img src="{{asset('img/logos.png')}}" style="width:20%" alt="Logo site"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,10 +25,10 @@
                         <a class="nav-link" href="http://xixha.com">Xixhá</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/register">Registro</a>
+                        <a class="nav-link" href="{{asset('register')}}">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Iniciar Sesión</a>
+                        <a class="nav-link" href="{{asset('login')}}">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +71,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center py-2">                
-                    <img src="./public/img/mapa.png" alt="Logo Estado" class="img-fluid e-mapa">     
+                    <img src="{{asset('img/mapa.png')}}" alt="Logo Estado" class="img-fluid e-mapa">     
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    return view('auth/login'); 
+    return view('layouts/index'); 
 });
 
 /*Route::resource('almacen/categoria','CategoriaController');
@@ -12,7 +12,7 @@ Route::resource('ventas/venta','VentaController'); */
 
 Route::auth();
 Route::get('/home','ProveedorController@index');
-Route::get('/','ProveedorController@index');
+Route::get('layouts/index','ProveedorController@index');
 Route::resource('compras/proveedor','ProveedorController');
 
 /*Route::resource('compras/ingreso','IngresoController');
