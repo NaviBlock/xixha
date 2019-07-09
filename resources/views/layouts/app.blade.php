@@ -47,9 +47,9 @@
                     <li class="nav-item active">
                         <a class="nav-link e-texto-one e-texto" href="http://xixha.com">Xixhá</a>
                     </li>
-                    <!--li class="nav-item">
-                        <a class="nav-link" href="{{asset('register')}}">Registro</a>
-                    </li-->
+                    <li class="nav-item">
+                        <a class="nav-link e-texto" href="{{asset('register')}}">Registro</a>
+                    </li>
                 </ul>
             </div>
                 <!-- Branding Image -->
@@ -82,11 +82,12 @@
 
     <header class="main-header">
     <div class="background-overlay text-white py-5">
-        <div class="container">
+        <div class="container"> 
             <div class="row">
                 <div class="col-md-12 text-center justify-content-center align-self-center">
                     <h1 class="e-titulo">Padrón de Apicultores Activo</h1>
-                    <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12">    
+                    <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12"> 
+                    <a class="navbar-brand e-titulo" href="/"><img src="{{asset('img/sipax.jpeg')}}" style="width:20%" alt="Logo site"></a>            
                         @yield('content')
                     </div>
                 </div>
