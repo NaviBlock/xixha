@@ -39,33 +39,8 @@
             <div class="row">
                 <div class="col-md-6 text-center justify-content-center align-self-center">
                     <h1 class="e-titulo">Municipio de Apicultores Activo</h1>
-                    <div class="table-responsive">
-                        <table class="table text-white table-hover e-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Municipio</th>
-                                    <th scope="col">N°</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Acapulco de Juarez</td>
-                                    <td>2</td>
-                                </tr></tr>
-                                <tr>
-                                    <td>San Luis Acatlán</td>
-                                    <td>14</td>
-                                </tr>
-                                <tr>
-                                    <td>Azoyú</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <td>Total</td>
-                                    <td>20</td>
-                                </tr>    
-                            </tbody>
-                        </table>
+                    <div class="table-responsive">    
+                        @yield('contenido')
                     </div>
                 </div>
                 <div class="col-md-6 text-center py-2">                

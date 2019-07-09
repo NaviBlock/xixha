@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 col-md-12 text-center justify-content-center align-self-center">
             <div class="panel panel-default"> 
-                <div class="panel-heading">Acceso al Sistema</div>
+                <div class="panel-heading"><h3>Acceso al Sistema</h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-6 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" name="remember"> Recordar
@@ -49,12 +49,11 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-6 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i> Acceder
                                 </button>
-
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">¿Olvidaste tu Password?</a>
+                                <!--a class="btn btn-link" href="{{ url('/password/reset') }}">¿Olvidaste tu Password?</a-->
                             </div>
                         </div>
                     </form>
