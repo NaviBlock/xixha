@@ -34,7 +34,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div  class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/"><img src="{{asset('img/logos.png')}}" style="width:20%" alt="Logo site"></a>                
+                <a class="navbar-brand e-logo" href="/"><img src="{{asset('img/logos.png')}}" style="width:20%" alt="Logo site"></a>                
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,11 +45,11 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link e-texto-one" href="http://xixha.com">Xixhá</a>
+                        <a class="nav-link e-texto-one e-texto" href="http://xixha.com">Xixhá</a>
                     </li>
-                    <li class="nav-item">
+                    <!--li class="nav-item">
                         <a class="nav-link" href="{{asset('register')}}">Registro</a>
-                    </li>
+                    </li-->
                 </ul>
             </div>
                 <!-- Branding Image -->
@@ -98,7 +98,7 @@
     </div>    
     <footer>
         <div class="container p-3 text-center text-white">
-            <p>xixhá &copy; 2019</p>
+            <p class="e-titulo">xixhá &copy; 2019</p>
         </div>
     </footer>
     <div class="wave">
