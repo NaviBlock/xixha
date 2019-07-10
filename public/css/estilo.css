@@ -1,7 +1,7 @@
 .wave{
     height: 100px;
     width: 100%;  
-    background: #F7971E;
+    background: rgb(247, 245, 245);
 }
 
 .navbar{
@@ -9,9 +9,9 @@
     opacity: 0.9;
 }
 
-.e-texto-one{
-    margin-left: 950px;
-  
+
+footer{
+    background: rgb(247, 245, 245);
 }
 
 .navbar .nav-item .nav-link{
@@ -20,22 +20,29 @@
 
 .main-header{
     position:relative;
-    background:#F7971E;
+    background:#fff;
     background-size: cover;
     min-height: 500px;
 }
 
 .background-overlay{ 
-    background:rgba(240, 147, 43,0.5);
+    background:rgb(247, 245, 245);
     top:0;
     left:0;
     width:100%;
     height: 100%;
 }
 
-.e-mapa{
+.e-color{
+ color: #F7971E !important;
+}
+/*.e-mapa{
     width: 100%;
     animation: moverDerecha 1s ease-in ;
+}*/
+
+.e-boton{
+    margin: 10px !important;
 }
 
 .e-logo{
@@ -52,11 +59,6 @@
 
 .e-titulo{
     animation: abajo 1s ease-in ;
-}
-
-.form-control {
-    margin-left: 280px;
-    margin-right: 280px;
 }
 
 @keyframes moverIzquierda{
@@ -115,6 +117,14 @@
 @media (max-width: 991.98px) { 
  }
 
-/*Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { 
- }*/
+Large devices (desktops, less than 1200px)*/
+@media (min-width: 1199.98px) { 
+    .e-texto-one{
+        margin-left: 950px; 
+    }
+    
+    .form-control {
+    margin-left: 280px;
+    margin-right: 280px;
+    }
+}

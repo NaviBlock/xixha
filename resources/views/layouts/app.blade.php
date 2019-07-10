@@ -36,7 +36,7 @@
             <div class="navbar-header">
                 <a class="navbar-brand e-logo" href="/"><img src="{{asset('img/logos.png')}}" style="width:20%" alt="Logo site"></a>                
                 <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="navbar-toggler collapsed justify-content-center" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <!--span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -45,10 +45,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link e-texto-one e-texto" href="http://xixha.com">Xixhá</a>
+                        <a class="nav-link e-texto-one e-texto e-color" href="http://xixha.com">Xixhá</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link e-texto" href="{{asset('register')}}">Registro</a>
+                        <a class="nav-link e-texto e-color" href="{{asset('register')}}">Registro</a>
                     </li>
                 </ul>
             </div>
@@ -85,7 +85,7 @@
         <div class="container"> 
             <div class="row">
                 <div class="col-md-12 text-center justify-content-center align-self-center">
-                    <h1 class="e-titulo">Padrón de Apicultores Activo</h1>
+                    <h1 class="e-titulo e-color">Padrón de Apicultores Activo</h1>
                     <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12"> 
                     <a class="navbar-brand e-titulo" href="/"><img src="{{asset('img/sipax.jpeg')}}" style="width:20%" alt="Logo site"></a>            
                         @yield('content')
@@ -99,11 +99,11 @@
     </div>    
     <footer>
         <div class="container p-3 text-center text-white">
-            <p class="e-titulo">xixhá &copy; 2019</p>
+            <p class="e-titulo e-color">xixhá &copy; 2019</p>
         </div>
     </footer>
     <div class="wave">
-        <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+        <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #F7971E;"></path></svg></div>
     </div> 
 
     <!-- JavaScripts -->
