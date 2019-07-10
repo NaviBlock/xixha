@@ -1,7 +1,7 @@
 @extends ('layouts.admin')
 @section ('contenido')
     <div class="row">
-        <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning">        
+        <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning space-between"> 
             <div class="card-body text-warning">
                 <h5 class="card-title">Padrón de Apicultores.</h5>
                 <div class="text-center"> 
@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card-footer mx-auto">
+                <div class="card-footer mx-auto e-alineacion">
                     <span class="text-muted">XIXHÁ 2019</span>
                 </div>                
 
@@ -83,5 +83,4 @@
         {{$personas->render()}}
     </div>
 </div>
-    
 @endsection
