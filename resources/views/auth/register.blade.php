@@ -11,7 +11,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} e-titulo">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                            <label for="name" class="col-md-4 control-label e-color">Nombre</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} e-titulo">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-4 control-label e-color">E-Mail</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} e-titulo">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <label for="password" class="col-md-4 control-label e-color">Password</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password">
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }} e-titulo">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            <label for="password-confirm" class="col-md-4 control-label e-color">Confirmar Password</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation">

@@ -38,7 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <!--div class="form-group">
                             <div class="col-md-6 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center e-color">
                                 <div class="checkbox">
                                     <label>
@@ -46,7 +46,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div-->
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
