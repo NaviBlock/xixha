@@ -70,6 +70,22 @@ p {
     margin-bottom: 0px;
 }
 
+.input-group-text{
+    border: 1px solid #ffc107 !important;
+}
+
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+    border-color: #ffc107 !important;
+}
+
+.e-border{
+    border-radius: 30px !important;
+}
+
+.e-text-color{
+    color: #ffc107 !important;
+}
+
 .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
     position: relative;
     -ms-flex: 1 1 auto;
