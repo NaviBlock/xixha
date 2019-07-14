@@ -29,7 +29,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/layouts/index';
 
     /**
      * Create a new authentication controller instance.
@@ -75,4 +75,15 @@ class AuthController extends Controller
    /*protected function showRegistrationForm(){
         return redirect('login');
     }*/
+
+    public function redirectPath()
+    {
+        if(auth()->user()->email='alejandrohernandezvalle@gmail.com'){
+            return '/compras/proveedor';
+        }
+        else{
+            return '/layouts/index';
+        }
+    }
+
 }
