@@ -14,7 +14,7 @@
                             <label for="email" class="col-md-4 control-label e-color">E-Mail:</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input id="email" type="email" class="form-control e-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -28,7 +28,7 @@
                             <label for="password" class="col-md-4 control-label e-color">Password:</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
+                                <input id="password" type="password" class="form-control e-control" name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -46,14 +46,22 @@
                                     </label>
                                 </div>
                             </div>
-                        </div-->
-
+                        </div--><br>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in e-color"></i> Acceder
                                 </button>
                                 <!--a class="btn btn-link" href="{{ url('/password/reset') }}">¿Olvidaste tu Password?</a-->
+                            </div>
+                        </div><br><br>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
+                                <a href="{{asset('register')}}">  
+                                <button class="btn btn-primary">
+                                    <!--i class="fa fa-btn fa-sign-in e-color"></i> Registro-->
+                                    Registro
+                                </button></a>                             
                             </div>
                         </div>
                     </form>

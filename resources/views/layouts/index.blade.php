@@ -14,20 +14,20 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="{{asset('img/logos.png')}}" style="width:20%" alt="Logo site"></a>
+            <a class="navbar-brand" href="/"><img src="{{asset('img/logos.png')}}" style="width:50%" alt="Logo site"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="http://xixha.com">Xixhá</a>
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item active ">
+                        <a class="nav-link t-a" href="http://xixha.com">Xixhá</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{asset('register')}}">Registro</a>
+                        <a class="nav-link t-b" href="{{asset('register')}}">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{asset('login')}}">Iniciar Sesión</a>
+                        <a class="nav-link t-c" href="{{asset('login')}}">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
