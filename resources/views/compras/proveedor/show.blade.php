@@ -44,7 +44,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon102">Estado</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">		
-						<input type="text" name="estadoP" value="{{$persona->estadoP}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon102">			
+						<input type="text" name="estadoP" value="{{$persona->estadoP}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA btn btn-warning " aria-describedby="basic-addon102">			
 					</div>
 				</div>
 			</div><br><br>
@@ -54,7 +54,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon103">Municipio</span>	
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">				
-					<input type="text" name="municipio" value="{{$persona->municipio}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon103">
+					<input type="text" name="municipio" value="{{$persona->municipio}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon103">
 				</div>
 			</div><br><br>
 
@@ -63,7 +63,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon104">Colonia</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">		
-						<input type="text" name="colonia" value="{{$persona->colonia}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon104">
+						<input type="text" name="colonia" value="{{$persona->colonia}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon104">
 					</div>
 				</div>
 			</div><br><br>
@@ -73,7 +73,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon105">Calle</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="calle" value="{{$persona->calle}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon105">
+						<input type="text" name="calle" value="{{$persona->calle}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon105">
 					</div>
 				</div>
 			</div><br><br>
@@ -83,7 +83,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon106">Telefono</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="telefono" value="{{$persona->telefono}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon106">
+						<input type="text" name="telefono" value="{{$persona->telefono}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon106">
 					</div>
 				</div>
 			</div><br><br>
@@ -93,7 +93,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon107">Correo electronico</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="email" value="{{$persona->email}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon107">
+						<input type="text" name="email" value="{{$persona->email}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon107">
 					</div>
 				</div>
 			</div><br><br>
@@ -103,7 +103,7 @@
 				<div class="input-group-append ">
 					<span class="input-group-text btn btn-warning" id="basic-addon108">SEXO</span>		
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">			
-						<input type="text" name="sexo" value="{{$persona->sexo}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon108">
+						<input type="text" name="sexo" value="{{$persona->sexo}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon108">
 					</div>
 				</div>
 			</div><br><br>
@@ -113,7 +113,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon110">CURP</span>		
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="curp" value="{{$persona->curp}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon109">		
+						<input type="text" name="curp" value="{{$persona->curp}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon109">		
 					</div>
 				</div>	
 			</div><br><br>
@@ -123,7 +123,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon2">RFC</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">				
-						<input type="text" name="rfc" value="{{$persona->rfc}}" disabled ="true" class="e-border md-textarea form-control lineA" aria-describedby="basic-addon110">
+						<input type="text" name="rfc" value="{{$persona->rfc}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA" aria-describedby="basic-addon110">
 					</div>
 				</div>
 			</div><br><br>
@@ -138,7 +138,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon111">Folio</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon111">
+						<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon111">
 					</div>
 				</div>
 			</div><br><br>
@@ -148,7 +148,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon112">Tipo de Certificación</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="certificacion" value="{{$persona->certificacion}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon112">
+						<input type="text" name="certificacion" value="{{$persona->certificacion}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon112">
 					</div>
 				</div>
 			</div><br><br>
@@ -158,7 +158,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon113">Temporada de Cosecha</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">
-						<input type="text" name="temp_cosecha" value="{{$persona->temp_cosecha}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon113">
+						<input type="text" name="temp_cosecha" value="{{$persona->temp_cosecha}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon113">
 					</div>
 				</div>
 			</div><br><br>
@@ -168,7 +168,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon114">N° Colmenas, Chapetas</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon114">
+						<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon114">
 					</div>
 				</div>
 			</div><br><br>
@@ -178,7 +178,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon115">UPP</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="upp" value="{{$persona->upp}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon115">			
+						<input type="text" name="upp" value="{{$persona->upp}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon115">			
 					</div>
 				</div>
 			</div><br><br>
@@ -188,7 +188,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon116">PGN</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="pgn" value="{{$persona->pgn}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon116">	
+						<input type="text" name="pgn" value="{{$persona->pgn}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon116">	
 					</div>						
 				</div>
 			</div><br><br>
@@ -198,7 +198,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon117">Producción anual</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="prod_anual" value="{{$persona->prod_anual}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon117">
+						<input type="text" name="prod_anual" value="{{$persona->prod_anual}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon117">
 					</div>
 				</div>
 			</div><br><br>
@@ -208,7 +208,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addon118">Clave de Rasteabilidad</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="clave_rast" value="{{$persona->clave_rast}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon118">
+						<input type="text" name="clave_rast" value="{{$persona->clave_rast}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon118">
 					</div>
 				</div>
 			</div><br><br>
@@ -218,7 +218,7 @@
 				<div class="input-group-append">
 					<span class="input-group-text btn btn-warning" id="basic-addto119">Localización de los Apiarios</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="loc_api" value="{{$persona->loc_api}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addto119">
+						<input type="text" name="loc_api" value="{{$persona->loc_api}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addto119">
 					</div>
 				</div>
 			</div><br><br>
@@ -228,7 +228,7 @@
 				<div class="input-group-append ">
 					<span class="input-group-text btn btn-warning" id="basic-addon120">Observación</span>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 e-border">	
-						<input type="text" name="observacion" value="{{$persona->observacion}}" disabled ="true" class="e-border md-textarea form-control lineA " aria-describedby="basic-addon120">
+						<input type="text" name="observacion" value="{{$persona->observacion}}" disabled ="true" class="e-border md-textarea form-control-plaintext lineA " aria-describedby="basic-addon120">
 					</div>
 				</div>
 			</div><br><br>
