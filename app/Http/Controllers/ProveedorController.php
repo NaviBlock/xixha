@@ -167,7 +167,7 @@ class ProveedorController extends Controller
  
     public function show($id){
         return view('compras.proveedor.show',['persona'=>Persona::findOrFail($id)]);
-    }
+    } 
   
     public function edit($id){
         return view('compras.proveedor.edit',['persona'=>Persona::findOrFail($id)]);
