@@ -40,6 +40,16 @@ footer{
     height: 100%;
 }
 
+.trans{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.table-tab{
+    overflow-y:100%;
+}
+
 .e-color{
  color: #F7971E !important;
 }
@@ -117,6 +127,14 @@ footer{
     .e-t{
         font-size:20px;
     }
+
+    .e-t-t{
+        display: none !important;
+    }
+
+    .navbar-dark .navbar-toggler {
+        display: none !important;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px)*/
@@ -142,10 +160,25 @@ footer{
         margin-left: 300px !important;
         padding: 10px !important;    
     }
+
+    .e-t-t{
+        display: none !important;
+    }
+
+    .navbar-dark .navbar-toggler {
+        display: none !important;
+    }
 }
 
 /*Medium devices (tablets, less than 992px)*/
 @media (min-width: 991.98px) { 
+    .e-t-t{
+        display: none !important;
+    }
+
+    .navbar-dark .navbar-toggler {
+        display: none !important;
+    }
  }
 
  /*Large devices (desktops, less than 1024px)*/

@@ -18,9 +18,10 @@
 </div>
 {!!Form::model($persona,['method'=>'PATCH','route'=>['compras.proveedor.update',$persona->idpersona]]) !!}
 {{Form::token()}}
-	<div class="container-fluid">
-		<div class="row">
-			<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">	
+<div class="container-fluid">
+	<div class="row">
+		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">	
+			
 			<!---Titulo---->				
 				<div class="text-center">
 					<h3 class="e-text-color">Datos Personales del Apicultor</h3>
@@ -37,12 +38,6 @@
 					</div>
 				</div>
 				</div>
-
-
-	<!---div class="input-group mb-3">
-  	<div class="input-group-prepend">
-    <label class="input-group-text" for="inputGroupSelect01">Options</label>
-  </div-->
 
 			<!---Estado---->	
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
@@ -155,7 +150,7 @@
 				<!--Titulo de Rastreabilidad-->
 				<br><br><br>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
-					<h3 class="display-5 e-text-color">Datos de Rastreabilidad</h3><br><br>
+					<h3 class="e-text-color">Datos de Rastreabilidad</h3><br><br>
 				</div>	
 
 				
@@ -280,14 +275,25 @@
 						</div>
 						</div>
 
-					<!---Tabla de Datos-->
+					<!---Titulo-->						
 						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">	
-									
-										<div class="table-responsive"> 
-											<table class="table table-striped table-hover table-condensed table-borderless table-striped w-auto">
+										<h2 class="e-text-color">Realizada Transacciones</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					<!---Tabla de Datos-->
+						<div class="form-group amber-textarea active-amber-textarea-2 e-border text-center">
+							<div class="input-group mx-auto">
+								<div class="mx-auto">
+									<div class="input-group ">								
+										<div class="table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl"> 
+											<table class="table table-hover table-condensed ">
 												<thead class="thead-dark">
 													<th>No</th>
 													<th>Cantidad</th>
@@ -318,14 +324,57 @@
 							</div>
 						</div>
 
+					<!---Datos del banco--->	
+						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+							<div class="input-group mx-auto">
+								<div class="mx-auto">
+									<div class="input-group-prepend">
+										<button type="button" class="btn btn-primary btn-responsive btninter text-center" data-toggle="modal" data-target="#exampleModal">
+											<span>Datos del Banco<span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
 
-					<!---Datos del banco--->
-					
-				
-				
+					<!-- Modal -->
+						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+							<div class="input-group mx-auto">
+								<div class="mx-auto">
+									<div class="input-group-prepend">
+										<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Datos Bancarios</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+														<div class="input-group mx-auto">
+															<div class="mx-auto">
+																<div class="input-group-prepend">
+																	<div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-4">
+																		<p>Nombre del Titular: {{$persona->nombre}}</p>
+																		<p>No. de Cuenta: {{$persona->telefono}}</p>
+																		<p>Clave Interbancaria: {{$persona->telefono}}</p>
+																		<p>Banco: {{$persona->estadoP}}</p>																		
+																		<br><br><br><br>
+																	</div>																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
 
-
-		</div>
 	</div>
+</div>
 {!!Form::Close()!!}		
 @endsection

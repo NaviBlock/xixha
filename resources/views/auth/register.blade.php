@@ -1,12 +1,10 @@
 @extends('layouts.app')
-
-@section('content')
-
+@section('content') 
 <div class="container">
     <div class="row">
         <div class="col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
-            <div class="panel panel-default">
-                <!--div class="panel-heading">Acceso al Registro</div-->
+            <div class="panel panel-default">              
+                <div class="panel-heading e-color e-texto"><h3 >Acceso al Registro</h3></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
