@@ -40,7 +40,7 @@
             </thead>
             <tbody>
                 @foreach($personas as $per)
-                <tr>
+                <tr> 
                     <td>{{ $per->folio }}</td>
                     <td>
                         <img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid">
@@ -60,13 +60,13 @@
                                 </a>
                             </div>
                         </div><br>
-                        <!--div>
+                        <div>
                             <div class="btn-group mr-4" role="group" aria-label="Boton Editar">
                                 <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}">
                                     <button type="button" class="btn btn-primary btn-block">Editar</button>
                                 </a>
                             </div>
-                        </div><br-->
+                        </div><br>
                         <!--div>
                             <div class="btn-group mr-4" role="group" aria-label="Boton de Eliminar">
                                 <a href="" data-target="#modal-delete-{{$per->idpersona}}" data-toggle="modal">

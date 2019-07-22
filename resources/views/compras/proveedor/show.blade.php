@@ -27,40 +27,40 @@
 					<h3 class="e-text-color">Datos Personales del Apicultor</h3>
 				</div>
 
-			<!---Nombre del apicultor---->										
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center py-4">
+			<!---Nombre del apicultor---->
+				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
 						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-						<div class="input-group-prepend">
-							<span class=" text-center input-group-text btn btn-warning" id="basic-addon101">Folio de: {{$persona->nombre}} {{$persona->apellidopa}} {{$persona->apellidoma}}</span>
-							<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="input-group-text e-border md-textarea form-control lineA" aria-describedby="basic-addon101">
+							<div class="input-group-prepend">
+								<span class="text-center input-group-text btn btn-warning" id="basic-addon101">Folio de: {{$persona->nombre}} {{$persona->apellidopa}} {{$persona->apellidoma}}</span>
+								<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="input-group-text e-border md-textarea form-control lineA" aria-describedby="basic-addon101">
+							</div>
 						</div>
 					</div>
-				</div>
 				</div>
 
 			<!---Estado---->	
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
 						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-						<div class="input-group-prepend">
-							<span class="text-center input-group-text btn btn-warning" id="basic-addon102">Estado</span>		
-							<input type="text" name="estadoP" value="{{$persona->estadoP}}" disabled ="true" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon102">								
-						</div>	
-					</div>		
-				</div>
+							<div class="input-group-prepend">
+								<span class="text-center input-group-text btn btn-warning" id="basic-addon102">Estado</span>		
+								<input type="text" name="estadoP" value="{{$persona->estadoP}}" disabled ="true" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon102">								
+							</div>	
+						</div>		
+					</div>
 				</div>
 
 				<!--Municipio-->
 					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 						<div class="input-group mx-auto">
 							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="text-center input-group-text btn btn-warning" id="basic-addon103">Municipio</span>				
-								<input type="text" name="municipio" value="{{$persona->municipio}}" disabled ="true" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon103">
+								<div class="input-group-prepend">
+									<span class="text-center input-group-text btn btn-warning" id="basic-addon103">Municipio</span>				
+									<input type="text" name="municipio" value="{{$persona->municipio}}" disabled ="true" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon103">
+								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 
 				<!--Colonia-->
@@ -275,61 +275,12 @@
 						</div>
 						</div>
 
-					<!---Titulo-->						
-						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-							<div class="input-group mx-auto">
-								<div class="mx-auto">
-									<div class="input-group-prepend">	
-										<h2 class="e-text-color">Realizada Transacciones</h2>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-					<!---Tabla de Datos-->
-						<div class="form-group amber-textarea active-amber-textarea-2 e-border text-center">
-							<div class="input-group mx-auto">
-								<div class="mx-auto">
-									<div class="input-group ">								
-										<div class="table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl"> 
-											<table class="table table-hover table-condensed ">
-												<thead class="thead-dark">
-													<th>No</th>
-													<th>Cantidad</th>
-													<th>Precio</th>
-													<th>Fecha</th>
-													<th>Total</th>
-												</thead>
-												<tbody>
-													<tr>
-														<td class="table-warning">1</td>
-														<td class="table-warning">150</td>
-														<td class="table-warning">$200.00</td>
-														<td class="table-warning">23-23-23</td>
-														<td class="table-warning">$200.00</td>
-													</tr>
-													<tr>
-														<td class="table-warning">1</td>
-														<td class="table-warning">150</td>
-														<td class="table-warning">$200.00</td>
-														<td class="table-warning">23-23-23</td>
-														<td class="table-warning">$200.00</td>
-													</tr>
-												</tbody>
-											</table>        
-										</div>
-									</div>
-								</div>			
-							</div>
-						</div>
-
 					<!---Datos del banco--->	
 						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<button type="button" class="btn btn-primary btn-responsive btninter text-center" data-toggle="modal" data-target="#exampleModal">
+										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#exampleModal">
 											<span>Datos del Banco<span>
 										</button>
 									</div>
@@ -355,12 +306,11 @@
 														<div class="input-group mx-auto">
 															<div class="mx-auto">
 																<div class="input-group-prepend">
-																	<div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-4">
+																	<div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
 																		<p>Nombre del Titular: {{$persona->nombre}}</p>
-																		<p>No. de Cuenta: {{$persona->telefono}}</p>
-																		<p>Clave Interbancaria: {{$persona->telefono}}</p>
-																		<p>Banco: {{$persona->estadoP}}</p>																		
-																		<br><br><br><br>
+																		<p>No. de Cuenta: {{$persona->nCuenta}}</p>
+																		<p>Clave Interbancaria: {{$persona->clave}}</p>
+																		<p>Banco: {{$persona->banco}}</p>							
 																	</div>																	
 																</div>
 															</div>
@@ -372,8 +322,72 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div><br><br><br><br>
 
+					<!---Datos del Tabla--->	
+						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+							<div class="input-group mx-auto">
+								<div class="mx-auto">
+									<div class="input-group-prepend">
+										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#ModalTransacciones">
+											<span>Transacciones<span>
+										</button>										
+									</div>
+								</div>
+							</div>
+						</div>
+
+					<!-- Modal Tabla-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+							<div class="input-group mx-auto">
+								<div class="mx-auto">
+									<div class="input-group-prepend">
+										<div class="modal fade" id="ModalTransacciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Datos de Operación</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+														<div class="input-group mx-auto">
+															<div class="mx-auto">
+																<div class="input-group-prepend">
+																	<div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+																		<!--Tabla-->
+																			<div class="table-responsive"> 
+																				<table class="table table-hover table-condensed table-sm text-white">
+																					<thead class="thead-dark">
+																						<th scope="col">No</th>
+																						<th scope="col">Cantidad</th>
+																						<th scope="col">Precio</th>
+																						<th scope="col">Fecha</th>
+																						<th scope="col">Total</th>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td scope="row" class="bg-warning">{{$persona->noOperacion}}</td>
+																							<td scope="row" class="bg-warning">{{$persona->opCantidad}}</td>
+																							<td scope="row" class="bg-warning">{{$persona->opPrecio}}</td>
+																							<td scope="row" class="bg-warning">{{$persona->opFecha}}</td>
+																							<td scope="row" class="bg-warning">{{$persona->opTotal}}</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>						
 	</div>
 </div>
 {!!Form::Close()!!}		

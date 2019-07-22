@@ -1,14 +1,14 @@
 <?php
 Route::auth();
 Route::get('/',function(){
-    return view('/layouts/index');
+    return view('compras/proveedor/index');
 });
-/*layouts/index*/
 
 Route::resource('compras/proveedor','ProveedorController');
-/*Route::get('compras/proveedor','ProveedorController@show.bank');*/
-/*Route::get('/','ProveedorController@index');
+Route::get('/home','ProveedorController@index');
+Route::get('/','ProveedorController@index');
 
+/*
 /*Route::get('/home','ProveedorController@index');
 Route::get('/','ProveedorController@index');*/
 

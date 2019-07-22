@@ -26,7 +26,7 @@
           <a class="nav-link" href="{{asset('home')}}">Inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{{asset('home')}}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Perfil
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

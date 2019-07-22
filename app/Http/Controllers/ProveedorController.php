@@ -65,7 +65,8 @@ class ProveedorController extends Controller
             return view('compras.proveedor.index',['personas'=>$personas,'searchText'=>$query]);
         }
     }
- 
+    
+
     public function create(){  
         return view("compras.proveedor.create");
     }
@@ -99,7 +100,7 @@ class ProveedorController extends Controller
             //$mytime = Carbon::now('America/Mexico_City');
             //$persona->fecha_hora = $mytime->toDateTimeString();
             $personas->tipo_persona ='Apicultor';
-            $personas->estado ='Activo';
+            $personas->estado ='Activo';        
 
             
             //Codigo para los Folios
@@ -204,10 +205,11 @@ class ProveedorController extends Controller
             $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
             $persona->img_perfil=$file->getClientOriginalName();
         }*/
-
         $persona->update();
         return Redirect::to('compras/proveedor');
     }
+
+    
  
     public function destroy($id){
         $persona = Persona::findOrFail($id);
