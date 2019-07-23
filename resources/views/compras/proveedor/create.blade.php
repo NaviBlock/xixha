@@ -1,14 +1,10 @@
 @extends ('layouts.admin')
 @section ('contenido')
-
-<div class="container-fluid"> 
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<br><br>
-			<h3 class="text-center">Alta del Apicultor</h3>
-			<br>
+<div class="row"> 
+	<div class="container-fluid">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+			<h3 class="text-center">Alta del Apicultor</h3>		
 			@if(count($errors)>0)
-
 				<div class="alert alert-danger">
 					<ul>
 						@foreach ($errors->all() as $error)
@@ -16,18 +12,26 @@
 						@endforeach
 					</ul> 
 				</div>
-
 			@endif  
-			{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
-			{{Form::token()}}	
+		</div>
+	</div>
+</div>
+{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
+{{Form::token()}}	
 
-			<div class="form-group mf-form amber-textarea active-amber-textarea-2 input-group mb-3">			
-					<span class="input-group-text" id="basic-addon2">Nombre del Apicultor</span>
+<div class="container-fluid">
+	<div class="row">
+		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">
+
+		<!--Nombre--->
+
+					<span class="text-center input-group-text btn btn ewarning" id="basic-addon2">Nombre del Apicultor</span>	
 					
+					
+
+
 					<input type="text" name="nombre" required value="{{old('nombre')}}" class="md-textarea form-control lineA " placeholder="Nombre..." aria-describedby="basic-addon2">
-
 					<input type="text" name="apellidopa" required value="{{old('apellidopa')}}" class="md-textarea form-control lineA " placeholder="Apellido Parteno..." aria-describedby="basic-addon2">
-
 					<input type="text" name="apellidoma" required value="{{old('apellidoma')}}" class="md-textarea form-control lineA " placeholder="Apellido Marteno..." aria-describedby="basic-addon2">		
 			</div>
 
@@ -259,4 +263,7 @@
 	</script>
 @endpush-->
 
-@endsection
+	</div>
+	</div>
+	</div>
+	@endsection

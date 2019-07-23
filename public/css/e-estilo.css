@@ -1,11 +1,12 @@
 dl, ol, ul {
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 .pagination, a{
  color:#F7971E;
- font-size: 20px;
+ font-size: 25px;
  justify-content: center;
+ letter-spacing: auto;
 }
 
 .e-alineacion{

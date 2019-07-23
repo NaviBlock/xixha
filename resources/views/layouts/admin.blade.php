@@ -30,8 +30,9 @@
           Perfil
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="{{asset('home')}}">Usuario</a>
-            <a class="dropdown-item"  href="{{url('/logout')}}">Salir</a>
+            <a class="dropdown-item btn btn-primary btn-responsive text-center" href="{{asset('home')}}">Configuración</a>
+            <a class="dropdown-item btn btn-success btn-responsive text-center" href="{{asset('compras/proveedor/create')}}">Registro</a>
+            <a class="dropdown-item btn btn-danger btn-responsive text-center"  href="{{url('/logout')}}">Salir</a>
           </div>
         </li>
       </ul>
