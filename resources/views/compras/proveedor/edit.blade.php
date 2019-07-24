@@ -4,21 +4,21 @@
 	<div class="container-fluid">
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto">
 			<h3>Editar datos de: {{ $persona->nombre}}</h3>
-				@if(count($errors)>0)
-					<div class="alert alert-danger">
-						<ul>
-							@foreach($errors->all() as $error)
-								<li>{{$error}}</li>
-							@endforeach
-						</ul> 
-					</div> 
-				@endif
-			</div> 
+			@if(count($errors)>0)
+				<div class="alert alert-danger">
+					<ul>
+						@foreach($errors->all() as $error)
+							<li>{{$error}}</li>
+						@endforeach
+					</ul> 
+				</div> 
+			@endif
 		</div>  
 	</div>
 </div>
 {!!Form::model($persona,['method'=>'PATCH','route'=>['compras.proveedor.update',$persona->idpersona]]) !!}
 {{Form::token()}}
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">

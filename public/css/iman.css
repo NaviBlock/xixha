@@ -82,8 +82,28 @@ p {
     border-radius: 30px !important;
 }
 
+.dropdown-menu {
+    padding: 0 !important;
+}
+
 .e-text-color{
     color: #ffc107 !important;
+
+}
+
+.e-text-color-y{
+    color: #ffc107 !important;
+    background-color: rgba(224, 220, 10, 0.062) ;
+}
+
+.e-text-color-b{
+    color: #1E88E5 !important;
+    background-color: rgba(10, 85, 224, 0.062) ;
+}
+
+.e-text-color-r{
+    color: #DD2C00 !important;
+    background-color: rgba(224, 10, 10, 0.062) ;
 }
 
 .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {

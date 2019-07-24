@@ -22,17 +22,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">                   
+        <!--li class="nav-item active">                   
           <a class="nav-link" href="{{asset('home')}}">Inicio</a>
-        </li>
+        </li-->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Perfil
+          <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          SIPAX
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item btn btn-primary btn-responsive text-center" href="{{asset('home')}}">Configuración</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center" href="{{asset('compras/proveedor/create')}}">Registro</a>
-            <a class="dropdown-item btn btn-danger btn-responsive text-center"  href="{{url('/logout')}}">Salir</a>
+            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('home')}}">Buscador</a>
+            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{asset('compras/proveedor/create')}}">Registro</a>
+            <a class="dropdown-item btn btn-danger btn-responsive text-center e-text-color-r"  href="{{url('/logout')}}">Salir</a>
           </div>
         </li>
       </ul>
