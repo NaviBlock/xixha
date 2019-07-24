@@ -4,15 +4,13 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIPAX</title>
-   
+  <title>SIPAX</title>   
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/iman.css')}}">
   <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
   <!--link rel="stylesheet" href="{{asset('css/estilo.css')}}"-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
-  
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,13 +20,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <!--li class="nav-item active">                   
-          <a class="nav-link" href="{{asset('home')}}">Inicio</a>
-        </li-->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          SIPAX
-          </a>
+          <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('home')}}">Buscador</a>
             <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{asset('compras/proveedor/create')}}">Registro</a>
