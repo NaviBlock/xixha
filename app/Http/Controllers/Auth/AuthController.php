@@ -71,10 +71,10 @@ class AuthController extends Controller
         ]);
     }
     
-    //Acceso a login
-   /*protected function showRegistrationForm(){
+    //Acceso a registro
+   protected function showRegistrationForm(){
         return redirect('login');
-    }*/
+    }
 
     public function redirectPath()
     {

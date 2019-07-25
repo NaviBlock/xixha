@@ -25,6 +25,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('home')}}">Buscador</a>
             <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{asset('compras/proveedor/create')}}">Registro</a>
+            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('/seguridad/usuario')}}">Configuración</a>
             <a class="dropdown-item btn btn-danger btn-responsive text-center e-text-color-r"  href="{{url('/logout')}}">Salir</a>
           </div>
         </li>

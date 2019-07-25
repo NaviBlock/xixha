@@ -34,7 +34,7 @@
         <div class="container"> 
             <div class="row">
                 <div class="col-md-12 text-center justify-content-center align-self-center">
-                    <h1 class="e-titulo e-color">Padrón de Apicultores Activo</h1>
+                    <h1 class="e-titulo e-color">Padrón de Apicultores</h1>
                     <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12"> 
                     <a class="navbar-brand e-titulo" href="/"><img class="e-logo-p img-responsive center-block" src="{{asset('img/sipax.jpeg')}}" alt="Logo site"></a>            
                         @yield('content')
