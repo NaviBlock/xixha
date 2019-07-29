@@ -20,8 +20,7 @@
                                 <div class="table-responsive "> 
                                     <table class="table table-hover table-condensed table-sm text-dark table-bordered">
                                         <thead class="table-color">
-                                            <th scope="col">Id</th>
-                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Nombre</th>                                           
                                             <th scope="col">Email</th>
                                             <th scope="col">Rol</th>
                                             <th scope="col">Opciones</th>

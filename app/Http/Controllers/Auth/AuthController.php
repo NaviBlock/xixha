@@ -29,6 +29,7 @@ class AuthController extends Controller
      *
      * @var string
      */
+    //protected $redirectTo = 'compras/proveedor';
     protected $redirectTo = '/layouts/index';
 
     /**
@@ -72,9 +73,9 @@ class AuthController extends Controller
     }
     
     //Acceso a registro
-   protected function showRegistrationForm(){
+   /*protected function showRegistrationForm(){
         return redirect('login');
-    }
+    }*/
 
     public function redirectPath()
     {

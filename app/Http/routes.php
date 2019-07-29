@@ -1,14 +1,23 @@
 <?php
-
-Route::get('/', function(){
-    return view('auth/login');
+Route::get('/', function () {
+   //return view('auth/login');
+   return view('login');
 });
 
-/*Index*/
+Route::auth();
+
+/** Ruta Api_token*/
+Route::group(['middleware' => ['auth:api']], function(){
+    Route::get('test',function(){
+        $user = \Auth::user();
+        return $user;
+    });
+});
+
+//Index
 Route::get('/home','ProveedorController@index');
 Route::get('/','ProveedorController@index');
 Route::get('/index','ProveedorController@index');
-
 
 /*Direccion a proveedor*/
 Route::resource('compras/proveedor','ProveedorController');
@@ -17,13 +26,8 @@ Route::resource('compras/proveedor','ProveedorController');
 Route::resource('/seguridad/usuario','UsuarioController');
 Route::get('/seguridad/usuario','UsuarioController@index');
 
-/*Seguridad*/
-Route::auth();
-Route::get('/home','HomeController@index');
-
 /*Usuario*/
 /*Route::resource('configuracion/usuario','UsuarioController');*/
-/*
 /*Route::get('/home','ProveedorController@index');
 Route::get('/','ProveedorController@index');*/
 /*Route::resource('almacen/categoria','CategoriaController');
