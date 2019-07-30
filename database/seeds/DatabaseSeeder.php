@@ -15,5 +15,5 @@ class DatabaseSeeder extends Seeder
         factory(xixha\User::class)->create();
         //factory(App\User::class)->create();
     }
-}
+} 
  

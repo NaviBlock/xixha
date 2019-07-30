@@ -8,7 +8,7 @@ Route::auth();
 
 /** Ruta Api_token*/
 Route::group(['middleware' => ['auth:api']], function(){
-    Route::get('test',function(){
+    Route::get('token',function(){
         $user = \Auth::user();
         return $user;
     });
