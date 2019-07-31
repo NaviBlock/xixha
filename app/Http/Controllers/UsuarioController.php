@@ -23,14 +23,15 @@ class UsuarioController extends Controller
             $usuarios = DB::table('users')
             ->where('name','LIKE','%'.$query.'%')  
             ->orwhere('email','LIKE','%'.$query.'%')  
-            ->orderBy('id','desc')
+            ->orderBy('id','desc') 
             ->paginate(5);
-            return view('seguridad.usuario.index',['usuarios'=>$usuarios,'searchText'=>$query]);
+            return view('secs.index',['usuarios'=>$usuarios,'searchText'=>$query]);
         }
     }
 
+    
     public function create(){
-        return view("seguridad.usuario.create");
+        return view("secs.create");
     }
 
     public function store(UsuarioFormRequest $request){
@@ -39,12 +40,14 @@ class UsuarioController extends Controller
         $usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->rol=$request->get('rol');
+       // $usuario->remember_token();
         $usuario->save();
-        return Redirect::to("seguridad/usuario");
+        
+        return Redirect::to("secs");
     }
 
     public function edit($id){
-        return view("seguridad.usuario.edit",["usuario"=>User::findOrFail($id)]);
+        return view("secs.edit",["usuario"=>User::findOrFail($id)]);
     }
 
     public function update(UsuarioFormRequest $request, $id){
@@ -53,13 +56,13 @@ class UsuarioController extends Controller
         $usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->update();
-        return Redirect::to("seguridad/usuario");
+        return Redirect::to("secs");
     }
 
     public function destroy($id){
         $usuario = DB::table('users')
         ->where('id','=', $id)
         ->delete();
-        return Redirect::to("seguridad/usuario");
+        return Redirect::to("secs");
     }
 }

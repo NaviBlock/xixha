@@ -8,7 +8,12 @@ dl, ol, ul {
  justify-content: center;
  letter-spacing: auto;
 }
-
+ 
 .e-alineacion{
     text-align: center;
 } 
+
+.e-coloresx{
+    color:#F7971E !important;
+    text-decoration: #F7971E !important;
+}

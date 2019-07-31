@@ -73,17 +73,17 @@ class AuthController extends Controller
     }
     
     //Acceso a registro
-   /*protected function showRegistrationForm(){
+   protected function showRegistrationForm(){
         return redirect('login');
-    }*/
+    }
 
     public function redirectPath()
     {
-        if(auth()->user()->email='alejandrohernandezvalle@gmail.com'){
-            return '/compras/proveedor';
+        if(auth()->user()){
+            return '/login';
         }
         else{
-            return '/layouts/index';
+            return '/layouts/login';
         }
     }
 

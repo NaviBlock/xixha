@@ -13,7 +13,6 @@ use DB;
 use Storage;
 use Illuminate\Support\Str;
 
-use Carbon\Carbon;
 use Response;
 use Illuminate\Support\Collection;
 use Illuminate\Database\DatabaseManager;
@@ -62,13 +61,12 @@ class ProveedorController extends Controller
 
             ->orderBy('idpersona','desc')
             ->paginate(5);
-            return view('compras.proveedor.index',['personas'=>$personas,'searchText'=>$query]);
+            return view('proveedor.index',['personas'=>$personas,'searchText'=>$query]);
         }
     }
     
-
     public function create(){  
-        return view("compras.proveedor.create");
+        return view("proveedor.create");
     }
 
     public function store(PersonaFormRequest $request){
@@ -101,7 +99,6 @@ class ProveedorController extends Controller
             //$persona->fecha_hora = $mytime->toDateTimeString();
             $personas->tipo_persona ='Apicultor';
             $personas->estado ='Activo';        
-
             
             //Codigo para los Folios
                 /*if(isset($folio)){
@@ -127,9 +124,7 @@ class ProveedorController extends Controller
                 //fechacomunidad,usa el ine, 
                 //xi-curp-a //deberia poner el nombre.....? alarchivo 
                 //xix-heva092404grllt4j5-ha
-
-            
-            
+                    
                 if(Input::hasFile('img_perfil')) {
                 $file=Input::file('img_perfil');                    
                 $extension=$file->getClientOriginalExtension();                              
@@ -162,16 +157,16 @@ class ProveedorController extends Controller
            }
 
             $personas->save();
-        return Redirect::to('compras/proveedor');
+        return Redirect::to('proveedor');
 
     }
  
     public function show($id){
-        return view('compras.proveedor.show',['persona'=>Persona::findOrFail($id)]);
+        return view('proveedor.show',['persona'=>Persona::findOrFail($id)]);
     } 
   
     public function edit($id){
-        return view('compras.proveedor.edit',['persona'=>Persona::findOrFail($id)]);
+        return view('proveedor.edit',['persona'=>Persona::findOrFail($id)]);
     }
 
     public function update(PersonaFormRequest $request,$id){
@@ -206,7 +201,7 @@ class ProveedorController extends Controller
             $persona->img_perfil=$file->getClientOriginalName();
         }*/
         $persona->update();
-        return Redirect::to('compras/proveedor');
+        return Redirect::to('proveedor');
     }
 
     
@@ -215,6 +210,6 @@ class ProveedorController extends Controller
         $persona = Persona::findOrFail($id);
         $persona->tipo_persona ='Inactivo';
         $persona->update();
-        return Redirect::to('compras/proveedor');	
+        return Redirect::to('proveedor');	
     }
 }  

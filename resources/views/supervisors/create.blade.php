@@ -19,7 +19,7 @@
 		</div>
 	</div>
 </div>
-{!!Form::open(array('url'=>'compras/proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
+{!!Form::open(array('url'=>'proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 {{Form::token()}}	
 
 <div class="container-fluid">

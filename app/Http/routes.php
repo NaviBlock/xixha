@@ -14,19 +14,38 @@ Route::group(['middleware' => ['auth:api']], function(){
     });
 });
 
-//Index
-Route::get('/home','ProveedorController@index');
-Route::get('/','ProveedorController@index');
-Route::get('/index','ProveedorController@index');
+//Index Dashboard
+Route::get('/home','DashboardController@index');
+Route::get('/','DashboardController@index');
+Route::get('/index','DashboardController@index');
 
-/*Direccion a proveedor*/
-Route::resource('compras/proveedor','ProveedorController');
+/*Direccion a users*/
+Route::resource('users','ApicultorController');
+Route::get('users','ApicultorController@index');
+
+/*Direccion a root*/
+Route::resource('root','RootController');
+Route::get('root', 'RootController@index');
+Route::get('secs', 'UsuarioController@index');
+Route::resource('secs','UsuarioController');
+
+/*Direccion a supervisor*/
+Route::resource('supervisors','ProveedorController');
+Route::get('supervisors', 'SuperController@index');
+
+/*Direccion a moderadors*/
+Route::resource('moderadors','ProveedorController');
+Route::get('moderadors', 'ModerController@index');
+
+/*Direccion a administrador*/
+Route::resource('administradors','ProveedorController');
+Route::get('administradors', 'AdminController@index');
 
 /*Configuracion*/
 Route::resource('/seguridad/usuario','UsuarioController');
 Route::get('/seguridad/usuario','UsuarioController@index');
 
-/*Usuario*/
+//Route::resource('proveedor','ProveedorController');
 /*Route::resource('configuracion/usuario','UsuarioController');*/
 /*Route::get('/home','ProveedorController@index');
 Route::get('/','ProveedorController@index');*/

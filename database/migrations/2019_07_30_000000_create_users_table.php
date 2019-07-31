@@ -10,10 +10,10 @@ class CreateUsersTable extends Migration{
             $table->string('name');            
             $table->string('email');
             $table->string('password');
-            $table->rememberToken(str_random(10));
-            $table->string('apiToken')->rememberToken(str_random(10));
+            $table->rememberToken();
+            /*$table->string('apiToken')->rememberToken(str_random(10));
             $table->boolean('confirmed')->default(0);
-            $table->string('confirmationCode')->nullable();      
+            $table->string('confirmationCode')->nullable();    */  
             $table->string('rol')->default("User");    
             $table->timestamps();           
         });

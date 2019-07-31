@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="{{asset('img/logos.png')}}" style="width:50%" alt="Logo site"></a>
+            <a class="navbar-brand" href="/home"><img src="{{asset('img/logos.png')}}" style="width:50%" alt="Logo site"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

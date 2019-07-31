@@ -7,11 +7,10 @@
                 <h5 class="card-title">Padrón de Apicultores.</h5>
                 <div class="text-center">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        @include('compras.proveedor.search')
+                        @include('proveedor.search')
                     </div>
                 </div>
             </div> 
-
  
             <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
@@ -68,7 +67,7 @@
                                                     </div--> 
                                                 </td>
                                             </tr>
-                                            @include('compras.proveedor.modal')
+                                            @include('proveedor.modal')
                                             @endforeach
                                         </tbody>
                                     </table>
