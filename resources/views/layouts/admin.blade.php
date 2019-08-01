@@ -4,7 +4,7 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIPAX</title>   
+  <title>SIPAX</title>    
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/iman.css')}}">
   <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
@@ -23,8 +23,8 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('root')}}">Padrón</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{asset('root/create')}}">Registro</a>            
+            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('root/index')}}">Padrón</a>
+            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{asset('root/create')}}">Registro Apicultor</a>            
             <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('secs')}}">Roles</a>
             <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('secs/create')}}">Crear Roles</a>
             <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('logout')}}">Salir</a>

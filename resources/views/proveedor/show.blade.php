@@ -57,7 +57,7 @@
 								<div class="input-group-prepend">
 									<span class="text-center input-group-text btn btn-warning" id="basic-addon103">Municipio</span>				
 									<input type="text" name="municipio" value="{{$persona->municipio}}" disabled ="true" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon103">
-								</div>
+								</div> 
 							</div>
 						</div>
 					</div>

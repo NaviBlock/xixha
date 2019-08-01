@@ -16,7 +16,7 @@
 		</div>  
 	</div>
 </div>
-{!!Form::model($persona,['method'=>'PATCH','route'=>['proveedor.update',$persona->idpersona]]) !!}
+{!!Form::model($persona,['method'=>'PATCH','route'=>['root.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 
 <div class="container-fluid">

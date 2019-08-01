@@ -49,14 +49,14 @@
                                                 <td class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
                                                     <div>
                                                         <div class="btn-group mr-4" role="group" aria-label="Boton Detalles">
-                                                            <a href="{{URL::action('ProveedorController@show',$per->idpersona)}}">
+                                                            <a href="{{URL::action('RootController@show',$per->idpersona)}}">
                                                                 <button type="button" class="btn btn-success btn-block">Detalles</button>
                                                             </a>
                                                         </div>
                                                     </div><br>
                                                     <div>
                                                         <div class="btn-group mr-4" role="group" aria-label="Boton Editar">
-                                                            <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}">
+                                                            <a href="{{URL::action('RootController@edit',$per->idpersona)}}">
                                                                 <button type="button" class="btn btn-primary btn-block">Editar</button>
                                                             </a>
                                                         </div>

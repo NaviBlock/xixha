@@ -19,31 +19,34 @@ Route::get('/home','DashboardController@index');
 Route::get('/','DashboardController@index');
 Route::get('/index','DashboardController@index');
 
-/*Direccion a users*/
+/*users*/
 Route::resource('users','ApicultorController');
 Route::get('users','ApicultorController@index');
 
-/*Direccion a root*/
-Route::resource('root','RootController');
-Route::get('root', 'RootController@index');
-Route::get('secs', 'UsuarioController@index');
-Route::resource('secs','UsuarioController');
+/*root*/
+Route::resource('root/index','RootController');
+Route::resource('root/create','RootController');
+Route::get('root', 'RootController@dashboard');
 
-/*Direccion a supervisor*/
+/*secs*/
+Route::resource('secs','UsuarioController');
+Route::get('secs', 'UsuarioController@index');
+
+/*supervisor*/
 Route::resource('supervisors','ProveedorController');
 Route::get('supervisors', 'SuperController@index');
 
-/*Direccion a moderadors*/
+/*moderadors*/
 Route::resource('moderadors','ProveedorController');
 Route::get('moderadors', 'ModerController@index');
 
-/*Direccion a administrador*/
+/*administrador*/
 Route::resource('administradors','ProveedorController');
 Route::get('administradors', 'AdminController@index');
 
 /*Configuracion*/
-Route::resource('/seguridad/usuario','UsuarioController');
-Route::get('/seguridad/usuario','UsuarioController@index');
+//Route::resource('/seguridad/usuario','UsuarioController');
+//Route::get('/seguridad/usuario','UsuarioController@index');
 
 //Route::resource('proveedor','ProveedorController');
 /*Route::resource('configuracion/usuario','UsuarioController');*/

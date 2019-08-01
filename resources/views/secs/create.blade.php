@@ -120,6 +120,17 @@
 					</div>
 				</div>
 
+			<!--pin-->
+			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+				<div class="input-group mx-auto">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+						<div class="input-group-prepend">
+							<label for="pin" class="input-group-text e-border">Pin</label>
+							<input id="pin" type="number" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="10">	
+						</div>							
+					</div>
+				</div>
+			</div>
 
 			<!--botones--->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq py-4" id="datoy">					<div class="input-group mx-auto">

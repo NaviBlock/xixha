@@ -19,9 +19,8 @@
 		</div>
 	</div>
 </div>
-{!!Form::open(array('url'=>'proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
+{!!Form::open(array('url'=>'root','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 {{Form::token()}}	
-
 <div class="container-fluid">
 	<div class="row">
 		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">

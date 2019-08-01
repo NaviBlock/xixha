@@ -71,6 +71,10 @@ public function create(){
     return view("root.create");
 }
 
+public function dashboard(){  
+    return view("root.dashboard");
+}
+
 public function store(PersonaFormRequest $request){
         $personas = new Persona;
         //$personas->tipo_persona='proveedor';
@@ -211,5 +215,5 @@ public function destroy($id){
     $persona->tipo_persona ='Inactivo';
     $persona->update();
     return Redirect::to('root');	
+    }
 }
-}  
