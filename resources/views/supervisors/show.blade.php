@@ -1,6 +1,6 @@
 @extends ('layouts.adminsuper')
 @section ('contenido')
-<div class="row">
+<div class="row"> 
 	<div class = "container-fluid"> 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
 			<h3>Datos del Apicultor: {{$persona->nombre}}</h3>
@@ -279,7 +279,7 @@
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#exampleModal">
+										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#exampleModall">
 											<span>Datos del Banco<span>
 										</button>
 									</div>
@@ -292,13 +292,13 @@
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal fade" id="exampleModall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabell" >
 											<div class="modal-dialog" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">Datos Bancarios</h5>
+														<h5 class="modal-title" id="exampleModalLabell">Datos Bancarios</h5>
 														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-															<span aria-hidden="true">&times;</span>
+															<span >&times;</span>
 														</button>
 													</div>
 													<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
@@ -341,13 +341,13 @@
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<div class="modal fade" id="ModalTransacciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal fade" id="ModalTransacciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
 											<div class="modal-dialog" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
 														<h5 class="modal-title" id="exampleModalLabel">Datos de Operación</h5>
 														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-															<span aria-hidden="true">&times;</span>
+															<span >&times;</span>
 														</button>
 													</div>
 													<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">

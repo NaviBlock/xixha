@@ -14,7 +14,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="{{asset('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo"></a>
+    <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,7 +23,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('supervisors')}}">Padrón</a>           
+            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{url('supervisors')}}">Padrón</a>
             <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('/logout')}}">Salir</a>
           </div>
         </li>
