@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es"> 
-<head>
+<head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,14 +23,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('home')}}">Buscador</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{asset('proveedor/create')}}">Registro</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('root')}}">Root</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('/seguridad/usuario')}}">Root Secs</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('/administradors')}}">Administrador</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('/supervisors')}}">Supervisor</a>
-            <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('/moderadors')}}">Moderador</a>
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-b" href="{{url('/users')}}">Apicultor</a>
+            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{asset('supervisors')}}">Padrón</a>           
             <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('/logout')}}">Salir</a>
           </div>
         </li>

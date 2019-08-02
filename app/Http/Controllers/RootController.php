@@ -107,7 +107,7 @@ public function store(PersonaFormRequest $request){
         $personas->estado ='Activo';        
         
         //Codigo para los Folios
-            /*if(isset($folio)){
+            /*if(isset($folio)){ 
                     echo "Folio repetido";
                 }else{
                     $personas->folio = 'xi0'.(rand(1,100000));

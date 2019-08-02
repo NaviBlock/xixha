@@ -91,6 +91,10 @@ p {
 
 }
 
+.rest{
+    margin-top: 0 !important;
+}
+
 .e-text-color-g{
     color: #0ba706 !important;
     background-color: rgba(224, 220, 10, 0.062) ;

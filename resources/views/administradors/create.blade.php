@@ -1,4 +1,4 @@
-@extends ('layouts.admin')
+@extends ('layouts.adminadmin')
 @section ('contenido')
 <div class="row"> 
 	<div class="container-fluid">
@@ -19,9 +19,8 @@
 		</div>
 	</div>
 </div>
-{!!Form::open(array('url'=>'proveedor','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
+{!!Form::open(array('url'=>'administradors','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 {{Form::token()}}	
-
 <div class="container-fluid">
 	<div class="row">
 		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">

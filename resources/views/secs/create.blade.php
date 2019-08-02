@@ -5,7 +5,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto"> 
 			<!--Titulo-->
 				<div class="text-center py-4">
-					<h3 class="e-text-color">Nueva Usuario</h3>
+					<h3 class="e-text-color">Nuevo rol</h3>
 				</div>
 				@if (count($errors)>0)
 				<div class="alert alert-danger">
@@ -100,7 +100,7 @@
 						</div>
 					</div>
 				</div>
-
+ 
 			<!--rol-->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
@@ -108,12 +108,9 @@
 							<div class="input-group-prepend">
 								<select name="rol" value="{{old('rol')}}" id="rol" class="md-textarea form-control lineA e-border">
 									<option value="User">User</option>
-									<option value="Supervisor">Supervisor</option>
-									<option value="Moderador">Moderador</option>
+									<option value="Supervisor">Supervisor</option>									
 									<option value="Administrador">Administrador</option>									
-									<option value="Dios">Dios</option>
-									<option value="Goku">Goku</option>
-									<option value="Mr. root">Mr.Root</option>
+									<option value="Mr.Root">Mr.Root</option>
 								</select>									
 							</div>							
 						</div>

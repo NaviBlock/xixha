@@ -25,24 +25,21 @@ Route::get('users','ApicultorController@index');
 
 /*root*/
 Route::resource('root/index','RootController');
-Route::resource('root/create','RootController');
+Route::resource('root/create','RootController@create');
 Route::get('root', 'RootController@dashboard');
 
 /*secs*/
 Route::resource('secs','UsuarioController');
 Route::get('secs', 'UsuarioController@index');
 
+/*administrador*/
+Route::resource('administradors','AdminController');
+Route::get('administradors', 'AdminController@index');
+
 /*supervisor*/
-Route::resource('supervisors','ProveedorController');
+Route::resource('supervisors','SuperController');
 Route::get('supervisors', 'SuperController@index');
 
-/*moderadors*/
-Route::resource('moderadors','ProveedorController');
-Route::get('moderadors', 'ModerController@index');
-
-/*administrador*/
-Route::resource('administradors','ProveedorController');
-Route::get('administradors', 'AdminController@index');
 
 /*Configuracion*/
 //Route::resource('/seguridad/usuario','UsuarioController');

@@ -1,9 +1,9 @@
-@extends ('layouts.admin')
+@extends ('layouts.adminadmin')
 @section ('contenido')
 <div class = "row"> 
 	<div class="container-fluid">
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto">
-			<h3>Editar datos de: {{ $persona->nombre}}</h3>
+			<h3 class="e-text-color">Editar datos de: {{ $persona->nombre}}</h3>
 			@if(count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
@@ -16,7 +16,7 @@
 		</div>  
 	</div>
 </div>
-{!!Form::model($persona,['method'=>'PATCH','route'=>['proveedor.update',$persona->idpersona]]) !!}
+{!!Form::model($persona,['method'=>'PATCH','route'=>['administradors.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 
 <div class="container-fluid">

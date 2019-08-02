@@ -37,12 +37,6 @@ class UsuarioController extends Controller
             ->orwhere('email','LIKE','%'.$query.'%')
             ->where('rol','=','Administrador')
 
-            //Moderador
-            ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','Moderador')
-            ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','Moderador')
-
             //Supervisor
             ->orwhere('name','LIKE','%'.$query.'%')
             ->where('rol','=','Supervisor')
