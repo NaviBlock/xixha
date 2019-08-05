@@ -18,7 +18,7 @@
 			@endif
 		</div>
 	</div>
-</div>
+</div> 
 
 {!!Form::open(array('url'=>'secs','method'=>'POST','autocomplete'=>'off'))!!}
 {{Form::token()}}

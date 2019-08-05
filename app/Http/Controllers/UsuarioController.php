@@ -62,7 +62,7 @@ class UsuarioController extends Controller
         $usuario->remember_token=bcrypt(str_random($request->get('pin')));       
         $usuario->save();        
         return Redirect::to("secs");
-    }
+    } 
 
     public function edit($id){
         return view("secs.edit",["usuario"=>User::findOrFail($id)]);

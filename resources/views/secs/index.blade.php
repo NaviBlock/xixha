@@ -50,16 +50,9 @@
                                         <tbody>
                                     </table>
                                     {{$usuarios->render()}}
-                                    <div class="btn-group mr-4" role="group" aria-label="Crear">
-                                        <a href="{{URL::action('UsuarioController@create',$usu->id)}}">
-                                            <button class="btn btn-success">crear</button>
-                                        </a>
-                                    </div><br><br><br>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
 @endsection 

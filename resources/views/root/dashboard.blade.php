@@ -11,7 +11,7 @@
     <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
  
-    <style>
+    <style> 
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;

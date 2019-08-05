@@ -40,6 +40,12 @@ class SuperController extends Controller
     
             ->where('nombre','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')
+
+            ->orwhere('apellidopa','LIKE','%'.$query.'%')
+            ->where('tipo_persona','=','Apicultor')
+
+            ->orwhere('apellidoma','LIKE','%'.$query.'%')
+            ->where('tipo_persona','=','Apicultor')
     
             ->orwhere('telefono','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')

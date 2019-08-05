@@ -223,7 +223,7 @@
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
 						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
+							<div class="input-group-prepend"> 
 								<span class="input-group-text" id="basic-addon2 text-center" for="inputGroupSelect01">Temporada de Cosecha</span>
 								<select name="temp_cosecha" value="{{old('temp_cosecha')}}" class="custom-select md-textarea form-control lineB" id="inputGroupSelect01">
 									<option value="PRIMAVERA">PRIMAVERA</option>

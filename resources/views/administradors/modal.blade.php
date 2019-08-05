@@ -9,7 +9,7 @@
                 </button>
                 <h4 class="modal-title">Eliminar Apicultor</h4>
 			</div>
-			<div class="modal-body">
+			<div class="modal-body"> 
 				<p>Confirme si desea Eliminar la Apicultor</p>
 			</div> 
 			<div class="modal-footer">

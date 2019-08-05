@@ -24,7 +24,7 @@
 		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">
 
 		<!--Titulo-->
-			<div class="text-center">
+			<div class="text-center"> 
 				<h3 class="e-text-color">Datos Personales del Apicultor</h3>
 			</div>
 

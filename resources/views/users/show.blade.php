@@ -1,4 +1,4 @@
-@extends ('layouts.admin')
+@extends ('layouts.adminuser')
 @section ('contenido')
 <div class="row">
 	<div class = "container-fluid"> 
@@ -16,7 +16,7 @@
 		</div> 
 	</div>
 </div>
-{!!Form::model($persona,['method'=>'PATCH','route'=>['proveedor.update',$persona->idpersona]]) !!}
+{!!Form::model($persona,['method'=>'PATCH','route'=>['users.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 
 <div class="container-fluid">
@@ -386,7 +386,8 @@
 											</div>
 										</div>
 									</div>
-								</div>						
+								</div>		
+												
 	</div>
 </div>
 {!!Form::Close()!!}		

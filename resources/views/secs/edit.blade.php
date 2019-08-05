@@ -22,10 +22,9 @@
 
 {!!Form::model($usuario,['method'=>'PATCH','route'=>['secs.update',$usuario->id]])!!}
 {{Form::token()}}
-<div class="container-fluid">
+<div class="container-fluid"> 
 	<div class="row">
 		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">
-
 			<!--Nombre-->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">

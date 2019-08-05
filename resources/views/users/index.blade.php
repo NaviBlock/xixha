@@ -22,7 +22,6 @@
                                             <th scope="col">Folio</th>
                                             <th scope="col">Perfil</th>
                                             <th scope="col">Nombre Completo</th>
-                                            <th scope="col">Estado</th>                                           
                                             <th scope="col">Email</th>
                                             <th scope="col">N° Colmenas</th>
                                             <th scope="col">Producción Anual</th>
@@ -34,7 +33,6 @@
                                                 <td scope="row">{{ $per->folio }}</td>
                                                 <td><img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid"></td>
                                                 <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>
-                                                <td>{{ $per->estadoP }}</td>                                                
                                                 <td>{{ $per->email }}</td>
                                                 <td>{{ $per->num_colmena }}</td>
                                                 <td>{{ $per->prod_anual." Kg" }}</td>

@@ -20,13 +20,18 @@ Route::get('/','DashboardController@index');
 Route::get('/index','DashboardController@index');
 
 /*users*/
-Route::resource('users','ApicultorController');
 Route::get('users','ApicultorController@index');
+Route::resource('users','ApicultorController');
 
 /*root*/
-Route::resource('root/index','RootController');
-Route::resource('root/create','RootController@create');
-Route::get('root', 'RootController@dashboard');
+Route::get('root/dashboard', 'RootController@dashboard');
+Route::get('root/index','RootController@index');
+Route::get('root','RootController@index');
+Route::get('root/create','RootController@create');
+Route::get('root/edit','RootController@edit');
+Route::get('root/show','RootController@show');
+Route::get('root/destroy','RootController@destroy');
+Route::resource('root','RootController');
 
 /*secs*/
 Route::resource('secs','UsuarioController');
@@ -39,22 +44,3 @@ Route::get('administradors', 'AdminController@index');
 /*supervisor*/
 Route::resource('supervisors','SuperController');
 Route::get('supervisors', 'SuperController@index');
-
-
-/*Configuracion*/
-//Route::resource('/seguridad/usuario','UsuarioController');
-//Route::get('/seguridad/usuario','UsuarioController@index');
-
-//Route::resource('proveedor','ProveedorController');
-/*Route::resource('configuracion/usuario','UsuarioController');*/
-/*Route::get('/home','ProveedorController@index');
-Route::get('/','ProveedorController@index');*/
-/*Route::resource('almacen/categoria','CategoriaController');
-Route::resource('almacen/articulo','ArticuloController');
-Route::resource('ventas/cliente','ClienteController');
-Route::resource('ventas/venta','VentaController'); */
-/*Route::resource('compras/ingreso','IngresoController');
-Route::resource('seguridad/usuario','UsuarioController');*/
-/*Route::auth();
-Route::get('/home','HomeController@index');
-Route::get('/{slug?}', 'HomeController@index');*/
