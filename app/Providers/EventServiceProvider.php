@@ -17,6 +17,12 @@ class EventServiceProvider extends ServiceProvider
             'xixha\Listeners\EventListener',
         ],
     ];
+ 
+    /*protected $listen = [
+        'Illuminate\Auth\Events\Login' => [
+            'App\Listeners\SuccessfulLogin',
+        ],
+    ];*/
 
     /**
      * Register any other events for your application.

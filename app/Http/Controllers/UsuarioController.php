@@ -59,7 +59,8 @@ class UsuarioController extends Controller
         $usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->rol=$request->get('rol');
-        $usuario->remember_token=bcrypt(str_random($request->get('pin')));       
+        $usuario->remember_token=bcrypt(str_random($request->get('pin')));    
+        $usuario->last_login(DateTime());
         $usuario->save();        
         return Redirect::to("secs");
     } 
@@ -73,6 +74,7 @@ class UsuarioController extends Controller
         $usuario->name=$request->get('name');
         //$usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
+
         $usuario->update();
         return Redirect::to("secs");
     }

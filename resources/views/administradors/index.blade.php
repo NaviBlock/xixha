@@ -5,6 +5,7 @@
         <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto"> 
             <div class="card-body text-warning">
                 <h5 class="card-title">Padrón de Apicultores.</h5>
+                <h4>Hola .{{ auth()->user()->name }}</h4>
                 <div class="text-center">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         @include('administradors.search')

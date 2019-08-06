@@ -8,7 +8,7 @@ use xixha\Persona;
 use xixha\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
- 
+
 class AuthController extends Controller
 {
     /*
@@ -68,14 +68,14 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => bcrypt($data['password']),           
         ]);
     }
     
     //Acceso a registro
-   protected function showRegistrationForm(){
+  /* protected function showRegistrationForm(){
         return redirect('login');
-    }
+    }*/
 
     public function redirectPath()
     {

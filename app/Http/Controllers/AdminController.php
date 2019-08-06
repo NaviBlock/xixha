@@ -7,6 +7,7 @@ use xixha\Http\Requests;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\input;
+use Illuminate\Support\Facades\Auth;
 use xixha\Http\Requests\PersonaFormRequest;
  
 use xixha\Persona; 
@@ -22,6 +23,7 @@ use Illuminate\Database\DatabaseManager;
 use xixha\User;
 use xixha\Http\Controllers\Controller;
 use xixha\Http\Controllers\UsuarioController;
+
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;

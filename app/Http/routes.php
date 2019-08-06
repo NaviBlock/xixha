@@ -16,11 +16,17 @@ Route::group(['middleware' => ['auth:api']], function(){
 
 //Index Dashboard
 Route::get('/home','DashboardController@index');
+Route::post('/home','DashboardController@index');
+
 Route::get('/','DashboardController@index');
+Route::post('/','DashboardController@index');
+
 Route::get('/index','DashboardController@index');
+Route::post('/index','DashboardController@index');
 
 /*users*/
 Route::get('users','ApicultorController@index');
+Route::post('users','ApicultorController@index');
 Route::resource('users','ApicultorController');
 
 /*root*/
@@ -38,8 +44,14 @@ Route::resource('secs','UsuarioController');
 Route::get('secs', 'UsuarioController@index');
 
 /*administrador*/
-Route::resource('administradors','AdminController');
-Route::get('administradors', 'AdminController@index');
+//Route::resource('administradors','AdminController');
+//Route::get('administradors', 'AdminController@index');
+
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('administradors', 'AdminController@index');  
+    Route::resource('administradors', 'AdminController');    
+});
 
 /*supervisor*/
 Route::resource('supervisors','SuperController');

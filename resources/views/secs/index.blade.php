@@ -9,7 +9,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         @include('secs.search')
                     </div>
-                </div>
+                </div> 
             </div>
             <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
