@@ -31,7 +31,7 @@ class ApicultorController extends Controller
         $this->middleware('auth');
     }
  
-    public function index(Request $request){
+    public function padron(Request $request){
         if ($request){
             $query = trim($request->get('searchText'));
             $personas = DB::table('persona')
@@ -69,15 +69,11 @@ class ApicultorController extends Controller
 
             ->orderBy('idpersona','desc')
             ->paginate(10);
-            return view('users.index',['personas'=>$personas,'searchText'=>$query]);
+            return view('users.padron',['personas'=>$personas,'searchText'=>$query]);
         }
     }
-    
-    public function create(){  
-        return view("users.create");
+ 
+    public function index(){  
+        return view("users.index");
     }
-
-    public function show($id){
-        return view('users.show',['persona'=>Persona::findOrFail($id)]);
-    }   
-}  
+} 

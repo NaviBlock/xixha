@@ -16,9 +16,8 @@ class RootMiddleware
     public function handle($request, Closure $next)
     {  
         if (auth()->check() && auth()->user()->is_admin)
-            return $next($request);
-            //return redirect('/root');
+            return $next($request);           
     
-        return redirect('/');            
+        return redirect('/');
     }
 }

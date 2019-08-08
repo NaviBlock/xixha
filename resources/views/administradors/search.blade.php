@@ -1,4 +1,4 @@
-{!! Form::open(array('url'=>'administradors','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
+{!! Form::open(array('url'=>'administradors/padron','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
 <div class="form-group e-border text-center">
 	<div class="input-group mx-auto">
 		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
@@ -10,5 +10,5 @@
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 {{Form::close()}}

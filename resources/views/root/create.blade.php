@@ -14,7 +14,7 @@
 							<li>{{$error}}</li>
 						@endforeach
 					</ul> 
-				</div>
+				</div> 
 			@endif  
 		</div>
 	</div>

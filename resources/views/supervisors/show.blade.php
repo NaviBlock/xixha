@@ -12,8 +12,8 @@
 						@endforeach
 					</ul> 
 				</div>
-			@endif 
-		</div> 
+			@endif
+		</div>
 	</div>
 </div>
 {!!Form::model($persona,['method'=>'PATCH','route'=>['supervisors.update',$persona->idpersona]]) !!}
@@ -388,6 +388,6 @@
 									</div>
 								</div>						
 	</div>
-</div>
+</div> 
 {!!Form::Close()!!}		
 @endsection

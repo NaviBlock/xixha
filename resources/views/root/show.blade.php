@@ -27,7 +27,7 @@
 				<div class="text-center">
 					<h3 class="e-text-color">Datos Personales del Apicultor</h3>
 				</div>
-
+ 
 			<!---Nombre del apicultor---->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center ">
 					<div class="input-group mx-auto">

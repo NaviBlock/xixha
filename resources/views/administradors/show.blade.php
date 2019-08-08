@@ -15,7 +15,7 @@
 			@endif 
 		</div> 
 	</div>
-</div>
+</div> 
 {!!Form::model($persona,['method'=>'PATCH','route'=>['administradors.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 

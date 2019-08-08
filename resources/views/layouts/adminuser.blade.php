@@ -24,6 +24,7 @@
           <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-b" href="{{url('home')}}">Inicio</a>
+            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-b" href="{{url('padron')}}">Padrón</a>
             <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('logout')}}">Salir</a>
           </div>
         </li>

@@ -32,7 +32,7 @@ class SuperController extends Controller
         $this->middleware('auth');
     }
     
-    public function index(Request $request){
+    public function padron(Request $request){
         if ($request){
             $query = trim($request->get('searchText'));
             $personas = DB::table('persona')
@@ -69,16 +69,16 @@ class SuperController extends Controller
             ->where('tipo_persona','=','Apicultor')
     
             ->orderBy('idpersona','desc')
-            ->paginate(5);
-            return view('supervisors.index',['personas'=>$personas,'searchText'=>$query]);
+            ->paginate(10); 
+            return view('supervisors.padron',['personas'=>$personas,'searchText'=>$query]);
         }
     }
-    
+ 
+    public function index(){
+        return view('supervisors.index');
+    } 
+
     public function show($id){
         return view('supervisors.show',['persona'=>Persona::findOrFail($id)]);
-    } 
-    
-    public function edit($id){
-        return view('supervisors.edit',['persona'=>Persona::findOrFail($id)]);
     }
 }

@@ -31,7 +31,7 @@ public function __construct(){
     $this->middleware('auth');
 }
 
-public function index(Request $request){
+public function padron(Request $request){
     if ($request){
         $query = trim($request->get('searchText'));
         $personas = DB::table('persona')
@@ -68,17 +68,25 @@ public function index(Request $request){
         ->where('tipo_persona','=','Apicultor')
 
         ->orderBy('idpersona','desc')
-        ->paginate(5);
-        return view('root.index',['personas'=>$personas,'searchText'=>$query]);
+        ->paginate(10);
+        return view('root.padron',['personas'=>$personas,'searchText'=>$query]);
     }
 }
+
+public function index(){  
+    return view("root.index");
+}
+
+public function show($id){
+    return view('root.show',['persona'=>Persona::findOrFail($id)]);
+} 
 
 public function create(){  
     return view("root.create");
 }
 
-public function dashboard(){  
-    return view("root.dashboard");
+public function edit($id){
+    return view('root.edit',['persona'=>Persona::findOrFail($id)]);
 }
 
 public function store(PersonaFormRequest $request){
@@ -167,25 +175,15 @@ public function store(PersonaFormRequest $request){
                 //Terminar y regresar el nombre de la foto
                 exit($nombreImagenGuardada);*/
        }
-
         $personas->save();
-    return Redirect::to('root');
-
-}
-
-public function show($id){
-    return view('root.show',['persona'=>Persona::findOrFail($id)]);
-} 
-
-public function edit($id){
-    return view('root.edit',['persona'=>Persona::findOrFail($id)]);
+    return Redirect::to('root/padron'); 
 }
 
 public function update(PersonaFormRequest $request,$id){
-    $persona = Persona::findOrFail($id); // categoria que quiero modificar 
-    $persona->nombre=$request->get('nombre');
-    $persona->apellidopa=$request->get('apellidopa');
-    $persona->apellidoma=$request->get('apellidoma');
+    $persona = Persona::findOrFail($id);
+    //$persona->nombre=$request->get('nombre');
+    //$persona->apellidopa=$request->get('apellidopa');
+    //$persona->apellidoma=$request->get('apellidoma');
     $persona->curp=$request->get('curp');        
     $persona->telefono=$request->get('telefono');
     $persona->email=$request->get('email');
@@ -213,13 +211,13 @@ public function update(PersonaFormRequest $request,$id){
         $persona->img_perfil=$file->getClientOriginalName();
     }*/
     $persona->update();
-    return Redirect::to('root');
+    return Redirect::to('root/padron');
 }
 
 public function destroy($id){
     $persona = Persona::findOrFail($id);
     $persona->tipo_persona ='Inactivo';
     $persona->update();
-    return Redirect::to('root');	
+    return Redirect::to('root/padron');	
     }
 }
