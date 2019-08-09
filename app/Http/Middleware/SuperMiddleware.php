@@ -1,23 +1,26 @@
 <?php
-
 namespace xixha\Http\Middleware;
-
 use Closure;
-
+use Illuminate\Support\Facades\Auth;
 class SuperMiddleware
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
-    public function handle($request, Closure $next)
-    {       
-        if (auth()->check() && auth()->user()->is_admin)
-            return $next($request);    
+    public function __construct()
+    {   
     
-        return redirect('/');         
+        $this->middleware('auth');
+        $this->middleware('super');
+    }
+    public function handle($request, Closure $next)
+    {
+        if(auth()->check() && auth()->user()->is_user == 0){       
+            if(auth()->check() && auth()->user()->is_root == 0 ){
+                if (auth()->check() && auth()->user()->is_admin == 0){
+                    if(auth()->check() && auth()->user()->is_super == 1 ){
+                        return $next($request);
+                    }
+                }
+            }    
+        }
+        return redirect('/home');
     }
 }

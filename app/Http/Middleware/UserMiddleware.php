@@ -1,24 +1,26 @@
 <?php
-
 namespace xixha\Http\Middleware;
-
 use Closure;
-
+use Illuminate\Support\Facades\Auth;
 class UserMiddleware
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
+    public function __construct()
+    {   
+        $this->middleware('auth');
+        $this->middleware('user');
+    }
+
     public function handle($request, Closure $next)
     {
-        if (auth()->check() && auth()->user()->is_admin)
-            return $next($request);        
-
-        return redirect('/');       
+        if (auth()->check() && auth()->user()->is_root == 0){
+            if(auth()->check() && auth()->user()->is_admin == 0 ){
+                if(auth()->check() && auth()->user()->is_super == 0 ){
+                    if(auth()->check() && auth()->user()->is_user == 0){
+                        return $next($request);
+                    }
+                }
+            }
+        }             
+        return redirect('/home');
     }
 }
- 
