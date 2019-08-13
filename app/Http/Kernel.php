@@ -22,18 +22,19 @@ class Kernel extends HttpKernel
         'api' => [
             'throttle:60,1',
         ],
-    ];
+    ]; 
 
     protected $routeMiddleware = [
         'auth' => \xixha\Http\Middleware\Authenticate::class,    
         //**********************************************/    
-        'admin' => \xixha\Http\Middleware\AdminMiddleware::class,
-        'root' => \xixha\Http\Middleware\RootMiddleware::class,
+        //'admin' => \xixha\Http\Middleware\AdminMiddleware::class,
+        //'root' => \xixha\Http\Middleware\RootMiddleware::class,
         'super' => \xixha\Http\Middleware\SuperMiddleware::class,
         'user' => \xixha\Http\Middleware\UserMiddleware::class,  
+        
         //**********************************************/      
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-      //  'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \xixha\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,

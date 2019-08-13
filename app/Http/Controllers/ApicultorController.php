@@ -30,7 +30,7 @@ class ApicultorController extends Controller
     public function __construct(){
         $this->middleware('auth');
     }
- 
+  
     public function padron(Request $request){
         if ($request){
             $query = trim($request->get('searchText'));
@@ -76,4 +76,8 @@ class ApicultorController extends Controller
     public function index(){  
         return view("users.index");
     }
+
+    public function show($id){
+        return view('root.show',['persona'=>Persona::findOrFail($id)]);
+    } 
 } 

@@ -30,8 +30,9 @@ class AuthController extends Controller
      * @var string
      */
     //protected $redirectTo = 'compras/proveedor';
-    protected $redirectTo = '/layouts/index';
 
+        protected $redirectTo = '/home';
+    
     /**
      * Create a new authentication controller instance.
      *
@@ -80,10 +81,10 @@ class AuthController extends Controller
     public function redirectPath()
     {
         if(auth()->user()){
-            return '/login';
+            return '/';
         }
         else{
-            return '/layouts/login';
+            return 'auth/login';
         }
     }
 

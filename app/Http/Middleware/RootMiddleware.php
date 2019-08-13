@@ -2,24 +2,17 @@
 namespace xixha\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
-class RootMiddleware
-{
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('root');
-    }
-
-    public function handle($request, Closure $next){    
-        if (auth()->check() && auth()->user()->is_root){
-            if(auth()->check() && auth()->user()->is_admin ){
-                if(auth()->check() && auth()->user()->is_super){
-                    if(auth()->check() && !auth()->user()->is_user){
+class RootMiddleware{
+    public function handle($request, Closure $next){
+      /*  if (auth()->check() && auth()->user()->is_root == 0){
+            if(auth()->check() && auth()->user()->is_admin == 0 ){
+                if(auth()->check() && auth()->user()->is_super == 0 ){
+                    if(auth()->check() && auth()->user()->is_user == 0){
                         return $next($request);
                     }
                 }
             }
-        }   
-        return redirect('/home');
-    }    
+        }             
+        return redirect('/home');*/
+    }
 }
