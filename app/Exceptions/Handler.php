@@ -1,7 +1,5 @@
 <?php
-
 namespace xixha\Exceptions;
-
 use Exception;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;

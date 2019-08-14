@@ -8,6 +8,8 @@ use xixha\Persona;
 use xixha\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -31,7 +33,8 @@ class AuthController extends Controller
      */
     //protected $redirectTo = 'compras/proveedor';
 
-        protected $redirectTo = '/home';
+        protected $redirectTo = '/';        
+
     
     /**
      * Create a new authentication controller instance.
@@ -74,9 +77,9 @@ class AuthController extends Controller
     }
     
     //Acceso a registro
-  /* protected function showRegistrationForm(){
+    protected function showRegistrationForm(){
         return redirect('login');
-    }*/
+    }
 
     public function redirectPath()
     {
