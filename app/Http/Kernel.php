@@ -27,8 +27,8 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'auth' => \xixha\Http\Middleware\Authenticate::class,    
         //**********************************************/    
-        //'admin' => \xixha\Http\Middleware\AdminMiddleware::class,
-        //'root' => \xixha\Http\Middleware\RootMiddleware::class,
+        'admin' => \xixha\Http\Middleware\AdminMiddleware::class,
+        'root' => \xixha\Http\Middleware\RootMiddleware::class,
         'super' => \xixha\Http\Middleware\SuperMiddleware::class,
         'user' => \xixha\Http\Middleware\UserMiddleware::class,  
         

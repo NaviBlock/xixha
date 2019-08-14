@@ -17,7 +17,7 @@ Route::auth();
 //Users
 Route::group(['middleware' => 'user'], function(){
     //Index Dashboard   
-    Route::get('','ApicultorController@index');
+    //Route::get('','ApicultorController@index');
     Route::get('/','ApicultorController@index');
     Route::get('/index','ApicultorController@index');
     Route::get('/home','ApicultorController@index');
@@ -34,10 +34,6 @@ Route::group(['middleware' => 'user'], function(){
 //Super
 Route::group(['middleware' => 'super'], function(){
     //index Super
-    //Route::get('', 'SuperController@index');    
-    //Route::get('/','SuperController@index');
-    //Route::get('/index','SuperController@index');
-    //Route::get('/home','SuperController@index');
     Route::get('supervisors', 'SuperController@index');
     Route::get('supervisors/index','SuperController@index');    
     Route::get('supervisors/home','SuperController@index');    
@@ -48,11 +44,11 @@ Route::group(['middleware' => 'super'], function(){
     //Resource
    Route::resource('supervisors','SuperController');
 });
-/*
+
 //Admin
-Route::group(['middleware' => 'user'], function () {
+Route::group(['middleware' => 'admin'], function () {
     //Index Admin
-    Route::get('', 'AdminController@index');
+    //Route::get('', 'AdminController@index');
     Route::get('administradors', 'AdminController@index');
     Route::get('administradors/index', 'AdminController@index');
     Route::get('administradors/home', 'AdminController@index');
@@ -67,9 +63,9 @@ Route::group(['middleware' => 'user'], function () {
 });
 
 //root
-Route::group(['middleware' => 'user'], function(){
+Route::group(['middleware' => 'root'], function(){
     //Index root
-    Route::get('','RootController@index');
+    //Route::get('','RootController@index');
     Route::get('root','RootController@index');
     Route::get('root/index','RootController@index');
     Route::get('root/home','RootController@index');
@@ -97,4 +93,4 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('secs/destroy','UsuarioController@destroy');
     //Resource
     Route::resource('secs', 'UsuarioController');
-});*/
+});
