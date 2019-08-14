@@ -1,2 +1,0 @@
-[09-Jul-2019 03:20:27 Etc/GMT] PHP Warning:  require_once(/home/apidelpf/public_html/sipax/../bootstrap/app.php): failed to open stream: No such file or directory in /home/apidelpf/public_html/sipax/index.php on line 32
-[09-Jul-2019 03:20:27 Etc/GMT] PHP Fatal error:  require_once(): Failed opening required '/home/apidelpf/public_html/sipax/../bootstrap/app.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/apidelpf/public_html/sipax/index.php on line 32
