@@ -19,13 +19,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
           <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-b" href="{{url('home')}}">Inicio</a>
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-b" href="{{url('padron')}}">Padrón</a>
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('logout')}}">Salir</a>
+            <a class="dropdown-item btn btn-primary btn-responsive text-center" href="{{url('home')}}">Inicio</a>
+            <a class="dropdown-item btn btn-warning btn-responsive text-center" href="{{url('padron')}}">Padrón</a>
+            <a class="dropdown-item btn btn-danger btn-responsive text-center"  href="{{url('logout')}}">Salir</a>
           </div>
         </li>
       </ul>

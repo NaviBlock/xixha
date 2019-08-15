@@ -1,13 +1,13 @@
 
-body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
+/*body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
     line-height: 15px;
-}
+}*/
 
 .table td, .table th {
     padding: .75rem;
     vertical-align: top;
     border: 1px solid  rgba(0, 0, 0, 0);
-}
+} 
  
 .table thead th {
     vertical-align: bottom;
@@ -18,13 +18,13 @@ body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
     text-align: center;
 }
 
-.logo-img-a{
+/*.logo-img-a{
     width: 100px;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-}
+}*/
 
 .table{
     width: auto;
@@ -53,7 +53,7 @@ body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
     justify-content: center;
 }
 
-p {
+/*p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -68,69 +68,70 @@ p {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0px;
-}
+}*/
 
 .input-group-text{
     border: 1px solid #ffc107 !important;
+    text-decoration:none;
 }
 
 .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
     border-color: #ffc107 !important;
+    text-decoration:none;
 }
 
 .e-border{
     border-radius: 30px !important;
 }
 
-.dropdown-menu {
+/*.dropdown-menu {
     padding: 0 !important;
-}
+}*/
 
 .e-text-color{
     color: #ffc107 !important;
+    text-decoration:none;
 
 }
-
 .rest{
     margin-top: 0 !important;
 }
 
 .e-text-color-g{
     color: #0ba706 !important;
-    background-color: rgba(224, 220, 10, 0.062) ;
+    text-decoration:none !important;  
 }
 
 .e-text-color-y{
     color: #ffc107 !important;
-    background-color: rgba(224, 220, 10, 0.062) ;
+    text-decoration:none !important;
 }
 
 .e-text-color-b{
     color: #1E88E5 !important;
-    background-color: rgba(10, 85, 224, 0.062) ;
+    text-decoration: none !important ;
 }
 
 .e-text-color-r{
     color: #DD2C00 !important;
-    background-color: rgba(224, 10, 10, 0.062) ;
+    
 }
 
-.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+/*.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
     position: relative;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     width: 90%;
     margin-top: 10px;
     margin-bottom: 0;
-}
+}*/
 
 body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
     line-height: 15px;
     height: 10px;
-    /*margin-left: 50px;*/
-}
+    /*margin-left: 50px;}
 
-/* Para 960px*/
+/* Para 960px*//*
 @media only screen and (max-width: 980px) and (min-width: 821px) {  
     .card{
         margin: 50px;
@@ -142,7 +143,7 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
     }    
 }  
 
-/* Para 800px */  
+/* Para 800px */  /*
 @media only screen and (max-width: 820px) and (min-width: 621px) {  
     .card{
         margin: auto;
@@ -157,10 +158,10 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
     display: flex;
     width: 100%;
     height: 100%;
-    }*/
-}    
+    }
+}*/    
   
-/* Para 600px */  
+/* Para 600px */  /*
 @media only screen and (max-width: 620px) and (min-width: 501px) {  
     table,.card{
         display: block;
@@ -170,10 +171,10 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
     display: block;
     width: auto;
     height: auto;
-    }*/
-}  
+    }
+}*/
   
-/* Para 480px */  
+/* Para 480px */  /*
 @media only screen and (max-width: 500px) and (min-width: 341px) {  
     table,.card{
         display: block;
@@ -183,10 +184,10 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
     display: block;
     width: auto;
     height: auto;
-    }*/
-}  
+    }
+}  */
 
- /*Para 320px */
+ /*Para 320px *//*
 @media only screen and (max-width: 340px) and (min-width: 5px) {  
     table,.card{
         display: block;
@@ -196,5 +197,5 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
     display: block;
     width: auto;
     height: auto;
-    }*/
-} 
+    }
+}*/

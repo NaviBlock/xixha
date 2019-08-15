@@ -15,6 +15,7 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('users','ApicultorController@index');
     Route::get('users/index','ApicultorController@index');
     //users
+    Route::get('padron','ApicultorController@padron');
     Route::get('users/padron','ApicultorController@padron');
     Route::get('users/search','ApicultorController@search');
     Route::get('users/show','ApicultorController@show');
@@ -35,7 +36,8 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('root/show','RootController@show');
     Route::get('root/destroy','RootController@destroy');
     Route::get('root/search','RootController@search');  
-    Route::get('root/modal','RootController@modal');      
+    Route::get('root/modal','RootController@modal');   
+    Route::get('root/banc','RootController@banc');   
     //Resource
     Route::resource('root', 'RootController');
 

@@ -9,8 +9,9 @@
     <meta name="generator" content="Sipax, Xixhá">
     <title>SIPAX</title> 
     <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/iman.css')}}">
     <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
- 
+  
     <style> 
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -37,18 +38,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Actividades</a>
-      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Actividades</a>
+          </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuración</a>
+        <a class="nav-link dropdown-toggle e-text-color" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuración</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-        <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('root')}}">Inicio</a>
-          <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{url('root/padron')}}">Padrón</a>
-          <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('root/create')}}">Registro Apicultor</a>                      
-          <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('secs/index')}}">Roles</a>
-          <a class="dropdown-item btn btn-success btn-responsive text-center e-text-color-b" href="{{url('secs/create')}}">Crear Roles</a>
-          <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('logout')}}">Salir</a>
+          <a class="dropdown-item btn btn-success btn-responsive text-center text-success" href="{{url('root')}}">Inicio</a>
+          <a class="dropdown-item btn btn-primary btn-responsive text-center text-primary" href="{{url('root/padron')}}">Padrón</a>
+          <a class="dropdown-item btn btn-warning btn-responsive text-center text-warning" href="{{url('root/create')}}">Registro Apicultor</a>
+          <a class="dropdown-item btn btn-info btn-responsive text-center text-info" href="{{url('secs/index')}}">Roles</a>
+          <a class="dropdown-item btn btn-primary btn-responsive text-center text-primary" href="{{url('secs/create')}}">Crear Roles</a>
+          <a class="dropdown-item btn btn-danger btn-responsive text-center text-danger"  href="{{url('logout')}}">Salir</a>
         </div>
       </li>
     </ul>
@@ -57,7 +58,7 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3 e-coloresx">Hola, Amigo Administrador!</h1>
+      <h1 class="display-3 e-coloresx">Hola, Amigo Administrador Root {{ auth()->user()->name }}!</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolore quos, accusamus quidem quas maiores assumenda ipsa, aliquam id deserunt voluptas voluptates ratione laudantium maxime excepturi porro eum eos hic!
       Minus voluptate quasi, recusandae perferendis ad veritatis iusto id sit repudiandae, quo animi magni ipsa, totam laboriosam deserunt nemo neque quos facere quaerat a rerum. Dolorum, distinctio harum. Necessitatibus, molestias.
       Nemo recusandae dolores dolorum eum exercitationem similique, id quos hic, sapiente voluptatum sed! Omnis ipsa commodi fugiat. Saepe voluptas, tempora suscipit similique quia accusamus. At vero iusto possimus aliquid corporis?</p>

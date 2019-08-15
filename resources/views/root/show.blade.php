@@ -10,10 +10,10 @@
 						@foreach($errors->all() as $error)
 							<li>{{$error}}</li>
 						@endforeach
-					</ul> 
+					</ul>
 				</div>
-			@endif 
-		</div> 
+			@endif
+		</div>
 	</div>
 </div>
 {!!Form::model($persona,['method'=>'PATCH','route'=>['root.update',$persona->idpersona]]) !!}

@@ -41,15 +41,13 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuración</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Información Personal</a>
-          <a class="dropdown-item"  href="{{url('users/padron')}}">Padrón</a>
-          <a class="dropdown-item" href="#">Historial de Pagos</a>
-          <a class="dropdown-item"  href="{{url('logout')}}">Salir</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">          
+          <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y"  href="{{url('users/padron')}}">Padrón</a>          
+          <a class="dropdown-item btn btn-danger btn-responsive text-center e-text-color-r"  href="{{url('logout')}}">Salir</a>
         </div>
       </li>
     </ul>
-  </div> 
+  </div>
 </nav>
 <main role="main">
   <div class="jumbotron">
