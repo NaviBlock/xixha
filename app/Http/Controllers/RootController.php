@@ -224,4 +224,4 @@ public function destroy($id){
     $persona->update();
     return Redirect::to('root/padron');	
     }
-}
+} 

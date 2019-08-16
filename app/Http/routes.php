@@ -3,9 +3,7 @@ Route::get('/', function () {
    return view('auth/login');
    //return view('login');
 });
-
 Route::auth();
-  
 //Users
 Route::group(['middleware' => 'user'], function(){
     //Index Dashboard       
@@ -22,7 +20,6 @@ Route::group(['middleware' => 'user'], function(){
     //Resource
     Route::resource('users','ApicultorController');
 });
-
 //root
 Route::group(['middleware' => 'root'], function(){
     //Index root
@@ -40,7 +37,6 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('root/banc','RootController@banc');   
     //Resource
     Route::resource('root', 'RootController');
-
     //Index secs
     Route::get('secs', 'UsuarioController@index');
     Route::get('secs/index', 'UsuarioController@index');

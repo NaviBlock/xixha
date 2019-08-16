@@ -122,7 +122,7 @@
 				<div class="input-group mx-auto">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
 						<div class="input-group-prepend">							
-							<p class="input-group-text e-border">Token de Seguridad, minimo 5, maximo de 10 digitos</p>							
+							<p class="input-group-text e-border">numero de Seguridad del  5 al 10</p>							
 						</div><br>	
 					</div>					
 				</div>

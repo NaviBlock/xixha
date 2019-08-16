@@ -69,9 +69,9 @@
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1">
                                                         <div class="btn-group mr-4" role="group" aria-label="Boton Datos Bancarios">
                                                             <a href="{{URL::action('RootController@banc',$per->idpersona)}}">
-                                                                <button type="button" class="btn btn-info btn-block">Banco</button>
+                                                                <button type="button" class="btn btn-info btn-block">Editar</button>
                                                             </a>
-                                                        </div>
+                                                        </div>     
                                                     </div>
                                                 </td>
                                             </tr>

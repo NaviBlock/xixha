@@ -1,15 +1,11 @@
 <?php
-
 namespace xixha\Http;
-
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-
 class Kernel extends HttpKernel
 {
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
     ];
-
     protected $middlewareGroups = [
         'web' => [
             \xixha\Http\Middleware\EncryptCookies::class,
@@ -22,7 +18,6 @@ class Kernel extends HttpKernel
             'throttle:60,1',
         ],
     ]; 
-
     protected $routeMiddleware = [
         'auth' => \xixha\Http\Middleware\Authenticate::class,                    
         'root' => \xixha\Http\Middleware\RootMiddleware::class,       

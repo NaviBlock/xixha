@@ -1,7 +1,7 @@
 @extends ('layouts.admin')
 @section ('contenido')
 <div class="row">
-	<div class="coontainer-fluid">
+	<div class="coontainer-fluid py-4">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto"> 
 			<!--Titulo-->
 				<div class="text-center py-4">
@@ -78,8 +78,7 @@
 					<div class="input-group mx-auto">
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
 							<div class="input-group-prepend">
-							<!--div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}"-->
-								<label for="password-confirm" class="input-group-text e-border">Confirmar Password</label>				
+								<label for="password-confirm" class="input-group-text e-border">Confirmar Password</label>
 								<input id="password-confirm" require type="password" class="md-textarea form-control lineA e-border" name="password_confirmation">
 								@if ($errors->has('password_confirmation'))
 									<span class="help-block">
@@ -91,6 +90,46 @@
 					</div>
 				</div>
 				
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
+						<div class="input-group-prepend">							
+							<p class="input-group-text e-border">Rol de cada Token</p>							
+						</div><br>
+					</div>
+
+			<!--rol-->
+				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+					<div class="input-group mx-auto">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+							<div class="input-group-prepend">
+								<label for="password-confirm" class="input-group-text e-border">Nivel de rol</label>
+								<select name="rol" value="{{old('rol')}}" id="rol" class="md-textarea form-control lineA e-border">
+									<option value="User">User</option>
+									<option value="Supervisor">Supervisor</option>									
+									<option value="Administrador">Administrador</option>
+									<option value="Mr.Root">Mr.Root</option>
+								</select>									
+							</div>							
+						</div>
+					</div>
+				</div>				
+				
+			<!--rol-->
+			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+					<div class="input-group mx-auto">						
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+							<div class="input-group-prepend">
+								<label for="password-confirm" class="input-group-text e-border">Nivel de token</label>
+								<select name="is_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
+									<option value="0">User</option>
+									<option value="1">Supervisor</option>									
+									<option value="1">Administrador</option>									
+									<option value="1">Mr.Root</option>
+								</select>									
+							</div>							
+						</div>
+					</div>
+				</div>
+
 			<!--botones--->
 					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq py-4" id="datoy">				
 					<div class="input-group mx-auto">
