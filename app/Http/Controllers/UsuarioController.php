@@ -59,6 +59,7 @@ class UsuarioController extends Controller
         $usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->rol=$request->get('rol');
+       
         $usuario->remember_token=bcrypt(str_random($request->get('pin')));    
         $usuario->last_login(DateTime());
         $usuario->save();        

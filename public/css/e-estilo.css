@@ -17,3 +17,10 @@ dl, ol, ul {
     color:#F7971E !important;
     text-decoration: #F7971E !important;
 }
+
+.e-bord{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}

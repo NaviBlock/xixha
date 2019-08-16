@@ -1,7 +1,7 @@
 @extends ('layouts.admin')
 @section ('contenido')
 <div class="row">
-	<div class="container-fluid">
+	<div class="container-fluid py-4">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto"> 
 			<!--Titulo-->
 				<div class="text-center py-4">
@@ -120,11 +120,18 @@
 			<!--pin-->
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
+						<div class="input-group-prepend">							
+							<p class="input-group-text e-border">Token de Seguridad, minimo 5, maximo de 10 digitos</p>							
+						</div><br>	
+					</div>					
+				</div>
+				<div class="input-group mx-auto">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
 						<div class="input-group-prepend">
-							<label for="pin" class="input-group-text e-border">Pin</label>
-							<input id="pin" type="number" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="10">	
-						</div>							
+							<label for="pin" class="input-group-text e-border">Pin</label>														
+							<input id="pin" type="text" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="10">	 
+						</div>					
 					</div>
 				</div>
 			</div>
