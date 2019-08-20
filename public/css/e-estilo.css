@@ -17,3 +17,24 @@ dl, ol, ul {
     color:#F7971E !important;
     text-decoration: #F7971E !important;
 }
+
+.e-estilo-p{
+    color:#fff !important;
+}
+
+.e-fondo-p{
+    /*color:#757575;*/
+    background:#FFC107 !important;
+}
+
+.e-padding{
+    padding: 0 !important;
+}
+
+.e-ul{
+    margin:0 !important;
+}
+
+.e-navbar{
+    padding: 0;
+}
