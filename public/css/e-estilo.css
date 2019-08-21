@@ -16,6 +16,10 @@ dl, ol, ul {
 .e-coloresx{
     color:#F7971E !important;
     text-decoration: #F7971E !important;
+    align-self: auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .e-estilo-p{
@@ -25,6 +29,10 @@ dl, ol, ul {
 .e-fondo-p{
     /*color:#757575;*/
     background:#FFC107 !important;
+}
+
+.e-subtitulo{
+  color:#FFC107;   
 }
 
 .e-padding{
@@ -37,4 +45,34 @@ dl, ol, ul {
 
 .e-navbar{
     padding: 0;
+}
+
+
+.jumbotron {
+    background-color: #FFC107;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('public\img\slide\apiarios-7.jpg');   
+    color:white; 
+}
+
+.card {
+    margin:10px;
+    border-color: #F7971E;
+}
+
+.e-footer{
+    text-align: center;
+}
+
+/*.minit{
+    background: url(public/img/slide/planta.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}*/
+
+
+.e-listp{
+    list-style:none;
 }
