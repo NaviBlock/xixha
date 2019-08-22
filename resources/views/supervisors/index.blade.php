@@ -30,9 +30,9 @@
             <li class="nav-item active">              
               <a class="dropdown-item e-coloresx" href="{{url('supervisors/padron')}}"  >Padrón <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <!--li class="nav-item">
               <a class="dropdown-item e-coloresx disabled" href="/">Grafico</a>
-            </li>  
+            </li-->  
           </ul>
           <span class="navbar-item">
             <a class="dropdown-item e-coloresx"  href="{{url('logout')}}">Salir</a>

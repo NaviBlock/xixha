@@ -19,13 +19,12 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             //return redirect('/');
-            if(auth()->check() && auth()->user()->is_admin == 0){
+            if(auth()->check() && auth()->user()->is_admin == 0 && auth()->user()->rol == 'User'){
                 return redirect('/');
-            }elseif (auth()->check() && auth()->user()->is_admin == 1){
+            }elseif (auth()->check() && auth()->user()->is_admin == 1 && auth()->user()->rol == 'Super'){
                 return redirect('supervisors');
             }
         }
-
         return $next($request);
     }
 }
