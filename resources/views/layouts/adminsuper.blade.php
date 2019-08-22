@@ -23,9 +23,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">            
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{url('supervisors/index')}}">Inicio</a>
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{url('supervisors/padron')}}">Padrón</a>
-            <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('/logout')}}">Salir</a>
+            <a class="dropdown-item btn btn-primary btn-warning text-center te1" href="{{url('supervisors/index')}}">Inicio</a>
+            <a class="dropdown-item btn btn-primary btn-success text-center te2" href="{{url('supervisors/padron')}}">Padrón</a>
+            <a class="dropdown-item btn btn-primary btn-danger text-center te3"  href="{{url('logout')}}">Salir</a>
           </div>
         </li>
       </ul>

@@ -1,0 +1,66 @@
+#gradient-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  z-index: 10;
+  overflow: hidden;
+}
+#gradient-background .box {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#gradient-background .box .b1, #gradient-background .box .b2, #gradient-background .box .b3, #gradient-background .box .b4, #gradient-background .box .b5, #gradient-background .box .b6, #gradient-background .box .b7, #gradient-background .box .b8, #gradient-background .box .b9 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  opacity: 0.09;
+}
+#gradient-background .box .b1.b1, #gradient-background .box .b2.b1, #gradient-background .box .b3.b1, #gradient-background .box .b4.b1, #gradient-background .box .b5.b1, #gradient-background .box .b6.b1, #gradient-background .box .b7.b1, #gradient-background .box .b8.b1, #gradient-background .box .b9.b1 {
+  z-index: 1;
+  left: 0%;
+  transform: rotate(10deg);
+}
+#gradient-background .box .b1.b2, #gradient-background .box .b2.b2, #gradient-background .box .b3.b2, #gradient-background .box .b4.b2, #gradient-background .box .b5.b2, #gradient-background .box .b6.b2, #gradient-background .box .b7.b2, #gradient-background .box .b8.b2, #gradient-background .box .b9.b2 {
+  z-index: 2;
+  left: -10%;
+  transform: rotate(290deg);
+}
+#gradient-background .box .b1.b3, #gradient-background .box .b2.b3, #gradient-background .box .b3.b3, #gradient-background .box .b4.b3, #gradient-background .box .b5.b3, #gradient-background .box .b6.b3, #gradient-background .box .b7.b3, #gradient-background .box .b8.b3, #gradient-background .box .b9.b3 {
+  z-index: 3;
+  left: 20%;
+  transform: rotate(0deg);
+}
+#gradient-background .box .b1.b4, #gradient-background .box .b2.b4, #gradient-background .box .b3.b4, #gradient-background .box .b4.b4, #gradient-background .box .b5.b4, #gradient-background .box .b6.b4, #gradient-background .box .b7.b4, #gradient-background .box .b8.b4, #gradient-background .box .b9.b4 {
+  z-index: 4;
+  left: 50%;
+  transform: rotate(210deg);
+}
+#gradient-background .box .b1.b5, #gradient-background .box .b2.b5, #gradient-background .box .b3.b5, #gradient-background .box .b4.b5, #gradient-background .box .b5.b5, #gradient-background .box .b6.b5, #gradient-background .box .b7.b5, #gradient-background .box .b8.b5, #gradient-background .box .b9.b5 {
+  z-index: 5;
+  left: -15%;
+  transform: rotate(140deg);
+}
+#gradient-background .box .b1.b6, #gradient-background .box .b2.b6, #gradient-background .box .b3.b6, #gradient-background .box .b4.b6, #gradient-background .box .b5.b6, #gradient-background .box .b6.b6, #gradient-background .box .b7.b6, #gradient-background .box .b8.b6, #gradient-background .box .b9.b6 {
+  z-index: 6;
+  left: -40%;
+  transform: rotate(70deg);
+}
+#gradient-background .box .b1.b7, #gradient-background .box .b2.b7, #gradient-background .box .b3.b7, #gradient-background .box .b4.b7, #gradient-background .box .b5.b7, #gradient-background .box .b6.b7, #gradient-background .box .b7.b7, #gradient-background .box .b8.b7, #gradient-background .box .b9.b7 {
+  z-index: 7;
+  left: -90%;
+  transform: rotate(30deg);
+}
+#gradient-background .box .b1.b8, #gradient-background .box .b2.b8, #gradient-background .box .b3.b8, #gradient-background .box .b4.b8, #gradient-background .box .b5.b8, #gradient-background .box .b6.b8, #gradient-background .box .b7.b8, #gradient-background .box .b8.b8, #gradient-background .box .b9.b8 {
+  z-index: 8;
+  left: 50%;
+  transform: rotate(140deg);
+}
+#gradient-background .box .b1.b9, #gradient-background .box .b2.b9, #gradient-background .box .b3.b9, #gradient-background .box .b4.b9, #gradient-background .box .b5.b9, #gradient-background .box .b6.b9, #gradient-background .box .b7.b9, #gradient-background .box .b8.b9, #gradient-background .box .b9.b9 {
+  z-index: 9;
+  left: 30%;
+  transform: rotate(30deg);
+}
