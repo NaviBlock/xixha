@@ -25,7 +25,6 @@ class RedirectIfAuthenticated
                 return redirect('administradors');
             }
         }
-
         return $next($request);
     }
 }
