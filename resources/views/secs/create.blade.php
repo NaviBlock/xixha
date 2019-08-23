@@ -108,9 +108,9 @@
 							<div class="input-group-prepend">
 								<select name="rol" value="{{old('rol')}}" id="rol" class="md-textarea form-control lineA e-border">
 									<option value="User">User</option>
-									<option value="Supervisor">Supervisor</option>									
-									<option value="Administrador">Administrador</option>									
-									<option value="Mr.Root">Mr.Root</option>
+									<option value="Super">Supervisor</option>									
+									<option value="Admin">Administrador</option>									
+									<option value="Mr.Root">Root</option>
 								</select>									
 							</div>							
 						</div>
