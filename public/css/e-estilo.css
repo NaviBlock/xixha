@@ -16,4 +16,64 @@ dl, ol, ul {
 .e-coloresx{
     color:#F7971E !important;
     text-decoration: #F7971E !important;
+    align-self: auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.e-estilo-p{
+    color:#fff !important;
+}
+
+.e-fondo-p{
+    /*color:#757575;*/
+    background:#FFC107 !important;
+}
+
+.e-subtitulo{
+  color:#FFC107;   
+}
+
+.e-padding{
+    padding: 0 !important;
+}
+
+.e-ul{
+    margin:0 !important;
+}
+
+.e-navbar{
+    padding: 0;
+}
+
+.jumbotron {
+    background-color: #FFC107;
+    font-family: 'Roboto', sans-serif;    
+    color:white; 
+}
+
+.card {
+    margin:10px;
+    border-color: rgb(247, 165, 14);
+}
+
+.e-footer{
+    text-align: center;
+}
+
+.e-listp{
+    list-style:none;
+}
+
+.te1:hover {
+    background-color: yellow;
+}
+
+.te2:hover {
+    background-color: #00c853;
+}
+
+.te3:hover {
+    background-color: #e53935;
 }
