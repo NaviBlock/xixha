@@ -5,7 +5,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto"> 
 			<!--Titulo-->
 				<div class="text-center py-4">
-					<h3 class="e-text-color">Nuevo rol</h3>
+					<h3 class="e-text-color">Nuevo Rol</h3>
 				</div>
 				@if (count($errors)>0)
 				<div class="alert alert-danger">
@@ -122,7 +122,7 @@
 				<div class="input-group mx-auto">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
 						<div class="input-group-prepend">							
-							<p class="input-group-text e-border">numero de Seguridad del  5 al 10</p>							
+							<p class="input-group-text e-border">Seleccione un numero (pin) del 5 al 100</p>							
 						</div><br>	
 					</div>					
 				</div>
@@ -130,7 +130,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
 						<div class="input-group-prepend">
 							<label for="pin" class="input-group-text e-border">Pin</label>														
-							<input id="pin" type="text" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="10">	 
+							<input id="pin" type="text" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="100">	 
 						</div>					
 					</div>
 				</div>
