@@ -8,7 +8,7 @@
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/iman.css')}}">
   <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
-  <!--link rel="stylesheet" href="{{asset('css/estilo.css')}}"-->
+  <!--link rel="stylesheet" href="{ {asset('css/estilo.css')}}"-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
 </head>
@@ -23,9 +23,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle e-text-color" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIPAX</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">            
-            <a class="dropdown-item btn btn-primary btn-warning text-center te1" href="{{url('supervisors/index')}}">Inicio</a>
-            <a class="dropdown-item btn btn-primary btn-success text-center te2" href="{{url('supervisors/padron')}}">Padrón</a>
-            <a class="dropdown-item btn btn-primary btn-danger text-center te3"  href="{{url('logout')}}">Salir</a>
+            <a class="dropdown-item btn btn-warning text-center te1" href="{{url('supervisors/index')}}">Inicio</a>
+            <a class="dropdown-item btn btn-success text-center te2" href="{{url('supervisors/padron')}}">Padrón</a>
+            <a class="dropdown-item btn btn-danger text-center te3"  href="{{url('logout')}}">Salir</a>
           </div>
         </li>
       </ul>

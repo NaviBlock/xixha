@@ -48,7 +48,7 @@
             <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo Apicultor!</h1>
             <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del guerrero.</p>
             <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('users/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
-          <div>
+          <div> 
         </main>
       </div>
       
