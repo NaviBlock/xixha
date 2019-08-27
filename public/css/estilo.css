@@ -1,7 +1,7 @@
 .wave{
     height: 100px;
     width: 100%;  
-    background: rgb(247, 245, 245);
+    background: #F8F9F9;
 }
 
 .e-img{
@@ -11,14 +11,14 @@
 .e-t{
     font-size:50px;
 }
-
+ 
 .navbar{
     box-shadow: 2px 2px 5px #000;
     opacity: 0.9;
 }
  
 footer{
-    background: rgb(247, 245, 245);
+    background:#F8F9F9;
 }
 
 .navbar .nav-item .nav-link{
@@ -33,7 +33,7 @@ footer{
 }
  
 .background-overlay{ 
-    background:rgb(247, 245, 245);
+    background:#F8F9F9;
     top:0;
     left:0;
     width:100%;
@@ -51,7 +51,7 @@ footer{
 }
 
 .e-color{
- color: #F7971E !important;
+ color: #FFA000 !important;
 }
 .e-boton{
     margin: 10px !important;

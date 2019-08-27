@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fondo-e">
         <div  class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/"><img src="{{asset('img/logos.png')}}" class="e-logo e-img img-responsive center-block" alt="Logo site"></a>                
@@ -36,7 +36,7 @@
                 <div class="col-md-12 text-center justify-content-center align-self-center">
                     <h1 class="e-titulo e-color">Padrón de Apicultores</h1>
                     <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12"> 
-                    <a class="navbar-brand e-titulo" href="/"><img class="e-logo-p img-responsive center-block" src="{{asset('img/sipax.jpeg')}}" alt="Logo site"></a>            
+                    <a class="navbar-brand e-titulo" href="/"><img class="e-logo-p img-responsive center-block" src="{{asset('img/sipaxQ.png')}}" alt="Logo site"></a>            
                         @yield('content')
                     </div>
                 </div>
@@ -45,11 +45,13 @@
     </div>    
     <footer>
         <div class="container p-3 text-center text-white">
-            <p class="e-titulo e-color">xixhá &copy; 2019</p>
+           <a href="http://xixha.com/">
+                <p class="e-titulo e-color">xixhá &copy; 2019</p>
+            </a>
         </div>
     </footer>
     <div class="wave">
-        <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #F7971E;"></path></svg></div>
+        <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #FFA000;"></path></svg></div>
     </div>     
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
