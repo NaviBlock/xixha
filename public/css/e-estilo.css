@@ -1,3 +1,18 @@
+.foorter-color-e{
+    color:#F7971E !important;  
+    align-self: auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none !important;
+    text-decoration-style: none !important;
+    text-decoration-color: none !important;
+}
+
+p{
+    color: #212121;
+}
+
 dl, ol, ul {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
@@ -76,4 +91,8 @@ dl, ol, ul {
 
 .te3:hover {
     background-color: #e53935;
+}
+
+.e-element-11{
+    color:white !important;
 }
