@@ -1,3 +1,7 @@
+body {
+    padding-top: 15px;
+}
+
 .foorter-color-e{
     color:#F7971E !important;  
     align-self: auto;
@@ -17,6 +21,7 @@ dl, ol, ul {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
+
 .pagination, a{
  color:#F7971E;
  font-size: 25px;
@@ -91,8 +96,92 @@ dl, ol, ul {
 
 .te3:hover {
     background-color: #e53935;
+    color:white !important;
+    border-radius: 10px;
+}
+
+.te4:hover {
+    background-color: rgb(247, 165, 14);;
+    color:white !important;
+    border-radius: 10px;
 }
 
 .e-element-11{
     color:white !important;
 }
+
+.e-text-color{
+    color: #ffc107 !important;    
+}
+
+/*iman.css*/
+.e-border{
+    border-radius: 30px !important;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border: 1px solid  #ffc107;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ffc107;
+    border-top: 2px solid #ffc107;
+}
+
+/*.table-responsive {
+    border-bottom: 2px solid #ffc107;
+}*/
+
+.table{
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 10px;
+    padding: 0px;
+    border: 1px;
+    align-items: center;
+    border-color:#ffc400 !important;
+    display: inline-table !important;
+}
+
+.table td, .table th {
+    padding: 10px;
+    border: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.adx{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+/* Para 960px*/
+@media only screen and (max-width: 980px) and (min-width: 821px) {  
+   
+}  
+
+/* Para 800px */  
+@media only screen and (max-width: 820px) and (min-width: 621px) {  
+    .e-displayer{
+        display: block;
+    }
+}    
+  
+/* Para 600px */  
+@media only screen and (max-width: 620px) and (min-width: 501px) {  
+
+}  
+  
+/* Para 480px */  
+@media only screen and (max-width: 500px) and (min-width: 341px) {  
+
+}  
+
+ /*Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {  
+
+} 

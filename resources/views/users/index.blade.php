@@ -12,30 +12,29 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">
   </head>
-<body> 
+<body>  
   <div class="container">
     <div class="container-fluid">
 
       <!--Menu-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!---a class="navbar-brand e-coloresx" href="/">SIPAX</a-->
+        <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-          <span class="navbar-text">
-            <a class="nav-link e-coloresx px-2">Apicultor {{ auth()->user()->name }}</a>
+          <a class="nav-link e-coloresx px-2">Apicultor {{ auth()->user()->name }}</a>
           </span>
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">              
-              <a class="dropdown-item e-coloresx" href="{{url('users/padron')}}">Padrón <span class="sr-only">(current)</span></a>
-            </li>
             <!--li class="nav-item">
               <a class="dropdown-item e-coloresx"  href="#">Grafico</a>
             </li--->  
+            <li class="nav-item active">              
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}">Padrón</a>
+            </li>
           </ul>
           <span class="navbar-item">
-            <a class="dropdown-item e-coloresx"  href="{{url('logout')}}">Salir</a>
+            <a class="dropdown-item e-coloresx te3"  href="{{url('logout')}}">Salir</a>
           </span>
         </div>
       </nav>
@@ -45,7 +44,7 @@
         <main role="main">                
           <div class="jumbotron">
             <!--Titulo principal-->
-            <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo Apicultor!</h1>
+            <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo Apicultor {{auth()->user()->name}} !</h1>
             <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del guerrero.</p>
             <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('users/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
           <div> 

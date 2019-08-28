@@ -3,7 +3,6 @@
 <div class="row">
 	<div class = "container-fluid"> 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-			<h3>Datos del Apicultor: {{$persona->nombre}}</h3>
 			@if(count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
@@ -16,6 +15,7 @@
 		</div> 
 	</div>
 </div> 
+
 {!!Form::model($persona,['method'=>'PATCH','route'=>['users.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 
