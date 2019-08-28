@@ -17,7 +17,7 @@
                             <div class="col-md-12 ml-sm-auto col-lg-12 mx-auto">
                                 <input id="email" type="email" class="form-control e-table e-border text-center" name="email" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
-                                    <span class="help-block">
+                                    <span class="help-block e-text-color">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -31,7 +31,7 @@
                                     <input id="password" type="password" class="form-control e-table e-border text-center" name="password">
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block e-text-color">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif
