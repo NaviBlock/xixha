@@ -14,7 +14,7 @@
 			@endif
 		</div>
 	</div>
-</div>
+</div> 
 
 {!!Form::model($persona,['method'=>'PATCH','route'=>['supervisors.update',$persona->idpersona]]) !!}
 {{Form::token()}}
@@ -273,35 +273,35 @@
 								</div>			
 							</div>
 						</div>
-
+ 
+					<div class="container">
 					<!---Datos del banco--->	
 						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#exampleModall">
+										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#bancModal">
 											<span>Datos del Banco<span>
 										</button>
 									</div>
 								</div>
 							</div>
 						</div>
-
-					<!-- Modal -->
+						<!-- Modal -->
 						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<div class="modal fade" id="exampleModall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabell" >
+										<div class="modal fade" id="bancModal" tabindex="-1" role="dialog" aria-labelledby="bancModal" >
 											<div class="modal-dialog" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabell">Datos Bancarios</h5>
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<h5 class="modal-title" id="bancModal">Datos Bancarios</h5>
+														<button class="botModal" type="button" class="close" data-dismiss="modal" aria-expanded="false" aria-label="close">
 															<span >&times;</span>
 														</button>
 													</div>
-													<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+													<div class="modal-body">													<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 														<div class="input-group mx-auto">
 															<div class="mx-auto">
 																<div class="input-group-prepend">
@@ -316,46 +316,51 @@
 														</div>
 													</div>
 												</div>
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+												</div>
+
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
+				
+					<div class="container">
 					<!---Datos del Tabla--->	
 						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#ModalTransacciones">
+										<button type="button" class="btn btn-warning btn-responsive btninter text-center" data-toggle="modal" data-target="#modaltran">
 											<span>Transacciones<span>
 										</button>										
 									</div>
 								</div>
 							</div>
 						</div>
-
+					</div>
+					  					
 					<!--Modal Tabla-->
-						<!--div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 							<div class="input-group mx-auto">
 								<div class="mx-auto">
 									<div class="input-group-prepend">
-										<div class="modal fade" id="ModalTransacciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+										<div class="modal fade" id="modaltran" tabindex="-1" role="dialog" aria-labelledby="modaltran" >
 											<div class="modal-dialog" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">Datos de Operación</h5>
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-															<span >&times;</span>
-														</button>
-													</div--->
-													<!--div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-															<div class="input-group mx-auto">
-																<div class="mx-auto">
+														<h5 class="modal-title" id="modaltran">Datos de Operación</h5>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+													<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+														<div class="input-group mx-auto">
+															<div class="mx-auto">
 																	<div class="input-group-prepend">
-																		<div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-																			<--Tabla>
+																		<div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">																	
 																				<div class="table-responsive"> 
 																					<table class="table table-hover table-condensed table-sm text-white">
 																						<thead class="thead-dark">
@@ -381,13 +386,15 @@
 																	</div>
 																</div>
 															</div>
-													</div-->
-												<!--/div>
+
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>						
 							</div>
-						</div--> 
+						</div> 
+
 {!!Form::Close()!!}		
 @endsection

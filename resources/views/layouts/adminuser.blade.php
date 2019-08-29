@@ -8,6 +8,7 @@
   <meta name="generator" content="Sipax, Xixhá">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SIPAX</title>   
+  
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <!--link rel="stylesheet" href="{ {asset('css/iman.css')}}"-->
   <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">

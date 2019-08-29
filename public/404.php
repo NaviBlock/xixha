@@ -7,16 +7,19 @@
 * Licensed under MIT (https://coreui.io/license)
 -->
 
-<html lang="en">
+<html lang="es">
   <head>
     <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+  
+    <meta name="description" content="Sipax, Xixhá">
+    <meta name="author" content="Alejandro Hernández Valle">
+    <meta name="generator" content="Sipax, Xixhá">    
+    <meta name="keyword" content="miel,honey,abeja,bee,organic,organica">
+
+    <title>¡Uy! Estas perdido.</title>
     <!-- Icons-->
     <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
     <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
@@ -46,8 +49,8 @@
         <div class="col-md-6">
           <div class="clearfix">
             <h1 class="float-left display-3 mr-4">404</h1>
-            <h4 class="pt-3">Oops! You're lost.</h4>
-            <p class="text-muted">The page you are looking for was not found.</p>
+            <h4 class="pt-3">¡Uy! Estas perdido.</h4>
+            <p class="text-muted">No se encontró la página que está buscando.</p>
           </div>
           <div class="input-prepend input-group">
             <div class="input-group-prepend">
