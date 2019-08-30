@@ -8,11 +8,11 @@ class CrearTablaDatoperacion extends Migration
         Schema::create('datoperacion', function (Blueprint $table) {
             $table->increments('idaop');            
             $table->string('numeroperacion');            
-            $table->string('cantidad');
+            $table->timestamp('cantidad');
             $table->string('precio');
             $table->string('fecha');
             $table->string('total');           
-            $table->timestamps();
+            $table->timestamp();
             $table->dateTime('last_login')->nullable();
         });
     }

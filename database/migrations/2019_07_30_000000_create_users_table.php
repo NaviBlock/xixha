@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration{
             $table->boolean('confirmed')->default(0);
             $table->string('confirmationCode')->nullable();    */  
             $table->string('rol')->default("User");    
-            $table->timestamps();   
+            $table->timestamp();   
             //$table->dateTime('last_login')->nullable();       
            // $table->boolean('is_super')->default(false); 
             $table->boolean('is_admin')->default(false); 
