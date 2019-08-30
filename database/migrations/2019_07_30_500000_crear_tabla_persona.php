@@ -1,17 +1,15 @@
 <?php
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CrearTablaPersona extends Migration
-{
-    public function up()
-    {
+class CrearTablaPersona extends Migration{
+    public function up(){
         Schema::create('persona', function (Blueprint $table) {
             $table->increments('idpersona');
             $table->string('tipo_persona');
             $table->string('apellidopa');        
             $table->string('apellidoma');
             $table->string('nombre');
-            $table->dateTime('fecha_na');
+            $table->timestamp('fecha_na');
             $table->string('sexo');
             $table->string('estadoP');  
             $table->string('curp');
@@ -31,12 +29,11 @@ class CrearTablaPersona extends Migration
             $table->string('pgn');  
             $table->string('clave_rast');
             $table->string('certificacion');  
-            $table->dateTime('fecha_hora');
+            $table->timestamp('fecha_hora');
             $table->string('mov_col');  
             $table->string('donde');
             $table->string('observacion');            
-            $table->string('folio');
-            $table->string('loc_api');
+            $table->string('folio');            
             $table->string('img_perfil');
             $table->string('estado');
             $table->string('nCuenta');  
@@ -45,10 +42,9 @@ class CrearTablaPersona extends Migration
             $table->string('noOperacion');
             $table->string('opCantidad');  
             $table->string('opPrecio');
-            $table->dateTime('opFecha');  
+            $table->timestamp('opFecha');  
             $table->string('opTotal');
-            $table->timestamps();
-            $table->dateTime('last_login')->nullable();
+            
         });
     }
 
