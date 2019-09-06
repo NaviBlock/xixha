@@ -25,7 +25,7 @@
 			
 			<!---Titulo---->				
 				<div class="text-center">
-				<h3 class="e-text-color">Datos Personales del Apicultor {{$persona->nombre}}</h3>					
+				<h3 class="e-text-color">Datos Personales del Apicultor {{$persona->nombre}}</h3>
 				</div>
 
 			<!---Nombre del apicultor---->

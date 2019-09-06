@@ -2,7 +2,7 @@
 @section ('contenido') 
 <div class="container-fluid adx">
 
-    <div class="container adx"> 
+    <div class="container adx">   
         <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto"> 
             <div class="card-body text-warning">
                 <h5 class="card-title">Padrón de Apicultores.</h5>
@@ -36,7 +36,7 @@
                         </thead>
                         <tbody>
                             @foreach($personas as $per)
-                            <tr>                                     
+                            <tr>
                                 <td><img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid"></td>
                                 <td scope="row">{{ $per->folio }}</td>
                                 <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>

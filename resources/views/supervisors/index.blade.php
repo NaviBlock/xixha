@@ -15,7 +15,6 @@
 <body>
   <div class="container">
     <div class="container-fluid">
-
       <!--Menu-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
@@ -23,10 +22,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <!--li class="nav-item">
-              <a class="dropdown-item e-coloresx disabled" href="/">Grafico</a>
-            </li-->  
+          <ul class="navbar-nav mr-auto"> 
             <li class="nav-item active">
               <a class="dropdown-item e-coloresx text-center te4" href="{{url('supervisors/padron')}}">Padrón</a>
             </li>
@@ -43,7 +39,7 @@
           <div class="jumbotron">
             <!--Titulo principal-->
             <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo!</h1>
-            <a class="nav-link e-coloresx px-2 e-element-11">Supervisor {{ auth()->user()->name }}</a>
+            <a class="nav-link e-coloresx px-2 e-element-11">Supervisor {{auth()->user()->name }}</a>
             <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del guerrero.</p>
             <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('supervisors/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
           <div>
