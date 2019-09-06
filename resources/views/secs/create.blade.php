@@ -117,19 +117,27 @@
 					</div>
 				</div>
 
+			<!--secs-->
+			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+				<div class="input-group mx-auto">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+						<div class="input-group-prepend">
+							<label class="input-group-text e-border">Nivel de token</label>		
+							<select name="id_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
+								<option value="0">0</option>
+								<option value="1">1</option>
+							</select>
+						</div>							
+					</div>
+				</div>
+			</div>
+
 			<!--pin-->
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
-						<div class="input-group-prepend">							
-							<p class="input-group-text e-border">Seleccione un numero (pin) del 5 al 100</p>							
-						</div><br>	
-					</div>					
-				</div>
-				<div class="input-group mx-auto">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mx-auto">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
 						<div class="input-group-prepend">
-							<label for="pin" class="input-group-text e-border">Pin</label>														
+							<p class="input-group-text e-border">Pin de 5 al 100</p>
 							<input id="pin" type="text" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="100">	 
 						</div>					
 					</div>

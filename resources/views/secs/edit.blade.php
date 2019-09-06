@@ -104,8 +104,8 @@
 								<label for="password-confirm" class="input-group-text e-border">Nivel de rol</label>
 								<select name="rol" value="{{old('rol')}}" id="rol" class="md-textarea form-control lineA e-border">
 									<option value="User">User</option>
-									<option value="Supervisor">Supervisor</option>									
-									<option value="Administrador">Administrador</option>
+									<option value="Super">Supervisor</option>									
+									<option value="Admin">Administrador</option>
 									<option value="Mr.Root">Mr.Root</option>
 								</select>									
 							</div>							
@@ -113,22 +113,20 @@
 					</div>
 				</div>				
 				
-			<!--rol-->
+			<!--secs-->
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">						
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
-							<div class="input-group-prepend">
-								<label for="password-confirm" class="input-group-text e-border">Nivel de token</label>
-								<select name="is_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
-									<option value="0">User</option>
-									<option value="1">Supervisor</option>									
-									<option value="1">Administrador</option>									
-									<option value="1">Mr.Root</option>
-								</select>									
-							</div>							
-						</div>
+				<div class="input-group mx-auto">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+						<div class="input-group-prepend">
+							<label class="input-group-text e-border">Nivel de token</label>		
+							<select name="id_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
+								<option value="0">0</option>
+								<option value="1">1</option>
+							</select>
+						</div>							
 					</div>
 				</div>
+			</div>
 
 			<!--botones--->
 					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq py-4" id="datoy">				

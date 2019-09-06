@@ -1,6 +1,6 @@
 @extends ('layouts.admin')
-@section ('contenido')  
-<div class="row"> 
+@section ('contenido')
+<div class="row">  
     <div class="container-fluid">
         <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto"> 
             <div class="card-body text-warning">
@@ -18,9 +18,9 @@
 						    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
                                 <div class="table-responsive "> 
                                     <table class="table table-hover table-condensed table-sm text-dark table-bordered">
-                                        <thead class="table-color">
-                                            <th scope="col">Folio</th>
+                                        <thead class="table-color">                                            
                                             <th scope="col">Perfil</th>
+                                            <th scope="col">Folio</th>
                                             <th scope="col">Nombre Completo</th>
                                             <th scope="col">Municipio</th>
                                             <th scope="col">Telefono</th>
@@ -33,9 +33,9 @@
                                         </thead>
                                         <tbody>
                                             @foreach($personas as $per)
-                                            <tr>
-                                                <td scope="row">{{ $per->folio }}</td> 
+                                            <tr>                                               
                                                 <td><img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid"></td>
+                                                <td scope="row">{{ $per->folio }}</td> 
                                                 <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>
                                                 <td>{{ $per->municipio}}</td>
                                                 <td>{{ $per->telefono }}</td>

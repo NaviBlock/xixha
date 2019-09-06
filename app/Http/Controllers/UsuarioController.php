@@ -33,15 +33,15 @@ class UsuarioController extends Controller
 
             //Administrador
             ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','Administrador')
+            ->where('rol','=','Admin')
             ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','Administrador')
+            ->where('rol','=','Admin')
 
             //Supervisor
             ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','Supervisor')
+            ->where('rol','=','Super')
             ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','Supervisor')
+            ->where('rol','=','Super')
            
             ->orderBy('id','desc') 
             ->paginate(5);  

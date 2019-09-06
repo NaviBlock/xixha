@@ -8,41 +8,39 @@
     <meta name="generator" content="Sipax, Xixhá">
     <title>SIPAX</title> 
     <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
-    <!--link rel="stylesheet" href="{ {asset('css/iman.css')}}"-->
     <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">
   </head>
 <body>
-    <div class="container">
-        <div class="container-fluid">
-          <!--Menu-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!---a class="navbar-brand e-coloresx" href="/">SIPAX</a-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-              <span class="navbar-text">
-            <a class="nav-link e-coloresx px-2">Root {{auth()->user()->name }}</a>
-          </span>
+  <div class="container">
+    <div class="container-fluid"> 
+
+      <!--#Menú-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <a class="nav-link e-coloresx px-2">{{auth()->user()->name}}</a>
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">              
-              <a class="dropdown-item e-coloresx btn btn-primary  text-center text-primary" href="{{url('root/padron')}}">Padrón <span class="sr-only">(current)</span></a>
+            <li class="nav-item active">
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('root/padron')}}">Padrón</a>                  
             </li>
-            <li class="nav-item">                  
-              <a class="dropdown-item btn btn-warning  text-center text-warning" href="{{url('root/create')}}">Registro Apicultor</a>
-            </li>      
-              <span class="nav-item">
-                  <a class="dropdown-item btn btn-info text-center text-info" href="{{url('secs/index')}}">Roles</a>
-                </span>               
-                <span class="nav-item">
-                    <a class="dropdown-item btn btn-primary text-center text-primary" href="{{url('secs/create')}}">Crear Roles</a>
-                  </span>   
-                <li class="nav-item">
-                    <a class="e-coloresx dropdown-item btn btn-danger text-center text-danger" href="{{url('logout')}}">Salir</a>
-                  </li>  
-          </span>
+          <li class="nav-item">
+            <a class="dropdown-item e-coloresx text-center te1" href="{{url('root/create')}}">Registro Apicultor</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/index')}}">Roles</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item e-coloresx text-center te5" href="{{url('secs/create')}}">Crear Roles</a>
+          </li>
+      </ul>
+          <span class="nav-item">
+            <a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a>
+          </span>  
         </div>
       </nav>
 
@@ -51,7 +49,8 @@
           <main role="main">                
             <div class="jumbotron">
               <!--Titulo principal-->
-              <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo Mr.{{auth()->user()->name }}!</h1>
+              <h1 class="text-center display-4 e-coloresx e-element-11">Hola Amigo!</h1> 
+              <a class="nav-link e-coloresx px-2 e-element-11">Administrador {{auth()->user()->name}}!</a>
               <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del guerrero.</p>
               <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('root/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
             <div>
