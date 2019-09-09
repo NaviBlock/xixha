@@ -1,7 +1,7 @@
 @extends ('layouts.adminsuper')
 @section ('contenido') 
 <div class="container-fluid adx">
-
+ 
     <div class="container adx">   
         <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto"> 
             <div class="card-body text-warning">

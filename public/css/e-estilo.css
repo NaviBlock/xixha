@@ -88,10 +88,14 @@ dl, ol, ul {
 
 .te1:hover {
     background-color: yellow;
+    color:white !important;
+    border-radius: 10px;
 }
 
 .te2:hover {
     background-color: #00c853;
+    color:white !important;
+    border-radius: 10px;
 }
 
 .te3:hover {
@@ -102,6 +106,18 @@ dl, ol, ul {
 
 .te4:hover {
     background-color: rgb(247, 165, 14);;
+    color:white !important;
+    border-radius: 10px;
+}
+
+.te5:hover {
+    background-color: rgb(14, 76, 247);;
+    color:white !important;
+    border-radius: 10px;
+}
+
+.te6:hover {
+    background-color: rgb(8, 187, 88);;
     color:white !important;
     border-radius: 10px;
 }

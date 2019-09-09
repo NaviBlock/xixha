@@ -34,7 +34,7 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="dropdown-item e-coloresx text-center te4" href="{{url('supervisors/index')}}">Inicio</a>
-            </li>                  
+            </li>                   
           </ul>
           <span class="navbar-item">
             <a class="dropdown-item e-coloresx te3" href="{{url('logout')}}">Salir</a>
