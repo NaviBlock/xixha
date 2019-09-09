@@ -9,11 +9,11 @@
 							<div class="modal-content">				
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true" class="text-primary">X</span>
+										<span aria-hidden="true" class="text-warning">X</span>
 									</button>
-									<h4 class="modal-title py-3 text-primary">Eliminar Usuario</h4>
+									<h4 class="modal-title py-3 text-warning">Eliminar Usuario</h4>
 								</div>
-								<div class="modal-body py-3 text-primary">
+								<div class="modal-body py-3">
 									<p>Confirme si desea Eliminar la Usuario</p>
 								</div>
 								<div class="modal-footer py-3">

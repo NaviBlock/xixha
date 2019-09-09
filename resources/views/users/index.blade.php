@@ -7,15 +7,16 @@
     <meta name="author" content="Alejandro Hernández Valle">
     <meta name="generator" content="Sipax, Xixhá">
     <title>SIPAX</title> 
-    <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
+
+    <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">  
     <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">
-  </head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> 
+    
+  </head> 
 <body>  
   <div class="container">
     <div class="container-fluid">
-
+ 
       <!--Menu-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
@@ -25,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <a class="nav-link e-coloresx px-2">Apicultor {{ auth()->user()->name }}</a>
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">              
+            <li class="nav-item active">
               <a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}">Padrón</a>
             </li>
           </ul>
