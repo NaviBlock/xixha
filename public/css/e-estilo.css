@@ -87,15 +87,15 @@ dl, ol, ul {
 }
 
 .te1:hover {
-    background-color: yellow;
+    background-color: yellow !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te2:hover {
-    background-color: #00c853;
+    background-color: #00c853 !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te3:hover {
@@ -111,15 +111,15 @@ dl, ol, ul {
 }
 
 .te5:hover {
-    background-color: rgb(14, 76, 247);;
+    background-color: rgb(14, 76, 247) !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te6:hover {
-    background-color: rgb(8, 187, 88);;
+    background-color: rgb(8, 187, 88) !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .e-element-11{

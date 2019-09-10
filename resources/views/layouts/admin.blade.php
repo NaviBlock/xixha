@@ -51,10 +51,10 @@
   </div>
 </div>
 
-  <script src="{{asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
-  <script src="{{asset('js/popper-cnd.min.js')}}"></script>
-  <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
-  <script src="{{asset('js/js.js')}}"></script>
+  <!--script src="{ {asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
+  <script src="{ {asset('js/popper-cnd.min.js')}}"></script>
+  <script src="{ {asset('js/bootstrap-cnd.min.js')}}"></script>
+  <script src="{ {asset('js/js.js')}}"></script--->
 
   @stack('scripts')
 </body>
