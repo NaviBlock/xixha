@@ -1,5 +1,5 @@
 body {
-    padding-top: 15px;
+    padding-top: 40px;
 }
 
 .foorter-color-e{
@@ -87,39 +87,39 @@ dl, ol, ul {
 }
 
 .te1:hover {
-    background-color: yellow;
+    background-color: yellow !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te2:hover {
-    background-color: #00c853;
+    background-color: #00c853 !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te3:hover {
-    background-color: #e53935;
+    background-color: #e53935 !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te4:hover {
-    background-color: rgb(247, 165, 14);;
+    background-color: rgb(247, 165, 14) !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te5:hover {
-    background-color: rgb(14, 76, 247);;
+    background-color: rgb(14, 76, 247) !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te6:hover {
-    background-color: rgb(8, 187, 88);;
+    background-color: rgb(8, 187, 88) !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .e-element-11{
@@ -175,6 +175,7 @@ dl, ol, ul {
     padding-left: 0px !important;
 }
 
+
 /* Para 960px*/
 @media only screen and (max-width: 980px) and (min-width: 821px) {  
    
@@ -189,7 +190,6 @@ dl, ol, ul {
   
 /* Para 600px */  
 @media only screen and (max-width: 620px) and (min-width: 501px) {  
-
 }  
   
 /* Para 480px */  
