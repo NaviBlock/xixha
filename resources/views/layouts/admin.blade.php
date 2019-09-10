@@ -10,7 +10,7 @@
   <title>SIPAX</title>
 
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
+  <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 </head>
 <body> 
