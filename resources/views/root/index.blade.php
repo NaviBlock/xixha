@@ -27,7 +27,7 @@
           <a class="nav-link e-coloresx px-2">{{auth()->user()->name}}</a>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="dropdown-item e-coloresx text-center te4" href="{{url('root/padron')}}">Padrón</a>                  
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('root/padron')}}">Padrón</a>
             </li>
           <li class="nav-item">
             <a class="dropdown-item e-coloresx text-center te1" href="{{url('root/create')}}">Registro Apicultor</a>

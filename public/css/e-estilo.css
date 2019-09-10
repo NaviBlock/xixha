@@ -99,15 +99,15 @@ dl, ol, ul {
 }
 
 .te3:hover {
-    background-color: #e53935;
+    background-color: #e53935 !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te4:hover {
-    background-color: rgb(247, 165, 14);;
+    background-color: rgb(247, 165, 14) !important;
     color:white !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .te5:hover {
