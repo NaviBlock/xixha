@@ -190,14 +190,26 @@ dl, ol, ul {
   
 /* Para 600px */  
 @media only screen and (max-width: 620px) and (min-width: 501px) {  
+    .container{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
 }  
   
 /* Para 480px */  
 @media only screen and (max-width: 500px) and (min-width: 341px) {  
+    .container{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
 
 }  
 
  /*Para 320px */
 @media only screen and (max-width: 340px) and (min-width: 5px) {  
+    .container{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
 
 } 

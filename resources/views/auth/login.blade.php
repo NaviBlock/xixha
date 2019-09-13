@@ -8,7 +8,7 @@
                     <h3 class="e-text-color e-table">Acceso al Sistema</h3>
                 </div>
             </div>
-
+ 
             <div class="panel-body">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                     {{ csrf_field() }}

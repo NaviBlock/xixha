@@ -8,7 +8,7 @@ body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
     vertical-align: top;
     border: 1px solid  rgba(0, 0, 0, 0);
 }
-  
+   
 .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid rgba(0, 0, 0, 0);
