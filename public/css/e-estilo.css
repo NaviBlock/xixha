@@ -1,5 +1,5 @@
 body {
-    padding-top: 40px;
+    padding-top: 4vh;
 }
 
 .foorter-color-e{
@@ -18,13 +18,13 @@ p{
 }
 
 dl, ol, ul {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+    margin-top: 1vh !important;
+    margin-bottom: 1vh !important;
 }
 
 .pagination, a{
  color:#F7971E;
- font-size: 25px;
+ font-size: 2.5vh;
  justify-content: center;
  letter-spacing: auto;
 }
@@ -46,8 +46,7 @@ dl, ol, ul {
     color:#fff !important;
 }
 
-.e-fondo-p{
-    /*color:#757575;*/
+.e-fondo-p{    
     background:#FFC107 !important;
 }
 
@@ -56,15 +55,15 @@ dl, ol, ul {
 }
 
 .e-padding{
-    padding: 0 !important;
+    padding: 0vh !important;
 }
 
 .e-ul{
-    margin:0 !important;
+    margin:0vh !important;
 }
 
 .e-navbar{
-    padding: 0;
+    padding: 0vh;
 }
 
 .jumbotron {
@@ -74,7 +73,7 @@ dl, ol, ul {
 }
 
 .card {
-    margin:10px;
+    margin:1vh;
     border-color: rgb(247, 165, 14);
 }
 
@@ -89,37 +88,37 @@ dl, ol, ul {
 .te1:hover {
     background-color: yellow !important;
     color:white !important;
-    border-radius: 10px !important;
+    border-radius: 1vh !important;
 }
 
 .te2:hover {
     background-color: #00c853 !important;
     color:white !important;
-    border-radius: 10px !important;
+    border-radius: 1vh !important;
 }
 
 .te3:hover {
     background-color: #e53935 !important;
     color:white !important;
-    border-radius: 10px !important;
+    border-radius: 1vh !important;
 }
 
 .te4:hover {
     background-color: rgb(247, 165, 14) !important;
     color:white !important;
-    border-radius: 10px !important;
+    border-radius: 1vh !important;
 }
 
 .te5:hover {
     background-color: rgb(14, 76, 247) !important;
     color:white !important;
-    border-radius: 10px !important;
+    border-radius: 1vh !important;
 }
 
 .te6:hover {
     background-color: rgb(8, 187, 88) !important;
     color:white !important;
-    border-radius: 10px !important;
+    border-radius: 1vh !important;
 }
 
 .e-element-11{
@@ -132,84 +131,80 @@ dl, ol, ul {
 
 /*iman.css*/
 .e-border{
-    border-radius: 30px !important;
+    border-radius: 3vh !important;
 }
 
 .table td, .table th {
     padding: .75rem;
     vertical-align: top;
-    border: 1px solid  #ffc107;
+    border: 0.1vh solid  #ffc107;
 }
 
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #ffc107;
-    border-top: 2px solid #ffc107;
+    border-bottom: 0.2vh solid #ffc107;
+    border-top: 0.2vh solid #ffc107;
 }
-
-/*.table-responsive {
-    border-bottom: 2px solid #ffc107;
-}*/
 
 .table{
     width: auto;
     height: auto;
     display: block;
-    margin: 10px;
-    padding: 0px;
-    border: 1px;
+    margin: 1vh;
+    padding: 0vh;
+    border: 0.1vh;
     align-items: center;
     border-color:#ffc400 !important;
     display: inline-table !important;
 }
 
 .table td, .table th {
-    padding: 10px;
-    border: 10px;
-    margin: 10px;
+    padding: 1vh;
+    border: 1vh;
+    margin: 1vh;
     text-align: center;
 }
 
 .adx{
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+    padding-right: 0vh !important;
+    padding-left: 0vh !important;
 }
 
 
 /* Para 960px*/
-@media only screen and (max-width: 980px) and (min-width: 821px) {  
+@media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
    
 }  
 
 /* Para 800px */  
-@media only screen and (max-width: 820px) and (min-width: 621px) {  
+@media only screen and (max-width: 82vh) and (min-width: 62.1vh) {  
     .e-displayer{
         display: block;
     }
 }    
   
 /* Para 600px */  
-@media only screen and (max-width: 620px) and (min-width: 501px) {  
+@media only screen and (max-width: 62vh) and (min-width: 50.1vh) {  
     .container{
-        padding-right: 0px !important;
-        padding-left: 0px !important;
+        padding-right: 0vh !important;
+        padding-left: 0vh !important;
     }
 }  
   
 /* Para 480px */  
-@media only screen and (max-width: 500px) and (min-width: 341px) {  
+@media only screen and (max-width: 50vh) and (min-width: 34.1vh) {  
     .container{
-        padding-right: 0px !important;
-        padding-left: 0px !important;
+        padding-right: 0vh !important;
+        padding-left: 0vh !important;
     }
 
 }  
 
  /*Para 320px */
-@media only screen and (max-width: 340px) and (min-width: 5px) {  
+@media only screen and (max-width: 34vh) and (min-width: 0.5vh) {  
     .container{
-        padding-right: 0px !important;
-        padding-left: 0px !important;
+        padding-right: 0vh !important;
+        padding-left: 0vh !important;
     }
 
 } 

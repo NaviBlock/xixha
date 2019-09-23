@@ -9,11 +9,11 @@
 }
 
 .e-t{
-    font-size:50px;
+    font-size:5vh;
 } 
  
 .navbar{
-    box-shadow: 2px 2px 5px #000;
+    box-shadow: 0.2vh 0.2vh 0.5vh #000;
     opacity: 0.9;
 }
  
@@ -29,19 +29,19 @@ footer{
     position:relative;
     background:#fff;
     background-size: cover;
-    min-height: 500px;
+    min-height: 50vh;
 }
  
 .background-overlay{ 
     background:#F8F9F9;
-    top:0;
-    left:0;
+    top:0vh;
+    left:0vh;
     width:100%;
     height: 100%;
 }
 
 .trans{
-    width: 400px;
+    width: 40vh;
     display: flex;
     justify-content: center;
 }
@@ -54,7 +54,7 @@ footer{
  color: #FFA000 !important;
 }
 .e-boton{
-    margin: 10px !important;
+    margin: 1vh !important;
 }
 
 .e-logo{
@@ -73,56 +73,56 @@ footer{
 @keyframes moverIzquierda{
     0%{
         opacity:0;
-        transform:translateX(-100px);
+        transform:translateX(-10vh);
     }
     100%{
         opacity: 1;
-        transform:translate(0);
+        transform:translate(0vh);
     }
 }
 @keyframes moverDerecha{
     0%{
         opacity:0;
-        transform:translateX(100px);
+        transform:translateX(10vh);
     }
     100%{
         opacity: 1;
-        transform:translate(0);
+        transform:translate(0vh);
     }
 }
 @keyframes arriba{
     0%{
         opacity:0;
-        transform:translateY(100px);
+        transform:translateY(10vh);
     }
     100%{
         opacity: 1;
-        transform:translate(0);
+        transform:translate(0vh);
     }
 }
 @keyframes abajo{
     0%{
         opacity:0;
-        transform:translateY(-100px);
+        transform:translateY(-10vh);
     }
     100%{
         opacity: 1;
-        transform:translate(0);
+        transform:translate(0vh);
     }
 } 
 
 /* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 575.98px) {
+@media (max-width: 57.598vh) {
     .e-texto-one{
-        margin-left: 0px; 
+        margin-left: 0vh; 
     }
     
     .e-img{
         width:30%;
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-top: 1px;
-        margin-bottom: 1px;
+        margin-left: 8vh;
+        margin-right: 8vh;
+        margin-top: 0.1vh;
+        margin-bottom: 0.1vh;
     }
 
     .e-logo-p{
@@ -130,7 +130,7 @@ footer{
     }
 
     .e-t{
-        font-size:20px;
+        font-size:2vh;
     }
 
     .e-t-t{
@@ -143,9 +143,9 @@ footer{
 }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (min-width: 767.98px) { 
+@media (min-width: 76.798vh) { 
     .e-texto-one{
-        margin-left: 0px; 
+        margin-left: 0vh; 
     }
     
     .e-img{
@@ -157,13 +157,13 @@ footer{
     }
 
     .e-t{
-        font-size:20px;
+        font-size:2vh;
     }
 
     .navbar-dark .navbar-toggler {
         display: inline-block !important;
-        margin-left: 300px !important;
-        padding: 10px !important;    
+        margin-left: 30vh !important;
+        padding: 1vh !important;    
     }
 
     .e-t-t{
@@ -176,7 +176,7 @@ footer{
 }
 
 /*Medium devices (tablets, less than 992px)*/
-@media (min-width: 991.98px) { 
+@media (min-width: 99.198vh) { 
     .e-t-t{
         display: none !important;
     }
@@ -187,9 +187,9 @@ footer{
  }
 
  /*Large devices (desktops, less than 1024px)*/
-@media (max-width: 1024px) { 
+@media (max-width: 102.4vh) { 
     .e-texto-one{
-        margin-left: 650px; 
+        margin-left: 65vh; 
     }
     
     .e-img{
@@ -201,7 +201,7 @@ footer{
     }
 
     .e-t{
-        font-size:40px;
+        font-size:4vh;
     }
 
     .e-t-t{
@@ -214,7 +214,7 @@ footer{
 }
 
 /*Large devices (desktops, less than 1200px)*/
-@media (min-width: 1199.98px) { 
+@media (min-width: 119.998vh) { 
     .e-img{
         width:30%;
     }
@@ -222,8 +222,8 @@ footer{
         width:35%;
     }
     .e-t{
-        font-size:20px;
-        margin-left: 1200px;
+        font-size:2vh;
+        margin-left: 120vh;
     }
 
     .e-t-t{
