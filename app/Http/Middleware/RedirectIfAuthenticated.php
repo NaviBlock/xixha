@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
             //return redirect('/');
             if(auth()->check() && auth()->user()->is_admin == 0 && auth()->user()->rol == 'User'){
                 return redirect('/');
-            }elseif (auth()->check() && auth()->user()->is_admin == 1 && auth()->user()->rol == 'Mr.Root'){
+            }elseif (auth()->check() && auth()->user()->is_admin == 1 && auth()->user()->rol == 'MrRoot'){
                 return redirect('root');
             }
         }

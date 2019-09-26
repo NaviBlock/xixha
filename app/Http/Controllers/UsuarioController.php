@@ -43,8 +43,20 @@ class UsuarioController extends Controller
             ->orwhere('email','LIKE','%'.$query.'%')
             ->where('rol','=','Super')
            
+            //Inactivo
+            ->orwhere('name','LIKE','%'.$query.'%')
+            ->where('rol','=','Inactivo')
+            ->orwhere('email','LIKE','%'.$query.'%')
+            ->where('rol','=','Inactivo')
+
+            //MrRoot
+            ->orwhere('name','LIKE','%'.$query.'%')
+            ->where('rol','=','MrRoot')
+            ->orwhere('email','LIKE','%'.$query.'%')
+            ->where('rol','=','MrRoot')
+                       
             ->orderBy('id','desc') 
-            ->paginate(5);  
+            ->paginate(8);  
             return view('secs.index',['usuarios'=>$usuarios,'searchText'=>$query]);
         }
     }
@@ -59,7 +71,7 @@ class UsuarioController extends Controller
         $usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->rol=$request->get('rol');
-        //$usuario->is_admin=$request->get('is_admin');    
+        $usuario->is_admin=$request->get('is_admin');    
         $usuario->remember_token=bcrypt(str_random($request->get('pin')));    
         //$usuario->last_login(DateTime());
         $usuario->save();        

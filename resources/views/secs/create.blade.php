@@ -123,7 +123,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
 						<div class="input-group-prepend">
 							<label class="input-group-text e-border">Nivel de token</label>		
-							<select name="id_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
+							<select name="is_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
 								<option value="0">0</option>
 								<option value="1">1</option>
 							</select>
