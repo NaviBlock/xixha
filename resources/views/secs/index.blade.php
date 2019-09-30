@@ -33,12 +33,12 @@
                                     <th scope="col">Opciones</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($usuarios as $usu)
+                                    @foreach ($usuarios as $usu)                                    
                                     <tr>
                                         <td>{{ $usu->name}}</td>
                                         <td>{{ $usu->email}}</td>
                                         <td>{{ $usu->rol}}</td>
-                                        <td>
+                                        <td> 
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1">
                                                 <div class="btn-group mr-4" role="group" aria-label="Editar">
                                                     <a href="{{URL::action('UsuarioController@edit',$usu->id)}}">

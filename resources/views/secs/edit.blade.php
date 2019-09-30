@@ -129,7 +129,7 @@
 			</div>
 
 			<!--botones--->
-					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq py-4" id="datoy">				
+					<!--div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq py-4" id="datoy">				
 					<div class="input-group mx-auto">
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
 								<div class="input-group-prepend">
@@ -138,9 +138,24 @@
 								</div>
 							</div>
 						</div>
+					</div-->		
+				<!---botones-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+								<div class="input-group-prepend">			
+									<button class="btn btn-primary btn-block" type="submit">Guardar</button><br>
+									<button class="btn btn-danger btn-block " type="reset">Cancelar</button>
+								</div>
+							</div>
+						</div>
 					</div>				
-			{!!Form::Close()!!}		
+		<!--{! !Form::Close()!!}---->
+		<!--/div>
+	</div>
+</div-->
 		</div>
 	</div>
 </div>
+{!!Form::Close()!!}		
 @endsection

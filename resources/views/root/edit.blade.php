@@ -1,5 +1,6 @@
 @extends ('layouts.admin')
 @section ('contenido')
+
 <div class = "row"> 
 	<div class="container-fluid">
 		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto">
@@ -300,7 +301,7 @@
 					</div>
 				</div>
 			</div>
-
+ 
 
 		<!--Sexo-->
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
@@ -513,7 +514,7 @@
 					</div>
 				</div>
 			</div>
-
+ 
 		<!---botones-->
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
@@ -525,6 +526,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>

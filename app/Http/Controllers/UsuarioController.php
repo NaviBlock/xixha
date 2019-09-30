@@ -54,6 +54,12 @@ class UsuarioController extends Controller
             ->where('rol','=','MrRoot')
             ->orwhere('email','LIKE','%'.$query.'%')
             ->where('rol','=','MrRoot')
+
+            //MrRoot
+            ->orwhere('name','LIKE','%'.$query.'%')
+            ->where('rol','=','Mr.Root')
+            ->orwhere('email','LIKE','%'.$query.'%')
+            ->where('rol','=','Mr.Root')
                        
             ->orderBy('id','desc') 
             ->paginate(8);  

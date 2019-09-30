@@ -80,10 +80,6 @@ public function index(){
 public function show($id){
     return view('root.show',['persona'=>Persona::findOrFail($id)]);
 } 
-
-public function banc($id){
-    return view('root.banc',['persona'=>Persona::findOrFail($id)]);
-} 
  
 public function create(){  
     return view("root.create");
