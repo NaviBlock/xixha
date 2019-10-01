@@ -215,8 +215,8 @@ public function update(PersonaFormRequest $request,$id){
 }
 
 public function destroy($id){
-    $persona = Persona::findOrFail($id);
-    $persona->tipo_persona ='Inactivo';
+    $persona = Persona::findOrFail($id);    
+    $persona->tipo_persona ='Inactivo';    
     $persona->update();
     return Redirect::to('root/padron');	
     }

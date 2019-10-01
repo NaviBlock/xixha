@@ -101,8 +101,9 @@ class UsuarioController extends Controller
 
     public function destroy($id){
         $usuario = User::findOrFail($id);       
+        $usuario->is_admin = 0;
         $usuario->rol='Inactivo';
-        $usuario->update();
+        $usuario->update();        
         return Redirect::to("secs");
     }
 } 

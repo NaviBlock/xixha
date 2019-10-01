@@ -22,10 +22,10 @@
 								</div>
 							</div>
 						</div>
+						{{Form::Close()}}
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	{{Form::Close()}}
+	</div>	
 </div>

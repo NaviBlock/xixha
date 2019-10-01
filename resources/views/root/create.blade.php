@@ -19,11 +19,12 @@
 		</div>
 	</div>
 </div>
+
 {!!Form::open(array('url'=>'root','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 {{Form::token()}}	
 <div class="container-fluid">
 	<div class="row">
-		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">
+		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">		
 			<!---Nombre del apicultor---->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center py-4">
 					<div class="input-group mx-auto">
@@ -82,7 +83,7 @@
 						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="basic-addon2">Estado</span>			
-										<select name="estadoP" value="{{old('estadoP')}}" id="estadoP" class="md-textarea form-control lineA">
+								<select name="estadoP" value="{{old('estadoP')}}" id="estadoP" class="md-textarea form-control lineA">
 											<option value="AGUASCALIENTES">AGUASCALIENTES</option>
 											<option value="BAJA CALIFORNIA">BAJA CALIFORNIA</option>
 											<option value="BAJA CALIFORNIA SUR">BAJA CALIFORNIA SUR</option>
@@ -112,7 +113,7 @@
 											<option value="VERACRUZ">VERACRUZ</option>
 											<option value="YUCATAN">YUCATÁN</option>
 											<option value="ZACATECAS">ZACATECAS</option>
-										</select>								
+								</select>								
 							</div>
 						</div>
 					</div>
@@ -346,15 +347,14 @@
 					</div>
 				</div>	
 
-			</div>
 		</div>
-		{!!Form::Close()!!}	
-	</div> 
-</div>
+	</div>
+	{!!Form::Close()!!}	
+</div> 
 
-  <script src="{{asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
-  <script src="{{asset('js/popper-cnd.min.js')}}"></script>
-  <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
-  <script src="{{asset('js/js.js')}}"></script>
+<!--script src="{ {asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
+<script src="{ {asset('js/popper-cnd.min.js')}}"></script>
+<script src="{ {asset('js/bootstrap-cnd.min.js')}}"></script>
+<script src="{ {asset('js/js.js')}}"></script-->
 
 @endsection

@@ -1,13 +1,14 @@
 @extends ('layouts.admin')
 @section ('contenido')
+
 <div class="row">
 	<div class="coontainer-fluid py-4">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto"> 
 			<!--Titulo-->
-				<div class="text-center py-4">
-					<h3 class="e-text-color">Editar Usuario: {{ $usuario->name}}</h3>
-				</div>
-				@if (count($errors)>0)
+			<div class="text-center py-4">
+				<h3 class="e-text-color">Editar Usuario: {{ $usuario->name}}</h3>
+			</div>
+			@if (count($errors)>0)
 				<div class="alert alert-danger">
 					<ul>
 						@foreach ($errors->all() as $error)
@@ -30,14 +31,14 @@
 					<div class="input-group mx-auto">
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
 							<div class="input-group-prepend">
-							<!--div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}"-->
+								<!--div class="form-group{ { $errors->has('name') ? ' has-error' : '' }}"-->
 								<label for="name" class="input-group-text e-border">Nombre</label>		
 								<input id="name" type="text" require class="text-center md-textarea form-control lineA e-border" name="name" value="{{$usuario->name}}">
 									@if ($errors->has('name'))
-									<span class="help-block">
-										<strong>{{ $errors->first('name') }}</strong>
-									</span>
-								@endif			
+										<span class="help-block">
+											<strong>{{ $errors->first('name') }}</strong>
+										</span>
+									@endif			
 							</div>
 						</div>
 					</div>
@@ -114,46 +115,31 @@
 				</div>				
 				
 			<!--secs-->
-			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-				<div class="input-group mx-auto">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
-						<div class="input-group-prepend">
-							<label class="input-group-text e-border">Nivel de token</label>		
-							<select name="is_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
-								<option value="0">0</option>
-								<option value="1">1</option>
-							</select>
-						</div>							
+				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+					<div class="input-group mx-auto">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+							<div class="input-group-prepend">
+								<label class="input-group-text e-border">Nivel de token</label>		
+								<select name="is_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
+									<option value="0">0</option>
+									<option value="1">1</option>
+								</select>
+							</div>							
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<!--botones--->
-					<!--div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq py-4" id="datoy">				
+			
+			<!---botones-->
+				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
-								<div class="input-group-prepend">
-									<button class="btn btn-primary btn-block" type="submit">Guardar</button>
-									<button class="btn btn-danger btn-block rest" type="reset">Cancelar</button>
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
+							<div class="input-group-prepend">			
+								<button class="btn btn-primary btn-block" type="submit">Guardar</button><br>
+								<button class="btn btn-danger btn-block " type="reset">Cancelar</button>
 							</div>
 						</div>
-					</div-->		
-				<!---botones-->
-					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-						<div class="input-group mx-auto">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
-								<div class="input-group-prepend">			
-									<button class="btn btn-primary btn-block" type="submit">Guardar</button><br>
-									<button class="btn btn-danger btn-block " type="reset">Cancelar</button>
-								</div>
-							</div>
-						</div>
-					</div>				
-		<!--{! !Form::Close()!!}---->
-		<!--/div>
-	</div>
-</div-->
+					</div>
+				</div>					
 		</div>
 	</div>
 </div>

@@ -1,14 +1,13 @@
   <!--Modal-->  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script--->
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script-->
   <!----------------------------------------------------------------->
 
 @extends ('layouts.admin')
 @section ('contenido')
 <div class="container-fluid adx">
-
     <div class="container adx">
         <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto"> 
             <div class="card-body text-warning">
@@ -38,21 +37,21 @@
                                         <td>{{ $usu->name}}</td>
                                         <td>{{ $usu->email}}</td>
                                         <td>{{ $usu->rol}}</td>
-                                        <td> 
+                                        <td>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1">
-                                                <div class="btn-group mr-4" role="group" aria-label="Editar">
+                                                <div class="btn-group mr-4" role="group" aria-label="Boton Editar">
                                                     <a href="{{URL::action('UsuarioController@edit',$usu->id)}}">
-                                                        <button class="btn btn-info">Editar</button>
+                                                        <button type="button" class="btn btn-primary btn-block">Editar</button>
                                                     </a>
-                                                </div>
-                                            </div>
+                                                </div>     
+                                            </div>     
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1">
-                                                <div class="btn-group mr-4" role="group" aria-label="Boton Detalles">
+                                                <div class="btn-group mr-4" role="group" aria-label="Boton de Eliminar">
                                                     <a href="" data-target="#modal-delete-{{$usu->id}}" data-toggle="modal">
-                                                        <button class="btn btn-danger">Eliminar</button>
+                                                        <button type="button" class="btn btn-danger btn-block">Eliminar</button>
                                                     </a>
                                                 </div>
-                                            </div>
+                                            </div>                                            
                                         </td>
                                     </tr>
                                     @include('secs.modal')
@@ -66,10 +65,13 @@
             </div>  
             
             <div class="container">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                        <div class="card-footer mx-auto e-alineacion">
-                            <span class="foorter-color-e">XIXHÁ 2019</span>
-                        </div>                
-                    </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+                    <div class="card-footer mx-auto e-alineacion">
+                        <span class="foorter-color-e">XIXHÁ 2019</span>
+                    </div>                
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection 
