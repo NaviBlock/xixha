@@ -13,18 +13,16 @@ use DB;
 use Storage;
 use Illuminate\Support\Str;
 
-class UsuarioController extends Controller
-{
-    public function __construct() 
-    {
+class UsuarioController extends Controller{
+    public function __construct(){
         $this->middleware('auth');
     }
 
     public function index(Request $request){
         if ($request){
             $query = trim($request->get('searchText'));
-            $usuarios = DB::table('users')            
-            
+            $usuario = DB::table('users')
+
             //User
             ->where('name','LIKE','%'.$query.'%')
             ->where('rol','=','User') 
@@ -49,13 +47,7 @@ class UsuarioController extends Controller
             ->orwhere('email','LIKE','%'.$query.'%')
             ->where('rol','=','Inactivo')
 
-            //MrRoot
-            ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','MrRoot')
-            ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','MrRoot')
-
-            //MrRoot
+            //Mr.Root
             ->orwhere('name','LIKE','%'.$query.'%')
             ->where('rol','=','Mr.Root')
             ->orwhere('email','LIKE','%'.$query.'%')
@@ -63,7 +55,7 @@ class UsuarioController extends Controller
                        
             ->orderBy('id','desc') 
             ->paginate(8);  
-            return view('secs.index',['usuarios'=>$usuarios,'searchText'=>$query]);
+            return view('secs.index',['usuario'=>$usuario,'searchText'=>$query]);
         }
     }
     
@@ -101,7 +93,7 @@ class UsuarioController extends Controller
 
     public function destroy($id){
         $usuario = User::findOrFail($id);       
-        $usuario->is_admin = 0;
+        $usuario->is_admin = "0";
         $usuario->rol='Inactivo';
         $usuario->update();        
         return Redirect::to("secs");

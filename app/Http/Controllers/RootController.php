@@ -27,8 +27,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;
 
 class RootController extends Controller{
-public function __construct(){
-    $this->middleware('auth');
+    public function __construct(){
+        $this->middleware('auth');
 }
 
 public function padron(Request $request){

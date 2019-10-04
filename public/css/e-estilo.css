@@ -170,6 +170,26 @@ dl, ol, ul {
     padding-left: 0vh !important;
 }
 
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: 0rem 5rem -1rem auto !important;
+}
+
+.textX2{
+    padding-right: 22vh !important;
+}
+
+.h3{
+    line-height: 0.1;
+}
+
+.letterX{
+    text-transform: uppercase;
+}
+
+.letterY{
+    text-transform: lowercase;
+}
 
 /* Para 960px*/
 @media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
