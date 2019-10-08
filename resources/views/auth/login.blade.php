@@ -8,7 +8,7 @@
                     <h3 class="e-text-color e-table">Acceso al Sistema</h3>
                 </div>
             </div>
- 
+  
             <div class="panel-body">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                     {{ csrf_field() }}
@@ -17,7 +17,7 @@
                             <div class="col-md-12 ml-sm-auto col-lg-12 mx-auto">
                                 <input id="email" type="email" class="form-control e-table e-border text-center" name="email" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
-                                    <span class="help-block">
+                                    <span class="help-block e-text-color">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -31,7 +31,7 @@
                                     <input id="password" type="password" class="form-control e-table e-border text-center" name="password">
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block e-text-color">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif

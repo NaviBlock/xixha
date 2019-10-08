@@ -17,7 +17,7 @@
                         <div class="col-md-12 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
                             <input id="name" type="text" class="form-control e-control e-border" name="name" value="{{ old('name') }}">
                             @if ($errors->has('name'))
-                            <span class="help-block">
+                            <span class="help-block e-text-color">
                                 <strong>{{ $errors->first('name') }}</strong>
                             </span>
                             @endif
@@ -29,7 +29,7 @@
                             <div class="col-md-12 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
                                 <input id="email" type="email" class="form-control e-control e-border" name="email" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
-                                    <span class="help-block">
+                                    <span class="help-block e-text-color">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -41,7 +41,7 @@
                             <div class="col-md-12 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
                                 <input id="password" type="password" class="form-control e-control e-border" name="password">
                                 @if ($errors->has('password'))
-                                    <span class="help-block">
+                                    <span class="help-block e-text-color">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
@@ -53,7 +53,7 @@
                             <div class="col-md-12 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
                                 <input id="password-confirm" type="password" class="form-control e-control e-border" name="password_confirmation">
                                 @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
+                                    <span class="help-block e-text-color">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
                                     </span>
                                 @endif
