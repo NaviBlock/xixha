@@ -30,7 +30,7 @@
             </li>
           </ul>
           <span class="navbar-item">
-            <a class="dropdown-item e-coloresx text-center te3"  href="{{url('logout')}}">Salir</a>
+            <a class="dropdown-item e-coloresx text-center te3 ali-e"  href="{{url('logout')}}">Salir</a>
           </span>  
         </div>
       </nav> 
