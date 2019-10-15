@@ -1,0 +1,40 @@
+/**********************************************************************/
+/*** Modo Body******************************************************/
+/*Menu*/
+.bar-color{
+  background-color: #F2A007 !important;
+  color:#F2A007;
+}
+
+/**********************************************************************/
+/*** light-theme ******************************************************/
+/*p{
+  color:#3F3F3F !important;
+}
+
+p *{
+  color:#ffffff !important;
+}
+
+/**********************************************************************/
+/*** dark-theme ******************************************************/
+/*.dark-theme .body-e {
+  background: #ffffff;
+}
+.dark-theme .body-e *{
+  background: #3F3F3F;
+}
+
+.dark-theme p {
+  color:#ffffff !important;
+} 
+.dark-theme p *{
+  color:#3F3F3F !important;  
+}
+
+.dark-theme .btn-al{
+  color: #ffffff;
+}
+.dark-theme .btn-al * {
+  color: #ffffff;
+}*/

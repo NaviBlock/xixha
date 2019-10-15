@@ -1,5 +1,9 @@
 body {
-    padding-top: 40px;
+    padding-top: 2.5vh !important;
+}
+.logox{
+    height: 65px;
+    width: 90px;
 }
 
 .foorter-color-e{
@@ -15,6 +19,8 @@ body {
 
 p{
     color: #212121;
+    margin-top:0;
+    margin-bottom:0;
 }
 
 dl, ol, ul {
@@ -71,11 +77,33 @@ dl, ol, ul {
     background-color: #FFC107;
     font-family: 'Roboto', sans-serif;    
     color:white; 
+    margin-bottom: .5rem !important;
+    padding: 1.5rem 1.5rem;
+    border-radius: 1rem;
+    
 }
 
 .card {
     margin:10px;
     border-color: rgb(247, 165, 14);
+}
+
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .7rem;
+}
+
+.card-body{
+    
+    /*display:grid;*/
+}
+
+.dropdown-item {
+    margin-left:2.5rem;
+    padding: .25rem 1.5rem;
 }
 
 .e-footer{
@@ -175,6 +203,26 @@ dl, ol, ul {
     padding-left: 0px !important;
 }
 
+.container{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.btnx{
+    margin-top:4vh;
+}
+
+/*Para 576px*/
+@media (min-width: 576px){
+    .jumbotron {
+        padding: 1rem;
+    }
+}
 
 /* Para 960px*/
 @media only screen and (max-width: 980px) and (min-width: 821px) {  

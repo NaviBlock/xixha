@@ -7,23 +7,29 @@
     <meta name="author" content="Alejandro Hernández Valle">
     <meta name="generator" content="Sipax, Xixhá">
     <title>SIPAX</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
     <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">
+    <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">    
+    
+    <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dark.css')}}">
+    <!--script src="{ {url('js/dark.js')}}"></script-->
+  
   </head>
-<body>  
-  <div class="container">
-    <div class="container-fluid">
-
+<body>
+  <div class="container content" id="content"> 
+    <div class="container-fluid body-e">
+    
       <!--Menu-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <a href="{{url('/')}}"><img class="navbar-brand-minimized logox" src="{{asset('img/sipaxQ.png')}}" alt="Xixha Logo"></a>
+        <button class="navbar-toggler bar-color" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-          <a class="nav-link e-coloresx px-2">Apicultor {{ auth()->user()->name }}</a>
+          <a class="nav-link e-coloresx px-2 text-uppercase">{{auth()->user()->name }}</a>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">              
               <a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}">Padrón</a>
@@ -34,15 +40,22 @@
           </span>
         </div>
       </nav>
+      <!--div class="center">          
+        <button onclick="swapDayAndNight()"><i class="fas fa-adjust"></i></button>
+      </div-->
 
       <!--Main--->
       <div class="container-fliud">
         <main role="main">                
           <div class="jumbotron">
             <!--Titulo principal-->
-            <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo Apicultor {{auth()->user()->name}} !</h1>
+            <h1 class="text-center display-4 e-coloresx e-element-11">Hola Amigo {{auth()->user()->name}} !</h1>
             <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del guerrero.</p>
-            <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('users/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
+            <span class="text-center">
+              <p class="text-center">
+                <a class="btn btn-primary btn-lg btnx btn-al" href="{{url('users/padron')}}" role="button">Ir a Padrón &raquo;</a>
+              </p>
+            </span>
           <div> 
         </main>
       </div>
@@ -91,11 +104,19 @@
           <p class="foorter-color-e">&copy;Xixhá 2019</p>
         </a>
       </footer>      
-
     </div>
   </div>
+  <div class="wave">
+    <div style="height: 150px; overflow: hidden;">
+      <svg viewBox="0 0 400 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #FFA000;"></path>
+      </svg>
+    </div>
+  </div>    
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <!--script src="{ {asset('js/jsx/jquery-slim.min.js')}}"></script-->
-  <script src="{{asset('js/jsx//bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('js/jsx/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('js/dark.js')}}"></script>  
   </body>
 </html>
