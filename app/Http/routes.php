@@ -14,11 +14,15 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('/home','ApicultorController@index');
     Route::get('users','ApicultorController@index');
     Route::get('users/index','ApicultorController@index');
-    Route::get('users/home','ApicultorController@index');
+    Route::get('users/home','ApicultorController@index');   
     //users
     Route::get('users/padron','ApicultorController@padron');
     Route::get('users/search','ApicultorController@search');
     Route::get('users/show','ApicultorController@show');
+    Route::get('users/cal','ApicultorController@cal');
+    Route::get('cal','ApicultorController@cal');
+    Route::get('users/convocatoria','ApicultorController@cal');
+    Route::get('convocatoria','ApicultorController@cal');
     //Resource
     Route::resource('users','ApicultorController');
 });

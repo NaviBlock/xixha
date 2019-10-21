@@ -12,7 +12,7 @@ class CrearTablaDatoperacion extends Migration
             $table->string('precio');
             $table->string('fecha');
             $table->string('total');           
-            $table->timestamp();
+            $table->timestamp('created_at');
             $table->dateTime('last_login')->nullable();
         });
     }

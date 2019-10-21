@@ -11,7 +11,7 @@ class CrearTablaDatobancario extends Migration
             $table->string('idpersona');
             $table->string('clave');
             $table->string('nombanco');           
-            $table->timestamp();
+            $table->timestamp('created_at');
             $table->dateTime('last_login')->nullable();
 
         });

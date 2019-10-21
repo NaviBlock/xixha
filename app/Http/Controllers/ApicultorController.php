@@ -77,6 +77,14 @@ class ApicultorController extends Controller
         return view("users.index");
     }
 
+    public function cal(){  
+        return view("users.cal");
+    }
+
+    public function convocatoria(){  
+        return view("users.convocatoria");
+    }
+
     public function show($id){
         return view('root.show',['persona'=>Persona::findOrFail($id)]);
     } 
