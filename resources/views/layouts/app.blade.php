@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
     <link rel="stylesheet" href="{{asset('css/iman.css')}}">
     <link rel="stylesheet" href="{{url('css/estilo.css')}}">
-    
+
 </head> 
 <body id="app-layout">
     <nav class="navbar navbar-expand-lg navbar-dark fondo-e fix-bar-e">
@@ -50,10 +50,7 @@
                 <p class="e-color fix-st">xixhá &copy; 2019</p>
             </a>
         </div>
-    </footer>
-    <div class="wave">
-        <div class="fix-you" ><svg viewBox="0 0 400 150" preserveAspectRatio="none" class="fix-wave"><path d="M0.00,49.98 C277.93,134.70 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #FFA000;"></path></svg></div>
-    </div>     
+    </footer> 
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

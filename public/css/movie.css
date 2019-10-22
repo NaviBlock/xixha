@@ -87,7 +87,7 @@
     } 
     
     .e-img{
-        width:30%;
+        width:50%;
         margin-left: 80px;
         margin-right: 80px;
         margin-top: 1px;
@@ -479,8 +479,12 @@
 @media (min-width: 1200px){ 
     
     .wave{
-        height: 100px;
+        display: block;
         width: 100%; 
+        margin-top:-100px;
+
+        
+      /*  line-height: 1vh;*/
     }
 
     .main-header{
@@ -522,16 +526,10 @@
     }
     
     .fix-styl{
-        display: inline-block;
-        height: 90px;        
-        width: auto;
+        display: inline-block;               
         line-height: 3.5;       
     }
-    
-    body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
-        line-height: 22px;
-    }
-    
+        
     .py-4{
         padding-bottom:0.5rem !important;
         padding-top: 0.5rem !important;    
@@ -539,10 +537,6 @@
     
     .form-group{
         margin-bottom: 0.5rem;
-    }
-    
-    .py-2{
-        padding-bottom: 0.1vh !important;
     }
     
     .fix-st{
@@ -559,9 +553,13 @@
     }
     
 
-    body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
+    /*body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
         line-height: 1.6vh;
-    }
+    }*/
+
+    /*body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
+        line-height: 22px;
+    }*/
 
     .e-img{
         width:30%;
@@ -585,13 +583,27 @@
     .h1, h1 {
         font-size: 2.5rem;
         margin-top:-50px;
+        margin-bottom:0px;
+        margin-left: 0px;
+        margin-right:0px;
+    }
+
+    .h3 h3{
+        font-size: 1.75rem;
+    }
+
+    h3{
+        margin-top:-10px;
     }
 
     .fix-you{
         display:block;        
-        margin-top:-9h;
-        width: auto;
-        height: 127px;
+        margin-top:-9vh;
+        width: 100%;        
+    }
+    .py-2{
+        padding-bottom: 0rem !important;
+        padding-top:0rem !important;
     }
 }
 /******************************************************/
