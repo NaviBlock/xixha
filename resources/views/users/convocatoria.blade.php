@@ -42,60 +42,59 @@
                             <div class="col-md-4 ">
                                 <div class="card text-center">
                                     <div class="card-body e-element-2 ">
-                                        <h5 class="card-title text-primary">Convocatoria del dia</h5>
-                                        <p class="card-text text-justify e-element-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At odio ducimus soluta rerum vero eos voluptates illo voluptas repellat error quia reprehenderit cupiditate modi, corporis, magni veritatis totam sapiente vel!</p>
-                                        <button type="button" class="btn btn-primary" data-target="#user-id">                                            
-                                            <div id="user-id" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-lg">
-                                                    <div class="modal-content">                                                            
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Hola Mundo</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perspiciatis quisquam quaerat architecto, dignissimos quia harum rem minima quod beatae aut sed voluptates hic, pariatur vitae amet. Molestias, incidunt qui!</p>
-                                                            <br>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        </div>                                                                                                                
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a class="fix-boto" href="#" role="button">Detalles</a>
-                                        </button>                                       
+                                        <h5 class="card-title text-primary">Convocatoria</h5>
+                                        <p class="card-text text-justify e-element-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum voluptas omnis accusantium voluptatem odit, architecto ipsa deserunt harum temporibus id facilis ratione atque dolore assumenda ipsam eum. Quas, rem.</p>                                        
+                                        <button class="btn btn-primary" id="myBtn">
+                                            <div id="myModal2" class="modal">    
+                                                <div class="modal-content">
+                                                    <span class="close" hidden>&times;</span>
+                                                    <p class="e-text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis fuga placeat repudiandae consequuntur ducimus rem, suscipit aut perferendis. Eaque perspiciatis debitis quae ducimus? Consequuntur voluptatem odit explicabo commodi, assumenda adipisci?</p>
+                                                </div>    
+                                            </div>        
+                                            <a class="fix-boto" role="button">Detalles</a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!--Card1-->
+                            <div class="col-md-4 ">
+                                    <div class="card text-center">
+                                        <div class="card-body e-element-2 ">
+                                            <h5 class="card-title text-primary">Convocatoria</h5>
+                                            <p class="card-text text-justify e-element-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum voluptas omnis accusantium voluptatem odit, architecto ipsa deserunt harum temporibus id facilis ratione atque dolore assumenda ipsam eum. Quas, rem.</p>                                        
+                                            <button class="btn btn-primary" id="myBtn">
+                                                <div id="myModal3" class="modal">    
+                                                    <div class="modal-content">
+                                                        <span class="close" hidden>&times;</span>
+                                                        <p class="e-text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis fuga placeat repudiandae consequuntur ducimus rem, suscipit aut perferendis. Eaque perspiciatis debitis quae ducimus? Consequuntur voluptatem odit explicabo commodi, assumenda adipisci?</p>
+                                                    </div>    
+                                                </div>        
+                                                <a class="fix-boto" role="button">Detalles</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            <!--Card1-->
+                            <div class="col-md-4 ">
+                                    <div class="card text-center">
+                                        <div class="card-body e-element-2 ">
+                                            <h5 class="card-title text-primary">Convocatoria</h5>
+                                            <p class="card-text text-justify e-element-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum voluptas omnis accusantium voluptatem odit, architecto ipsa deserunt harum temporibus id facilis ratione atque dolore assumenda ipsam eum. Quas, rem.</p>                                        
+                                            <button class="btn btn-primary" id="myBtn">
+                                                <div id="myModal" class="modal">    
+                                                    <div class="modal-content">
+                                                        <span class="close" hidden>&times;</span>
+                                                        <p class="e-text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis fuga placeat repudiandae consequuntur ducimus rem, suscipit aut perferendis. Eaque perspiciatis debitis quae ducimus? Consequuntur voluptatem odit explicabo commodi, assumenda adipisci?</p>
+                                                    </div>    
+                                                </div>        
+                                                <a class="fix-boto" role="button">Detalles</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <!--Card1-->
-                            <div class="col-md-4 ">
-                                <div class="card text-center">
-                                    <div class="card-body e-element-2 ">
-                                        <h5 class="card-title text-primary">Convocatoria</h5>
-                                        <p class="card-text text-justify e-element-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum voluptas omnis accusantium voluptatem odit, architecto ipsa deserunt harum temporibus id facilis ratione atque dolore assumenda ipsam eum. Quas, rem.</p>
-                                        <button class="btn btn-primary">
-                                            <a class="fix-boto" href="#" role="button">Detalles</a>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!--Card1-->
-                            <div class="col-md-4 ">
-                                <div class="card text-center">
-                                    <div class="card-body e-element-2 ">
-                                        <h5 class="card-title text-primary">Convocatoria</h5>
-                                        <p class="card-text text-justify e-element-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat similique explicabo provident exercitationem voluptate qui ex incidunt dignissimos in id odit laboriosam non ducimus culpa, iste, rem quia illo ipsa?</p>
-                                        <button class="btn btn-primary">
-                                            <a class="fix-boto" href="#" role="button">Detalles</a>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>                            
-                            
                         </div>
                     </div>
 
