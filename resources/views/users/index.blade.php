@@ -102,36 +102,33 @@
                   <div class="card text-center">
                     <div class="card-body e-element-2 ">
                       <h5 class="card-title text-primary">Convacatorias</h5>
-                      <p class="card-text text-justify e-element-1">Convocatoria para los apicultores del estado.</p>
-                      <a class="btn btn-primary" href="#" role="button">Detalles &raquo;</a>
+                      <p class="card-text text-center e-element-1">Convocatoria para los apicultores.</p>
+                      <a class="btn btn-primary" href="{{url('convocatoria')}}" role="button">Detalles &raquo;</a>
                     </div>
                   </div>
                 </div>
-      
+    
               <!--Card5-->
-                <div class="col-md-4 ">
-                  <div class="card text-center">
-                    <div class="card-body e-element-2 ">
-                      <h5 class="card-title text-primary">Calendario</h5>
-                      <p class="card-text text-justify e-element-1">conoce nuestro calendario de actividades mensual.</p>
-                      <a class="btn btn-primary" href="{{url('users/cal')}}" role="button">Detalles &raquo;</a>
-                    </div>
-                  </div>
-                </div>
-                
-              <!--Card6-->
                 <div class="col-md-4 ">
                     <div class="card text-center">
                       <div class="card-body e-element-2 ">
                         <h5 class="card-title text-primary">Noticias</h5>
-                        <p class="card-text text-justify e-element-1">Conoce las ultimas noticias del momento</p>
-                        <a class="btn btn-primary" href="http://xixha.com/category/blog/" role="button">Detalles &raquo;</a>
+                        <p class="card-text text-center e-element-1">Conoce las ultimas noticias del momento</p>
+                        <a class="btn btn-primary fix-cub" href="http://xixha.com/category/blog/" role="button">Detalles &raquo;</a>
                       </div>
                     </div>
                   </div>
-        
-      
-            
+
+              <!--Card6-->
+                <div class="col-md-4 ">
+                    <div class="card text-center">
+                      <div class="card-body e-element-2 ">
+                        <h5 class="card-title text-primary">Calendario</h5>
+                        <p class="card-text text-center e-element-1">conoce nuestro calendario de actividades mensual.</p>
+                        <a class="btn btn-primary" href="{{url('users/cal')}}" role="button">Detalles &raquo;</a>
+                      </div>
+                    </div>
+                  </div>                          
             </div>
           </div>
       
@@ -143,6 +140,7 @@
             </footer>      
           </div>
         </div>
+      </div>
       
         <!--Efecto Wave-->
         <div class="wave">
@@ -152,7 +150,6 @@
               </svg>
             </div>
         </div>
-  </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!--script src="{ {asset('js/jsx/jquery-slim.min.js')}}"></script-->

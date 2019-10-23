@@ -232,6 +232,26 @@ dl, ol, ul {
     padding-left:2.5rem !important;
 }
 
+.fix-cub{
+    margin: 10px;
+}
+
+.btn-primary{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.fix-boto{  
+    font-size: 3vh;  
+    color:white;
+    text-decoration-color: none;
+}
+
+.fix-boto:hover {    
+    color:white !important;
+    text-decoration: none;    
+}
+
 /*Para 576px*/
 @media (min-width: 576px){
     .jumbotron {

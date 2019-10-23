@@ -527,12 +527,13 @@
     
     .fix-styl{
         display: inline-block;               
-        line-height: 3.5;       
+        line-height: 2.5;
+        margin:-5vh;
     }
         
     .py-4{
-        padding-bottom:0.5rem !important;
-        padding-top: 0.5rem !important;    
+        padding-bottom:0rem !important;
+        padding-top: 0rem !important;    
     }
     
     .form-group{
@@ -552,6 +553,11 @@
         padding: 0.5rem 0.5rem;
     }
     
+    .fix-bart{
+        display: inline-block;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
 
     /*body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
         line-height: 1.6vh;
@@ -604,6 +610,19 @@
     .py-2{
         padding-bottom: 0rem !important;
         padding-top:0rem !important;
+    }
+
+    .fix-tf{
+        position: relative;
+        width: 100%;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .form-control{
+        padding: 0rem 0rem;        
+        height: calc(1rem + .9rem + 2px) !important;
+    
     }
 }
 /******************************************************/

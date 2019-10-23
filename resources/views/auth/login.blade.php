@@ -2,7 +2,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="row"> 
-        <div class="main col-md-8 ml-sm-auto col-lg-8 mx-auto">
+        <div class="main col-md-8 ml-sm-auto col-lg-8 mx-auto fix-tf">
             <div class="panel panel-default"> 
                 <div class="panel-heading text-center">
                     <h3 class="e-text-color">Acceso al Sistema</h3>
@@ -43,8 +43,16 @@
                                     <button type="submit" class="btn btn-primary btn-lg btn-block">
                                         <i class="fa fa-btn fa-sign-in e-color"></i> Acceder
                                     </button>                             
-                                </div>
-                            </div><br><br>
+                                </div><br><br>
+                            </div>
+
+                            <div class="container text-center text.white">
+                                <a href="{{asset('register')}}">
+                                    <p class="e-color fix-st">Registro</p>
+                                </a>
+                            </div>
+
+                            <br><br>
                         </form>
                     </div>
             </div>

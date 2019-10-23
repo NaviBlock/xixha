@@ -12,6 +12,11 @@
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>    
 </head>
 <body>
   <div class="container">
@@ -34,8 +39,12 @@
           </span>  
         </div>
       </nav> 
+
       <!--Contenido-->
-      @yield('contenido')      
+      <div class="container-fluid">
+        @yield('contenido')  
+      </div>
+
     </div>
   </div>
 
@@ -43,6 +52,6 @@
   <script src="{{asset('js/popper-cnd.min.js')}}"></script>
   <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
   <script src="{{asset('js/js.js')}}"></script>
-  @stack('scripts')
+
 </body>
 </html>

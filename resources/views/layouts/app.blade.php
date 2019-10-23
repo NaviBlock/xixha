@@ -37,7 +37,7 @@
                 <div class="col-md-12 text-center">
                     <h1 class="e-color fix-styl py-2 fix-dis fix-t">Padrón de Apicultores</h1>
                     <div class="col-md-12 col-sm-12 col-lg-12 col-12 col-xl-12"> 
-                    <a class="navbar-brand" href="/"><img class="e-logo-p img-responsive center-block" src="{{asset('img/sipaxQ.png')}}" alt="Logo site"></a>            
+                    <a class="navbar-brand fix-bart" href="/"><img class="e-logo-p img-responsive center-block" src="{{asset('img/sipaxQ.png')}}" alt="Logo site"></a>            
                         @yield('content')
                     </div>
                 </div>
