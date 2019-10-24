@@ -19,10 +19,11 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('users/padron','ApicultorController@padron');
     Route::get('users/search','ApicultorController@search');
     Route::get('users/show','ApicultorController@show');
-    Route::get('users/cal','ApicultorController@cal');
-    Route::get('cal','ApicultorController@cal');
+
+    //Convocatoria
     Route::get('users/convocatoria','ApicultorController@convocatoria');
     Route::get('convocatoria','ApicultorController@convocatoria');
+
     //Resource
     Route::resource('users','ApicultorController');
 });

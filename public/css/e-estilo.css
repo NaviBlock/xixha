@@ -251,14 +251,19 @@ dl, ol, ul {
     color:white !important;
     text-decoration: none;    
 }
-
+.imgs{    
+    display: block;
+    height: 50%;
+    width: 50%;
+    align-self: center;    
+}
 /* The Modal (background) */
 .modal{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */    
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
+    padding-top: 50px; /* Location of the box */        
+    left: 0;    
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
@@ -274,6 +279,7 @@ dl, ol, ul {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    white-space: normal;
 }
     
 /* The Close Button */
@@ -289,6 +295,12 @@ dl, ol, ul {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.p-e{
+    display: block;        
+    white-space: normal;
+    margin-top:4rem !important;
 }
 
 /*Para 576px*/

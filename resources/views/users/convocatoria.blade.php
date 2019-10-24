@@ -27,7 +27,7 @@
                             $mes=date("n");
                             $ao=date("o");                        
                             if($dia <= 29){
-                                echo "<h3 class=\"e-text-color\">Convocatoria para hoy: $hora:$minuto:$segundo $antePost, Dia $dia/$mes/$ao</h3>";
+                                echo "<h3 class=\"e-text-color\">Convocatoria para el hoy: Dia $dia/$mes/$ao, $hora:$minuto:$segundo $antePost</h3>";
                             }else{
                                 echo"Sitio No Activo";
                             }
@@ -45,9 +45,10 @@
                                         <h5 class="card-title text-primary">Convocatoria</h5>
                                         <p class="card-text text-justify e-element-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum voluptas omnis accusantium voluptatem odit, architecto ipsa deserunt harum temporibus id facilis ratione atque dolore assumenda ipsam eum. Quas, rem.</p>                                        
                                         <button class="btn btn-primary" id="myBtn">
-                                            <div id="myModal2" class="modal">    
+                                            <div id="myModal" class="modal">    
                                                 <div class="modal-content">
                                                     <span class="close" hidden>&times;</span>
+                                                    <img class="imgs text-center" src="{{asset('img/Lollipop.png')}}" alt="test">
                                                     <p class="e-text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis fuga placeat repudiandae consequuntur ducimus rem, suscipit aut perferendis. Eaque perspiciatis debitis quae ducimus? Consequuntur voluptatem odit explicabo commodi, assumenda adipisci?</p>
                                                 </div>    
                                             </div>        
@@ -57,16 +58,17 @@
                                 </div>
                             </div>
                             
-                            <!--Card1-->
+                            <!--Card2-->
                             <div class="col-md-4 ">
                                     <div class="card text-center">
                                         <div class="card-body e-element-2 ">
                                             <h5 class="card-title text-primary">Convocatoria</h5>
                                             <p class="card-text text-justify e-element-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum voluptas omnis accusantium voluptatem odit, architecto ipsa deserunt harum temporibus id facilis ratione atque dolore assumenda ipsam eum. Quas, rem.</p>                                        
-                                            <button class="btn btn-primary" id="myBtn">
-                                                <div id="myModal3" class="modal">    
+                                            <button class="btn btn-primary" id="myBtn2">
+                                                <div id="myModal2" class="modal">    
                                                     <div class="modal-content">
                                                         <span class="close" hidden>&times;</span>
+                                                        <img class="imgs text-center" src="{{asset('img/Lollipop.png')}}" alt="test">
                                                         <p class="e-text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis fuga placeat repudiandae consequuntur ducimus rem, suscipit aut perferendis. Eaque perspiciatis debitis quae ducimus? Consequuntur voluptatem odit explicabo commodi, assumenda adipisci?</p>
                                                     </div>    
                                                 </div>        
@@ -76,17 +78,18 @@
                                     </div>
                                 </div>
                             
-                            <!--Card1-->
+                            <!--Card3-->
                             <div class="col-md-4 ">
                                     <div class="card text-center">
                                         <div class="card-body e-element-2 ">
                                             <h5 class="card-title text-primary">Convocatoria</h5>
                                             <p class="card-text text-justify e-element-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum voluptas omnis accusantium voluptatem odit, architecto ipsa deserunt harum temporibus id facilis ratione atque dolore assumenda ipsam eum. Quas, rem.</p>                                        
-                                            <button class="btn btn-primary" id="myBtn">
-                                                <div id="myModal" class="modal">    
+                                            <button class="btn btn-primary" id="myBtn3">
+                                                <div id="myModal3" class="modal">    
                                                     <div class="modal-content">
                                                         <span class="close" hidden>&times;</span>
-                                                        <p class="e-text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis fuga placeat repudiandae consequuntur ducimus rem, suscipit aut perferendis. Eaque perspiciatis debitis quae ducimus? Consequuntur voluptatem odit explicabo commodi, assumenda adipisci?</p>
+                                                        <img class="imgs text-center" src="{{asset('img/Lollipop.png')}}" alt="test">
+                                                        <p class="e-text-color p-e">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis fuga placeat repudiandae consequuntur ducimus rem, suscipit aut perferendis. Eaque perspiciatis debitis quae ducimus? Consequuntur voluptatem odit explicabo commodi, assumenda adipisci?</p>
                                                     </div>    
                                                 </div>        
                                                 <a class="fix-boto" role="button">Detalles</a>

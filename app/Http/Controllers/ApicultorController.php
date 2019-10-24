@@ -77,12 +77,16 @@ class ApicultorController extends Controller
         return view("users.index");
     }
 
-    public function cal(){  
-        return view("users.cal");
-    }
+    //public function cal(){  
+    //  return view("users.cal");
+    //}
 
     public function convocatoria(){  
         return view("users.convocatoria");
+    }
+
+    public function chat(){  
+        return view("users.chat");
     }
 
     public function show($id){

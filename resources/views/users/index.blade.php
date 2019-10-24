@@ -35,6 +35,9 @@
                   <li class="nav-item active">              
                     <a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}">Padrón</a>
                   </li>
+                  <!--li class="nav-item active">              
+                    <a class="dropdown-item e-coloresx text-center te4" href="{ {url('users/chat')}}">Chat</a>
+                  </li--->
                 </ul>
                 <span class="navbar-item out-p">
                   <a class="dropdown-item e-coloresx te3" href="{{url('logout')}}">Salir</a>
@@ -120,7 +123,7 @@
                   </div>
 
               <!--Card6-->
-                <div class="col-md-4 ">
+                <!--div class="col-md-4 ">
                     <div class="card text-center">
                       <div class="card-body e-element-2 ">
                         <h5 class="card-title text-primary">Calendario</h5>
@@ -128,7 +131,7 @@
                         <a class="btn btn-primary" href="{{url('users/cal')}}" role="button">Detalles &raquo;</a>
                       </div>
                     </div>
-                  </div>                          
+                  </div--->                          
             </div>
           </div>
       
