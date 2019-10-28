@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="dropdown-item e-coloresx text-center te4" href="{{url('supervisors/index')}}">Inicio</a>
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('supervisors/index')}}">Inicio</a>              
             </li>                   
           </ul>
           <span class="navbar-item">
