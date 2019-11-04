@@ -101,11 +101,11 @@ dl, ol, ul {
 /*}*/
 
 
-.ali-e {
-    /*display: flex !important;
+/*.ali-e {
+    display: flex !important;
     margin-left: -9rem !important;
-    padding: 0.25rem 4rem !important;*/
-}
+    padding: 0.25rem 4rem !important;
+}*/
 
 /*.dropdown-item {
     margin-left:2.5rem;
@@ -347,3 +347,24 @@ dl, ol, ul {
     }
 
 } 
+
+/*******************/
+#grafica{
+    width:3vh;
+    height: 4vh;
+    background-color: #f6f6f6;
+    display: block;
+    margin:0px auto;
+}
+@media screen and (min-width: 740px) {
+    #grafica{ width:640px; }
+}
+@media screen and (min-width: 1000px) {
+    #grafica{ width:920px; }
+}
+@media screen and (min-width: 1260px) {
+    #grafica{ width:1120px;  height:500px; }
+}
+@media screen and (min-width: 1580px) {
+    #grafica{ width:1320px; }
+}

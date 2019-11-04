@@ -1,7 +1,7 @@
 <?php
 
 namespace xixha\Http\Requests;
-
+ 
 use xixha\Http\Requests\Request;
 
 class UsuarioFormRequest extends Request

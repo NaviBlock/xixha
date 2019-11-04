@@ -19,11 +19,9 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('users/padron','ApicultorController@padron');
     Route::get('users/search','ApicultorController@search');
     Route::get('users/show','ApicultorController@show');
-
     //Convocatoria
     Route::get('users/convocatoria','ApicultorController@convocatoria');
     Route::get('convocatoria','ApicultorController@convocatoria');
-
     //Resource
     Route::resource('users','ApicultorController');
 });
@@ -38,6 +36,9 @@ Route::group(['middleware' => 'super'], function(){
     Route::get('supervisors/padron', 'SuperController@padron');
     Route::get('supervisors/search', 'SuperController@search');
     Route::get('supervisors/show','SuperController@show');
+    //Banx    
+    Route::get('banx','BanxController@banx');
+    Route::get('banx/banx','BanxController@banx');
     //Resource
-    Route::resource('supervisors','SuperController');
+    Route::resource('supervisors','SuperController');    
 });

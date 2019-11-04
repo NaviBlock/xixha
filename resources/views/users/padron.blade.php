@@ -15,7 +15,7 @@
             </div> 
         </div>
     </div>
-
+    
     <div class="container">
         <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
@@ -38,7 +38,7 @@
                                     <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>                                    
                                     <td>{{ $per->email }}</td>                                    
                                     <td>{{ $per->num_colmena }}</td>
-                                    <td>{{ $per->prod_anual." Kg" }}</td>        
+                                    <td>{{ $per->prod_anual." Kg" }}</td>
                                     <td>{{ $per->municipio }}</td>                            
                                 </tr>                                          
                                 @endforeach
@@ -51,12 +51,30 @@
         </div>
     </div>
 
+    <!--Total-->
     <div class="container">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                <div class="card-footer mx-auto e-alineacion">
-                    <span class="foorter-color-e">&copy;XIXHÁ 2019</span>
-                </div>                
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+            <div class="card-footer mx-auto e-alineacion">
+                <p>Producción Total</p>
+                <?php $sum = 0; ?>
+                @foreach($personas as $per)
+                <?php $sum += $per->prod_anual; ?>
+                @endforeach
+                <p>Producción Anual: {{ $sum }}.Kg</p>
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+            @include('users.search')        
+    </div>
+
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+            <div class="card-footer mx-auto e-alineacion">
+                <span class="foorter-color-e">&copy;XIXHÁ 2019</span>
+            </div>                
+        </div>
     </div>
 </div>
 @endsection
