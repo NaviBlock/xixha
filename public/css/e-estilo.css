@@ -191,10 +191,28 @@ dl, ol, ul {
     text-transform: lowercase;
 }
 
+.form-group {
+    margin-bottom: 0.8rem;
+}
+
 /* Para 960px*/
 @media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
-   
+    .col-lg-12 {      
+        flex: 0 0 50%;
+        max-width: 50%;
+        min-width: 50%;
+        margin: auto;
 }  
+
+/*@media (min-width: 992px){
+    .col-lg-12 {
+      
+        flex: 0 0 50%;
+        max-width: 50%;
+        min-width: 50%;
+        margin: auto;
+    }
+}*/
 
 /* Para 800px */  
 @media only screen and (max-width: 82vh) and (min-width: 62.1vh) {  
@@ -211,6 +229,14 @@ dl, ol, ul {
     }
 }  
   
+@media (min-width: 576px){
+    .col-sm-6 {
+       
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
 /* Para 480px */  
 @media only screen and (max-width: 50vh) and (min-width: 34.1vh) {  
     .container{
