@@ -35,12 +35,12 @@ class BanxController extends Controller
         if ($request){
             $query = trim($request->get('searchText'));
             $personas = DB::table('users')
-            ->join('banx','banx.id','=','users.id','banx.name','=','users.name','banx.rol','=','users.rol','banx.email','=','users.email')
+            /*->join('banx','banx.id','=','users.id','banx.name','=','users.name','banx.rol','=','users.rol','banx.email','=','users.email')
 
             /*->join('user','user.id','=','','name.user','rol.user')
             ->join('banx')*/
             /*->select('idpersona','nombre','apellidopa','apellidoma','id','name','rol','fecha','cantidad','clave','nombanco','created_at','updated_at','token')*/
-            ->select('id','name','rol')
+            /*->select('id','name','rol')
     
             ->where('name','LIKE','%'.$query.'%')
             ->where('rol','=','Super')
@@ -49,7 +49,7 @@ class BanxController extends Controller
             ->where('email','LIKE','%'.$query.'%')
             ->orwhere('rol','=','Super')            
 
-            ->orderBy('id','desc')
+            ->orderBy('id','desc')*/
             ->paginate(10);
 
             return view('banx.banx',['personas'=>$personas,'searchText'=>$query]);
@@ -63,4 +63,4 @@ class BanxController extends Controller
     public function show($id){
         return view('banx.show',['persona'=>Persona::findOrFail($id)]);
     }
-}
+} 

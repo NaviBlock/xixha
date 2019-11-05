@@ -7,10 +7,10 @@
     <meta name="author" content="Alejandro Hernández Valle">
     <meta name="generator" content="Sipax, Xixhá">
     <title>SIPAX</title> 
-    <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
+    <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
   </head>
 <body>
   <div class="container">

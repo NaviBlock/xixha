@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 class CrearTablaBanx extends Migration
 {
     public function up()
-    {
+    { 
         Schema::create('banx', function (Blueprint $table) {
             $table->increments('idop');
             $table->timestamp('fecha');

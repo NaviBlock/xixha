@@ -28,7 +28,7 @@ class Banx extends Model
         'last_login',
         'token'
     ];   
- 
+    
     protected $guarded = [       
     ];
 } 

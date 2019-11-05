@@ -3,7 +3,7 @@ Route::get('/', function () {
    return view('auth/login');
    //return view('login');
 });
-
+  
 Route::auth();
   
 //Users
