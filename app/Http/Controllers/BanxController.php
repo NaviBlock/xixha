@@ -34,15 +34,15 @@ class BanxController extends Controller
     public function banx(Request $request){
         if ($request){
             $query = trim($request->get('searchText'));
-            $personas = DB::table('users')
+            $personas = DB::table('persona')
             /*->join('banx','banx.id','=','users.id','banx.name','=','users.name','banx.rol','=','users.rol','banx.email','=','users.email')
 
             /*->join('user','user.id','=','','name.user','rol.user')
             ->join('banx')*/
             /*->select('idpersona','nombre','apellidopa','apellidoma','id','name','rol','fecha','cantidad','clave','nombanco','created_at','updated_at','token')*/
-            /*->select('id','name','rol')
+            /*->select('nombre','apellidopa','apellidoma','folio')
     
-            ->where('name','LIKE','%'.$query.'%')
+            /*->where('name','LIKE','%'.$query.'%')
             ->where('rol','=','Super')
     
     
@@ -55,6 +55,10 @@ class BanxController extends Controller
             return view('banx.banx',['personas'=>$personas,'searchText'=>$query]);
         }
     }
+
+    /*public function banx(){
+        return view('banx.banx');
+    }*/
 
     public function show($id){
         return view('banx.show',['persona'=>Persona::findOrFail($id)]);

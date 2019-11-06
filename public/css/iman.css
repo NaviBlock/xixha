@@ -1,17 +1,16 @@
-
 body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
-    line-height: 1.5vh;
+    line-height: 15px;
 }
 
 .table td, .table th {
     padding: .75rem;
     vertical-align: top;
-    border: 0.1vh solid  rgba(0, 0, 0, 0);
+    border: 1px solid  rgba(0, 0, 0, 0);
 }
    
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 0.2vh solid rgba(0, 0, 0, 0);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
  
 .text-center {
@@ -19,8 +18,8 @@ body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
 }
 
 .logo-img-a{
-    width: 10vh;
-    height: 10vh;
+    width: 100px;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -30,16 +29,16 @@ body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
     width: auto;
     height: auto;
     display: block;
-    margin: 1vh;
-    padding: 0vh;
-    border: 0vh;
+    margin: 10px;
+    padding: 0px;
+    border: 0px;
     align-items: center;
 }
 
 .table td, .table th {
-    padding: 1vh;
-    border: 1vh;
-    margin: 1vh;
+    padding: 10px;
+    border: 10px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -54,24 +53,24 @@ body,.modal-content,.modal-body,.modal-footer,.modal-dialog{
 }
 
 p {
-    margin-top: 0vh;
-    margin-bottom: 0vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 p {
     display: block;
-    margin-block-start: 0vh;
-    margin-block-end: 0vh;
-    margin-inline-start: 0vh;
-    margin-inline-end: 0vh;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0vh;
+    margin-bottom: 0px;
 }
 
 .input-group-text{
-    border: 0.1vh solid #ffc107 !important;
+    border: 1px solid #ffc107 !important;
 }
 
 .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
@@ -79,11 +78,11 @@ p {
 }
 
 .e-border{
-    border-radius: 3vh !important;
+    border-radius: 30px !important;
 }
 
 .dropdown-menu {
-    padding: 0vh !important;
+    padding: 0 !important;
 }
 
 .e-text-color{
@@ -92,7 +91,7 @@ p {
 }
 
 .rest{
-    margin-top: 0vh !important;
+    margin-top: 0 !important;
 }
 
 .e-text-color-g{
@@ -121,12 +120,12 @@ p {
     flex: 1 1 auto;
     width: 90%;
     margin-top: 10px;
-    margin-bottom: 0vh;
+    margin-bottom: 0;
 }
 
 body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
-    line-height: 1.5vh;
-    height: 1vh;
+    line-height: 15px;
+    height: 10px;
     /*margin-left: 50px;*/
 }
 
@@ -156,6 +155,12 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
         display: block;
         padding: 15px;
     }
+    
+    /*.row{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    }*/
 }    
   
 /* Para 600px */  
@@ -164,6 +169,11 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
         display: block;
         padding: 15px;
     }
+    /*.row{
+    display: block;
+    width: auto;
+    height: auto;
+    }*/
 }  
   
 /* Para 480px */  
@@ -172,6 +182,11 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
         display: block;
         padding: 15px;
     }
+    /*.row{
+    display: block;
+    width: auto;
+    height: auto;
+    }*/
 }  
 
  /*Para 320px */
@@ -180,4 +195,9 @@ body, .modal-content, .modal-body, .modal-footer, .modal-dialog {
         display: block;
         padding: 15px;
     }
+    /*.row{
+    display: block;
+    width: auto;
+    height: auto;
+    }*/
 } 

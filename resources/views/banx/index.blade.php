@@ -1,80 +1,114 @@
-@extends ('layouts.admin')
-@section ('contenido')
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sipax, Xixhá">
+    <meta name="author" content="Alejandro Hernández Valle">
+    <meta name="generator" content="Sipax, Xixhá">
+    <title>SIPAX</title> 
 
-  <!--Modal-->  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script-->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!----------------------------------------------------------------->
+    <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    
+  </head>
+<body>
+  <div class="container">
+    <div class="container-fluid"> 
 
-<div class="container-fluid adx">
-    <div class="container adx">
-        <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto"> 
-            <div class="card-body text-warning">
-                <h5 class="card-title">Roles</h5>
-                <a class="nav-link e-coloresx px-2 letterX">{{auth()->user()->name}}</a> 
-                <div class="text-center">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        @include('secs.search')
-                    </div>
-                </div> 
-            </div>
-
-            <div class="container">
-                <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">                
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                        <div class="table-responsive "> 
-                            <table class="table table-hover table-condensed table-sm text-dark table-bordered">
-                                <thead class="table-color">
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Rol</th>
-                                    <th scope="col">Token</th>
-                                    <th scope="col">Opciones</th>
-                                </thead>
-                                <tbody>
-                                    @foreach ($usuario as $usu)                                    
-                                    <tr>
-                                        <td>{{ $usu->name}}</td>
-                                        <td>{{ $usu->email}}</td>
-                                        <td>{{ $usu->rol}}</td>
-                                        <td>{{ $usu->is_admin}}</td>
-                                        <td>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                                                <div class="btn-group mr-4" role="group" aria-label="Boton Editar">
-                                                    <a href="{{URL::action('UsuarioController@edit',$usu->id)}}">
-                                                        <button type="button" class="btn btn-primary btn-block">Editar</button>
-                                                    </a>
-                                                </div>     
-                                            </div>     
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                                                <div class="btn-group mr-4" role="group" aria-label="Boton de Eliminar">
-                                                    <a href="" data-target="#modal-delete-{{$usu->id}}" data-toggle="modal">
-                                                        <button type="button" class="btn btn-danger btn-block">Eliminar</button>
-                                                    </a>
-                                                </div>
-                                            </div>                                            
-                                        </td>
-                                    </tr>
-                                    @include('secs.modal')
-                                    @endforeach
-                                <tbody>
-                            </table>
-                            {{$usuario->render()}}
-                        </div>
-                    </div> 
-                </div>
-            </div>  
-            
-            <div class="container">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                    <div class="card-footer mx-auto e-alineacion">
-                        <span class="foorter-color-e">XIXHÁ 2019</span>
-                    </div>                
-                </div>
-            </div>
+      <!--#Menú-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <a class="nav-link e-coloresx px-2">{{auth()->user()->name}}</a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('root/padron')}}">Padrón</a>
+            </li>
+          <li class="nav-item">
+            <a class="dropdown-item e-coloresx text-center te1" href="{{url('root/create')}}">Registro Apicultor</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/index')}}">Roles</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item e-coloresx text-center te5" href="{{url('secs/create')}}">Crear Roles</a>
+          </li>
+          <li class="nav-item">
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('banx')}}">Historial</a>
+            </li>
+      </ul>
+          <span class="navbar-item">
+            <a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a>
+          </span>  
         </div>
+      </nav>
+
+      <!--Main--->
+      <div class="container-fliud">
+          <main role="main">                
+            <div class="jumbotron">
+              <!--Titulo principal-->
+              <h1 class="text-center display-4 e-coloresx e-element-11">Hola Amigo!</h1> 
+              <a class="nav-link e-coloresx px-2 e-element-11">Administrador {{auth()->user()->name}}!</a>
+              <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del guerrero.</p>
+              <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('root/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
+            <div>
+          </main>
+        </div>
+        
+        <!--Card-->
+        <div class="container-fliud">  
+          <div class="row">  
+            <!--Card1-->
+            <div class="col-md-4">
+              <div class="card text-center">
+                <div class="card-body e-element-2">
+                  <h5 class="card-title text-primary">Mieles Xixhá</h5>
+                  <p class="card-text text-justify e-element-1">Las mieles Xixhá provienen de la región, Costa Chica de Guerrero, se caracterizan por ser mieles muy aromáticas, un poco obscuras, comparadas con las mielesdel altiplano, pero con aromas y sabores muy marcados, intensos o suaves, pero definidos que se han ganado la aceptaciónde los consumidores.</p>
+                  <a class="btn btn-primary" href="http://xixha.com/wp-content/uploads/2019/06/Caracterizacion-de-la-Miel-Xixha.pdf" role="button">Detalles &raquo;</a>
+                </div>
+              </div>
+            </div>
+  
+            <!--Card2-->
+            <div class="col-md-4">
+              <div class="card text-center">          
+                <div class="card-body e-element-2">            
+                  <h5 class="card-title text-primary">Proyecto Estratégico: “Bio Parque Xixhá”</h5>
+                  <p class="card-text text-justify e-element-1">Es un proyecto estratégico porque plantea una solución común a una problemática común, de bajo costo, alto impacto social, que genera empleo, arraigo comunitario, patrimonio familiar, forma agentes de cambio social guardianes de la naturaleza, al preservar los recursos de la selva y el bosque; tierra, agua, flora, fauna, oxigeno, combate al cambio climático..</p>
+                  <a class="btn btn-primary" href="http://xixha.com/wp-content/uploads/2019/03/Bio-Parque-Xixha.pdf" role="button">Detalles &raquo;</a>
+                </div>
+              </div>
+            </div>
+  
+            <!--Card3-->
+            <div class="col-md-4">
+              <div class="card text-center">        
+                <div class="card-body e-element-2">
+                  <h5 class="card-title text-primary">Ficha Técnica Mieles Xixhá</h5>
+                  <p class="card-text text-justify e-element-1">Nuestras mieles tienen aplicación nutricional, pueden degustarse directamente, en mesa, en platillos en cocina, en panaderías, pastelerías, en confitería (caramelos, granola, etc.), en cosméticos (cremas, shampoo, etc.), en coadyuvantes para la salud, jarabes, elaboraciónde cervezas, etc.</p>
+                  <a class="btn btn-primary" href="http://xixha.com/wp-content/uploads/2019/06/Ficha-TecnicaMiel-Xixha-100619.pdf" role="button">Detalles &raquo;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!--Footer-->         
+        <footer class="container-fliud">
+          <a href="http://xixha.com"><p class="foorter-color-e">&copy;Xixhá 2019</p>
+          </a>
+        </footer>      
+  
+      </div>
     </div>
-</div>
-@endsection 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{{asset('js/jsx/jquery-slim.min.js')}}"></script>
+    <script src="{{asset('js/jsx//bootstrap.bundle.min.js')}}"></script>
+    </body>
+  </html>
