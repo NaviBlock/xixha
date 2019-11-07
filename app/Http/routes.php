@@ -37,6 +37,7 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('root/banc','RootController@banc');   
     //Resource
     Route::resource('root', 'RootController');
+
     //Index secs
     Route::get('secs', 'UsuarioController@index');
     Route::get('secs/index', 'UsuarioController@index');
@@ -47,9 +48,11 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('secs/show','UsuarioController@show');
     Route::get('secs/modal','UsuarioController@modal');
     Route::get('secs/destroy','UsuarioController@destroy');
-    //Banx
+
+    //Banx index
     Route::get('banx/','BanxController@banx');
-    Route::get('banx/banx','BanxController@banx');    
+    Route::get('banx/banx','BanxController@banx');
+    //Banx Body
     Route::get('banx/create','BanxController@create');
     Route::get('banx/edit','BanxController@edit');
     Route::get('banx/show','BanxController@show');

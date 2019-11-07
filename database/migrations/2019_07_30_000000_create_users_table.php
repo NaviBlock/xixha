@@ -6,7 +6,7 @@ class CreateUsersTable extends Migration{
         Schema::create('users', function (Blueprint $table){
             $table->increments('id');
             $table->string('name');            
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
             /*$table->string('apiToken')->rememberToken(str_random(10));
@@ -17,11 +17,9 @@ class CreateUsersTable extends Migration{
             $table->timestamp('updated_at');
             //$table->dateTime('last_login')->nullable();       
            // $table->boolean('is_super')->default(false); 
-            $table->boolean('is_admin')->default(0); 
-            
+            $table->boolean('is_admin')->default(0);             
             //$table->boolean('is_root')->default(false); 
-            //$table->boolean('is_user')->default(false);   
-            
+            //$table->boolean('is_user')->default(false);               
         });
     }
     public function down(){

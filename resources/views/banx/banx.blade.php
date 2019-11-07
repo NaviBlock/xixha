@@ -21,16 +21,17 @@
                 <div class="table-responsive "> 
                     <table class="table table-hover table-condensed table-sm text-dark table-bordered">
                         <thead class="table-color">
-                            <th scope="col">Perfil</th>
-                            <th scope="col">Folio</th>
-                            <th scope="col">Nombre Completo</th>
-                            <th scope="col">Municipio</th>
+                            <th scope="col">Nombre Completo</th>                            
                             <th scope="col">Telefono</th>
                             <th scope="col">Email</th>
-                            <th scope="col">N° Colmenas</th>
-                            <th scope="col">Producción Anual</th>
-                            <th scope="col">Temporada</th>
-                            <th scope="col">Certificación</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Fecha</th>                            
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Nombre del Banco</th>
+                            <th scope="col">Clave</th>                            
+                            <th scope="col">Acceso a token</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Tóken</th>
                             <th scope="col">Opciones</th>
                         </thead>
                         <!--tbody>

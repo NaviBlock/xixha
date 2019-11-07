@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container-fluid">
-    <div class="row"> 
+    <div class="row">  
         <div class="main col-md-8 ml-sm-auto col-lg-8 mx-auto fix-tf">
             <div class="panel panel-default"> 
                 <div class="panel-heading text-center">
@@ -17,7 +17,7 @@
                             <div class="col-md-8 ml-sm-auto col-lg-8 mx-auto">
                                 <input id="email" type="email" class="form-control e-border text-center" name="email" value="{{ old('email') }}">
                                 @if ($errors->has('email'))
-                                    <span class="help-block">
+                                    <span class="help-block e-color">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -31,7 +31,7 @@
                                     <input id="password" type="password" class="form-control e-border text-center" name="password">
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block e-color">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif

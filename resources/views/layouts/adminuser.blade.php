@@ -30,9 +30,6 @@
           <li class="nav-item active">
             <a class="dropdown-item e-coloresx text-center te4" href="{{url('home')}}">Inicio</a>
           </li>
-          <li class="nav-item active">
-              <a class="dropdown-item e-coloresx text-center te5" href="{{url('banx/create')}}">Pagos</a>
-            </li>
         </ul>
         <span class="nav-item">
           <a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a>

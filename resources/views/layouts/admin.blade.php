@@ -43,6 +43,9 @@
             <li class="nav-item">
               <a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/create')}}">Crear Roles</a>            
             </li>
+            <li class="nav-item">
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('banx/create')}}">Pagos</a>            
+            </li>
           </ul>
           <span class="navbar-item">
             <a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a>
