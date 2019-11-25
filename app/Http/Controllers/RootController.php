@@ -68,7 +68,7 @@ public function padron(Request $request){
         ->where('tipo_persona','=','Apicultor')
 
         ->orderBy('idpersona','desc')
-        ->paginate(10);
+        ->paginate(5);
         return view('root.padron',['personas'=>$personas,'searchText'=>$query]);
     }
 }

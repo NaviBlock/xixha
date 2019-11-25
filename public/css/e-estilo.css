@@ -1,5 +1,8 @@
 body {
-    padding-top: 4vh;
+    padding-top: 0vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    display: flex;
 }
 
 .foorter-color-e{
@@ -169,50 +172,61 @@ dl, ol, ul {
     padding-right: 0vh !important;
     padding-left: 0vh !important;
 }
-
-.modal-header .close {
-    padding: 1rem 1rem;
-    margin: 0rem 5rem -1rem auto !important;
+.container{
+    position: relative !important;
+    display: inline-block !important;
+    text-align: center !important;
 }
 
-.textX2{
-    padding-right: 22vh !important;
+.img-fix-l{    
+    margin-top: auto;
+    margin-bottom: auto !important;
+    /*position: absolute;*/    
+    display:inline-flex;    
 }
 
-.h3{
-    line-height: 0.1;
+.text-fix-l{
+    margin-left: -58vh;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    display:block;
+
+    /*margin-left: 1vh;
+    display: flexbox;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    position: absolute; 
+    left: 1px;*/
+
 }
 
-.letterX{
-    text-transform: uppercase;
+.text-t-fix-l{
+    margin-left: -58vh;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    display:block;
 }
 
-.letterY{
-    text-transform: lowercase;
+.table-bordered td, .table-bordered th {    
+    border: 0vh solid  #00000000 !important;
 }
 
-.form-group {
-    margin-bottom: 0.8rem;
+.fix-b{
+    padding-top: 10vh;
 }
 
-/* Para 960px*/
+p {    
+    margin-bottom: 0 !important;
+}
+
+.pagination, .active{
+    font-size: 5vh;
+}
+
+    /* Para 960px*/
 @media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
-    .col-lg-12 {      
-        flex: 0 0 50%;
-        max-width: 50%;
-        min-width: 50%;
-        margin: auto;
+   
 }  
-
-/*@media (min-width: 992px){
-    .col-lg-12 {
-      
-        flex: 0 0 50%;
-        max-width: 50%;
-        min-width: 50%;
-        margin: auto;
-    }
-}*/
 
 /* Para 800px */  
 @media only screen and (max-width: 82vh) and (min-width: 62.1vh) {  
@@ -229,14 +243,6 @@ dl, ol, ul {
     }
 }  
   
-@media (min-width: 576px){
-    .col-sm-6 {
-       
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-}
-
 /* Para 480px */  
 @media only screen and (max-width: 50vh) and (min-width: 34.1vh) {  
     .container{
