@@ -78,6 +78,6 @@ class ApicultorController extends Controller
     }
 
     public function show($id){
-        return view('root.show',['persona'=>Persona::findOrFail($id)]);
+        return view('users.show',['persona'=>Persona::findOrFail($id)]);
     } 
 } 

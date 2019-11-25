@@ -7,87 +7,96 @@
     <meta name="author" content="Alejandro Hernández Valle">
     <meta name="generator" content="Sipax, Xixhá">
     <title>SIPAX</title> 
-    <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
+
+    <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">  
     <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>  
-    <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md fixed-top bg-light e-coloresx">
-  <a class="navbar-brand" href="">SIPAX</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Actividades</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuración</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Información Personal</a>
-          <a class="dropdown-item"  href="{{url('users/padron')}}">Padrón</a>
-          <a class="dropdown-item" href="#">Historial de Pagos</a>
-          <a class="dropdown-item"  href="{{url('logout')}}">Salir</a>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> 
+    
+  </head> 
+<body>  
+  <div class="container">
+    <div class="container-fluid">
+ 
+      <!--#Menu-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <a class="nav-link e-coloresx px-2">Apicultor {{ auth()->user()->name }}</a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}">Padrón</a>
+            </li>
+          </ul>
+          <span class="navbar-item">
+            <a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a>
+          </span>
         </div>
-      </li>
-    </ul>
-  </div> 
-</nav>
-<main role="main">
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3 e-coloresx">Hola, Amigo Apicultor {{ auth()->user()->name }}!</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolore quos, accusamus quidem quas maiores assumenda ipsa, aliquam id deserunt voluptas voluptates ratione laudantium maxime excepturi porro eum eos hic!
-      Minus voluptate quasi, recusandae perferendis ad veritatis iusto id sit repudiandae, quo animi magni ipsa, totam laboriosam deserunt nemo neque quos facere quaerat a rerum. Dolorum, distinctio harum. Necessitatibus, molestias.
-      Nemo recusandae dolores dolorum eum exercitationem similique, id quos hic, sapiente voluptatum sed! Omnis ipsa commodi fugiat. Saepe voluptas, tempora suscipit similique quia accusamus. At vero iusto possimus aliquid corporis?</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Aprende más &raquo;</a></p>
-    </div>
-  </div>
-  <div class="container">  
-    <div class="row">
-      <div class="col-md-4">
-        <h2 class="e-coloresx">Evento 1</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">Detalles &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2 class="e-coloresx">Evento 2</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">Detalles &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2 class="e-coloresx">Evento 3</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-primary" href="#" role="button">Detalles &raquo;</a></p>
-      </div>
-    </div>
-    <hr>
-  </div>
-</main>
+      </nav>
 
-<footer class="container">
-  <p class="e-coloresx">&copy;Xixhá 2019</p>
-</footer>
+      <!--Main--->
+      <div class="container-fliud">
+        <main role="main">                
+          <div class="jumbotron">
+            <!--Titulo principal-->
+            <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo Apicultor {{auth()->user()->name}} !</h1>
+            <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del guerrero.</p>
+            <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('users/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
+          <div> 
+        </main>
+      </div>
+      
+      <!--Card-->
+      <div class="container-fliud">  
+        <div class="row">  
+          <!--Card1-->
+          <div class="col-md-4 ">
+            <div class="card text-center">
+              <div class="card-body e-element-2 ">
+                <h5 class="card-title text-primary">Mieles Xixhá</h5>
+                <p class="card-text text-justify e-element-1">Las mieles Xixhá provienen de la región, Costa Chica de Guerrero, se caracterizan por ser mieles muy aromáticas, un poco obscuras, comparadas con las mielesdel altiplano, pero con aromas y sabores muy marcados, intensos o suaves, pero definidos que se han ganado la aceptaciónde los consumidores.</p>
+                <a class="btn btn-primary" href="http://xixha.com/wp-content/uploads/2019/06/Caracterizacion-de-la-Miel-Xixha.pdf" role="button">Detalles &raquo;</a>
+              </div>
+            </div>
+          </div>
+
+          <!--Card2-->
+          <div class="col-md-4">
+            <div class="card text-center">          
+              <div class="card-body e-element-2">            
+                <h5 class="card-title text-primary">Proyecto Estratégico: “Bio Parque Xixhá”</h5>
+                <p class="card-text text-justify e-element-1">Es un proyecto estratégico porque plantea una solución común a una problemática común, de bajo costo, alto impacto social, que genera empleo, arraigo comunitario, patrimonio familiar, forma agentes de cambio social guardianes de la naturaleza, al preservar los recursos de la selva y el bosque; tierra, agua, flora, fauna, oxigeno, combate al cambio climático..</p>
+                <a class="btn btn-primary" href="http://xixha.com/wp-content/uploads/2019/03/Bio-Parque-Xixha.pdf" role="button">Detalles &raquo;</a>
+              </div>
+            </div>
+          </div>
+
+          <!--Card3-->
+          <div class="col-md-4">
+            <div class="card text-center">        
+              <div class="card-body e-element-2">
+                <h5 class="card-title text-primary">Ficha Técnica Mieles Xixhá</h5>
+                <p class="card-text text-justify e-element-1">Nuestras mieles tienen aplicación nutricional, pueden degustarse directamente, en mesa, en platillos en cocina, en panaderías, pastelerías, en confitería (caramelos, granola, etc.), en cosméticos (cremas, shampoo, etc.), en coadyuvantes para la salud, jarabes, elaboraciónde cervezas, etc.</p>
+                <a class="btn btn-primary" href="http://xixha.com/wp-content/uploads/2019/06/Ficha-TecnicaMiel-Xixha-100619.pdf" role="button">Detalles &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Footer-->         
+      <footer class="container-fliud">
+        <a href="http://xixha.com">
+          <p class="foorter-color-e">&copy;Xixhá 2019</p>
+        </a>
+      </footer>      
+
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="{{asset('js/jsx/jquery-slim.min.js')}}"></script>
   <script src="{{asset('js/jsx//bootstrap.bundle.min.js')}}"></script>
-</body>
+  </body>
 </html>

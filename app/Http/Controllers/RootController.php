@@ -27,8 +27,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;
 
 class RootController extends Controller{
-public function __construct(){
-    $this->middleware('auth');
+    public function __construct(){
+        $this->middleware('auth');
 }
 
 public function padron(Request $request){
@@ -80,7 +80,7 @@ public function index(){
 public function show($id){
     return view('root.show',['persona'=>Persona::findOrFail($id)]);
 } 
-
+ 
 public function create(){  
     return view("root.create");
 }
@@ -156,7 +156,7 @@ public function store(PersonaFormRequest $request){
             $personas->img_perfil=$newnombre;    
             $personas->folio=$new_Nombre_Folio;     
             
-           /*/ $imagenCodificada = file_get_contents("/imagenes/perfil"); //Obtener la imagen
+           /* $imagenCodificada = file_get_contents("/imagenes/perfil"); //Obtener la imagen
                 if(strlen($imagenCodificada) <= 0) exit("No se recibió ninguna imagen");
                         
                 //La imagen traerá al inicio data:image/png;base64, cosa que debemos remover
@@ -174,8 +174,8 @@ public function store(PersonaFormRequest $request){
                     
                 //Terminar y regresar el nombre de la foto
                 exit($nombreImagenGuardada);*/
-       }
-        $personas->save();
+       }   
+    $personas->save();
     return Redirect::to('root/padron'); 
 }
 
@@ -215,9 +215,9 @@ public function update(PersonaFormRequest $request,$id){
 }
 
 public function destroy($id){
-    $persona = Persona::findOrFail($id);
-    $persona->tipo_persona ='Inactivo';
+    $persona = Persona::findOrFail($id);    
+    $persona->tipo_persona ='Inactivo';    
     $persona->update();
     return Redirect::to('root/padron');	
     }
-}
+} 
