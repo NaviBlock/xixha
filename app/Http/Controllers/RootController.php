@@ -80,6 +80,12 @@ public function index(){
 public function show($id){
     return view('root.show',['persona'=>Persona::findOrFail($id)]);
 } 
+
+public function tablev(){
+    $persona = Persona::select(['idpersona','nombre']);
+    return Datatables::of($persona)
+    ->make(true);
+}
  
 public function create(){  
     return view("root.create");
@@ -220,4 +226,5 @@ public function destroy($id){
     $persona->update();
     return Redirect::to('root/padron');	
     }
+
 } 

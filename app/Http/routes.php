@@ -32,8 +32,9 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('root/edit','RootController@edit');
     Route::get('root/show','RootController@show');
     Route::get('root/destroy','RootController@destroy');
-    Route::get('root/search','RootController@search');  
-    Route::get('root/modal','RootController@modal');   
+    Route::get('root/search','RootController@search');
+    Route::get('root/tablav','RootController@tablav')->name('tablav');
+    Route::get('root/modal','RootController@modal');
     Route::get('root/banc','RootController@banc');   
     //Resource
     Route::resource('root', 'RootController');
