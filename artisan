@@ -1,6 +1,10 @@
 #!/usr/bin/env php
 <?php
 
+/*archivo de configuracion php artisan 
+  para llamar a bootstrap/autoload.php
+*/
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader

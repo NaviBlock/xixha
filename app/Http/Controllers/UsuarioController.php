@@ -13,16 +13,18 @@ use DB;
 use Storage;
 use Illuminate\Support\Str;
 
-class UsuarioController extends Controller{
-    public function __construct(){
+class UsuarioController extends Controller
+{
+    public function __construct() 
+    {
         $this->middleware('auth');
     }
 
     public function index(Request $request){
         if ($request){
             $query = trim($request->get('searchText'));
-            $usuario = DB::table('users')
-
+            $usuarios = DB::table('users')            
+            
             //User
             ->where('name','LIKE','%'.$query.'%')
             ->where('rol','=','User') 
@@ -31,31 +33,19 @@ class UsuarioController extends Controller{
 
             //Administrador
             ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','Admin')
+            ->where('rol','=','Administrador')
             ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','Admin')
+            ->where('rol','=','Administrador')
 
             //Supervisor
             ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','Super')
+            ->where('rol','=','Supervisor')
             ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','Super')
+            ->where('rol','=','Supervisor')
            
-            //Inactivo
-            ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','Inactivo')
-            ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','Inactivo')
-
-            //Mr.Root
-            ->orwhere('name','LIKE','%'.$query.'%')
-            ->where('rol','=','Mr.Root')
-            ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','Mr.Root')
-                       
             ->orderBy('id','desc') 
-            ->paginate(8);  
-            return view('secs.index',['usuario'=>$usuario,'searchText'=>$query]);
+            ->paginate(5);  
+            return view('secs.index',['usuarios'=>$usuarios,'searchText'=>$query]);
         }
     }
     
@@ -69,9 +59,8 @@ class UsuarioController extends Controller{
         $usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->rol=$request->get('rol');
-        $usuario->is_admin=$request->get('is_admin');    
         $usuario->remember_token=bcrypt(str_random($request->get('pin')));    
-        //$usuario->last_login(DateTime());
+        $usuario->last_login(DateTime());
         $usuario->save();        
         return Redirect::to("secs");
     } 
@@ -85,17 +74,15 @@ class UsuarioController extends Controller{
         $usuario->name=$request->get('name');
         //$usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
-        $usuario->is_admin=$request->get('is_admin');
-        $usuario->rol=$request->get('rol');    
+
         $usuario->update();
         return Redirect::to("secs");
     }
 
     public function destroy($id){
         $usuario = User::findOrFail($id);       
-        $usuario->is_admin = "0";
         $usuario->rol='Inactivo';
-        $usuario->update();        
+        $usuario->update();
         return Redirect::to("secs");
     }
 } 

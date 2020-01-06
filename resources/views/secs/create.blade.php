@@ -1,11 +1,11 @@
 @extends ('layouts.admin')
 @section ('contenido')
 <div class="row">
-	<div class="container-fluid py-4">
+	<div class="container-fluid">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto"> 
 			<!--Titulo-->
 				<div class="text-center py-4">
-					<h3 class="e-text-color">Nuevo Rol</h3>
+					<h3 class="e-text-color">Nuevo rol</h3>
 				</div>
 				@if (count($errors)>0)
 				<div class="alert alert-danger">
@@ -108,38 +108,23 @@
 							<div class="input-group-prepend">
 								<select name="rol" value="{{old('rol')}}" id="rol" class="md-textarea form-control lineA e-border">
 									<option value="User">User</option>
-									<option value="Super">Supervisor</option>									
-									<option value="Admin">Administrador</option>									
-									<option value="Mr.Root">Root</option>
+									<option value="Supervisor">Supervisor</option>									
+									<option value="Administrador">Administrador</option>									
+									<option value="Mr.Root">Mr.Root</option>
 								</select>									
 							</div>							
 						</div>
 					</div>
 				</div>
 
-			<!--secs-->
-			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-				<div class="input-group mx-auto">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
-						<div class="input-group-prepend">
-							<label class="input-group-text e-border">Nivel de token</label>		
-							<select name="is_admin" value="{{old('is_admin')}}" id="is_admin" class="md-textarea form-control lineA e-border">
-								<option value="0">0</option>
-								<option value="1">1</option>
-							</select>
-						</div>							
-					</div>
-				</div>
-			</div>
-
 			<!--pin-->
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
 						<div class="input-group-prepend">
-							<p class="input-group-text e-border">Pin de 5 al 100</p>
-							<input id="pin" type="text" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="100">	 
-						</div>					
+							<label for="pin" class="input-group-text e-border">Pin</label>
+							<input id="pin" type="number" require class="md-textarea form-control lineA e-border" name="pin" min="5" max="10">	
+						</div>							
 					</div>
 				</div>
 			</div>
@@ -165,8 +150,4 @@
 		</div>
 	</div>
 </div>
-<script src="{{asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
-<script src="{{asset('js/popper-cnd.min.js')}}"></script>
-<script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
-<script src="{{asset('js/js.js')}}"></script>
 @endsection

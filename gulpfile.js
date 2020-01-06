@@ -10,7 +10,9 @@ var elixir = require('laravel-elixir');
  | file for our application, as well as publishing vendor resources.
  |
  */
-
+/*Archivo de requerimiento elixir
+  llama de la funcion app.scss
+  */
 elixir(function(mix) {
     mix.sass('app.scss');
 });

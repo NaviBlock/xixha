@@ -1,5 +1,10 @@
 <?php
 
+/*
+    archivo de configuracion general framework, y tipo de permiso .env
+*/
+
+
 return [
 
     /*
@@ -13,7 +18,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +31,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------

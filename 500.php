@@ -1,3 +1,7 @@
+<!--
+  Archivo 500 para posible fallo 
+-->
+
 <!DOCTYPE html>
 <!--
 * CoreUI - Free Bootstrap Admin Template

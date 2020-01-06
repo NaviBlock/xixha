@@ -1,7 +1,7 @@
 .wave{
     height: 100px;
     width: 100%;  
-    background: #F8F9F9;
+    background: rgb(247, 245, 245);
 }
 
 .e-img{
@@ -9,16 +9,16 @@
 }
 
 .e-t{
-    font-size:5vh;
-} 
- 
+    font-size:50px;
+}
+
 .navbar{
-    box-shadow: 0.2vh 0.2vh 0.5vh #000;
+    box-shadow: 2px 2px 5px #000;
     opacity: 0.9;
 }
  
 footer{
-    background:#F8F9F9;
+    background: rgb(247, 245, 245);
 }
 
 .navbar .nav-item .nav-link{
@@ -29,19 +29,19 @@ footer{
     position:relative;
     background:#fff;
     background-size: cover;
-    min-height: 50vh;
+    min-height: 500px;
 }
  
 .background-overlay{ 
-    background:#F8F9F9;
-    top:0vh;
-    left:0vh;
+    background:rgb(247, 245, 245);
+    top:0;
+    left:0;
     width:100%;
     height: 100%;
 }
 
 .trans{
-    width: 40vh;
+    width: 400px;
     display: flex;
     justify-content: center;
 }
@@ -51,10 +51,10 @@ footer{
 }
 
 .e-color{
- color: #FFA000 !important;
+ color: #F7971E !important;
 }
 .e-boton{
-    margin: 1vh !important;
+    margin: 10px !important;
 }
 
 .e-logo{
@@ -73,56 +73,52 @@ footer{
 @keyframes moverIzquierda{
     0%{
         opacity:0;
-        transform:translateX(-10vh);
+        transform:translateX(-100px);
     }
     100%{
         opacity: 1;
-        transform:translate(0vh);
+        transform:translate(0);
     }
 }
 @keyframes moverDerecha{
     0%{
         opacity:0;
-        transform:translateX(10vh);
+        transform:translateX(100px);
     }
     100%{
         opacity: 1;
-        transform:translate(0vh);
+        transform:translate(0);
     }
 }
 @keyframes arriba{
     0%{
         opacity:0;
-        transform:translateY(10vh);
+        transform:translateY(100px);
     }
     100%{
         opacity: 1;
-        transform:translate(0vh);
+        transform:translate(0);
     }
 }
 @keyframes abajo{
     0%{
         opacity:0;
-        transform:translateY(-10vh);
+        transform:translateY(-100px);
     }
     100%{
         opacity: 1;
-        transform:translate(0vh);
+        transform:translate(0);
     }
 } 
 
 /* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 57.598vh) {
+@media (max-width: 575.98px) {
     .e-texto-one{
-        margin-left: 0vh; 
+        margin-left: 0px; 
     }
     
     .e-img{
         width:30%;
-        margin-left: 8vh;
-        margin-right: 8vh;
-        margin-top: 0.1vh;
-        margin-bottom: 0.1vh;
     }
 
     .e-logo-p{
@@ -130,7 +126,7 @@ footer{
     }
 
     .e-t{
-        font-size:2vh;
+        font-size:20px;
     }
 
     .e-t-t{
@@ -143,9 +139,9 @@ footer{
 }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (min-width: 76.798vh) { 
+@media (min-width: 767.98px) { 
     .e-texto-one{
-        margin-left: 0vh; 
+        margin-left: 0px; 
     }
     
     .e-img{
@@ -157,13 +153,13 @@ footer{
     }
 
     .e-t{
-        font-size:2vh;
+        font-size:20px;
     }
 
     .navbar-dark .navbar-toggler {
         display: inline-block !important;
-        margin-left: 30vh !important;
-        padding: 1vh !important;    
+        margin-left: 300px !important;
+        padding: 10px !important;    
     }
 
     .e-t-t{
@@ -176,7 +172,7 @@ footer{
 }
 
 /*Medium devices (tablets, less than 992px)*/
-@media (min-width: 99.198vh) { 
+@media (min-width: 991.98px) { 
     .e-t-t{
         display: none !important;
     }
@@ -187,9 +183,9 @@ footer{
  }
 
  /*Large devices (desktops, less than 1024px)*/
-@media (max-width: 102.4vh) { 
+@media (max-width: 1024px) { 
     .e-texto-one{
-        margin-left: 65vh; 
+        margin-left: 650px; 
     }
     
     .e-img{
@@ -201,7 +197,7 @@ footer{
     }
 
     .e-t{
-        font-size:4vh;
+        font-size:40px;
     }
 
     .e-t-t{
@@ -214,7 +210,7 @@ footer{
 }
 
 /*Large devices (desktops, less than 1200px)*/
-@media (min-width: 119.998vh) { 
+@media (min-width: 1199.98px) { 
     .e-img{
         width:30%;
     }
@@ -222,8 +218,8 @@ footer{
         width:35%;
     }
     .e-t{
-        font-size:2vh;
-        margin-left: 120vh;
+        font-size:20px;
+        margin-left: 1200px;
     }
 
     .e-t-t{

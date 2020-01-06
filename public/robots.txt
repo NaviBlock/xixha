@@ -1,26 +1,2 @@
 User-agent: *
-Crawl-delay: 60
-Disallow:/
-Disallow:/css/
-Disallow:/dist/
-Disallow:/fonts/
-Disallow:/img/
-Disallow:/icons/
-Disallow:/imagenes/
-Disallow:/imagenes/perfil/
-Disallow:/js/
-Disallow:/notifications/
-Disallow:/plugins/
-Disallow:/scss/
-Disallow:/vendors/
-Disallow:/.htaccess/
-Disallow:/web.config/
-Disallow:/xixha/
-Disallow:/xixha/app/
-Disallow:/xixha/bootstrap/
-Disallow:/xixha/config/
-Disallow:/xixha/database/
-Disallow:/xixha/resources/
-Disallow:/xixha/storage/
-Disallow:/xixha/tests/
-Disallow:/xixha/vendors/
+Disallow:

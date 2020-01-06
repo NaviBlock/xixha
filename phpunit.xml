@@ -9,11 +9,13 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
+    <!--llamada del test -->
         <testsuite name="Application Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
     <filter>
+    <!--filtros de la llamada del router -->
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
             <exclude>
@@ -22,6 +24,7 @@
         </whitelist>
     </filter>
     <php>
+    <!--llamada de los controladores-->
         <env name="APP_ENV" value="testing"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>

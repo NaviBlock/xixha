@@ -2,7 +2,7 @@
 	{{Form::Open(array('action'=>array('RootController@destroy',$per->idpersona),'method'=>'delete'))}}	
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header"> 
+			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
 					<span aria-hidden="true" class="text-warning">X</span>
 				</button> 
