@@ -1,10 +1,33 @@
-dl, ol, ul {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+body {
+    padding-top: 0vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    display: flex;
 }
+
+.foorter-color-e{
+    color:#F7971E !important;  
+    align-self: auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none !important;
+    text-decoration-style: none !important;
+    text-decoration-color: none !important;
+}
+
+p{
+    color: #212121;
+}
+
+dl, ol, ul {
+    margin-top: 1vh !important;
+    margin-bottom: 1vh !important;
+}
+
 .pagination, a{
  color:#F7971E;
- font-size: 25px;
+ font-size: 2.5vh;
  justify-content: center;
  letter-spacing: auto;
 }
@@ -16,4 +39,224 @@ dl, ol, ul {
 .e-coloresx{
     color:#F7971E !important;
     text-decoration: #F7971E !important;
+    align-self: auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
+
+.e-estilo-p{
+    color:#fff !important;
+}
+
+.e-fondo-p{    
+    background:#FFC107 !important;
+}
+
+.e-subtitulo{
+  color:#FFC107;   
+}
+
+.e-padding{
+    padding: 0vh !important;
+}
+
+.e-ul{
+    margin:0vh !important;
+}
+
+.e-navbar{
+    padding: 0vh;
+}
+
+.jumbotron {
+    background-color: #FFC107;
+    font-family: 'Roboto', sans-serif;    
+    color:white; 
+}
+
+.card {
+    margin:1vh;
+    border-color: rgb(247, 165, 14);
+}
+
+.e-footer{
+    text-align: center;
+}
+
+.e-listp{
+    list-style:none;
+}
+
+.te1:hover {
+    background-color: yellow !important;
+    color:white !important;
+    border-radius: 1vh !important;
+}
+
+.te2:hover {
+    background-color: #00c853 !important;
+    color:white !important;
+    border-radius: 1vh !important;
+}
+
+.te3:hover {
+    background-color: #e53935 !important;
+    color:white !important;
+    border-radius: 1vh !important;
+}
+
+.te4:hover {
+    background-color: rgb(247, 165, 14) !important;
+    color:white !important;
+    border-radius: 1vh !important;
+}
+
+.te5:hover {
+    background-color: rgb(14, 76, 247) !important;
+    color:white !important;
+    border-radius: 1vh !important;
+}
+
+.te6:hover {
+    background-color: rgb(8, 187, 88) !important;
+    color:white !important;
+    border-radius: 1vh !important;
+}
+
+.e-element-11{
+    color:white !important;
+}
+
+.e-text-color{
+    color: #ffc107 !important;    
+}
+
+/*iman.css*/
+.e-border{
+    border-radius: 3vh !important;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border: 0.1vh solid  #ffc107;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 0.2vh solid #ffc107;
+    border-top: 0.2vh solid #ffc107;
+}
+
+.table{
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 1vh;
+    padding: 0vh;
+    border: 0.1vh;
+    align-items: center;
+    border-color:#ffc400 !important;
+    display: inline-table !important;
+}
+
+.table td, .table th {
+    padding: 1vh;
+    border: 1vh;
+    margin: 1vh;
+    text-align: center;
+}
+
+.adx{
+    padding-right: 0vh !important;
+    padding-left: 0vh !important;
+}
+.container{
+    position: relative !important;
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+.img-fix-l{    
+    margin-top: auto;
+    margin-bottom: auto !important;
+    /*position: absolute;*/    
+    display:inline-flex;    
+}
+
+.text-fix-l{
+    margin-left: -58vh;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    display:block;
+
+    /*margin-left: 1vh;
+    display: flexbox;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    position: absolute; 
+    left: 1px;*/
+
+}
+
+.text-t-fix-l{
+    margin-left: -58vh;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    display:block;
+}
+
+.table-bordered td, .table-bordered th {    
+    border: 0vh solid  #00000000 !important;
+}
+
+.fix-b{
+    padding-top: 10vh;
+}
+
+p {    
+    margin-bottom: 0 !important;
+}
+
+.pagination, .active{
+    font-size: 5vh;
+}
+
+    /* Para 960px*/
+@media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
+   
+}  
+
+/* Para 800px */  
+@media only screen and (max-width: 82vh) and (min-width: 62.1vh) {  
+    .e-displayer{
+        display: block;
+    }
+}    
+  
+/* Para 600px */  
+@media only screen and (max-width: 62vh) and (min-width: 50.1vh) {  
+    .container{
+        padding-right: 0vh !important;
+        padding-left: 0vh !important;
+    }
+}  
+  
+/* Para 480px */  
+@media only screen and (max-width: 50vh) and (min-width: 34.1vh) {  
+    .container{
+        padding-right: 0vh !important;
+        padding-left: 0vh !important;
+    }
+
+}  
+
+ /*Para 320px */
+@media only screen and (max-width: 34vh) and (min-width: 0.5vh) {  
+    .container{
+        padding-right: 0vh !important;
+        padding-left: 0vh !important;
+    }
+
+} 

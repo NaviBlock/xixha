@@ -27,8 +27,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;
 
 class RootController extends Controller{
-public function __construct(){
-    $this->middleware('auth');
+    public function __construct(){
+        $this->middleware('auth');
 }
 
 public function padron(Request $request){
@@ -68,7 +68,7 @@ public function padron(Request $request){
         ->where('tipo_persona','=','Apicultor')
 
         ->orderBy('idpersona','desc')
-        ->paginate(10);
+        ->paginate(5);
         return view('root.padron',['personas'=>$personas,'searchText'=>$query]);
     }
 }
@@ -81,6 +81,12 @@ public function show($id){
     return view('root.show',['persona'=>Persona::findOrFail($id)]);
 } 
 
+public function tablev(){
+    $persona = Persona::select(['idpersona','nombre']);
+    return Datatables::of($persona)
+    ->make(true);
+}
+ 
 public function create(){  
     return view("root.create");
 }
@@ -215,9 +221,10 @@ public function update(PersonaFormRequest $request,$id){
 }
 
 public function destroy($id){
-    $persona = Persona::findOrFail($id);
-    $persona->tipo_persona ='Inactivo';
+    $persona = Persona::findOrFail($id);    
+    $persona->tipo_persona ='Inactivo';    
     $persona->update();
     return Redirect::to('root/padron');	
     }
-}
+
+} 

@@ -7,5 +7,5 @@ $uri = urldecode(
 if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
     return false;
 }
-
+//directorio de llamada a index 
 require_once __DIR__.'/public/index.php';

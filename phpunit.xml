@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--funcion de llamada golbales-->
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
          bootstrap="bootstrap/autoload.php"
@@ -9,13 +10,13 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-    <!--llamada del test -->
+    <!--Controladro filtro de Test-->
         <testsuite name="Application Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
     <filter>
-    <!--filtros de la llamada del router -->
+    <!--Controladro filtro de router-->
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
             <exclude>
@@ -24,7 +25,7 @@
         </whitelist>
     </filter>
     <php>
-    <!--llamada de los controladores-->
+    <!--funcion de llamada a Controlador -->
         <env name="APP_ENV" value="testing"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
