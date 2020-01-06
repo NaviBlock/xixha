@@ -1,13 +1,5 @@
 @extends ('layouts.admin')
 @section ('contenido') 
-  <!--Modal-->  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!----------------------------------------------------------------->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">  
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 
 <div class="container-fluid adx fix-autoE">     
     <div class="container adx">
@@ -29,7 +21,7 @@
     <div class="container">
         <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">		
 		    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                    <table id="tablav" class="table table-hover table-condensed">
+                    <table id="example" class="table table-hover table-condensed">
                             <thead>
                             <tr>
                                 <th>Id</th>
@@ -44,20 +36,6 @@
         </div>
     </div>
 
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            oTable = $('#tablav').DataTable({
-                "processing": true,
-                "serverSide": true,
-                "ajax": "{{ route('tablav') }}",
-                "columns": [
-                    {data: 'idpersona', name: 'id'},
-                    {data: 'nombre', name: 'name'}                    
-                ]
-            });
-        });
-    </script>
 
     <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">

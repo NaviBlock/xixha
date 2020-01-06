@@ -9,10 +9,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SIPAX</title>
 
-  <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">  
+  <!--link href="{ {asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-  <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
+  <link href="{ {asset('css/e-estilo.css')}}" rel="stylesheet"-->
   
+    <!--Modal-->  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+  <!-- #datatables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+
+
 </head>
 <body> 
   <div class="container">
@@ -62,6 +74,13 @@
 <script src="{ {asset('js/popper-cnd.min.js')}}"></script>
 <script src="{ {asset('js/bootstrap-cnd.min.js')}}"></script>
 <script src="{ {asset('js/js.js')}}"></script--->
+
+
+  <script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+  </script>
 
 @stack('scripts')
 </body>

@@ -31,7 +31,7 @@
                                             <th scope="col">Certificación</th>
                                             <th scope="col">Opciones</th>
                                         </thead>
-                                        <tbody> 
+                                        <tbody>
                                             @foreach($personas as $per)
                                             <tr> 
                                                 <td scope="row">{{ $per->folio }}</td>
