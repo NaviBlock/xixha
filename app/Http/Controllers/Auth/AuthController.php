@@ -29,7 +29,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    //protected $redirectTo = 'compras/proveedor';
+    //protected $redirectTo = 'login/';
 
         protected $redirectTo = '/home';
     
@@ -73,11 +73,14 @@ class AuthController extends Controller
         ]);
     }
     
-    //Acceso a registro
-  /* protected function showRegistrationForm(){
+    /*Acceso a registro 
+        http://localhost:8000/register
+    */
+    protected function showRegistrationForm(){
         return redirect('login');
-    }*/
+    }
 
+    /*Acceso a login*/
     public function redirectPath()
     {
         if(auth()->user()){
