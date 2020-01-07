@@ -10,27 +10,27 @@
   <title>SIPAX</title>
 
   <!--link href="{ {asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-  <link href="{ {asset('css/e-estilo.css')}}" rel="stylesheet"-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script-->  
   
-    <!--Modal-->  
+    <!--# Modal-->  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
-  <!-- #datatables -->
+  <!-- # Datatables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 
-
+    <!--# Estilos-->
+    <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
 
 </head>
 <body> 
   <div class="container">
     <div class="container-fluid">
       
-    <!--#Menu-->
+    <!--# Menu-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a href="{{asset('/')}}">
           <img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo">
@@ -75,7 +75,7 @@
 <script src="{ {asset('js/bootstrap-cnd.min.js')}}"></script>
 <script src="{ {asset('js/js.js')}}"></script--->
 
-
+<!--# Script Database --->
   <script>
     $(document).ready(function() {
         $('#example').DataTable();

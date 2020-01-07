@@ -10,22 +10,24 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
 </head> 
-    <body>        
+    <body>                
         <div class="card">
             <div class="card-body">                
-                <div class="container-fluid">                     
-                    <div class="text-center col-sm-12 my-4">                            
-                        <a class="navbar-brand">
-                            <div class="col-sm-6">
-                                <img class="img-fluid imgz" src="{{asset('img/sipaxQ.png')}}" alt="sipax">
-                            </div>                            
-                        </a>
-                        <h1 class="card-title e-color text-center text-uppercase text-t">Padrón de Apicultores</h1>                        
-                        @yield('content')
+                <div class="container-fluid">           
+                    <div class="row">
+                        <div class="text-center col-auto col-md-12 my-4">                            
+                            <a class="navbar-brand">
+                                <div class="col-sm-6">
+                                    <img class="img-fluid imgz" src="{{asset('img/sipaxQ.png')}}" alt="sipax">
+                                </div>                            
+                            </a>
+                            <h1 class="card-title e-color text-center text-uppercase text-t">Padrón de Apicultores</h1>                        
+                            @yield('content')
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
 
         <div class="container-fluid text-center text-white footer">
             <a href="http://xixha.com/">

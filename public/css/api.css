@@ -63,7 +63,10 @@ footer{
 }
 
 .card-body{
-    margin-bottom: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0vh;
+    padding: 0.6rem;
 }
 
 .btn-altx{
@@ -72,6 +75,6 @@ footer{
 
 .alt-f{
     display: block;
-    margin-top: 8vh;
+    margin-top: 3vh;
     font-size: 3vh;
 }
