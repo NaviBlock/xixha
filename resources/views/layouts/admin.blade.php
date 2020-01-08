@@ -7,81 +7,40 @@
   <meta name="author" content="Alejandro Hernández Valle">
   <meta name="generator" content="Sipax, Xixhá">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIPAX</title>
-
-  <!--link href="{ {asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script-->  
-  
-    <!--# Modal-->  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-  <!-- # Datatables -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-
-    <!--# Estilos-->
-    <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
-
+  <title>SIPAX</title>  
+  <!--# Estilos-->
+  <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
+  <!--# Modal-->  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
 </head>
 <body> 
-  <div class="container">
-    <div class="container-fluid">
-      
-    <!--# Menu-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="{{asset('/')}}">
-          <img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="dropdown-item e-coloresx text-center te4" href="{{url('root')}}">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="dropdown-item e-coloresx text-center te6" href="{{url('root/padron')}}">Padrón</a>
-            </li>
-            <li class="nav-item">
-              <a class="dropdown-item e-coloresx text-center te5" href="{{url('root/create')}}">Registro Apicultor</a>
-            </li>
-            <li class="nav-item">
-              <a class="dropdown-item e-coloresx text-center te1" href="{{url('secs/index')}}">Roles</a>
-            </li>
-            <li class="nav-item">
-              <a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/create')}}">Crear Roles</a>            
-            </li>
-            <li class="nav-item">
-              <a class="dropdown-item e-coloresx text-center te4" href="{{url('banx/create')}}">Pagos</a>            
-            </li>
-          </ul>
-          <span class="navbar-item">
-            <a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a>
-          </span>
-        </div>
-      </nav>
+  <!--- #Modelo de vista-->
+    <div class="container">
+      <div class="container-fluid">      
+      <!--# Menu-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a href="{{asset('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('root')}}">Inicio</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te6" href="{{url('root/padron')}}">Padrón</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te5" href="{{url('root/create')}}">Registro Apicultor</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te1" href="{{url('secs/index')}}">Roles</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/create')}}">Crear Roles</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4" href="{{url('banx/create')}}">Pagos</a></li>
+            </ul>
+            <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a></span>
+          </div>
+        </nav>
 
-    <!--#Contenido-->
-    @yield('contenido')
-  </div>
-</div>
-
-<!--script src="{ {asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
-<script src="{ {asset('js/popper-cnd.min.js')}}"></script>
-<script src="{ {asset('js/bootstrap-cnd.min.js')}}"></script>
-<script src="{ {asset('js/js.js')}}"></script--->
-
-<!--# Script Database --->
-  <script>
-    $(document).ready(function() {
-        $('#example').DataTable();
-    } );
-  </script>
-
-@stack('scripts')
+      <!--# Contenido-->
+        @yield('contenido')
+      </div>
+    </div>
+  @stack('scripts')
 </body>
 </html>

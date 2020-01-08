@@ -24,7 +24,7 @@
       <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarText">
-        <a class="nav-link e-coloresx px-2">{{auth()->user()->name}}</a>
+        <a class="nav-link e-coloresx px-2">{{auth()->user()->name}} </a>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('root/padron')}}">Padrón</a></li>
           <li class="nav-item"><a class="dropdown-item e-coloresx text-center te1" href="{{url('root/create')}}">Registro Apicultor</a></li>

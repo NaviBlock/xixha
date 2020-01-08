@@ -245,6 +245,20 @@ p {
     padding: 0.5rem 1rem;
 }
 
+.btn-x{
+    display: block !important;
+}
+
+.tit-x{
+    display: block !important;
+}
+
+.e-color{
+    color: #FFA000 !important;
+}
+
+
+
     /* Para 960px*/
 @media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
    
