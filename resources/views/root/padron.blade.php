@@ -10,7 +10,7 @@
         </div>
 
     <!-- #Tabla de Resultado-->
-        <div class="container form-group amber-textarea active-amber-textarea-2 input-group e-border text-center table-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+        <div class="container-fluid table-responsive form-group amber-textarea active-amber-textarea-2 input-group e-border text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
             <table class="table table-hover table-condensed table-sm text-dark table-bordered">
                 <thead class="table-color">
                     <th scope="col">Perfil</th>

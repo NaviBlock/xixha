@@ -79,7 +79,7 @@ dl, ol, ul {
 
 .card {
     margin:1vh;
-    border-color: rgb(247, 165, 14);
+    border-color: rgb(247, 165, 14) !important;
     padding: 0.5rem !important;
     border: 3px solid rgba(255, 145, 0, 0.877) !important;
     border-radius: 2.25rem !important;
@@ -202,14 +202,6 @@ dl, ol, ul {
     margin-bottom: 0 !important;
     position: absolute; 
     left: 1px;*/
-
-}
-
-.text-t-fix-l{
-    margin-left: -58vh;
-    margin-top: 0;
-    margin-bottom: 0 !important;
-    display:block;
 }
 
 .table-bordered td, .table-bordered th {    
@@ -277,6 +269,15 @@ p {
 
 .text-bor {
     padding-bottom: 0vh !important;
+}
+
+.input-group-append, .input-group-prepend {    
+    display: contents !important;
+}
+
+.modal.show .modal-dialog {
+    display: inline-flex;
+    position: initial;
 }
     /* Para 960px*/
 @media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  

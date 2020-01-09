@@ -1,67 +1,60 @@
 @extends ('layouts.admin')
 @section ('contenido')
 
-<div class = "row"> 
-	<div class="container-fluid">
-		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto">
-			<h3>Editar datos de: {{ $persona->nombre}}</h3>
-			@if(count($errors)>0)
-				<div class="alert alert-danger">
-					<ul> 
-						@foreach($errors->all() as $error)
-							<li>{{$error}}</li>
-						@endforeach
-					</ul> 
-				</div> 
-			@endif
-		</div>  
-	</div>
+<div class="row container-fluid col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto"> 	
+	<h3 class="e-color">Editar datos de: {{$persona->nombre}}</h3>
+	@if(count($errors)>0)
+	<div class="alert alert-danger">
+		<ul> 
+			@foreach($errors->all() as $error)
+				<li>{{$error}}</li>
+			@endforeach
+		</ul> 
+	</div> 
+	@endif
 </div>
 
 {!!Form::model($persona,['method'=>'PATCH','route'=>['root.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">
-			<!--Titulo-->
-				<div class="text-center"> 
-					<h3 class="e-text-color">Datos Personales del Apicultor</h3>
-				</div>
-
-			<!---Nombre del apicultor---->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center py-4">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="text-center input-group-text btn btn-warning" id="basic-addon101">Folio de: {{$persona->nombre}} {{$persona->apellidopa}} {{$persona->apellidoma}}</span>
-								<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="input-group-text e-border md-textarea form-control lineA" aria-describedby="basic-addon101">
+<!-- #Datos de Edición-->
+	<!-- #Titulo-->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
+				<h3 class="e-text-color text-bor">Datos Personales del Apicultor</h3>
+			</div>
+		<!-- #Datos Report-->
+			<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="p-id">
+				<div class="card card-body">
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->					
+				<!-- #Nombre del apicultor-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">				
+								<p class="text-center input-group-text btn btn-warning e-border" id="basic-addon101">Folio de: {{$persona->nombre}} {{$persona->apellidopa}} {{$persona->apellidoma}}</p>
+								<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="input-group-text e-border md-textarea form-control lineA" aria-describedby="basic-addon101">					
 							</div>
 						</div>
 					</div>
-				</div>
-			
-			<!--Nombre--->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">	
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="text-center input-group-text btn btn-warning" id="basic-addon102">Nombre del Apicultor</span>
+		
+				<!-- #Nombre--->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
+								<span class="text-center input-group-text btn btn-warning e-border" id="basic-addon102">Nombre del Apicultor</span>
 								<input type="text" name="nombre" required value="{{$persona->nombre}}" disabled="true" class="input-group-text e-border md-textarea form-control lineA" placeholder="Nombre..." aria-describedby="basic-addon102">
 								<input type="text" name="apellidopa" required value="{{$persona->apellidopa}}" disabled="true" class="input-group-text e-border md-textarea form-control lineA" placeholder="Apellido Parteno..." aria-describedby="basic-addon102">
-								<input type="text" name="apellidoma" required value="{{$persona->apellidoma}}" disabled="true" class="input-group-text e-border md-textarea form-control lineA" placeholder="Apellido Marteno..." aria-describedby="basic-addon102">		
+								<input type="text" name="apellidoma" required value="{{$persona->apellidoma}}" disabled="true" class="input-group-text e-border md-textarea form-control lineA" placeholder="Apellido Marteno..." aria-describedby="basic-addon102">
 							</div>
 						</div>
 					</div>
-				</div>
 
-			<!--Estado-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">								
-								<span class="text-center input-group-text btn btn-warning" id="basic-addon103">Estado</span>
-								<select name="estadoP" value="{{$persona->estadoP}}" id="estadoP" class="e-border md-textarea form-control lineA" aria-describebdy="basic-addon103">				
+				<!-- #Estado-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="text-center input-group-text btn btn-warning e-border" id="basic-addon103">Estado</span>
+								<select name="estadoP" value="{{$persona->estadoP}}" id="estadoP" class="e-border md-textarea form-control lineA" aria-describebdy="basic-addon103">
 									<option value="AGUASCALIENTES"
 										<?php 
 											if($persona->estadoP=="AGUASCALIENTES") 
@@ -235,80 +228,66 @@
 											if($persona->estadoP=="ZACATECAS")
 												echo "selected";
 											?>>ZACATECAS</option>										
-								</select>
+								</select>		
 							</div>
 						</div>
 					</div>
-				</div>
-			
-			<!--Municipio-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="text-center input-group-text btn btn-warning" id="basic-addon104">Municipio</span>
-								<input type="text" name="municipio" value="{{$persona->municipio}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon104">							
+	
+				<!-- #Municipio-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-1 mx-auto">
+								<span class="text-center input-group-text btn btn-warning e-border" id="basic-addon104">Municipio</span>
+								<input type="text" name="municipio" value="{{$persona->municipio}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon104">
 							</div>
 						</div>
 					</div>
-				</div>
 
-			<!--Colonia-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="text-center input-group-text btn btn-warning" id="basic-addon105">Colonia</span>
-								<input type="text" name="colonia" value="{{$persona->colonia}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon105">													
+				<!-- #Colonia-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="text-center input-group-text btn btn-warning e-border" id="basic-addon105">Colonia</span>
+								<input type="text" name="colonia" value="{{$persona->colonia}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon105">
 							</div>
 						</div>
 					</div>
-				</div>
 
-			<!--Calle-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon106">Calle</span>
-								<input type="text" name="calle" value="{{$persona->calle}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon106">												
-							</div>
-						</div>			
+				<!-- #Calle-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon106">Calle</span>
+								<input type="text" name="calle" value="{{$persona->calle}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon106">
+							</div>							
+						</div>
 					</div>
-				</div>
 
-			<!--Telefono-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon107">Telefono</span>
+				<!-- #Telefono-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">							
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon107">Telefono</span>
 								<input type="text" name="telefono" value="{{$persona->telefono}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon107">
 							</div>
-						</div>
+						</div>						
 					</div>
-				</div>
 
-
-			<!--Correo-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">									
-								<span class="input-group-text btn btn-warning" id="basic-addon108">Correo electronico</span>
+				<!-- #Correo-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon108">Correo electronico</span>
 								<input type="text" name="email" value="{{$persona->email}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon108">
 							</div>
 						</div>
 					</div>
-				</div>
-	
 
-			<!--Sexo-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon109">SEXO</span>
+				<!-- #Sexo-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon109">SEXO</span>
 								<select  name="sexo" value="{{$persona->sexo}}" id="sexo" class="e-border md-textarea form-control lineA">
 									<option value="HOMBRE"<?php 
 										if($persona->sexo=="HOMBRE") 
@@ -320,71 +299,69 @@
 											echo "selected";
 										?>
 										>MUJER</option>
-								</select>					
+								</select>
 							</div>
 						</div>
 					</div>
-				</div>
 
-			<!--curp-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon110">CURP</span>
-								<input type="text" name="curp" value="{{$persona->curp}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon110">						
+				<!-- #curp-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+									<span class="input-group-text btn btn-warning e-border" id="basic-addon110">CURP</span>
+									<input type="text" name="curp" value="{{$persona->curp}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon110">						
+								</div>
 							</div>
-						</div>					
 					</div>
-				</div>
 
-			<!--rfc-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon111">RFC</span>
-								<input type="text" name="rfc" value="{{$persona->rfc}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon111">
+				<!-- #rfc-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon111">RFC</span>
+								<input type="text" name="rfc" value="{{$persona->rfc}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon111">								
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- #Datos de rastreabilidad general-->
+	<!-- #Titulo de rastreabilidad-->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
+			<h3 class="e-text-color text-bor">Datos de Rastreabilidad</h3>
+		</div>
+
+	<!-- #Datos de rastreabilidad-->
+		<div class="collapse container-fluid row main col-md-12 ml-sm-auto col-lg-12 py-4" id="px-id">
+			<div class="card card-body">
+
+				<!-- #Folio-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon112">Folio</span>			
+								<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon112">								
+							</div>
+						</div> 
+					</div>
+
+				<!-- #Tipo Certificacion-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon113">Tipo de Certificación</span>
+								<input type="text" name="certificacion" value="{{$persona->certificacion}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon113">								
 							</div>
 						</div>
 					</div>
-				</div>
-		
-			<!--Sub-Titulo-->
-				<div class="text-center"><br><br><br>
-					<h3 class="e-text-color">Datos de Rastreabilidad</h3>
-				</div>
 
-			<!---Folio-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">					
-								<span class="input-group-text btn btn-warning" id="basic-addon112">Folio</span>			
-								<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon112">
-							</div>
-						</div>
-					</div> 
-				</div>
-
-			<!---Tipo Certificacion-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning " id="basic-addon113">Tipo de Certificación</span>
-								<input type="text" name="certificacion" value="{{$persona->certificacion}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon113">
-							</div>
-						</div>
-					</div>
-				</div>
-
-			<!---Temp-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">	
-								<span class="input-group-text btn btn-warning" id="basic-addon114">Temporada de Cosecha</span>		
+				<!---#Temp-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon114">Temporada de Cosecha</span>
 								<select  name="temp_cosecha" value="{{$persona->temp_cosecha}}" id="temp_cosecha" class="e-border md-textarea form-control lineA">
 									<option value="PRIMAVERA"<?php 
 										if($persona->temp_cosecha=="PRIMAVERA") 
@@ -425,111 +402,103 @@
 										if($persona->temp_cosecha=="INVIERNO-PRIMAVERA") 
 											echo "selected"; 
 										?>>INVIERNO-PRIMAVERA</option>
-								</select>									
-							</div>
-						</div>
-					</div> 
-				</div>
-
-			<!---chapetas-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon115">Numeros de Colmenas o Chapetas</span>
-								<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon115">
-							</div>
-						</div>
-					</div>
-				</div>
-		
-			<!---upp-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon116">UPP</span>
-								<input type="text" name="upp" value="{{$persona->upp}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon116">
+								</select>
 							</div>
 						</div> 
 					</div>
-				</div>
-			
-			<!---pgn-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon117">PGN</span>
-								<input type="text" name="pgn" value="{{$persona->pgn}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon117">
-							</div>
-						</div>
-					</div>
-				</div>
-		
-			<!---produccion-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon118">Produccion anual</span>
-								<input type="text" name="prod_anual" value="{{$persona->prod_anual}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon118">
-							</div>
-						</div>
-					</div>  
-				</div>
-			
-			<!---clave-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">				
-								<span class="input-group-text btn btn-warning" id="basic-addon119">Clave de Rasteabilidad</span>
-								<input type="text" name="clave_rast" value="{{$persona->clave_rast}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon119">
-							</div>
-						</div>
-					</div>
-				</div>
 
-			<!---localizacion-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text btn btn-warning" id="basic-addon120">Localización de los Apiarios</span>
-								<input rows="3" type="text" name="loc_api" value="{{$persona->loc_api}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon120">
+				<!-- #chapetas-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon115">Numeros de Colmenas o Chapetas</span>
+								<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon115">								
 							</div>
 						</div>
 					</div>
-				</div>
 
-			<!---observacion-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">				
-								<span class="input-group-text" id="basic-addon121">Observación</span><br>				
-								<input type="text" name="observacion" value="{{$persona->observacion}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon121">
-							</div>
+				<!-- #upp-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
+								<div class="">
+									<span class="input-group-text btn btn-warning e-border" id="basic-addon116">UPP</span>
+									<input type="text" name="upp" value="{{$persona->upp}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon116">
+								</div>
+							</div> 
 						</div>
 					</div>
-				</div>
 	
-			<!---botones-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">			
-								<button class="btn btn-primary btn-block" type="submit">Guardar</button><br>
-								<button class="btn btn-danger btn-block " type="reset">Cancelar</button>
+				<!-- #pgn-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon117">PGN</span>
+								<input type="text" name="pgn" value="{{$persona->pgn}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon117">					
 							</div>
 						</div>
 					</div>
-				</div>
-			
-		</div>
-	</div>
-</div>
 
-{!!Form::Close()!!}		
+				<!-- #produccion-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon118">Produccion anual</span>
+								<input type="text" name="prod_anual" value="{{$persona->prod_anual}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon118">								
+							</div>
+						</div>  
+					</div>
+	
+				<!-- #clave-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon119">Clave de Rasteabilidad</span>
+								<input type="text" name="clave_rast" value="{{$persona->clave_rast}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon119">								
+							</div>
+						</div>
+					</div>
+
+				<!-- #localizacion-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text btn btn-warning e-border" id="basic-addon120">Localización de los Apiarios</span>
+								<input rows="3" type="text" name="loc_api" value="{{$persona->loc_api}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon120">								
+							</div>
+						</div>
+					</div>
+
+				<!-- #observacion-->
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">								
+								<span class="input-group-text" id="basic-addon121">Observación</span><br>				
+								<input type="text" name="observacion" value="{{$persona->observacion}}" class="e-border md-textarea form-control lineA btn btn-warning" aria-describedby="basic-addon121">								
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>				
+
+		<!-- #botones-->
+			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+				<div class="input-group mx-auto">
+					<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
+						<button class="btn btn-primary btn-block" type="submit">Guardar</button>
+					</div>
+					<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
+						<button class="btn btn-danger btn-block " type="reset">Cancelar</button>
+						
+					</div>
+				</div>
+			</div>
+
+
+
+{!!Form::Close()!!}
+<script>
+	$('#p-id').collapse();
+	$('#px-id').collapse();
+</script>
 @endsection
