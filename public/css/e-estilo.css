@@ -279,6 +279,15 @@ p {
     display: inline-flex;
     position: initial;
 }
+
+.e-color-c{
+    color: #FFA000 !important;
+}
+
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
+    width: 100% !important;    
+}
+
     /* Para 960px*/
 @media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
    

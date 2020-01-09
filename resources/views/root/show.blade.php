@@ -1,7 +1,7 @@
 @extends ('layouts.admin')
 @section ('contenido')
 
-<div class="row container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">	
+<div class="row container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
 	@if(count($errors)>0)
 		<div class="alert alert-danger">
 			<ul> 
@@ -247,6 +247,5 @@
 <script>
 	$('#p-id').collapse();
 	$('#px-id').collapse();
-
 </script>
 @endsection 

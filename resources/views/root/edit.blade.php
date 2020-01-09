@@ -1,7 +1,7 @@
 @extends ('layouts.admin')
 @section ('contenido')
 
-<div class="row container-fluid col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto"> 	
+<div class="row container-fluid col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto">
 	<h3 class="e-color">Editar datos de: {{$persona->nombre}}</h3>
 	@if(count($errors)>0)
 	<div class="alert alert-danger">
@@ -25,8 +25,6 @@
 		<!-- #Datos Report-->
 			<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="p-id">
 				<div class="card card-body">
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->					
 				<!-- #Nombre del apicultor-->
 					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 						<div class="input-group mx-auto">
