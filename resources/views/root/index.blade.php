@@ -30,7 +30,7 @@
           <li class="nav-item"><a class="dropdown-item e-coloresx text-center te1" href="{{url('root/create')}}">Registro Apicultor</a></li>
           <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/index')}}">Roles</a></li>
           <li class="nav-item"><a class="dropdown-item e-coloresx text-center te5" href="{{url('secs/create')}}">Crear Roles</a></li>
-          <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4" href="{{url('banx')}}">Historial</a></li>
+          <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4" href="{{url('story')}}">Historial</a></li>
         </ul>
         <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a></span>  
       </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>  
+<head>   
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,6 @@
                 </div>
             </div>
         </div>    
-
         <div class="container-fluid text-center text-white footer">
             <a href="http://xixha.com/">
                 <p class="e-color alt-f">xixhá &copy; 2019</p>

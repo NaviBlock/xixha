@@ -1,27 +1,22 @@
-  <!--Modal-->  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!----------------------------------------------------------------->
-@extends ('layouts.admin')
+@extends ('layouts.adminuser')
 @section ('contenido')
 <div class="row">
 	<div class = "container-fluid"> 
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">			
 			@if(count($errors)>0)
 				<div class="alert alert-danger">
-					<ul> 
+					<ul>
 						@foreach($errors->all() as $error)
 							<li>{{$error}}</li>
 						@endforeach
 					</ul>
 				</div>
-			@endif
-		</div>
+			@endif 
+		</div> 
 	</div>
-</div>
-{!!Form::model($persona,['method'=>'PATCH','route'=>['banx.update',$persona->idpersona]]) !!}
+</div> 
+
+{!!Form::model($persona,['method'=>'PATCH','route'=>['users.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 
 <div class="container-fluid">
@@ -30,9 +25,9 @@
 			
 			<!---Titulo---->				
 				<div class="text-center">
-					<h3 class="e-text-color">Datos Personales del Apicultor</h3>
+				<h3 class="e-text-color">Datos Personales del Apicultor {{$persona->nombre}}</h3>
 				</div>
- 
+
 			<!---Nombre del apicultor---->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center ">
 					<div class="input-group mx-auto">
@@ -90,7 +85,7 @@
 						</div>
 					</div>
 					</div>
-
+ 
 				<!--Telefono--->
 					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 						<div class="input-group mx-auto">
@@ -391,9 +386,9 @@
 											</div>
 										</div>
 									</div>
-								</div>																
-
+								</div>		
+												
 	</div>
 </div>
 {!!Form::Close()!!}		
-@endsection 
+@endsection

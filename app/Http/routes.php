@@ -62,16 +62,17 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('secs/show','UsuarioController@show');
     Route::get('secs/modal','UsuarioController@modal');
     Route::get('secs/destroy','UsuarioController@destroy');
-
-    //Banx index
-    Route::get('banx/','BanxController@banx');
-    Route::get('banx/banx','BanxController@banx');
-    //Banx Body
-    Route::get('banx/create','BanxController@create');
-    Route::get('banx/edit','BanxController@edit');
-    Route::get('banx/show','BanxController@show');
-    Route::get('banx/modal','BanxController@modal');
-    Route::get('banx/destroy','BanxController@destroy');
     //Resource
     Route::resource('secs', 'UsuarioController');
+
+    //Story index    
+    Route::get('story/','StoryController@index');
+    Route::get('story/index','StoryController@index');
+    //Story
+    Route::get('story/create','StoryController@create');
+    Route::get('story/show','StoryController@show');
+    Route::get('story/search','StoryController@search');
+    
+    //Resource
+    Route::resource('story', 'StoryController');
 });
