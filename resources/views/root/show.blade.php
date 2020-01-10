@@ -12,12 +12,11 @@
 		</div>
 	@endif	
 </div>
-
+ 
 {!!Form::model($persona,['method'=>'PATCH','route'=>['root.update',$persona->idpersona]]) !!}
 {{Form::token()}}
 
-<!-- #Datos generales-->
-	<!--div class="container-fluid row main col-md-12 ml-sm-auto col-lg-12 py-4 mgq"-->
+<!-- #Datos generales-->	
 		<!--- #Titulo---->				
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
 				<h3 class="e-text-color text-bor">Datos Personales del Apicultor</h3>
@@ -127,8 +126,7 @@
 							</div>
 						</div>								
 				</div>
-			</div>
-	<!--/div-->
+			</div>	
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--Datos de rastreabilidad general-->

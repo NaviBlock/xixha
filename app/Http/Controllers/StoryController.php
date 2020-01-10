@@ -23,6 +23,8 @@ use xixha\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;
+use xixha\Http\Requests\StoryFormRequest;
+use xixha\Story;
 
 class StoryController extends Controller{ 
     public function __construct(){
@@ -34,23 +36,22 @@ class StoryController extends Controller{
             $query = trim($request->get('searchText'));
             $stories = DB::table('story as s')
             ->join('persona as p','s.id_story','=','p.idpersona')
-            ->select('s.id_story','s.fechaRegistro','s.cantidad','p.nombre','p.apellidopa','p.apellidoma','p.municipio','p.telefofo','p.temp_coshecha','p.folio')
+            ->select('id_story','fechaRegistro','cantidad','nombre','apellidopa','apellidoma','municipio','telefono','temp_cosecha','folio')
             
-			->where('p.nombre','LIKE','%'.$query.'%')
+			->where('nombre','LIKE','%'.$query.'%')
 			->where('tipo_persona','=','Apicultor')  
 			
-			->orwhere('p.apellidopa','LIKE','%'.$query.'%')
+			->orwhere('apellidopa','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')  
 
-            ->orwhere('p.apellidoma','LIKE','%'.$query.'%')
+            ->orwhere('apellidoma','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor') 
             
-            ->orwhere('p.telefono','LIKE','%'.$query.'%')
+            ->orwhere('telefono','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')  
 					
-	   		->orderBy('a.idarticulo','desc')
+	   		->orderBy('idpersona','desc')
 	   		->paginate(5);
-
 	   		return view('story.index',['stories'=>$stories,'searchText'=>$query]);
         }
     }
@@ -61,5 +62,25 @@ class StoryController extends Controller{
 
     public function show(){
         return view('story.show');
-    } 
+    }     
+
+    public function edit($id){
+        return view('story.edit',['stories'=>Stories::findOrFail($id)]);
+    }
+
+    public function store(StoryFormRequest $request){
+        $stories = new Stories;
+        $stories->fechaRegistro=$request->get('fechaRegistro');
+        $stories->cantidad=$request->get('cantidad');
+        $stories->save();
+        return Redirect::to('stories');
+    }
+
+    public function update(StoryFormRequest $request, $id){
+        $stories = Stories::findOrFail($id);
+        $stories->fechaRegistro=$request->get('fechaRegistro');
+        $stories->cantidad=$request->get('cantidad');
+        $stories->update();
+        return Redirect::to('stories');
+    }
 }

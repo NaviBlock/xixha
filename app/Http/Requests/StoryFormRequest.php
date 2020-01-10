@@ -14,8 +14,7 @@ class StoryFormRequest extends Request
 
     public function rules()
     {
-        return [
-            'fechaRegistro'=>'confirmed'
+        return [          
         ];
     }
 }

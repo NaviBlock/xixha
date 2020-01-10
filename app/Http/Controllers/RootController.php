@@ -124,8 +124,7 @@ public function store(PersonaFormRequest $request){
         //$mytime = Carbon::now('America/Mexico_City');
         //$persona->fecha_hora = $mytime->toDateTimeString();
         $personas->tipo_persona ='Apicultor';
-        $personas->estado ='Activo';        
-        
+        $personas->estado ='Activo';
         //Codigo para los Folios
             /*if(isset($folio)){ 
                     echo "Folio repetido";
@@ -150,37 +149,18 @@ public function store(PersonaFormRequest $request){
             //fechacomunidad,usa el ine, 
             //xi-curp-a //deberia poner el nombre.....? alarchivo 
             //xix-heva092404grllt4j5-ha
-                
+        //img_perfil                
             if(Input::hasFile('img_perfil')) {
-            $file=Input::file('img_perfil');                    
-            $extension=$file->getClientOriginalExtension();                              
-            //$personas->curp=$request->get('curp');    
-            $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension; 
-            $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';                 
-            $file->move(public_path().'/imagenes/perfil',$newnombre);                                
-            $personas->img_perfil=$file->getClientOriginalName($newnombre);             
-            $personas->img_perfil=$newnombre;    
-            $personas->folio=$new_Nombre_Folio;     
-            
-           /*/ $imagenCodificada = file_get_contents("/imagenes/perfil"); //Obtener la imagen
-                if(strlen($imagenCodificada) <= 0) exit("No se recibió ninguna imagen");
-                        
-                //La imagen traerá al inicio data:image/png;base64, cosa que debemos remover
-                $imagenCodificadaLimpia = str_replace("data:image/png;base64,", "", urldecode($imagenCodificada));
-                    
-                //Venía en base64 pero sólo la codificamos así para que viajara por la red, ahora la decodificamos y
-                //todo el contenido lo guardamos en un archivo
-                $imagenDecodificada = base64_decode($imagenCodificadaLimpia);
-                    
-                //Calcular un nombre único
-                $nombreImagenGuardada = "foto_" . uniqid() . ".png";
-                    
-                //Escribir el archivo
-                file_put_contents($nombreImagenGuardada, $imagenDecodificada);
-                    
-                //Terminar y regresar el nombre de la foto
-                exit($nombreImagenGuardada);*/
-       }
+                $file=Input::file('img_perfil');                    
+                $extension=$file->getClientOriginalExtension();                              
+                //$personas->curp=$request->get('curp');    
+                $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension; 
+                $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';                 
+                $file->move(public_path().'/imagenes/perfil',$newnombre);                                
+                $personas->img_perfil=$file->getClientOriginalName($newnombre);             
+                $personas->img_perfil=$newnombre;
+                $personas->folio=$new_Nombre_Folio;
+            }        
         $personas->save();
     return Redirect::to('root/padron'); 
 }

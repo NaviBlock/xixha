@@ -47,8 +47,7 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('root/destroy','RootController@destroy');
     Route::get('root/search','RootController@search');
     Route::get('root/tablav','RootController@tablav')->name('tablav');
-    Route::get('root/modal','RootController@modal');
-    Route::get('root/banc','RootController@banc');   
+    Route::get('root/modal','RootController@modal');    
     //Resource
     Route::resource('root', 'RootController');
 
@@ -71,8 +70,7 @@ Route::group(['middleware' => 'root'], function(){
     //Story
     Route::get('story/create','StoryController@create');
     Route::get('story/show','StoryController@show');
-    Route::get('story/search','StoryController@search');
-    
+    Route::get('story/search','StoryController@search');    
     //Resource
     Route::resource('story', 'StoryController');
 });

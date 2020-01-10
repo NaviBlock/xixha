@@ -1,17 +1,17 @@
 @extends ('layouts.admin')
 @section ('contenido')
 
-<div class="row container-fluid col-lg-12 col-sm-12 col-md-12 col-xs-12 mx-auto">
+<div class="row container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
 	@if(count($errors)>0)
-	<div class="alert alert-danger">
-		<ul>
-			@foreach ($errors->all() as $error)
-				<li>{{$error}}</li>
-			@endforeach
-		</ul> 
-	</div> 
-	@endif
-</div>
+		<div class="alert alert-danger">
+			<ul>
+				@foreach ($errors->all() as $error)
+					<li>{{$error}}</li>
+				@endforeach
+			</ul>
+		</div>
+		@endif
+	</div>
 
 {!!Form::open(array('url'=>'root','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
 {{Form::token()}}	
@@ -41,7 +41,7 @@
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
 							<select  name="sexo" value="{{old('sexo')}}" id="sexo" class="e-color md-textarea form-control lineA">
-								<option value="">Sexo</option>
+								<option value="">Sexo ("H","M")</option>
 								<option value="HOMBRE">HOMBRE</option>
 								<option value="MUJER">MUJER</option>								
 							</select>
@@ -53,7 +53,7 @@
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
-							<input type="text" name="curp" pattern="[0-9a-zA-Z]{18}"  value="{{old('curp')}}" id="curp" class="md-textarea form-control lineA e-color-c" placeholder="CURP...">							
+							<input type="text" name="curp" pattern="[0-9a-zA-Z]{18}"  value="{{old('curp')}}" id="curp" class="md-textarea form-control lineA e-color-c" placeholder="CURP 18 caracteres...">							
 						</div>
 					</div>
 				</div>		
@@ -62,7 +62,7 @@
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
-							<input type="text" name="rfc" value="{{old('rfc')}}" id="rfc" class="md-textarea form-control lineA e-color-c" placeholder="RFC...">
+							<input type="text" name="rfc" value="{{old('rfc')}}" id="rfc" class="md-textarea form-control lineA e-color-c" placeholder="RFC 13 caracteres...">
 						</div>
 					</div>
 				</div>			
@@ -155,14 +155,13 @@
 		</div>
 
 	<!-- #Datos de Rastreabilidad-->
-		<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="px-id">
-			<div class="card card-body">
+		<!-- #Titulo-->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
+				<h3 class="e-text-color text-bor">Datos de Rastreabilidad</h3>
+			</div>			
+	<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="px-id">
+		<div class="card card-body">
 
-			<!-- #Datos-->
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
-					<h3 class="e-text-color text-bor">Datos de Rastreabilidad</h3>
-				</div>
-			
 			<!-- #Rasteabilidad-->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
@@ -245,26 +244,11 @@
 					</div>
 				</div>				
 				
-			<!-- #Colmenas-->
-				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-					<div class="input-group mx-auto">
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
-							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon2">¿Mueve sus Colmenas?</span>	
-								<div class="" selected>
-									<button type="button" onclick="datoxx();" name="SI" class="btn btn-outline-primary ">SI</button>			
-									<button type="button" onclick="datox();"  name="NO" class="btn btn-outline-danger">NO</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>					
-
 			<!-- #Donde-->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq" id="datoy">
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">
-							<textarea rows="3" name="donde" value="{{old('donde')}}" class="form-control lineB" placeholder="¿A Dónde?..."></textarea>
+							<textarea rows="3" name="donde" value="{{old('donde')}}" class="e-color-c form-control lineB" placeholder="¿Mueve sus Colmenas?..."></textarea>
 						</div>
 					</div>
 				</div>		
