@@ -257,7 +257,7 @@
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq" id="datoy">			
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
-							<textarea rows="3" name="observacion" value="{{old('observacion')}}" class="form-control lineB" placeholder="Observación..."></textarea>							
+							<textarea rows="3" name="observacion" value="{{old('observacion')}}" class="e-color-c form-control lineB" placeholder="Observación..."></textarea>							
 						</div>
 					</div>
 				</div>	

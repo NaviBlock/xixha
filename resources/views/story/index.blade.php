@@ -12,30 +12,26 @@
             <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">                
                 <table class="table table-hover table-condensed table-sm text-dark table-bordered">
                     <thead class="table-color">
-                        <th scope="col">Folio</th>                                
+                        <th scope="col">Folio</th>
+                        <th scope="col">Ref</th>
+                        <th scope="col">Nombre</th>
                         <th scope="col">Fecha</th>
-                        <th scope="col">Nombre Completo</th>
                         <th scope="col">Cantidad</th>
+                        <th scope="col">Operación</th>
                     <tbody>
                         @foreach($stories as $per)
                             <tr>   
-                                <td>{{$per->id_story }}</td>                                    
+                                <td>{{$per->id_story}}</td>
+                                <td>{{$per->id_ref}}</td>
+                                <td>{{$per->nombre }} {{$per->apellidopa}} {{$per->apellidoma}}</td>
                                 <td>{{$per->fechaRegistro }}</td>
-                                <td>{{$per->nombre}}.{{$per->apellidopa}}.{{$per->apellidoma}}.{{$per->cantidad}}</td>
-                                <td>{{$per->cantidad}}</td>
-                                <td>                                
-                                    <!--div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1 btn-group mr-4 btn-x" role="group" aria-label="Boton Detalles">
-                                        <a href="{ {URL::action('StoryController@show',$per->idpersona)}}">
-                                            <button type="button" class="btn btn-success btn-block">Detalles</button>
-                                        </a>
-                                    </div-->
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1 btn-group mr-4 btn-x" role="group" aria-label="Boton Generar">
-                                        <a href="{{URL::action('StoryController@edit',$per->id_story)}}">
+                                <td>{{$per->cantidad}}</td>                                
+                                <td><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1 btn-group mr-4 btn-x" role="group" aria-label="Boton Generar">
+                                        <a href="{{URL::action('StoryController@generar',$per->id_story)}}">
                                             <button type="button" class="btn btn-primary btn-block">Generar</button>
                                         </a>
-                                    </div>
-                                </td>
-                            </tr>                                          
+                                </div></td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>

@@ -70,7 +70,8 @@ Route::group(['middleware' => 'root'], function(){
     //Story
     Route::get('story/create','StoryController@create');
     Route::get('story/show','StoryController@show');
-    Route::get('story/search','StoryController@search');    
+    Route::get('story/search','StoryController@search');
+    Route::get('story/edit','StoryController@generar');
     //Resource
     Route::resource('story', 'StoryController');
 });

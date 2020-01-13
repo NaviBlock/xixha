@@ -1,4 +1,5 @@
-@extends ('layouts.adminuser')
+@extends ('layouts.admin')
+<!--@ extends ('layouts .adminuser')-->
 @section ('contenido')
 <div class="row">
 	<div class = "container-fluid"> 

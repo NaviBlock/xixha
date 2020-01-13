@@ -162,7 +162,7 @@ public function store(PersonaFormRequest $request){
                 $personas->folio=$new_Nombre_Folio;
             }        
         $personas->save();
-    return Redirect::to('root/padron'); 
+        return Redirect::to('story/create');
 }
 
 public function update(PersonaFormRequest $request,$id){
