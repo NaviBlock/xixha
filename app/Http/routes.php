@@ -71,7 +71,7 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('story/create','StoryController@create');
     Route::get('story/show','StoryController@show');
     Route::get('story/search','StoryController@search');
-    Route::get('story/edit','StoryController@generar');
+    //Route::get('story/generar','StoryController@create');
     //Resource
     Route::resource('story', 'StoryController');
 });

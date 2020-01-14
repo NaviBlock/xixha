@@ -27,7 +27,7 @@
                                 <td>{{$per->fechaRegistro }}</td>
                                 <td>{{$per->cantidad}}</td>                                
                                 <td><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto py-1 btn-group mr-4 btn-x" role="group" aria-label="Boton Generar">
-                                        <a href="{{URL::action('StoryController@generar',$per->id_story)}}">
+                                        <a href="{{URL::action('StoryController@create',$per->id_ref)}}">
                                             <button type="button" class="btn btn-primary btn-block">Generar</button>
                                         </a>
                                 </div></td>

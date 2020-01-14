@@ -74,8 +74,22 @@ class StoryController extends Controller{
         $stories->save();
         return Redirect::to('story');
     }
+
+    public function generar(){
+        return view('story.create');
+    }
+
+    public function update(StoryFormRequest $request){
+        $stories = new Story;
+        $stories->fechaRegistro=$request->get('fechaRegistro');
+        $stories->cantidad=$request->get('cantidad');
+        $stories->id_ref=+1;
+        $stories->save();
+        return Redirect::to('story');
+    }
+
 //------------------------------------------------------------------------------------------//
-    public function generar($id_story){
+   /* public function generar($id_story){
         return view('story.edit',['stories'=>Story::findOrFail($id_story)]);
     }
 
@@ -91,5 +105,5 @@ class StoryController extends Controller{
         //$stories->id_ref=+1;
         $stories->update();
         return Redirect::to('story');
-    }
+    }*/
 }
