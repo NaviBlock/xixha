@@ -24,7 +24,7 @@
                         <thead class="table-color">
                             <th scope="col">Perfil</th>
                             <th scope="col">Folio</th>                           
-                            <th scope="col">Nombre Completo</th>                        
+                            <!--th scope="col">Nombre Completo</th-->
                             <th scope="col">Email</th>                            
                             <th scope="col">N° Colmenas</th>
                             <th scope="col">Producción Anual</th>
@@ -35,7 +35,7 @@
                                 <tr>                                     
                                     <td><img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px" width="100px" class="img-fluid"></td>
                                     <td scope="row">{{ $per->folio }}</td>
-                                    <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>                                    
+                                    <!--td>{ { $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td--->
                                     <td>{{ $per->email }}</td>                                    
                                     <td>{{ $per->num_colmena }}</td>
                                     <td>{{ $per->prod_anual." Kg" }}</td>
@@ -60,7 +60,8 @@
                 @foreach($personas as $per)
                 <?php $sum += $per->prod_anual; ?>
                 @endforeach
-                <p>Producción Anual: {{ $sum }}.Kg</p>
+                <p>Producción Mesual: {{ $sum/12 }}.Kg</p>
+                <p>Producción Anual: {{ $sum}}.Kg</p>
             </div>
         </div>
     </div>
