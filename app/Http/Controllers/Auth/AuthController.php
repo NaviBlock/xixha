@@ -73,8 +73,8 @@ class AuthController extends Controller
         ]);
     }
     
-    /*Acceso a registro 
-        http://localhost:8000/register
+    /*Acceso a registro     
+        http://localhost:8000/register        
     */
     protected function showRegistrationForm(){
         return redirect('login');
