@@ -1,5 +1,4 @@
 <?php
-
 $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
@@ -7,5 +6,5 @@ $uri = urldecode(
 if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
     return false;
 }
-//directorio de llamada a index 
+
 require_once __DIR__.'/public/index.php';

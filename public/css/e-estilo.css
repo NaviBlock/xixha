@@ -85,6 +85,11 @@ dl, ol, ul {
     border-radius: 2.25rem !important;
 }
 
+.ex-border{
+    border-color:rgba(255, 255, 255, 0) !important;
+    border:0px solid rgba(255, 0, 0, 0) !important;
+}
+
 .e-footer{
     text-align: center;
 }
@@ -283,6 +288,8 @@ p {
 .e-color-c{
     color: #FFA000 !important;
 }
+
+
 
 .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
     width: 100% !important;    

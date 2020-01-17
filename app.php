@@ -1,5 +1,4 @@
 <?php
-/*Archivo de configuración general*/
 return [
 
     /*

@@ -36,7 +36,7 @@
 							<input type="text" name="folio" value="{{$persona->folio}}" disabled ="true" class="input-group-text e-border md-textarea form-control lineA" aria-describedby="basic-addon101">
 						</div>
 					</div>
-				</div>			
+				</div>			 
 
 			<!---Estado---->	
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">

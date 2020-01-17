@@ -25,7 +25,17 @@
 		<!-- #Datos Registro-->
 			<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="p-id">
 				<div class="card card-body">
-					<!-- #CAntidad-->
+
+					<!-- #Folio--
+					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+						<div class="input-group mx-auto">
+							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
+								<input type="text" name="{ {$query}}" value="{ {$query}}" id="{ {$query}}" class="md-textarea form-control lineA e-color-c" placeholder="{ {$query}}">
+							</div>
+						</div>
+					</div--->
+					
+					<!-- #Cantidad-->
 						<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 							<div class="input-group mx-auto">
 								<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
@@ -33,7 +43,8 @@
 								</div>
 							</div>
 						</div>
-					<!-- #CAntidad-->
+
+					<!-- #Fecha-->
 					<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 						<div class="input-group mx-auto">
 							<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
@@ -41,6 +52,7 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		

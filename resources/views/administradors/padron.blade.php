@@ -52,7 +52,7 @@
                                                             </a>
                                                         </div>
                                                     </div><br>
-                                                    <div>
+                                                    <div> 
                                                         <div class="btn-group mr-4" role="group" aria-label="Boton Editar">
                                                             <a href="{{URL::action('AdminController@edit',$per->idpersona)}}">
                                                                 <button type="button" class="btn btn-primary btn-block">Editar</button>

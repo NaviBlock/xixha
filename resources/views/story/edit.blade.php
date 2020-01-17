@@ -14,8 +14,8 @@
 	@endif>
 </div>
 
-{!!Form::model($stories,['method'=>'PATCH','route'=>['story.update', $stories->id_ref]]) !!}
-{{Form::token()}}
+<!--{ !!Form::model($stories,['method'=>'PATCH','route'=>['story.update', $stories->id_story]]) !!}
+{ {Form::token()}}--->
 
 <!-- #Datos de Edición-->
 	<!-- #Titulo-->

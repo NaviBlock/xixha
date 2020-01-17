@@ -50,6 +50,9 @@ class StoryController extends Controller{
             
             ->orwhere('telefono','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')  
+
+            ->orwhere('id_story','LIKE','%'.$query.'%')
+            ->where('tipo_persona','=','Apicultor')  
 					
 	   		->orderBy('idpersona','desc')
 	   		->paginate(5);
@@ -70,27 +73,18 @@ class StoryController extends Controller{
         $stories = new Story;
         $stories->fechaRegistro=$request->get('fechaRegistro');
         $stories->cantidad=$request->get('cantidad');
-        $stories->id_ref=+1;
         $stories->save();
         return Redirect::to('story');
     }
-
-    public function generar(){
-        return view('story.create');
-    }
-
-    public function update(StoryFormRequest $request){
-        $stories = new Story;
-        $stories->fechaRegistro=$request->get('fechaRegistro');
-        $stories->cantidad=$request->get('cantidad');
-        $stories->id_ref=+1;
-        $stories->save();
-        return Redirect::to('story');
-    }
-
 //------------------------------------------------------------------------------------------//
-   /* public function generar($id_story){
-        return view('story.edit',['stories'=>Story::findOrFail($id_story)]);
+//Editar
+   public function edit($idpersona){
+        $editx =Editx::find($idpersona);
+        $storx = DB::table('story as s')
+        ->join('persona as p','s.id_story','=','p.idpersona')
+        ->select('s.id_story','s.id_ref','s.fechaRegistro','s.cantidad','p.folio','p.nombre','p.apellidopa','p.apellidoma');
+        //return view('story.edit',['stories'=>Story::findOrFail($id_story)]);
+        return view('story.edit', compact($editx,$storx));
     }
 
     public function update(StoryFormRequest $request, $id_story){ 
@@ -105,5 +99,5 @@ class StoryController extends Controller{
         //$stories->id_ref=+1;
         $stories->update();
         return Redirect::to('story');
-    }*/
+    }
 }
