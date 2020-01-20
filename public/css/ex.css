@@ -26,7 +26,7 @@ a {
   max-width: 1000px;
   width: 90%;
   margin: auto;
-  padding: 50px 0;
+  padding: 0px 0;
 }
 
 nav {
@@ -48,10 +48,39 @@ nav {
           box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
 
+.rest1{
+  columns: #111111;
+  background:#F1F1F1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;  
+  border-radius: 5px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+body.dark .rest1{
+  background: #222222;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); 
+}
+
 body.dark nav {
   background: #222222;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+body.dark .rest1 .rest2{
+  color:#f1f1f1;
 }
 
 body.dark nav a {
@@ -99,8 +128,8 @@ nav .enlaces a:hover {
 .switch::after {
   content: "";
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   background: #f1f1f1;
   top: 0;
@@ -124,13 +153,14 @@ nav .enlaces a:hover {
 }
 
 .switch span {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   line-height: 30px;
   display: block;
   background: none;
   color: #fff;
 }
+
 
 .grid {
   display: -ms-grid;
@@ -213,5 +243,18 @@ body.dark .grid .card {
 
 .grid .card .botones .boton.secundario:hover {
   background: #ACABAB;
+}
+
+.enlacest{
+  margin-left: 140vh;
+  background-color: #f8f9fa00;
+}
+
+.dropdown-ite{
+  background-color: #f8f9fa00;  
+}
+
+.dropdown-item:hover{
+  background-color: #f8f9fa00;  
 }
 /*# sourceMappingURL=estilos.css.map */

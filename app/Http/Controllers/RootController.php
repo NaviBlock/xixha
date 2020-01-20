@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;
 
+//Verifica si el tipo de usuario es el 
 class RootController extends Controller{
     public function __construct(){
         $this->middleware('auth');

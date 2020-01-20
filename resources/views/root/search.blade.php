@@ -1,6 +1,6 @@
 {!! Form::open(array('url'=>'root/padron','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
 	<!-- #Buscador-->
-	<div class="form-group e-border text-center input-group mx-auto col-lg-9 col-md-9 col-sm-9 col-xs-9 input-group-prepend">		
+	<div class="form-group e-border text-center input-group mx-auto co-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 input-group-prepend">		
 		<input type="text" class="e-color form-control text-center rounded-pill " name="searchText" placeholder="Buscar..." value="{{$searchText}}">
 	</div>
 	<!-- #Boton del Buscador-->	

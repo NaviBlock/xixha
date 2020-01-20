@@ -84,7 +84,7 @@ class StoryController extends Controller{
         ->join('persona as p','s.id_story','=','p.idpersona')
         ->select('s.id_story','s.id_ref','s.fechaRegistro','s.cantidad','p.folio','p.nombre','p.apellidopa','p.apellidoma');
         //return view('story.edit',['stories'=>Story::findOrFail($id_story)]);
-        return view('story.edit', compact($editx,$storx));
+        return view('story.edit', compact($ditx,$storx));
     }
 
     public function update(StoryFormRequest $request, $id_story){ 

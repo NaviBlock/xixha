@@ -26,11 +26,21 @@
     <div class="container">
       <div class="container-fluid">      
       <!--# Menu-->
-        <nav class="navbar navbar-expand-auto navbar-light bg-light">
+        <nav class="navbar navbar-expand-auto navbar-light">
           <a href="{{asset('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
+
+              <div class="contenedor">
+                <div class="enlaces enlacest">
+                  <button class="switch text-center" id="switch">
+                    <span><i class="fas fa-sun "></i></span>
+                    <span><i class="fas fa-moon "></i></span>
+                  </button>
+                </div>
+              </div>
+
               <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('root')}}">Inicio</a></li>
               <li class="nav-item"><a class="dropdown-item e-coloresx text-center te6" href="{{url('root/padron')}}">Padrón</a></li>
               <li class="nav-item"><a class="dropdown-item e-coloresx text-center te5" href="{{url('root/create')}}">Registro Apicultor</a></li>
@@ -39,14 +49,7 @@
               <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4" href="{{url('story/index')}}">Historial</a></li>              
             </ul>
             <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a></span>
-              <div class="contenedor">
-                <div class="enlaces">
-                  <button class="switch" id="switch">
-                    <span><i class="fas fa-sun"></i></span>
-                    <span><i class="fas fa-moon"></i></span>
-                  </button>
-                </div>
-              </div>
+
             </div>
           </nav>
  
