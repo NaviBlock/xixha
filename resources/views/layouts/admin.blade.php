@@ -31,7 +31,12 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
-
+              <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('root')}}">Inicio</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te6" href="{{url('root/padron')}}">Padrón</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te5" href="{{url('root/create')}}">Registro Apicultor</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te1" href="{{url('secs/index')}}">Roles</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/create')}}">Crear Roles</a></li>
+              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4" href="{{url('story/index')}}">Historial</a></li>              
               <div class="contenedor">
                 <div class="enlaces enlacest">
                   <button class="switch text-center btn-boton" id="switch">
@@ -40,13 +45,6 @@
                   </button>
                 </div>
               </div>
-
-              <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('root')}}">Inicio</a></li>
-              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te6" href="{{url('root/padron')}}">Padrón</a></li>
-              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te5" href="{{url('root/create')}}">Registro Apicultor</a></li>
-              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te1" href="{{url('secs/index')}}">Roles</a></li>
-              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/create')}}">Crear Roles</a></li>
-              <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4" href="{{url('story/index')}}">Historial</a></li>              
             </ul>
             <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a></span>
 

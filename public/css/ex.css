@@ -1,27 +1,28 @@
+/*Reset*/
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 } 
-
+/*Body*/
 body {
   background: #F1F1F1;
   font-family: 'Roboto', sans-serif;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
 }
-
+/*Body Modo Dark*/
 body.dark {
-  background: #111111;
+  background: #222222;
 }
-
+/*a*/
 a {
   color: #222222;
   text-decoration: none;
   font-weight: 500;
 }
-
+/*contenedor*/
 .contenedor {
   max-width: 1000px;
   width: 90%;
@@ -29,7 +30,7 @@ a {
   padding: 0px 0;
   padding-bottom: 1.5vh;
 }
-
+/*nav*/
 nav {
   background: #FEFEFE;
   display: -webkit-box;
@@ -45,6 +46,12 @@ nav {
   border-radius: 5px;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+body.dark nav {
+  background: #222222;
   -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
           box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
@@ -68,6 +75,16 @@ nav {
           box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
 
+body.dark .rest1{
+  background-color: #222222;
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16); 
+}
+
+body.dark .rest1 .rest2{
+  color:#C8C8C8;
+}
+
 .navbar-toggler{
   background-color: #f1f1f1;
   border:1px solid white;
@@ -80,25 +97,46 @@ nav {
 .navbar-toggler.dark{
   background-color: #222222;
   border:1px solid #222222;
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+.lapix{  
+  background: #ffffff;  
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);;
+}
+
+.lapix.dark{    
+  background-color: #222222;   
+  border:1px solid #222222;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); 
 }
 
-body.dark .rest1{
-  background: #222222;
+body.dark.lapix{  
+  background-color: #222222;
+  border:1px solid #222222;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); 
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
 }
 
-body.dark nav {
-  background: #222222;
+body.dark .lapix .lapix1{  
+  color: #C8C8C8;
+  background-color: #222222;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
 }
 
-body.dark .rest1 .rest2{
-  color:#f1f1f1;
+body.dark .lapix{
+  color:#c8c8c8;
+  background-color: #222222;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
 }
+
 
 body.dark nav a {
   color: #C8C8C8;
@@ -106,11 +144,6 @@ body.dark nav a {
 
 body.dark nav a:hover {
   color: #FEFEFE;
-}
-
-nav .logotipo {
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
 }
 
 nav .enlaces {

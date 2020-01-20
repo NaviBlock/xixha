@@ -301,6 +301,21 @@ p {
     width: 100% !important;
 }
 
+.input-group>.form-control {
+    margin-bottom: 15px !important;
+}
+
+
+.autom{
+    display: block;
+    margin-bottom: 15px !important;
+}
+
+.lapix-e{
+    margin: 0 !important;
+
+}
+
     /* Para 960px*/
 @media only screen and (max-width: 98vh) and (min-width: 82.1vh) {  
    

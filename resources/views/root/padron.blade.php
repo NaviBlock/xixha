@@ -4,9 +4,7 @@
         <div class="rest1 container-fluid adx fix-autoE card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto card-body text-warning">
             <h5 class="card-title">Padrón de Apicultores.</h5>
             <a class="nav-link e-coloresx px-2">Administrador: {{auth()->user()->name}}</a>
-            <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                @include('root.search')
-            </div>
+            @include('root.search')
         </div>
 
     <!-- #Tabla de Resultado-->
