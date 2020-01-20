@@ -34,7 +34,7 @@
 
               <div class="contenedor">
                 <div class="enlaces enlacest">
-                  <button class="switch text-center" id="switch">
+                  <button class="switch text-center btn-boton" id="switch">
                     <span><i class="fas fa-sun "></i></span>
                     <span><i class="fas fa-moon "></i></span>
                   </button>
