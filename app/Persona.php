@@ -52,7 +52,9 @@ class Persona extends Model
         'opCantidad',
         'opPrecio',
         'opFecha',
-        'opTotal'
+        'opTotal',
+        'fechaRegistro',
+        'cantidad'
     ];   
  
     protected $guarded = [       

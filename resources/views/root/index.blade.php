@@ -69,7 +69,7 @@
                 <p class="card-text text-justify e-element-1 lapix1">Las mieles Xixhá provienen de la región, Costa Chica de Guerrero, se caracterizan por ser mieles muy aromáticas, un poco obscuras, comparadas con las mielesdel altiplano, pero con aromas y sabores muy marcados, intensos o suaves, pero definidos que se han ganado la aceptaciónde los consumidores.</p>
                 <a class="btn btn-primary" href="http://xixha.com/wp-content/uploads/2019/06/Caracterizacion-de-la-Miel-Xixha.pdf" role="button">Detalles &raquo;</a>
               </div>
-            </div>
+            </div> 
           </div>        
     </div> 
 

@@ -208,6 +208,7 @@ class ProveedorController extends Controller
         }*/
         $persona->update();
         return Redirect::to('proveedor');
+        
     }
 
     
