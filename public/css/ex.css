@@ -81,9 +81,13 @@ body.dark .rest1{
           box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16); 
 }
 
-body.dark .rest1 .rest2{
+body.dark .rest1{
   color:#C8C8C8;
 }
+body.dark .rest2{
+  color:#ffc107;
+}
+
 
 .navbar-toggler{
   background-color: #f1f1f1;

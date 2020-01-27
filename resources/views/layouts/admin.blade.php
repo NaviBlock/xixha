@@ -21,7 +21,6 @@
 </head>
 <body> 
 
-
   <!--- #Modelo de vista-->
     <div class="container">
       <div class="container-fluid">      

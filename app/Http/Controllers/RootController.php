@@ -114,6 +114,7 @@ public function store(PersonaFormRequest $request){
         $personas->temp_cosecha=$request->get('temp_cosecha');
         $personas->estadoP=$request->get('estadoP');
         $personas->sexo=$request->get('sexo');
+        
         $personas->rfc=$request->get('rfc');
         $personas->municipio=$request->get('municipio');
         $personas->calle=$request->get('calle');

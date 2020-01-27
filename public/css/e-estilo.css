@@ -313,7 +313,28 @@ p {
 
 .lapix-e{
     margin: 0 !important;
+}
 
+.btnx{
+    display: block !important;
+    position: relative !important;
+    text-align-last: center !important;
+    -webkit-appearance: push-button !important;
+}
+input[type=file].btn0{
+    display: none;        
+    width: 50%;
+    margin:auto;
+    height: auto;
+    color: rgba(0, 0, 0, 0) !important;
+    /*opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;*/
+}
+
+.top-al{
+    margin-top: 3vh;
 }
 
     /* Para 960px*/

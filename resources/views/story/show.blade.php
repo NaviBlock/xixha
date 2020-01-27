@@ -358,7 +358,7 @@
 																	<div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
 																		<!--Tabla-->
 																			<div class="table-responsive"> 
-																				<table class="table table-hover table-condensed table-sm text-white">
+																				<table class="table table-condensed table-sm text-white">
 																					<thead class="thead-dark">
 																						<th scope="col">No</th>
 																						<th scope="col">Cantidad</th>

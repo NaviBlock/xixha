@@ -19,17 +19,17 @@
 <!-- #Datos de Registro-->
 	<!-- #Titulo-->
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
-			<h3 class="e-text-color text-bor">Alta del Apicultor</h3>
+			<h3 class="e-text-color text-bor top-al">Alta del Apicultor</h3>
 		</div>
 
 	<!-- #Alta de Apicultor-->
 		<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="p-id">
-			<div class="card card-body">
+			<div class="card card-body rest1">
 			<!-- #Nombre del apicultor---->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
-							<input type="text" name="nombre" required value="{{old('nombre')}}" class="e-color-c input-group-text btn e-border md-textarea form-control lineA" placeholder="Nombre..." aria-describedby="basic-addon2">
+							<input type="text" name="nombre" required value="{{old('nombre')}}" class=" e-color-c input-group-text btn e-border md-textarea form-control lineA" placeholder="Nombre..." aria-describedby="basic-addon2">
 							<input type="text" name="apellidopa" required value="{{old('apellidopa')}}" class="e-color-c input-group-text btn e-border md-textarea form-control lineA" placeholder="Apellido Parteno..." aria-describedby="basic-addon2">
 							<input type="text" name="apellidoma" required value="{{old('apellidoma')}}" class="e-color-c input-group-text bt e-border md-textarea form-control lineA" placeholder="Apellido Marteno..." aria-describedby="basic-addon2">
 						</div>
@@ -40,7 +40,7 @@
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
-							<select  name="sexo" value="{{old('sexo')}}" id="sexo" class="e-color md-textarea form-control lineA">
+							<select name="sexo" value="{{old('sexo')}}" id="sexo" class="e-color md-textarea form-control lineA">
 								<option value="">Sexo ("H","M")</option>
 								<option value="HOMBRE">HOMBRE</option>
 								<option value="MUJER">MUJER</option>								
@@ -48,7 +48,7 @@
 						</div>						
 					</div>
 				</div>
-	
+			
 			<!-- #Curp-->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 					<div class="input-group mx-auto">
@@ -160,7 +160,7 @@
 				<h3 class="e-text-color text-bor">Datos de Rastreabilidad</h3>
 			</div>			
 	<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="px-id">
-		<div class="card card-body">
+		<div class="card card-body rest1">
 
 			<!-- #Rasteabilidad-->
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
@@ -266,7 +266,7 @@
 				<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center aolq" id="datoy">					
 					<div class="input-group mx-auto">
 						<div class="input-group-prepend col-lg-11 col-md-11 col-sm-11 col-xs-11 mx-auto">							
-							<input accept=".jpg, .png, .jpeg, .gif" id="img_perfil" name="img_perfil" type="file" class="e-color-c text-center file hidden lineA form-control md-textarea btn btn-primary btn-file" data-browse-on-zone-click="true" readonly="readonly" value="{{('img_perfil')}}">						
+							<input accept=".jpg, .png, .jpeg, .gif" id="img_perfil" name="img_perfil" type="file" class="btn0 btnx e-color-c text-center file hidden lineA form-control md-textarea btn btn-primary btn-file" data-browse-on-zone-click="true" readonly="readonly" value="{{old('img_perfil')}}">						
 						</div>
 					</div>
 				</div>	
