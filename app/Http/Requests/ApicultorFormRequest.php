@@ -24,9 +24,7 @@ class ApicultorFormRequest extends Request
     public function rules()
     {
         return [
-            'loc_api'=>'max:256',
-            'mov_api'=>'max:256',
-            'observacion'=>'max:256'
+
         ];
     }
 }

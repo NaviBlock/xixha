@@ -76,9 +76,9 @@ class AuthController extends Controller
     /*Acceso a registro     
         http://localhost:8000/register        
     */
-    protected function showRegistrationForm(){
+    /*protected function showRegistrationForm(){
         return redirect('login');
-    }
+    }*/
 
     /*Acceso a login*/
     public function redirectPath()
@@ -90,5 +90,4 @@ class AuthController extends Controller
             return 'auth/login';
         }
     }
-
 }
