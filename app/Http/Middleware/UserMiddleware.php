@@ -12,6 +12,6 @@ class UserMiddleware
         }else{
             return redirect('login');
         }
-    }
-    return $next($request);
+        return $next($request);
+    }    
 }    
