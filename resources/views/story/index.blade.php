@@ -14,6 +14,7 @@
     <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
         <table class="table table-condensed table-sm text-dark table-bordered">
             <thead class="table-color rest2">
+                <th scope="col">id referencia</th>
                 <th scope="col">Folio</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Fecha</th>
@@ -22,11 +23,12 @@
             <tbody class="rest2">
                 @foreach($stories as $per)
                 <tr>
+                    <td>{{$per->id_ref}}</td>
                     <td>{{$per->folio}}</td>
                     <td>{{$per->nombre }} {{$per->apellidopa}} {{$per->apellidoma}}</td>
                     <td>{{$per->fechaRegistro }}</td>
                     <td>{{$per->cantidad}}</td>
-                    <td><a href="{{URL::action('StoryController@create',$per->idpersona)}}">
+                    <td><a href="{{URL::action('StoryController@create',$per->id_ref)}}">
                             <button type="button" class="btn btn-primary btn-md">transacción</button>
                         </a></td>
                 </tr>

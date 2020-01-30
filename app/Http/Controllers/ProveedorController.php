@@ -207,12 +207,9 @@ class ProveedorController extends Controller
             $persona->img_perfil=$file->getClientOriginalName();
         }*/
         $persona->update();
-        return Redirect::to('proveedor');
-        
+        return Redirect::to('proveedor');        
     }
 
-    
- 
     public function destroy($id){
         $persona = Persona::findOrFail($id);
         $persona->tipo_persona ='Inactivo';
