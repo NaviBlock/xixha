@@ -1,18 +1,15 @@
 <?php
 
-/* #Función get que regresa la vista auth/login*/
+/*#*/
 Route::get('/', function () {
    return view('auth/login');
    //return view('login');
 });
 
-/* #Función que referencia auth() */
+/*#*/
 Route::auth();
 
-/* #Función route para el grupo para middleware a user,
-    dirección verificada para el user 
-    //USER
-*/
+/*#*/
 Route::group(['middleware' => 'user'], function(){
     //Index Dashboard    
     //   
@@ -30,10 +27,7 @@ Route::group(['middleware' => 'user'], function(){
     Route::resource('users','ApicultorController');
 });
 
-/* #Función route para el grupo para middleware a root,
-    dirección verificada para el root 
-    //ROOT
-*/
+/*#*/
 Route::group(['middleware' => 'root'], function(){
     //Index root
     Route::get('root','RootController@index');
@@ -65,7 +59,7 @@ Route::group(['middleware' => 'root'], function(){
     Route::resource('secs', 'UsuarioController');
 
     //Story index    
-    Route::get('story/','StoryController@index');
+    /*Route::get('story/','StoryController@index');
     Route::get('story/index','StoryController@index');
     //Story
     Route::get('story/create','StoryController@create');
@@ -73,5 +67,5 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('story/search','StoryController@search');
     Route::get('story/edit','StoryController@edit');
     //Resource
-    Route::resource('story', 'StoryController');
+    Route::resource('story', 'StoryController')*/
 });

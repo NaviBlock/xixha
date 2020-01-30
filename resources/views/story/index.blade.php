@@ -1,43 +1,34 @@
-@extends ('layouts.admin')
-@section ('contenido')
-<!-- #Buscador-->
-<div
-    class="rest1 container-fluid adx fix-autoE card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto card-body text-warning">
-    <h5 class="card-title">Historial de pagos</h5>
-    <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        @include('story.search')
+@extends ('layouts.admin') @section ('contenido') <!-- #Buscador-->
+    <div
+        class="rest1 container-fluid adx fix-autoE card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto card-body text-warning">
+        <h5 class="card-title">Historial de pagos</h5>
+        <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">@include('story.search') </div>
     </div>
-</div>
-<!-- #Tabla de Registro-->
-<div
-    class="rest1 container-fluid table-responsive form-group amber-textarea active-amber-textarea-2 input-group e-border text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-    <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
-        <table class="table table-condensed table-sm text-dark table-bordered">
-            <thead class="table-color rest2">
-                <th scope="col">Folio</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Operación</th>
-            <tbody class="rest2">
-                @foreach($stories as $per)
-                <tr>
-                    <td>{{$per->folio}}</td>
-                    <td>{{$per->nombre }} {{$per->apellidopa}} {{$per->apellidoma}}</td>
-                    <td>{{$per->fechaRegistro }}</td>
-                    <td>{{$per->cantidad}}</td>
-                    <td><a href="{{URL::action('StoryController@create',$per->idpersona)}}">
-                            <button type="button" class="btn btn-primary btn-md">transacción</button>
-                        </a></td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-        {{$stories->render()}}
-    </div>
-</div>
-<!-- #Footer-->
-<div class="container foorter-color-e col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto card-footer mx-auto e-alineacion">
-    <span class="foorter-color-e">XIXHÁ 2019</span>
-</div>
-@endsection
+    <!-- #Tabla de Registro-->
+        <div
+            class="rest1 container-fluid table-responsive form-group amber-textarea active-amber-textarea-2 input-group e-border text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+            <div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+                <table class="table table-condensed table-sm text-dark table-bordered">
+                    <thead class="table-color rest2">
+                        <th scope="col">Folio</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Operación</th>
+                    <tbody class="rest2">@foreach($stories as $per) <tr>
+                            <td> {{$per->folio}}</td>
+                            <td> {{$per->nombre}} {{$per->apellidopa}} {{$per->apellidoma}}</td>
+                            <td> {{$per->fechaRegistro}}</td>
+                            <td> {{$per->cantidad}}</td>
+                            <td><a href="{{URL::action('StoryController@create',$per->idpersona)}}">
+                                <button type="button" class="btn btn-primary btn-md">transacción</button>
+                            </a></td>
+                        </tr>@endforeach </tbody>
+                </table> {{$stories->render()}}
+
+            </div>
+        </div>
+        <!-- #Footer-->
+            <div
+                class="container foorter-color-e col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto card-footer mx-auto e-alineacion">
+                <span class="foorter-color-e">XIXHÁ 2019</span></div>@endsection
