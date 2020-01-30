@@ -90,5 +90,4 @@ class AuthController extends Controller
             return 'auth/login';
         }
     }
-
 }

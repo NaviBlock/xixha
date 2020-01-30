@@ -1,11 +1,8 @@
-@extends ('layouts.admin')
-@section ('contenido')
-<!-- #Buscador-->
-<div
-    class="rest1 container-fluid adx fix-autoE card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto card-body text-warning">
-    <h5 class="card-title">Historial de pagos</h5>
-    <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        @include('story.search')
+@extends ('layouts.admin') @section ('contenido') <!-- #Buscador-->
+    <div
+        class="rest1 container-fluid adx fix-autoE card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto card-body text-warning">
+        <h5 class="card-title">Historial de pagos</h5>
+        <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">@include('story.search') </div>
     </div>
 </div>
 <!-- #Tabla de Registro-->

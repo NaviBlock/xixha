@@ -4,20 +4,19 @@ namespace xixha;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Story extends Model
+class Gpsapiario extends Model
 {
-    protected $table = 'story';
+    protected $table = 'gps_apiario';
 
-    protected $primaryKey ='id_story';
+    protected $primaryKey ='id_apiario';
  
     public $timestamps = false;
   
     protected $fillable = [
-        'id_ref',
-        'fechaRegistro',
-        'cantidad'
+        'id_apicultor',        
+        'pgs_data'
     ];   
-    
+ 
     protected $guarded = [       
     ];
 } 
