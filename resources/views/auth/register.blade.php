@@ -1,80 +1,56 @@
 @extends('layouts.app')
-@section('content')  
-<div class="container-fluid"> 
-    <div class="row">
-        <div class="main col-md-8 ml-sm-auto col-lg-8 py-4 mx-auto">
-            <div class="panel panel-default">
-                <div class="panel-heading ">
-                    <h3 class="e-text-color">Acceso al Registro</h3>
-                </div>
-            </div>
+@section('content') 
+<div class="container-fluid">     
+    <div class="panel-heading text-center">
+        <h3 class="e-color">Acceso al Registro</h3>
+    </div>
+
+    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+        {{ csrf_field() }}
+
+        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+            <input placeholder="Nombre" id="name" type="text" class="e-color form-control text-center rounded-pill" name="name" value="{{ old('name') }}">
+            @if($errors->has('name'))
+                <span class="help-block e-color">
+                    <strong>{{ $errors->first('name') }}</strong>
+                </span>
+            @endif
+        </div>
+
+        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} ">            
+            <input placeholder="E-mail" id="email" type="email" class="e-color form-control text-center rounded-pill" name="email" value="{{ old('email') }}">
+            @if($errors->has('email'))
+                <span class="help-block e-color">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+            @endif
+        </div>
             
-            <div class="panel-body">
-                <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                {{ csrf_field() }}
-                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <label for="name" class="col-md-4 control-label e-color">Nombre</label>
-                        <!--div class="col-md-8 col-md-offset-4 col-md-8 text-center justify-content-center align-self-center"-->
-                        <div class="col-md-8 ml-sm-auto col-lg-8 mx-auto">
-                            <input id="name" type="text" class="form-control e-control e-border" name="name" value="{{ old('name') }}">
-                            @if ($errors->has('name'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('name') }}</strong>
-                            </span>
-                            @endif
-                        </div>
-                    </div>
+        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} ">        
+            <input placeholder="password" id="password" type="password" class="e-color form-control text-center rounded-pill" name="password">
+            @if ($errors->has('password'))
+                <span class="help-block e-color">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+            @endif
+        </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label e-color">E-Mail</label>
-                            <!--div class="col-md-8 col-md-8 text-center justify-content-center align-self-center"-->
-                            <div class="col-md-8 ml-sm-auto col-lg-8 mx-auto">
-                                <input id="email" type="email" class="form-control e-control e-border" name="email" value="{{ old('email') }}">
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }} ">                                                        
+            <input placeholder="password" id="password-confirm" type="password" class="e-color form-control text-center rounded-pill" name="password_confirmation">
+            @if ($errors->has('password_confirmation'))
+                <span class="help-block e-color">
+                    <strong>{{ $errors->first('password_confirmation') }}</strong>
+                </span>
+            @endif                            
+        </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label e-color">Password</label>
-                            <!--div class="col-md-12 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center"-->
-                            <div class="col-md-8 ml-sm-auto col-lg-8 mx-auto">                            
-                                <input id="password" type="password" class="form-control e-control e-border" name="password">
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label for="password-confirm" class="col-md-4 control-label e-color">Confirmar Password</label>
-                            <!--div class="col-md-12 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center"-->
-                            <div class="col-md-8 ml-sm-auto col-lg-8 mx-auto">
-                                <input id="password-confirm" type="password" class="form-control e-control e-border" name="password_confirmation">
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-12 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i> Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+        <div class="form-group">
+            <div class="col-md-8 ml-sm-auto col-lg-8 mx-auto">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-btn fa-user e-color"></i> Register
+                </button>
             </div>
         </div>
-    </div>
-</div> 
+    </form>
+</div>
 @endsection

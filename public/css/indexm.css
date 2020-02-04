@@ -1,0 +1,6 @@
+@media (min-width: 576px){
+    .col-sm-12 {
+        max-width: 50%;
+        margin: 50vh !important;
+    }
+}
