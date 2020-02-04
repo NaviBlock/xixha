@@ -59,6 +59,7 @@
               href="{{url('logout')}}">Salir</a></span>
         </div>
       </nav>
+      
       <!--# Contenido-->
       @yield('contenido')
     </div>
