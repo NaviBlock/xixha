@@ -2,11 +2,10 @@
 namespace xixha\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
-class UserMiddleware{
+class SuperMiddleware{
     public function handle($request, Closure $next){
-        if(auth()->check() && auth()->user()->is_admin == 0 && auth()->user()->rol == 'User')
-        //if(auth()->check())
+        if(auth()->check() && auth()->user()->is_admin == 1)
             return $next($request);
         return redirect('login');
+        }
     }
-}

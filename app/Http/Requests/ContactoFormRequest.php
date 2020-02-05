@@ -4,7 +4,7 @@ namespace xixha\Http\Requests;
 
 use xixha\Http\Requests\Request;
 
-class ApicultorFormRequest extends Request
+class ContactoFormRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,8 @@ class ApicultorFormRequest extends Request
     public function rules()
     {
         return [
-            'loc_api'=>'max:256',
-            'mov_api'=>'max:256',
-            'observacion'=>'max:256'
+            'direccion'=>'max:200',
+            'telefono'=>'max:10'
         ];
     }
 }
- 

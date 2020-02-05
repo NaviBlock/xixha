@@ -6,18 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Apicultor extends Model
 {
-    protected $table = 'apicultor';
+    protected $table = 'apiarios';
 
-    protected $primaryKey ='id_apicultor';
+    protected $primaryKey ='idapiarios';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'nombre',
-        'apellido_pa',
-        'apellido_ma',
+        //'upp',
+        //'pgn',
+        //'clave_rast',
+        //'num_colmena',
+        //'prod_anual',
+        //'certificacion',
+        //'estado'
+        'idnum',
+        'loc_api',
+        'mov_api',
+        'observacion',
+        'estado'
     ]; 
-    
     protected $guarded = [       
     ];
 }

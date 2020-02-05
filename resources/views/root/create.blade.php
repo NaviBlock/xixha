@@ -298,6 +298,31 @@
 				</div>
 			</div>
 		</div>
+
+
+	</div>
+</div>
+
+<!-- #Datos de Rastreabilidad-->
+<!-- #Titulo-->
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
+	<h3 class="e-text-color text-bor">Contraseña</h3>
+</div>
+<div class="collapse container-fluid row main col-md-12 col-sm-auto col-lg-12 py-4" id="pz-id">
+	<div class="card card-body rest1">
+		<!-- #Rasteabilidad-->
+		<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
+			<div class="input-group mx-auto">
+				<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">            
+					<input id="password" placeholder="Password" type="password" class="e-color form-control text-center rounded-pill" name="password">
+					@if ($errors->has('password'))                    
+						<span class="help-block e-color">
+							<strong>{{ $errors->first('password') }}</strong>
+						</span>
+					@endif            
+			</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -314,5 +339,6 @@
 <script>
 	$('#p-id').collapse();
 	$('#px-id').collapse();
+	$('#pz-id').collapse();
 </script>
 @endsection

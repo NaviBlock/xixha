@@ -23,7 +23,6 @@ use xixha\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\URL;
 
 class StoryController extends Controller{ 
     public function __construct(){
@@ -33,27 +32,26 @@ class StoryController extends Controller{
     public function index(Request $request){
         if($request){
             $query = trim($request->get('searchText'));
-            $stories = DB::table('persona as p')           
-            ->join('story as s','s.id_ref','=','p.idpersona') 
-            ->select('s.id_story','s.id_ref','s.cantidad','s.fechaRegistro','p.nombre','p.apellidopa','p.apellidoma','p.telefono','p.folio','p.idpersona')
+            $stories = DB::table('persona')            
+            ->select('nombre','apellidopa','apellidoma','telefono','folio','fechaRegistro','cantidad','idpersona')
 
-			->where('p.nombre','LIKE','%'.$query.'%')
+			->where('nombre','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')
             
-			->orwhere('p.apellidopa','LIKE','%'.$query.'%')
+			->orwhere('apellidopa','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')  
             
-            ->orwhere('p.apellidoma','LIKE','%'.$query.'%')
+            ->orwhere('apellidoma','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor') 
             
-            ->orwhere('p.telefono','LIKE','%'.$query.'%')
+            ->orwhere('telefono','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')
             
-            ->orwhere('p.folio','LIKE','%'.$query.'%')
+            ->orwhere('folio','LIKE','%'.$query.'%')
             ->where('tipo_persona','=','Apicultor')
                
-            ->orderBy('p.idpersona','desc')
-               ->paginate(20);               
+            ->orderBy('idpersona','desc')
+	   		->paginate(5);
 	   		return view('story.index',['stories'=>$stories,'searchText'=>$query]);
         }
     }
@@ -67,10 +65,14 @@ class StoryController extends Controller{
     }     
 
     public function store(StoryFormRequest $request){
+        //$stx = DB::table('persona') 
+        //->select('nombre','apellidopa','apellidoma','telefono','folio','fechaRegistro','cantidad','idpersona')        
+        //->where('idpersona','=',$request); 
+
         $stories = new Story;
         $stories->fechaRegistro=$request->get('fechaRegistro');
         $stories->cantidad=$request->get('cantidad');
-        $stories->id_ref=$request->get('id_ref');
+        //$stories->id_ref=$stx;
         $stories->save();
         return Redirect::to('story');
     }

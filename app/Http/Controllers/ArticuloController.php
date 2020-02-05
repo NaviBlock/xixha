@@ -71,28 +71,24 @@ class ArticuloController extends Controller
 	   			}
 
 	   		$articulo->save();
-	   		return Redirect::to('almacen/articulo'); /* direcciona al listado del almacen categoria */
+	   		return Redirect::to('almacen/articulo');
 	   }
-
-	   /* recibe un parametro de una categoria | retorna una vista*/
+	
 	   public function show($id)
 	   {
 	   		return view('almacen.articulo.show',['articulo'=>Articulo::findOrFail($id)]);
 	   }
-
-	   /* llamar a un formulario donde modifico los datos de una categoria especifica */ 
+	   
 	   public function edit($id)
-	   {
-	   		/* opciones adicionales | mostrar listado de los articulos | detalles*/
+	   {	   		
 	   		$articulo=Articulo::findOrFail($id);
 	   		$categorias=DB::table('articulo')->where('estado','=','Activo')->get();
 	   		return view('almacen.articulo.edit',['articulo'=>$articulo,'categorias'=>$categorias]);
 	   }
-
-	   /* recibe 2 parametro de tipo formRequest*/
+	   
 	   public function update(ArticuloFormRequest $request,$id)
 	   {
-	   		$articulo = Articulo::findOrFail($id); // categoria que quiero modificar 
+	   		$articulo = Articulo::findOrFail($id);
 	   		$articulo->idcategoria=$request->get('idcategoria');
 	   		$articulo->codigo=$request->get('codigo');
 	   		$articulo->nombre=$request->get('nombre');
@@ -107,8 +103,7 @@ class ArticuloController extends Controller
 	   		$articulo->update();
 	   		return Redirect::to('almacen/articulo');
 	   }
-
-	   /* recibe como parametro un ID | cambiar el estado de la categoria*/
+	   
 	   public function destroy($id)
 	   {
 			$articulo=Articulo::findOrFail($id);
