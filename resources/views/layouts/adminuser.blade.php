@@ -9,27 +9,28 @@
   <meta name="generator" content="Sipax, Xixhá">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SIPAX</title>
-  <!--# Estilos-->
-  <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
   <!--# Modal-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <!--# Estilos-->
+  <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
   <link href="{{asset('css/ex.css')}}" rel="stylesheet">
-
 </head>
 
 <body>
-  <!-- #Modelo de la Vista-->
+  <!-- #Mode de la vista-->
   <div class="container">
     <div class="container-fluid">
-      <!-- #Menu--->
+
+      <!--# Menu-->
       <nav class="navbar navbar-expand-auto navbar-light">
-        <a href="{{asset('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90"
-            height="90" alt="Xixha Logo"></a>
+        <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90"
+            height="75" alt="Xixha Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span
             class="navbar-toggler-icon"></span></button>
@@ -39,7 +40,7 @@
                 href="{{url('home')}}">Inicio</a></li>
             <div class="contenedor">
               <div class="enlaces enlacest">
-                <button class="switch text-center btn-boton btb" id="switch">
+                <button class="switch text-center btn-boton" id="switch">
                   <span><i class="fas fa-sun "></i></span>
                   <span><i class="fas fa-moon "></i></span>
                 </button>
@@ -55,6 +56,7 @@
       @yield('contenido')
     </div>
   </div>
+
   @stack('scripts')
   <script src="{{URL('js/mainx.js')}}"></script>
 </body>
