@@ -7,7 +7,7 @@
     <a class="nav-link e-coloresx px-2">Administrador: {{auth()->user()->name}}</a>
     @include('root.search')
 </div>
- 
+
 <!-- #Tabla de Resultado-->
 <div
     class="rest1 container-fluid table-responsive form-group amber-textarea active-amber-textarea-2 input-group e-border text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">

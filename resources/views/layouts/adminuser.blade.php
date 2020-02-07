@@ -22,7 +22,6 @@
   <link href="{{asset('css/ex.css')}}" rel="stylesheet">
 </head>
 
-
 <body>
   <!-- #Mode de la vista-->
   <div class="container">
