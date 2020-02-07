@@ -4,6 +4,16 @@ btnSwitch.addEventListener('click', () => {
     btnSwitch.classList.toggle('active');
 });
 
+function cookieX(){
+    var cookieY = document.getElementById('#switch').value;
+    sessionStorage.setItem(cookieY).value;
+    //console.log(cookieY);
+    cookieX();
+}
+
+//cookieX();
+
+
 /*function setCookie(cname, cvalue, exdays) {
     var n = new Data();
     document.setTime(n.getTime() + (exdays * 24 * 60 * 60 * 365));

@@ -45,8 +45,8 @@
                 href="{{url('secs/index')}}">Roles</a></li>
             <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/create')}}">Crear
                 Roles</a></li>
-            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4"
-                href="{{url('story/index')}}">Historial</a></li>
+            <!--li class="nav-item"><a class="dropdown-item e-coloresx text-center te4"
+                href="{ {url('story/index')}}">Historial</a></li--->
             <div class="contenedor">
               <div class="enlaces enlacest">
                 <button class="switch text-center btn-boton" id="switch">
