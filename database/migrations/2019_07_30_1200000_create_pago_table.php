@@ -5,7 +5,8 @@ class CreatePagoTable extends Migration{
     public function up(){
         Schema::create('pago', function (Blueprint $table) {
             $table->increments('id_pago');
-            $table->integer('id_apicultor');            
+            $table->integer('id_apicultor');
+            $table->integer('folio');
             $table->integer('clave');
             $table->integer('no_cuenta');
             $table->string('banco');

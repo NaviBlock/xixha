@@ -4,11 +4,11 @@ namespace xixha\Http\Controllers;
 
 use Illuminate\Http\Request;
 use xixha\Http\Requests;
-
+ 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\input;
 use xixha\Http\Requests\PersonaFormRequest;
- 
+
 use xixha\Persona; 
 
 use DB;
@@ -26,7 +26,6 @@ use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Database\Eloquent\Model;
 
-//Verifica si el tipo de usuario es el 
 class RootController extends Controller{
     public function __construct(){
         $this->middleware('auth');
@@ -97,8 +96,7 @@ public function edit($id){
 }
 
 public function store(PersonaFormRequest $request){
-        $personas = new Persona;
-        //$personas->tipo_persona='proveedor';
+        $personas = new Persona;        
         $personas->nombre=$request->get('nombre');
         $personas->apellidopa=$request->get('apellidopa');
         $personas->apellidoma=$request->get('apellidoma');
@@ -113,8 +111,7 @@ public function store(PersonaFormRequest $request){
         $personas->num_colmena=$request->get('num_colmena');
         $personas->temp_cosecha=$request->get('temp_cosecha');
         $personas->estadoP=$request->get('estadoP');
-        $personas->sexo=$request->get('sexo');
-        
+        $personas->sexo=$request->get('sexo');        
         $personas->rfc=$request->get('rfc');
         $personas->municipio=$request->get('municipio');
         $personas->calle=$request->get('calle');
@@ -123,43 +120,15 @@ public function store(PersonaFormRequest $request){
         $personas->mov_col=$request->get('mov_col');
         $personas->donde=$request->get('donde');
         $personas->observacion=$request->get('observacion');
-        //$mytime = Carbon::now('America/Mexico_City');
-        //$persona->fecha_hora = $mytime->toDateTimeString();
         $personas->tipo_persona ='Apicultor';
-        $personas->estado ='Activo';
-        //Codigo para los Folios
-            /*if(isset($folio)){ 
-                    echo "Folio repetido";
-                }else{
-                    $personas->folio = 'xi0'.(rand(1,100000));
-                    $personas->save();
-                }*/               
-                //Cdigo para subir la imagen de perfil
-            /*if(Input::hasFile('img_perfil')) {
-                    $file=Input::file('img_perfil');    
-                    //Obtener el Nombre
-                    //$nombre_original=$file->getClientOriginalName();
-                    //Otener la Extension
-                    $extension=$file->getClientOriginalExtension();
-                    //coloca el archivo en la carpeta imagenes/perfil                
-                    $newnombre = 'xi0'.(rand(1,100000)).".".$extension; 
-                    $file->move(public_path().'/imagenes/perfil',$newnombre);                
-                    //registra el nombre a la referencia de imagen a la DB
-                    $personas->img_perfil=$file->getClientOriginalName($newnombre); 
-                    $personas->img_perfil=$newnombre;                                                         
-            }*/
-            //fechacomunidad,usa el ine, 
-            //xi-curp-a //deberia poner el nombre.....? alarchivo 
-            //xix-heva092404grllt4j5-ha
-        //img_perfil                
+        $personas->estado ='Activo';         
             if(Input::hasFile('img_perfil')) {
-                $file=Input::file('img_perfil');                    
-                $extension=$file->getClientOriginalExtension();                              
-                //$personas->curp=$request->get('curp');    
-                $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension; 
-                $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';                 
-                $file->move(public_path().'/imagenes/perfil',$newnombre);                                
-                $personas->img_perfil=$file->getClientOriginalName($newnombre);             
+                $file=Input::file('img_perfil');
+                $extension=$file->getClientOriginalExtension();
+                $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension;
+                $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';
+                $file->move(public_path().'/imagenes/perfil',$newnombre);
+                $personas->img_perfil=$file->getClientOriginalName($newnombre);
                 $personas->img_perfil=$newnombre;
                 $personas->folio=$new_Nombre_Folio;
             }        
@@ -169,9 +138,6 @@ public function store(PersonaFormRequest $request){
 
 public function update(PersonaFormRequest $request,$id){
     $persona = Persona::findOrFail($id);
-    //$persona->nombre=$request->get('nombre');
-    //$persona->apellidopa=$request->get('apellidopa');
-    //$persona->apellidoma=$request->get('apellidoma');
     $persona->curp=$request->get('curp');        
     $persona->telefono=$request->get('telefono');
     $persona->email=$request->get('email');
@@ -191,13 +157,7 @@ public function update(PersonaFormRequest $request,$id){
     $persona->loc_api=$request->get('loc_api');
     $persona->mov_col=$request->get('mov_col');
     $persona->donde=$request->get('donde');
-    $persona->observacion=$request->get('observacion');
-    //$persona->img_perfil=$request->get('img_perfil');
-    /*if (Input::hasFile('img_perfil')) {
-        $file=Input::file('img_perfil');
-        $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
-        $persona->img_perfil=$file->getClientOriginalName();
-    }*/
+    $persona->observacion=$request->get('observacion');   
     $persona->update();
     return Redirect::to('root/padron');
 }
@@ -208,5 +168,4 @@ public function destroy($id){
     $persona->update();
     return Redirect::to('root/padron');	
     }
-
 } 

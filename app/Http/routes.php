@@ -62,7 +62,7 @@ Route::group(['middleware' => 'root'], function(){
     Route::resource('secs', 'UsuarioController');
 
     //Story index    
-    /*Route::get('story/','StoryController@index');
+    Route::get('story/','StoryController@index');
     Route::get('story/index','StoryController@index');
     //Story
     Route::get('story/create','StoryController@create');
@@ -70,5 +70,15 @@ Route::group(['middleware' => 'root'], function(){
     Route::get('story/search','StoryController@search');
     Route::get('story/edit','StoryController@edit');
     //Resource
-    Route::resource('story', 'StoryController');*/
+    Route::resource('story', 'StoryController');
+
+    //Banx    
+    Route::get('banx','BanxController@index');
+    Route::get('banx/index','BanxController@index');
+    Route::get('banx/create','BanxController@create');
+    Route::get('banx/edit','BanxController@edit');
+    Route::get('banx/show','BanxController@show');    
+    Route::get('banx/search','BanxController@search');
+    //Resoource
+    Route::resource('banx', 'BanxController');
 });

@@ -35,19 +35,18 @@
             class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
+
             <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4"
-                href="{{url('root')}}">Inicio</a></li>
-            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te6"
-                href="{{url('root/padron')}}">Padrón</a></li>
-            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te5"
-                href="{{url('root/create')}}">Registro Apicultor</a></li>
-            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te1"
-                href="{{url('secs/index')}}">Roles</a></li>
-            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2" href="{{url('secs/create')}}">Crear
-                Roles</a></li>
-            <li class="nav-item">
-              <a class="dropdown-item e-coloresx text-center te2" href="{{url('banx')}}">Pagos</a>
-            </li>
+                href="{{url('banx/index')}}">Dashboard</a></li>
+            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2" href="{{url('banx/create')}}">Crear
+                pago</a></li>
+            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2"
+                href="{{url('banx/create')}}">Editar pago</a></li>
+            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2"
+                href="{{url('banx/search')}}">Buscar pago</a></li>
+            <li class="nav-item"><a class="dropdown-item e-coloresx text-center te2"
+                href="{{url('banx/search')}}">Mostrar pago</a></li>
+
             <li class="nav-item"><a class="dropdown-item e-coloresx text-center te4"
                 href="{ {url('story/index')}}">Historial</a></li>
             <div class="contenedor">
