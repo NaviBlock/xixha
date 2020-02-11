@@ -31,7 +31,7 @@
   <body>
     <nav class="navbar navbar-expand-md fixed-top bg-light e-coloresx">
   <a class="navbar-brand" href="">SIPAX</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <button id="menux" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -89,5 +89,25 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="{{asset('js/jsx/jquery-slim.min.js')}}"></script>
   <script src="{{asset('js/jsx//bootstrap.bundle.min.js')}}"></script>
+        <!-- #annyang-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script>
+          if (annyang) {
+            var comands = {
+              'hola': function () {            
+               $("#menux").click();            
+              },
+    
+              'noche': function () {
+                $("#switch").click();
+              },
+              
+            };
+    
+            annyang.addCommands(comands);
+            annyang.setLanguage('es-MX');
+            annyang.start();
+          }
+        </script>
 </body>
 </html>

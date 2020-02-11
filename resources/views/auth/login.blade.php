@@ -22,7 +22,7 @@
                 
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4 col-md-12 text-center justify-content-center align-self-center btn-altx">                
-                <button type="submit" class="btn btn-primary btn-lg btn-block rounded-pill">
+                <button type="submit" class="btn btn-primary btn-lg btn-block rounded-pill" id="botonEnviar">
                     <i class="fa fa-btn fa-sign-in e-color"></i> Acceder
                 </button>
             </div>

@@ -37,9 +37,9 @@
         </a>
     </div>
 
-    <video id="myvideo">
+    <!--video id="myvideo">
     <source src="video.mp4" type="video/mp4">
-    </video>
+    </video-->
 
     <!-- #Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -54,34 +54,20 @@
 
     <!-- #annyang-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <script type="text/javascript">
+    <script>
         if (annyang) {
-            var comandos = {
-                'hola': function () {
-                    alert("Hola");
-                },
-                'reproducir':playVideo,
-                'pausar':pauseVideo,
+            var comands = {
+                'hola': function () {                    
+                    $("#password").click();
+                    $("#email").click();
+                    $("#botonEnviar").click();
+                }
             };
-
-            annyang.addComandos(comandos);
-            annyang.setLanguage(es-MX);
-
-            annyang.start();            
+            annyang.addCommands(comands);
+            annyang.setLanguage('es-MX');
+            annyang.start();
         }
-
-        var vid= document.getElementById("myvideo");
-
-        function playVideo(){
-            vid.play();
-        }
-
-        function pauseVideo(){
-            vid.pause();
-        }
-
     </script>
-
 
 </body>
 

@@ -15,7 +15,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="{{asset('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90" height="90" alt="Xixha Logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="menux" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -40,5 +40,25 @@
   <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
   <script src="{{asset('js/js.js')}}"></script>
   @stack('scripts')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script>
+    if (annyang) {
+      var comands = {
+        'hola': function () {            
+         $("#menux").click();            
+        },
+
+        'noche': function () {
+          $("#switch").click();
+        },
+        
+      };
+
+      annyang.addCommands(comands);
+      annyang.setLanguage('es-MX');
+      annyang.start();
+    }
+  </script>
+  
 </body>
 </html>
