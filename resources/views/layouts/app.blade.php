@@ -11,6 +11,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
+    
+
 </head>
 
 <body>
@@ -58,16 +60,26 @@
         if (annyang) {
             var comands = {
                 'hola': function () {                    
-                    $("#password").click();
-                    $("#email").click();
+                    //$("#password").click();
+                    //$("#email").click();
                     $("#botonEnviar").click();
                 }
-            };
+            }; 
             annyang.addCommands(comands);
             annyang.setLanguage('es-MX');
             annyang.start();
         }
     </script>
+
+    <script src="https://raw.githubusercontent.com/TalAter/UpUp/master/dist/upup.min.js"></script>
+    <script src="https://raw.githubusercontent.com/TalAter/UpUp/master/dist/upup.sw.min.js"></script>
+
+    <script>
+        UpUp.start({
+          'content': '<html><body><h1>SIPAX</h1><p>SIPAX</p><p>SIPAX</p></body></html>'
+        });
+      </script>
+
 
 </body>
 

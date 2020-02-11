@@ -24,12 +24,18 @@
 
     <!--#Menú-->
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75 alt="Xixha Logo"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="menux"><span class="navbar-toggler-icon"></span></button>
+      <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75
+          alt="Xixha Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="menux"><span
+          class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarText">
         <a class="nav-link e-coloresx px-2">{{auth()->user()->name}} </a>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}" id="pdx">Padrón</a></li>
+          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}"
+              id="pdx">Padrón</a></li>
+          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/show')}}"
+              id="pdx">Perfil</a></li>
           <div class="contenedor">
             <div class="enlaces enlacest">
               <button class="switch text-center btn-boton" id="switch">
@@ -39,7 +45,8 @@
             </div>
           </div>
         </ul>
-        <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a></span>
+        <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3"
+            href="{{url('logout')}}">Salir</a></span>
       </div>
     </nav>
 
@@ -51,7 +58,8 @@
       <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la
         rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del
         guerrero.</p>
-      <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('users/padron')}}" role="button">Ir a Padrón &raquo;</a></p>
+      <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('users/padron')}}" role="button">Ir a Padrón
+          &raquo;</a></p>
     </div>
 
     <!-- #Card-->
@@ -109,10 +117,9 @@
       </a>
     </div>
 
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>    
+    </script>
     <script src="{{asset('js/jsx//bootstrap.bundle.min.js')}}"></script>
     <script src="{{URL('js/mainx.js')}}"></script>
 
@@ -121,14 +128,12 @@
     <script>
       if (annyang) {
         var comands = {
-          'hola': function () {            
-           $("#menux").click();            
+          'hola': function () {
+            $("#menux").click();
           },
-
           'noche': function () {
             $("#switch").click();
-          },
-          
+          }
         };
 
         annyang.addCommands(comands);

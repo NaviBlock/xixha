@@ -13,7 +13,7 @@
     class="rest1 container-fluid table-responsive form-group amber-textarea active-amber-textarea-2 input-group e-border text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
     <table class="table table-condensed table-sm text-dark table-bordered">
         <thead class="table-color rest2">
-            <th scope="col">Perfil</th>
+            <!--th scope="col">Perfil</th-->
             <th scope="col">Folio</th>
             <th scope="col">Nombre Completo</th>
             <th scope="col">Email</th>
@@ -24,8 +24,6 @@
         <tbody class="rest2">
             @foreach($personas as $per)
             <tr>
-                <td><img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}" alt="{{$per->img_perfil}}" height="100px"
-                        width="100px" class="img-fluid"></td>
                 <td scope="row">{{ $per->folio }}</td>
                 <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>
                 <td>{{ $per->email }}</td>

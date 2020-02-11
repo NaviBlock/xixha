@@ -69,7 +69,7 @@
           $("#switch").click();
         },
         
-      };
+      }; 
 
       annyang.addCommands(comands);
       annyang.setLanguage('es-MX');

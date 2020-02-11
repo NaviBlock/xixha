@@ -70,8 +70,7 @@ class UsuarioController extends Controller{
         $usuario->password=bcrypt($request->get('password'));
         $usuario->rol=$request->get('rol');
         $usuario->is_admin=$request->get('is_admin');    
-        $usuario->remember_token=bcrypt(str_random($request->get('pin')));    
-        //$usuario->last_login(DateTime());
+        $usuario->remember_token=bcrypt(str_random($request->get('pin')));            
         $usuario->save();        
         return Redirect::to("secs");
     } 
@@ -82,15 +81,14 @@ class UsuarioController extends Controller{
 
     public function update(UsuarioFormRequest $request, $id){
         $usuario = User::findOrFail($id);
-        $usuario->name=$request->get('name');
-        //$usuario->email=$request->get('email');
+        $usuario->name=$request->get('name');        
         $usuario->password=bcrypt($request->get('password'));
         $usuario->is_admin=$request->get('is_admin');
         $usuario->rol=$request->get('rol');    
         $usuario->update();
         return Redirect::to("secs");
     }
-
+ 
     public function destroy($id){
         $usuario = User::findOrFail($id);       
         $usuario->is_admin = "0";
@@ -98,4 +96,21 @@ class UsuarioController extends Controller{
         $usuario->update();        
         return Redirect::to("secs");
     }
+
+    //public function show($id){
+       /* if ($request){
+            $query = trim($request->get('searchText'));
+            $usuario = DB::table('users')
+
+            //User
+            ->where('name','LIKE','%'.$query.'%')
+            ->where('rol','=','User') 
+            ->orwhere('email','LIKE','%'.$query.'%')
+            ->where('rol','=','User')            
+            ->orderBy('id','desc') ;            
+            return view('secs.index',['usuario'=>$usuario]);
+        }*/
+      //  return view('users.show',['persona'=>Persona::findOrFail($id)]);
+    //}
+
 } 
