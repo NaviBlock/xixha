@@ -36,6 +36,8 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4"
                 href="{{url('home')}}">Inicio</a></li>
+                <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4"
+                  href="{{url('users/perfil')}}">Perfil</a></li>
             <div class="contenedor">
               <div class="enlaces enlacest">
                 <button class="switch text-center btn-boton" id="switch">

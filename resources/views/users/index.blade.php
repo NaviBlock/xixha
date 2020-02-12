@@ -34,7 +34,7 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}"
               id="pdx">Padrón</a></li>
-          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/show')}}"
+          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/perfil')}}"
               id="pdx">Perfil</a></li>
           <div class="contenedor">
             <div class="enlaces enlacest">
@@ -111,18 +111,16 @@
     </div>
 
     <!-- #Footer-->
-    <div class="container-fliud">
-      <a href="http://xixha.com">
-        <p class="foorter-color-e">&copy;Xixhá 2019</p>
-      </a>
+    <div class="container foorter-color-e col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto card-footer mx-auto e-alineacion">      
+        <span class="foorter-color-e">&copy;Xixhá 2019</span>      
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    <script src="{{asset('js/jsx//bootstrap.bundle.min.js')}}"></script>
-    <script src="{{URL('js/mainx.js')}}"></script>
+    <script src="{ {asset('js/jsx//bootstrap.bundle.min.js')}}"></script--->
 
+    <script src="{{URL('js/mainx.js')}}"></script>
     <!-- #annyang-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>

@@ -22,7 +22,8 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('padron','ApicultorController@padron');
     Route::get('users/padron','ApicultorController@padron');
     Route::get('users/search','ApicultorController@search');
-    Route::get('users/show','ApicultorController@show');
+    //Route::get('users/show','ApicultorController@show');
+    Route::get('users/perfil','ApicultorController@perfil');
     //Resource
     Route::resource('users','ApicultorController');
 });
