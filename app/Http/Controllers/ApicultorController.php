@@ -82,7 +82,8 @@ class ApicultorController extends Controller
     } */
 
     public function perfil(){
-        return view("users.perfil");
+        $persona = DB::table('persona')->get();
+        return view('users.perfil', ['persona' => $persona]);
+        //return view("users.perfil");
     }
-
 } 

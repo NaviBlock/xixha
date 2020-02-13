@@ -9,5 +9,5 @@ class UserMiddleware{
             return $next($request);
         return redirect('login');
     }
-    
+     
 }
