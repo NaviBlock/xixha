@@ -62,30 +62,14 @@
 			<div class="row">
 				<div class="col-2"></div>
 				<div class="col-8">
-					<label class="md-textarea form-control lineA e-color-c text-center text-uppercase">{{auth()->user()->name}}</label>
-					<label class="md-textarea form-control lineA e-color-c text-center text-lowercase">{{auth()->user()->email}}</label>
-					<label class="md-textarea form-control lineA e-color-c text-center text-lowercase">{{auth()->perfil()->rol}}</label>
-					<label class="md-textarea form-control lineA e-color-c text-center text-lowercase">{{auth()->perfil()->is_admin}}</label>
+					<!---label class="md-textarea form-control lineA e-color-c text-center text-uppercase">{{auth()->user()->name}}</label>
+					<label class="md-textarea form-control lineA e-color-c text-center text-lowercase">{{auth()->user()->email}}</label--->
+					<!--label class="md-textarea form-control lineA e-color-c text-center text-lowercase">{{auth()->perfil()->rol}}</label-->
+					<!--label class="md-textarea form-control lineA e-color-c text-center text-lowercase">{{auth()->perfil()->is_admin}}</label-->
 				</div>
-				<div class="col-"></div>
+				<div class="col-2"></div>
 			</div>
 		</div>
-
-		<?php /*
-			$apix = auth()->user()->rol;
-			$apiy = auth()->perfil()->nombre;					
-
-			if($apiz == $apia){
-				echo("test de test");									
-			}elseif($apix=="Mr.Root"){
-				echo("Test 2");
-			}elseif($apix=="Super"){
-				echo("Test 3");
-			}else{
-				echo("Consulte con el administrador");
-			}
-			echo Request::url();*/
-			?>
 
 		<!--#Footer-->
 		<div class="container-fliud">
