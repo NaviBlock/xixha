@@ -33,7 +33,7 @@
         <a class="nav-link e-coloresx px-2">{{auth()->user()->name}} </a>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}" id="pdx">Padrón</a></li>
-          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/perfil')}}" id="pdx">Perfil</a></li>
+          <!--li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{ {url('users/perfil')}}" id="pdx">Perfil</a></li-->
           <div class="contenedor">
             <div class="enlaces enlacest">
               <button class="switch text-center btn-boton" id="switch">
