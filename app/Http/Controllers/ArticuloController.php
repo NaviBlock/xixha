@@ -18,7 +18,6 @@ class ArticuloController extends Controller
 		   $this->middleware('auth');
 	   }
  
-	   /*recibe como parametro un objeto del tipo request*/
 	   public function index(Request $request)
 	   {
 	   	if ($request) {
@@ -45,16 +44,13 @@ class ArticuloController extends Controller
 	   		return view('almacen.articulo.index',['articulos'=>$articulos,'searchText'=>$consulta]);
 	   	}
 	   }
-
-	   /* retornar a una vista */
+	
 	   public function create()
-	   {
-	   	/* listado de categorias | estado de categorias */
+	   {	   	
 	   		$categorias=DB::table('categoria')->where('condicion','=','1')->get();
 	   		return view('almacen.articulo.create',['categorias'=>$categorias]);
 	   }
- 
-	   /* almacenar el objeto del modelo categoria | tabla categoria de la BD  | validacion formrequest */
+ 	   
 	   public function store(ArticuloFormRequest $request)
 	   {
 	   		$articulo = new Articulo;

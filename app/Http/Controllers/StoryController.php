@@ -64,15 +64,10 @@ class StoryController extends Controller{
         return view('story.show',['stories'=>Story::findOrFail($idpersona)]);
     }     
 
-    public function store(StoryFormRequest $request){
-        //$stx = DB::table('persona') 
-        //->select('nombre','apellidopa','apellidoma','telefono','folio','fechaRegistro','cantidad','idpersona')        
-        //->where('idpersona','=',$request); 
-
+    public function store(StoryFormRequest $request){        
         $stories = new Story;
         $stories->fechaRegistro=$request->get('fechaRegistro');
         $stories->cantidad=$request->get('cantidad');
-        //$stories->id_ref=$stx;
         $stories->save();
         return Redirect::to('story');
     }

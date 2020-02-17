@@ -17,14 +17,3 @@ class RedirectIfAuthenticated
         return $next($request);
     }
 }
-
-/*class RedirectIfAuthenticated{
-    public function handle($request, Closure $next, $guard = null){
-        if (Auth::guard($guard)->check())
-            if(auth()->check())
-                return redirect('/');
-            elseif (auth()->check())
-                return redirect('root');
-        return $next($request);
-    }
-}*/

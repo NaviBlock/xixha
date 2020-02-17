@@ -7,7 +7,7 @@ use xixha\Http\Controllers\Controller;
 use xixha\Http\Requests\BanxFormRequest;
 class BanxController extends Controller {
 
-    public function __construct() {
+    /*public function __construct() {
         $this->middleware('auth');
     }
 
@@ -17,13 +17,13 @@ class BanxController extends Controller {
 
     public function create() {
         return view('banx.create');
-    }
+    }*/
 
-    public function show($id) {
+    /*public function show($id) {
         return view('banx.show', ['banx'=>Banx::findOrFail($id)]);
-    }
+    }*/
  
-    public function store(BanxFormRequest $request) {        
+    /*public function store(BanxFormRequest $request) {        
         $x=DB::table('pago as pa')
         ->join('persona as p','p.idpersona','==','pa.id_pago')
         ->select('pa.id_pago','p.idpersona','p.nombre','p.apellidopa','p.apellidoma','p.curp','p.rfc','p.folio','p.clave','no_cuenta','p.banco','p.nombre','pa.token','fecha')
@@ -36,9 +36,9 @@ class BanxController extends Controller {
         $banx ->token = 'xix'.'-'.rand(10,10000).'ha'.rand(10,10000);        
         $banx ->save();
         return Redirect::to('banx');
-    }
+    }*/
 
-    public function update(BanxFormRequest $request, $id){
+    /*public function update(BanxFormRequest $request, $id){
         $banx = BanX::findORFail($id);
         $banx ->name_user=$request->get('name_user');
         $banx ->banco=$request->get('banco');
@@ -49,7 +49,6 @@ class BanxController extends Controller {
         $banx ->fecha=$request->get('fecha');
         $banx->update();
         return Redirect::to('banx/index');
-    }
+    }*/
     
-
 }

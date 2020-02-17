@@ -96,21 +96,4 @@ class UsuarioController extends Controller{
         $usuario->update();        
         return Redirect::to("secs");
     }
-
-    //public function show($id){
-       /* if ($request){
-            $query = trim($request->get('searchText'));
-            $usuario = DB::table('users')
-
-            //User
-            ->where('name','LIKE','%'.$query.'%')
-            ->where('rol','=','User') 
-            ->orwhere('email','LIKE','%'.$query.'%')
-            ->where('rol','=','User')            
-            ->orderBy('id','desc') ;            
-            return view('secs.index',['usuario'=>$usuario]);
-        }*/
-      //  return view('users.show',['persona'=>Persona::findOrFail($id)]);
-    //}
-
 } 

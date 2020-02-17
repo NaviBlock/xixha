@@ -6,13 +6,8 @@ Route::get('/', function () {
 
 Route::auth();
 
-/* #Función route para el grupo para middleware a user,
-    dirección verificada para el user 
-    //USER
-*/
 Route::group(['middleware' => 'user'], function(){
     //Index Dashboard    
-    //   
     Route::get('/','ApicultorController@index');
     Route::get('/index','ApicultorController@index');
     Route::get('/home','ApicultorController@index');
@@ -28,10 +23,6 @@ Route::group(['middleware' => 'user'], function(){
     Route::resource('users','ApicultorController');
 });
 
-/* #Función route para el grupo para middleware a root,
-    dirección verificada para el root 
-    //ROOT
-*/
 Route::group(['middleware' => 'root'], function(){
     //Index root
     Route::get('root','RootController@index');

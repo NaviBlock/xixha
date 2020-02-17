@@ -76,8 +76,7 @@ class ProveedorController extends Controller
     }
 
     public function store(PersonaFormRequest $request){
-            $personas = new Persona;
-            //$personas->tipo_persona='proveedor';
+            $personas = new Persona;            
             $personas->nombre=$request->get('nombre');
             $personas->apellidopa=$request->get('apellidopa');
             $personas->apellidoma=$request->get('apellidoma');
@@ -100,66 +99,18 @@ class ProveedorController extends Controller
             $personas->loc_api=$request->get('loc_api');
             $personas->mov_col=$request->get('mov_col');
             $personas->donde=$request->get('donde');
-            $personas->observacion=$request->get('observacion');
-            //$mytime = Carbon::now('America/Mexico_City');
-            //$persona->fecha_hora = $mytime->toDateTimeString();
+            $personas->observacion=$request->get('observacion');            
             $personas->tipo_persona ='Apicultor';
-            $personas->estado ='Activo';        
-            
-            //Codigo para los Folios
-                /*if(isset($folio)){
-                        echo "Folio repetido";
-                    }else{
-                        $personas->folio = 'xi0'.(rand(1,100000));
-                        $personas->save();
-                    }*/               
-                    //Cdigo para subir la imagen de perfil
-                /*if(Input::hasFile('img_perfil')) {
-                        $file=Input::file('img_perfil');    
-                        //Obtener el Nombre
-                        //$nombre_original=$file->getClientOriginalName();
-                        //Otener la Extension
-                        $extension=$file->getClientOriginalExtension();
-                        //coloca el archivo en la carpeta imagenes/perfil                
-                        $newnombre = 'xi0'.(rand(1,100000)).".".$extension; 
-                        $file->move(public_path().'/imagenes/perfil',$newnombre);                
-                        //registra el nombre a la referencia de imagen a la DB
-                        $personas->img_perfil=$file->getClientOriginalName($newnombre); 
-                        $personas->img_perfil=$newnombre;                                                         
-                }*/
-                //fechacomunidad,usa el ine, 
-                //xi-curp-a //deberia poner el nombre.....? alarchivo 
-                //xix-heva092404grllt4j5-ha
-                    
+            $personas->estado ='Activo';                                    
                 if(Input::hasFile('img_perfil')) {
                 $file=Input::file('img_perfil');                    
-                $extension=$file->getClientOriginalExtension();                              
-                //$personas->curp=$request->get('curp');    
+                $extension=$file->getClientOriginalExtension();                                              
                 $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension; 
                 $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';                 
                 $file->move(public_path().'/imagenes/perfil',$newnombre);                                
                 $personas->img_perfil=$file->getClientOriginalName($newnombre);             
                 $personas->img_perfil=$newnombre;    
-                $personas->folio=$new_Nombre_Folio;     
-                
-               /*/ $imagenCodificada = file_get_contents("/imagenes/perfil"); //Obtener la imagen
-                    if(strlen($imagenCodificada) <= 0) exit("No se recibió ninguna imagen");
-                            
-                    //La imagen traerá al inicio data:image/png;base64, cosa que debemos remover
-                    $imagenCodificadaLimpia = str_replace("data:image/png;base64,", "", urldecode($imagenCodificada));
-                        
-                    //Venía en base64 pero sólo la codificamos así para que viajara por la red, ahora la decodificamos y
-                    //todo el contenido lo guardamos en un archivo
-                    $imagenDecodificada = base64_decode($imagenCodificadaLimpia);
-                        
-                    //Calcular un nombre único
-                    $nombreImagenGuardada = "foto_" . uniqid() . ".png";
-                        
-                    //Escribir el archivo
-                    file_put_contents($nombreImagenGuardada, $imagenDecodificada);
-                        
-                    //Terminar y regresar el nombre de la foto
-                    exit($nombreImagenGuardada);*/
+                $personas->folio=$new_Nombre_Folio;                 
            }
 
             $personas->save();
@@ -176,7 +127,7 @@ class ProveedorController extends Controller
     }
 
     public function update(PersonaFormRequest $request,$id){
-        $persona = Persona::findOrFail($id); // categoria que quiero modificar 
+        $persona = Persona::findOrFail($id);
         $persona->nombre=$request->get('nombre');
         $persona->apellidopa=$request->get('apellidopa');
         $persona->apellidoma=$request->get('apellidoma');
@@ -200,19 +151,16 @@ class ProveedorController extends Controller
         $persona->mov_col=$request->get('mov_col');
         $persona->donde=$request->get('donde');
         $persona->observacion=$request->get('observacion');
-        //$persona->img_perfil=$request->get('img_perfil');
-        /*if (Input::hasFile('img_perfil')) {
+        $persona->img_perfil=$request->get('img_perfil');
+        if (Input::hasFile('img_perfil')) {
             $file=Input::file('img_perfil');
             $file->move(public_path().'/imagenes/perfil',$file->getClientOriginalName());
             $persona->img_perfil=$file->getClientOriginalName();
-        }*/
+        }
         $persona->update();
-        return Redirect::to('proveedor');
-        
+        return Redirect::to('proveedor');        
     }
 
-    
- 
     public function destroy($id){
         $persona = Persona::findOrFail($id);
         $persona->tipo_persona ='Inactivo';
