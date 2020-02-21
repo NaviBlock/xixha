@@ -15,6 +15,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<!--#Estilo--->
+	<!-- #llamamos nuestro estilos -->
 	<link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
 	<link rel="stylesheet" href="{{asset('css/ex.css')}}">
 </head>

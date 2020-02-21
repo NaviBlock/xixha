@@ -4,7 +4,9 @@
 <div
     class="rest1 container-fluid adx fix-autoE card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto card-body text-warning">
     <h5 class="card-title">Padrón de Apicultores</h5>
+    <!-- #llamamos al usuario por medio del middleware-->
     <a class="nav-link e-coloresx px-2">{{auth()->user()->name}}</a>
+    <!-- #llamamos -->
     @include('users.search')
 </div>
 
@@ -22,8 +24,9 @@
             <th scope="col">Certificación</th>
         </thead>
         <tbody class="rest2">
+            <!-- #Definimos nuestra valiable para itera en el ciclo for-->
             @foreach($personas as $per)
-            <tr>
+            <tr><!-- #Realizamos un ciclo for que itera la base de datos mostrando la informacion de -->
                 <td scope="row">{{ $per->folio }}</td>
                 <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>
                 <td>{{ $per->email }}</td>
@@ -31,9 +34,11 @@
                 <td>{{ $per->prod_anual." Kg" }}</td>
                 <td>{{ $per->certificacion }}</td>
             </tr>
+            <!-- #terminado -->
             @endforeach
         </tbody>
     </table>
+    <!-- #renderizamos la tabla en cada iteracion-->
     {{$personas->render()}}
 </div>
 
