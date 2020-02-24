@@ -1,21 +1,17 @@
 #!/usr/bin/env php
 <?php
 
-/*llamada de la funcion autoload.php a apache*/
+/*Llamamos la función autoload.php*/
 require __DIR__.'/bootstrap/autoload.php';
 $app = require_once __DIR__.'/bootstrap/app.php';
 
-/*
-    Run The Artisan Application
-*/
+/*Para lanzar la aplicación Artisan*/
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 $status = $kernel->handle(
     $input = new Symfony\Component\Console\Input\ArgvInput,
     new Symfony\Component\Console\Output\ConsoleOutput
 );
 
-/*
-    Shutdown The Application
-*/
+/*Apagamos la aplicacion Artisan*/
 $kernel->terminate($input, $status);
 exit($status);

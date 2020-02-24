@@ -1,13 +1,22 @@
 <?php
 return [
+    /*Variable en modo ejecución*/
     'env' => env('APP_ENV', 'production'),
+    /*Variable para activar el modo debug*/
     'debug' => env('APP_DEBUG', false),
+    /*Variable de la URL*/
     'url' => env('APP_URL', 'http://localhost'),
+    /*Variable del tiempo de la zona*/
     'timezone' => 'America/Mexico_City',
+    /*Variable que predefine el idioma de los 
+    mensaje internos de la aplicación*/
     'locale' => 'es',
     'fallback_locale' => 'en',
+    /*Variable APP_KEY*/
     'key' => env('APP_KEY'),
+    /*Variable del nivel de seguridad*/
     'cipher' => 'AES-256-CBC',
+    /*Variable para el registro del LOG*/
     'log' => env('APP_LOG', 'single'),
     'providers' => [
 

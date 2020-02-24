@@ -16,8 +16,9 @@
 		</div> 
 	</div>
 </div> 
-
+<!-- #Iniciamos la llamada del formulario--->
 {!!Form::model($persona,['method'=>'PATCH','route'=>['users.update',$persona->idpersona]]) !!}
+<!-- #Token de seguridad que se aplica al formulario--->
 {{Form::token()}}
 
 <div class="container-fluid">
@@ -25,7 +26,7 @@
 		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">	
 			
 			<!---Titulo---->				
-				<div class="text-center">
+				<div class="text-center">					
 				<h3 class="e-text-color">Datos Personales del Apicultor {{$persona->nombre}}</h3>
 				</div>
 

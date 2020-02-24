@@ -1,21 +1,24 @@
 <?php
 
-// llamamos el archivo autoload para arrancar el servidor
-//require __DIR__.'/xixha/bootstrap/autoload.php';
-require __DIR__.'bootstrap/autoload.php';
+/*llamamos el archivo autoload*/
+/*La opción A para el modo servidor*/
+/*A*///require __DIR__.'/xixha/bootstrap/autoload.php';
 
-// llamamos el archivo app para arrancar los servicios del servidor
-//$app = require_once __DIR__.'/xixha/bootstrap/app.php';
-$app = require_once __DIR__.'bootstrap/app.php';
+/*La opción B para el modo desarrollador*/
+/*B*/require __DIR__.'bootstrap/autoload.php';
 
-//Guardamos la direccion en la variable kernel en kernel
+/*llamamos el archivo app*/
+/*La opción A para el modo servidor*/
+/*A*///$app = require_once __DIR__.'/xixha/bootstrap/app.php';
+
+/*La opción B para el modo desarrollador*/
+/*B*/$app = require_once __DIR__.'bootstrap/app.php';
+
+/*Funcion de laravel no cambia en el servidor 
+y en el modo desarrollador*/
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
-
-//Guardamos la direccion en la variable response
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
-//response apunto a la funcion enviar en laravel
 $response->send();
-//kernel apunta a la funcion terminate enviando dos variable para finalizar
 $kernel->terminate($request, $response);

@@ -13,9 +13,11 @@
 	<link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
 	<!--#Google Font-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+	<!-- #Fontawesome-->
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<!--#Estilo--->
-	<!-- #llamamos nuestro estilos -->
+	<!-- #Utilizamos la propiedad asset para ubicar nuestro 
+		estilos en la aplicación-->
 	<link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
 	<link rel="stylesheet" href="{{asset('css/ex.css')}}">
 </head>
@@ -78,26 +80,26 @@
 				<p class="foorter-color-e">&copy;Xixhá 2019</p>
 			</a>
 		</div>
-	</div>
+	</div--->
 
-	<script src="{ {URL('js/mainx.js')}}"></script>
-	<-- #annyang>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-	<script>
-		if (annyang) {
-			var comands = {
-				'hola': function () {
-					$("#menux").click();
-				},
-				'noche': function () {
-					$("#switch").click();
-				}
-			};
-			annyang.addCommands(comands);
-			annyang.setLanguage('es-MX');
-			annyang.start();
-		}
-	</script--->
+	<!-- #Annyang-->
+		<!--script src="{ {URL('js/mainx.js')}}"></script>
+		<-- #annyang>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+		<script>
+			if (annyang) {
+				var comands = {
+					'hola': function () {
+						$("#menux").click();
+					},
+					'noche': function () {
+						$("#switch").click();
+					}
+				};
+				annyang.addCommands(comands);
+				annyang.setLanguage('es-MX');
+				annyang.start();
+			}
+		</script--->
 </body>
-
 </html>

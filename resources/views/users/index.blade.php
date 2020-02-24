@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,32 +7,35 @@
   <meta name="author" content="Alejandro Hernández Valle">
   <meta name="generator" content="Sipax, Xixhá">
   <title>SIPAX</title>
-
   <!--#Bootstrp -->
   <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
   <!--#Google Font-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <!-- #Fontawesome-->
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <!--#Estilo--->
-  <!-- #llamamos nuestro estilos desde la carpeta public/css-->
+  <!-- #Utilizamos la propiedad asset para ubicar nuestro-->
   <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
   <link rel="stylesheet" href="{{asset('css/ex.css')}}">
 </head>
-
 <body>
   <div class="container-fluid">
-
     <!--#Menú-->
     <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- #Utilizamos la propiedad URL para ubicar nuestra vista-->
+        <!-- #Utilizamos la propiedad asset para ubicar nuestro archivo-->
       <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90" height=75
           alt="Xixha Logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="menux"><span
           class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarText">
+        <!-- #llamamos por medio del middleware el nombre del usuario-->
         <a class="nav-link e-coloresx px-2">{{auth()->user()->name}} </a>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}" id="pdx">Padrón</a></li>
+          <!-- #Utilizamos la propiedad URL para ubicar nuestra vista-->
+          <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{{url('users/padron')}}"
+              id="pdx">Padrón</a></li>
           <!--li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4" href="{ {url('users/perfil')}}" id="pdx">Perfil</a></li-->
           <div class="contenedor">
             <div class="enlaces enlacest">
@@ -44,8 +46,8 @@
             </div>
           </div>
         </ul>
-        <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3"
-            href="{{url('logout')}}">Salir</a></span>
+        <!-- #Utilizamos la propiedad URL para ubicar nuestra vista-->
+        <span class="navbar-item"><a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a></span>
       </div>
     </nav>
 
@@ -53,10 +55,12 @@
     <div class="jumbotron col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto autom rest3">
       <!--Titulo principal-->
       <h1 class="text-center display-4 e-coloresx e-element-11">Hola, Amigo Apicultor !</h1>
+      <!-- #llamamos por medio del middleware el nombre del usuario-->
       <a class="nav-link e-coloresx px-2 e-element-11" href="">{{auth()->user()->name}} </a>
       <p class="text-center e-estilo-p">El sistema de padrón de apicultores Xixhá, tiene la finalidad de llevar la
         rastreabilidad de la miel de cada apicultor de cada municipio de la costa chica y montaña del estado del
         guerrero.</p>
+      <!-- #Utilizamos la propiedad URL para ubicar nuestra vista-->
       <p class="text-center"><a class="btn btn-primary btn-lg" href="{{url('users/padron')}}" role="button">Ir a Padrón
           &raquo;</a></p>
     </div>
@@ -110,18 +114,21 @@
     </div>
 
     <!-- #Footer-->
-    <div class="container foorter-color-e col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto card-footer mx-auto e-alineacion">      
-        <span class="foorter-color-e">&copy;Xixhá 2019</span>      
+    <div
+      class="container foorter-color-e col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto card-footer mx-auto e-alineacion">
+      <span class="foorter-color-e">&copy;Xixhá 2019</span>
     </div>
 
     <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
     <script src="{ {asset('js/jsx//bootstrap.bundle.min.js')}}"></script--->
-
+    <!-- #archivo de configuración del modo dark-->
     <script src="{{URL('js/mainx.js')}}"></script>
-    <!-- #annyang-->
+    <!-- #Annyang llamamos la libreria annyang para realizar funciones programable -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <!-- #Definimos nuestra variable comands, para invocar nuestra funciones personalizada, 
+          solo si el navegador es compatible-->
     <script>
       if (annyang) {
         var comands = {
@@ -132,13 +139,14 @@
             $("#switch").click();
           }
         };
-
+        //llamada de nuestro comandos
         annyang.addCommands(comands);
+        //llamada de nuestro set de idioma 
         annyang.setLanguage('es-MX');
+        //llamamos annyang para iniciar el script
         annyang.start();
       }
     </script>
-
 </body>
 
 </html>
