@@ -1,11 +1,8 @@
 <?php
 
 namespace xixha\Http\Requests;
-
-use xixha\Http\Requests\Request;
- 
-class IngresoFormRequest extends Request
-{
+use xixha\Http\Requests\Request; 
+class IngresoFormRequest extends Request{
     public function authorize() 
     {
         return true;
