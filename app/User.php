@@ -1,23 +1,26 @@
 <?php
-
-namespace xixha;
-
-use Illuminate\Auth\Authenticatable as AuthenticatableTrait;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-
-class User extends Authenticatable
-{
-    use AuthenticatableTrait; 
-
-    protected $table = 'users';
- 
-    protected $primaryKey = 'id';
-
-    protected $fillable = [
-        'name', 'email', 'password', 'remember_token', 'token_api',
-    ];
-
-    protected $hidden = [
-        'password', 'remember_token','token_api',
-    ];
-} 
+/*
+|--------------------------------------------------------------------------
+| Modelo User
+|--------------------------------------------------------------------------
+*/
+    namespace xixha;
+    use Illuminate\Auth\Authenticatable as AuthenticatableTrait;
+    use Illuminate\Foundation\Auth\User as Authenticatable;
+    /*
+    |--------------------------------------------------------------------------
+    | Modelo User
+    |--------------------------------------------------------------------------
+    |Invoca los datos de la tabla User de la DB,
+    */
+        class User extends Authenticatable{
+            use AuthenticatableTrait; 
+            protected $table = 'users'; 
+            protected $primaryKey = 'id';
+            protected $fillable = [
+                'name', 'email', 'password', 'remember_token', 'token_api',
+            ];
+            protected $hidden = [
+                'password', 'remember_token','token_api',
+            ];
+        } 
