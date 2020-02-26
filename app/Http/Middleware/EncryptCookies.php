@@ -1,17 +1,19 @@
 <?php
-
-namespace xixha\Http\Middleware;
-
-use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
-
-class EncryptCookies extends BaseEncrypter
-{
-    /**
-     * The names of the cookies that should not be encrypted.
-     *
-     * @var array
-     */
-    protected $except = [
-        //
-    ];
-}
+/*
+|--------------------------------------------------------------------------
+| Componente a librerias
+|--------------------------------------------------------------------------| 
+*/
+    namespace xixha\Http\Middleware;
+    use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
+    /*
+    |--------------------------------------------------------------------------
+    | Componente EncryptCookies
+    |--------------------------------------------------------------------------
+    | Componente de Encriptación de laravel
+    | 
+    */
+        class EncryptCookies extends BaseEncrypter{
+            protected $except = [
+            ];
+        }
