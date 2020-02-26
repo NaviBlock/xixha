@@ -1,21 +1,32 @@
-<?php namespace xixha\Http\Controllers;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
-use DB;
-use xixha\Banx;
-use xixha\Http\Controllers\Controller;
-use xixha\Http\Requests\BanxFormRequest;
-class BanxController extends Controller {
-
-    /*public function __construct() {
-        $this->middleware('auth');
-    }
-
-    public function index(Request $request) {
+<?php 
+/*
+|--------------------------------------------------------------------------
+| Componente a librerias
+|--------------------------------------------------------------------------| 
+*/
+    namespace xixha\Http\Controllers;
+    use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Redirect;
+    use DB;
+    use xixha\Banx;
+    use xixha\Http\Controllers\Controller;
+    use xixha\Http\Requests\BanxFormRequest;
+    /*
+    |--------------------------------------------------------------------------
+    | Componente constructor
+    |--------------------------------------------------------------------------
+    | Crea una nueva instancia en middleware que verifica
+    | los permisos en auth 
+    */
+        class BanxController extends Controller {
+            public function __construct() {
+                $this->middleware('auth');
+            }
+    /*public function index(Request $request) {
         return view('banx.index');        
-    }
+    }*/
 
-    public function create() {
+    /*public function create() {
         return view('banx.create');
     }*/
 
@@ -29,7 +40,6 @@ class BanxController extends Controller {
         ->select('pa.id_pago','p.idpersona','p.nombre','p.apellidopa','p.apellidoma','p.curp','p.rfc','p.folio','p.clave','no_cuenta','p.banco','p.nombre','pa.token','fecha')
         ->where('id_pago');
         $x = Banx::select(['id_pago']);
-
         $banx = new Banx;
         $banx ->name_user=$request->get('name_user');
         $banx ->clave=$request->get('clave');
@@ -37,7 +47,7 @@ class BanxController extends Controller {
         $banx ->save();
         return Redirect::to('banx');
     }*/
-
+    
     /*public function update(BanxFormRequest $request, $id){
         $banx = BanX::findORFail($id);
         $banx ->name_user=$request->get('name_user');
@@ -50,5 +60,4 @@ class BanxController extends Controller {
         $banx->update();
         return Redirect::to('banx/index');
     }*/
-    
 }

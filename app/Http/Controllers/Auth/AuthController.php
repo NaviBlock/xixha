@@ -1,94 +1,89 @@
 <?php
-
+/*
+|--------------------------------------------------------------------------
+| Componente a librerias
+|--------------------------------------------------------------------------| 
+*/
 namespace xixha\Http\Controllers\Auth;
-
 use xixha\User;
 use Validator;
 use xixha\Persona;
 use xixha\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-
-class AuthController extends Controller
-{
+class AuthController extends Controller{
+    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
     /*
     |--------------------------------------------------------------------------
-    | Registration & Login Controller
+    | Componente login
     |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users, as well as the
-    | authentication of existing users. By default, this controller uses
-    | a simple trait to add these behaviors. Why don't you explore it?
+    | El componente Auth verifica el user y el password, si son correctos envia 
+    |  al usuario a /home
     |
     */
-
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-
-    /**
-     * Where to redirect users after login / registration.
-     *
-     * @var string
-     */
-    //protected $redirectTo = 'login/';
-
-        protected $redirectTo = '/home';
-    
-    /**
-     * Create a new authentication controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
-    }
-
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
-    }
-
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),           
-        ]);
-    }
-    
-    /*Acceso a registro     
-        http://localhost:8000/register        
+        protected $redirectTo = '/home';    
+    /*
+    |--------------------------------------------------------------------------
+    | Componente auth
+    |--------------------------------------------------------------------------
+    | Crea una nueva instancia al controlador auth
+    |
     */
-    protected function showRegistrationForm(){
-        return redirect('login');
-    }
-
-    /*Acceso a login*/
-    public function redirectPath()
-    {
-        if(auth()->user()){
-            return '/';
+        public function __construct(){
+            $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
         }
-        else{
-            return 'auth/login';
+    /*
+    |--------------------------------------------------------------------------
+    | Componente validación de campos
+    |--------------------------------------------------------------------------
+    | Verifica los requerimiento de name, email, password
+    | al momento de realizar el registro
+    |
+    */
+        protected function validator(array $data){
+            return Validator::make($data, [
+                'name' => 'required|max:255',
+                'email' => 'required|email|max:255|unique:users',
+                'password' => 'required|min:6|confirmed',
+            ]);
         }
-    }
-
+    /*
+    |--------------------------------------------------------------------------
+    | Componente validacion del registro
+    |--------------------------------------------------------------------------
+    | Componente para instanciar la validacion de un nuevo registro
+    | 
+    */
+        protected function create(array $data){
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),           
+            ]);
+        }
+    /*
+    |--------------------------------------------------------------------------
+    | Acceso a Registro
+    |--------------------------------------------------------------------------
+    | Hay que descomentar las siguientes componente para deshabilitar de registro.
+    | Hay que comentar el siguiente componente para habilitar de registro.
+    */
+        protected function showRegistrationForm(){
+            return redirect('login');
+        }
+    /*
+    |--------------------------------------------------------------------------
+    | Acceso a login
+    |--------------------------------------------------------------------------
+    | Verifica el componente el user si es verificado, lo redirecciona a raiz(/) 
+    | pagina de inicio, si no login.
+    */
+        public function redirectPath(){
+            if(auth()->user()){
+                return '/';
+            }
+            else{
+                return 'auth/login';
+            }
+        }
 }
