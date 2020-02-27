@@ -12,9 +12,9 @@
     | Componente RedirectIfAuthenticated
     |--------------------------------------------------------------------------
     | Este componente verifica si es usuario user o Mr.Root 
-    | y si tiene la condicion is_admin = 1, lo redirecciona al 
-    | directorio root, si no lo redirecciona a raiz(/)
-    | si no cumple las condicion inicial lo redirecciona a login
+    | #Si es Mr.Root y is_admin = 1 lo redirecciona al directorio root
+    | #Si es User y is_admin = 0 lo redirecciona a raiz(/)
+    | #Si no cumple con las condicion lo redirecciona a login
     */
         class RedirectIfAuthenticated{
             public function handle($request, Closure $next, $guard = null){

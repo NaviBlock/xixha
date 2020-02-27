@@ -10,14 +10,14 @@
     |--------------------------------------------------------------------------
     | Componente ContactoFormRequest
     |--------------------------------------------------------------------------
-    | Aplica en cada items regla de comportamiento
-    | o limite solo si esta el usuario autentificado
+    | En cada items se aplica un regla de comportamiento o limite solo si el usuario 
+    | tiene permiso
     */
         class ContactoFormRequest extends Request{
             public function authorize(){
                 return true;
             }
-
+        //Reglas
         public function rules(){
             return [
                 'direccion'=>'max:200',

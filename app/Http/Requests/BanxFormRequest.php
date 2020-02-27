@@ -8,15 +8,16 @@
     use xixha\Http\Requests\Request;
     /*
     |--------------------------------------------------------------------------
-    | Componente ApicultorFormRequest
+    | Componente BanxFormRequest
     |--------------------------------------------------------------------------
-    | Aplica en cada items regla de comportamiento
-    | o limite solo si esta el usuario autentificado
+    | En cada items se aplica un regla de comportamiento o limite solo si el usuario 
+    | tiene permiso
     */
         class BanxFormRequest extends Request{
             public function authorize(){
                 return true;
             } 
+        //Reglas
         public function rules(){
             return [
                 /*'folio' => 'min:20|max:255|unique',

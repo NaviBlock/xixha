@@ -3,7 +3,7 @@
 |--------------------------------------------------------------------------
 | Componente Route::get
 |--------------------------------------------------------------------------
-| Enruta a nuestra direccion a al directorio 
+| Enruta a nuestra direccion al directorio 
 | seleccionado, solo si el usuario esta autentificado
 |
 */
@@ -14,11 +14,11 @@
     Route::auth();
 /*
 |--------------------------------------------------------------------------
-| Componente Route::group
+| Componente Route::group 
 |--------------------------------------------------------------------------
 | Agrupamos en un grupo de direcciones que apunte al middleware user
-| para que en cada llamada tome la ruta de la direccion, el controlador
-| y la vista
+| para que en cada llamada tome la ruta del directorio, el controlador
+| y vista invocada
 |
 */
     Route::group(['middleware' => 'user'], function(){
@@ -42,8 +42,8 @@
 | Componente Route::group
 |--------------------------------------------------------------------------
 | Agrupamos en un grupo de direcciones que apunte al middleware root
-| para que en cada llamada tome la ruta de la direccion, el controlador
-| y la vista
+| para que en cada llamada tome la ruta del directorio, el controlador
+| y vista invocada
 |
 */
     Route::group(['middleware' => 'root'], function(){

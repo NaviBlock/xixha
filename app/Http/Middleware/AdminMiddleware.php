@@ -11,7 +11,7 @@
     |--------------------------------------------------------------------------
     | Componente AdminMiddleware
     |--------------------------------------------------------------------------
-    | Este componente verifica si el usuario Administrador esta Autentificado  
+    | Este componente verifica si el usuario Administrador esta Autentificado,  
     | y si tiene la condicion is_admin = 1, si no lo redirecciona a login
     */
         class AdminMiddleware{

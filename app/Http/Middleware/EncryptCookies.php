@@ -10,8 +10,8 @@
     |--------------------------------------------------------------------------
     | Componente EncryptCookies
     |--------------------------------------------------------------------------
-    | Componente de Encriptación de laravel
-    | 
+    | Componente de Encriptación de laravel encripta la cookies que se genera en
+    | la session del usuario
     */
         class EncryptCookies extends BaseEncrypter{
             protected $except = [

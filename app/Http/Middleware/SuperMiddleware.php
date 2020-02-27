@@ -11,9 +11,9 @@
     |--------------------------------------------------------------------------
     | Componente SuperMiddleware
     |--------------------------------------------------------------------------
-    | Este componente verifica si es usuario esta Autentificado
-    | y si tiene la condicion is_admin = 1, lo redirecciona al 
-    | directorio a la siguiente etapa, si no lo redirecciona a login(/)
+    | Este componente verifica si es usuario esta Autentificado y si tiene la 
+    | condicion is_admin = 1 lo redirecciona a la siguiente etapa si no lo 
+    | redirecciona a login(/)
     |
     */
         class SuperMiddleware{

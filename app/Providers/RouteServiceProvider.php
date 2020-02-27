@@ -1,7 +1,9 @@
 <?php
+
 namespace xixha\Providers;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+
 class RouteServiceProvider extends ServiceProvider{
     protected $namespace = 'xixha\Http\Controllers';
     public function boot(Router $router){

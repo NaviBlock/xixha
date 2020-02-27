@@ -1,5 +1,5 @@
 <?php
-/*Modelo para implementación un Test*/
+/*Modelo para implementación de un Test*/
 class TestCase extends Illuminate\Foundation\Testing\TestCase
 {   
     /**/

@@ -9,11 +9,10 @@
     use Illuminate\Support\Facades\Auth;
     /*
     |--------------------------------------------------------------------------
-    | Componente RedirectIfAuthenticated
+    | Componente UserMiddleware
     |--------------------------------------------------------------------------
-    | Este componente verifica si es usuario user 
-    | y si tiene la condicion is_admin = 0, lo redirecciona a la 
-    | siguiente etapa, si no lo redirecciona a login
+    | Este componente verifica si es User y si tiene la condicion is_admin = 0
+    | lo redireccionamo a la siguiente etapa, si no lo redireccionamos a login
     |
     */
         class UserMiddleware{
