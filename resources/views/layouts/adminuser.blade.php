@@ -1,6 +1,6 @@
 <?php/*
 |--------------------------------------------------------------------------
-| Plantilla Admin
+| Plantilla User
 |--------------------------------------------------------------------------
 | Muestra el contenedor en donde se visualizara la informacion de las vista 
 */?>

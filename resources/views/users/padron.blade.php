@@ -1,3 +1,11 @@
+<?php/*
+|--------------------------------------------------------------------------
+| Plantilla del contenido Users
+|--------------------------------------------------------------------------
+| Esta pantilla muestra en contenido de la vista padron, llamando al modulo search 
+| y renderizamos la tabla al finalizar la iteración
+*/?>
+
 @extends ('layouts.adminuser')
 @section ('contenido')
 <!-- #Buscador-->
@@ -6,7 +14,7 @@
     <h5 class="card-title">Padrón de Apicultores</h5>
     <!-- #llamamos por medio de middleware el nombre del usuario-->
     <a class="nav-link e-coloresx px-2">{{auth()->user()->name}}</a>
-    <!-- #llamamos nuestro modulo serach que esta en la carpeta users-->
+    <!-- #llamamos nuestro modulo serach para relizar la busqueda-->
     @include('users.search')
 </div>
 
@@ -24,11 +32,14 @@
             <th scope="col">Certificación</th>
         </thead>
         <tbody class="rest2">
-            <!-- #Realizamos un ciclo foreach que itera en la base de datos, 
-                  en donde cada iteracion llama alcontrolador regresando en 
-                  la tabla resutado-->
+            <!-- 
+                #Realizamos un ciclo foreach que iterara en la tabla             
+                  en donde mostramos los datos que se tomara del controlador 
+                  ApicultorController
+            -->
             @foreach($personas as $per)
-            <tr><!--#Variable de interación, valor-->
+            <tr>
+                <!--#Variable de interación, valor-->
                 <td scope="row">{{ $per->folio }}</td>
                 <td>{{ $per->nombre." ".$per->apellidopa." ".$per->apellidoma }}</td>
                 <td>{{ $per->email }}</td>
@@ -40,7 +51,7 @@
             @endforeach
         </tbody>
     </table>
-    <!-- #renderizamos la tabla-->
+    <!-- #Renderizamos la tabla con los valores del controlador-->
     {{$personas->render()}}
 </div>
 

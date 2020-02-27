@@ -1,3 +1,9 @@
+<?php/*
+|--------------------------------------------------------------------------
+| Plantilla Banx
+|--------------------------------------------------------------------------
+| Muestra el contenedor en donde se visualizara la informacion de las vista 
+*/?>
 <!DOCTYPE html>
 <html lang="es">
 

@@ -1,3 +1,10 @@
+<?php/*
+|--------------------------------------------------------------------------
+| Plantilla del contenido Users
+|--------------------------------------------------------------------------
+| Pantilla de vista unica que se utiliza para definir la direccion principal 
+| del directorio
+*/?>
 <!doctype html>
 <html lang="es">
 <head>

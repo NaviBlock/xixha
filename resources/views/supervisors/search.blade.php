@@ -1,3 +1,11 @@
+<?php/*
+|--------------------------------------------------------------------------
+| modulo Supervisor
+|--------------------------------------------------------------------------
+| Esta modulo muestra un formulario de busqueda que llama el 
+| controlador SuperController en la funcion padron y retorna 
+| el resultado de la consulta
+*/?>
 <!-- #Iniciamos la llamada del formulario con la función--->
 {!! Form::open(array('url'=>'supervisors/padron','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
 <div class="form-group e-border text-center">
