@@ -15,25 +15,29 @@
     use DB;
     use Response;
     use Illuminate\Support\Collection;
+/*
+|--------------------------------------------------------------------------
+| Controlador IngresoController
+|-------------------------------------------------------------------------- 
+*/
+class IngresoController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos del administrador en auth 
+    | Crea una nueva instancia a middleware que verifica
+    | los permisos del usuario en auth 
     */
-        class IngresoController extends Controller{
             public function __construct(){
                 $this->middleware('auth');    
             } 
     /*
     |--------------------------------------------------------------------------
-    | Componente padrón
+    | Componente index
     |--------------------------------------------------------------------------
-    | Si request es true, realiza una consulta a la DB, 
-    | en donde combina las  tablas ingreso, persona, detalle_ingreso
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | Si request es true, realiza una consulta a la DB y retornamos la vista index 
+    | al usuario en donde el controlador realiza la consulta en las tablas ingreso,
+    | persona, detalle_ingreso    
     */
         public function index(Request $request){
             if($request){
@@ -59,7 +63,7 @@
     |--------------------------------------------------------------------------
     | Componente create
     |--------------------------------------------------------------------------
-    | Regresa la vista de create al usuario y dos datos de referencia
+    | Regresa la vista de create al usuario cuando el llamado por el route
     | 
     */
         public function create(){
@@ -77,9 +81,9 @@
     | Componente store
     |--------------------------------------------------------------------------
     | EL componente store guarda los cambios realizado en el componente create
-    | y lo redirecciona a la vista compras/ingreso, pero primero realiza un
-    | beginTransaction para que los datos a procesar seran correctamente almacenados
-    */    
+    | y lo redirecciona a la vista compras/ingreso, primero  una transaccion 
+    | para que los datos a procesar seran correctamente almacenados
+    */
         public function store(IngresoFormRequest $request){
             try{
                 DB::beginTransaction();
@@ -118,8 +122,7 @@
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | Regresa la vista de show, que recibe como parametro el $id del usuario
-    | que retorna dos query de referencia.
+    | Regresa la vista show al usuario cuando es llamado por el route, que recibe como parametro el $id del usuario    
     */
         public function show($id){
             $ingreso=DB::table('ingreso as i')
@@ -137,7 +140,7 @@
    |--------------------------------------------------------------------------
    | Componente destroy
    |--------------------------------------------------------------------------
-   | EL componente destroy actualiza el estado la ingreso a C
+   | EL componente destroy actualiza el estado a C
    | y lo redirecciona a la vista compras/ingreso
    */
         public function destroy($id){

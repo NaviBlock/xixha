@@ -22,24 +22,29 @@
     use Illuminate\Support\Facades\Validator;
     use Symfony\Component\HttpFoundation\File\UploadedFile;
     use Illuminate\Database\Eloquent\Model;
+/*
+|--------------------------------------------------------------------------
+| Controlador ApicultorController
+|--------------------------------------------------------------------------| 
+*/  
+class ApicultorController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos de user en auth 
-    */  
-        class ApicultorController extends Controller{
-            public function __construct(){
-                $this->middleware('auth');
-            }
+    | Crea una nueva instancia a middleware que verifica
+    | los permisos de users en auth 
+    */ 
+        public function __construct(){
+            $this->middleware('auth');
+        }
       /*
     |--------------------------------------------------------------------------
     | Componente padrón
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista padron, con la consulta hecha por el usuario
+    | y la instancia de referencia
     */ 
         public function padron(Request $request){
             if ($request){
@@ -75,7 +80,7 @@
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Regresa la vista de index al User
+    | Regresa la vista de index al Users cuando es llamado por el route
     |
     */
         public function index(){

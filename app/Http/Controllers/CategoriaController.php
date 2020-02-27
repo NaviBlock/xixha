@@ -11,14 +11,19 @@
    use Illuminate\Support\Facades\Redirect;
    use xixha\Http\Requests\CategoriaFormRequest;
    use DB;
+/*
+|--------------------------------------------------------------------------
+| Controlador CategoriaController
+|--------------------------------------------------------------------------
+*/      
+   class CategoriaController extends Controller{
    /*
    |--------------------------------------------------------------------------
    | Componente constructor
    |--------------------------------------------------------------------------
-   | Crea una nueva instancia en middleware que verifica
-   | los permisos en auth 
-   */      
-   class CategoriaController extends Controller{
+   | Crea una nueva instancia a middleware que verifica
+   | los permisos del usuario en auth 
+   */         
       public function __construct(){
          $this->middleware('auth');
       }
@@ -27,8 +32,8 @@
     | Componente index
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista index , con la consulta hecha por el usuario
+    | y la instancia de referencia
     */
       public function index(Request $request){
          if ($request) {
@@ -45,7 +50,7 @@
    |--------------------------------------------------------------------------
    | Componente create
    |--------------------------------------------------------------------------
-   | Regresa la vista de create al usuario
+   | Regresa la vista de create al usuario cuando es llamada por el route
    | 
    */      
       public function create()
@@ -56,7 +61,7 @@
    |--------------------------------------------------------------------------
    | Componente store
    |--------------------------------------------------------------------------
-   | EL componente store guarda los cambios realizado en el componente create
+   | EL componente store almacena los cambios realizado en el componente create
    | y lo redirecciona a la vista almacen/categoria
    */   
    public function store(CategoriaFormRequest $request)
@@ -72,8 +77,9 @@
    |--------------------------------------------------------------------------
    | Componente show
    |--------------------------------------------------------------------------
-   | Regresa la vista de show, que recibe como parametro el $id del usuario
-   | que retorna un query.
+   | Regresa la vista show al usuario cuando es llamado por el route, 
+   | recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
+   |
    */
       public function show($id)
       {
@@ -83,8 +89,7 @@
    |--------------------------------------------------------------------------
    | Componente edit
    |--------------------------------------------------------------------------
-   | Regresa la vista de edit, que recibe como parametro el $id del usuario
-   | que retorna un dato de referencia.
+   | Regresa la vista edit al usuario cuando es llamado por el route,
    | 
    */   
    public function edit($id)
@@ -96,7 +101,7 @@
    | Componente update
    |--------------------------------------------------------------------------
    | EL componente update actualiza los cambios realizado en el componente edit
-   | y lo redirecciona a la vista administradors/padron
+   | y lo redirecciona a la vista almacen/categoria
    */      
    public function update(CategoriaFormRequest $request,$id)
    {
@@ -110,7 +115,7 @@
    |--------------------------------------------------------------------------
    | Componente destroy
    |--------------------------------------------------------------------------
-   | EL componente destroy actualiza el estado la Categoria a Inactivo
+   | EL componente destroy actualiza el estado la condicion a 0
    | y lo redirecciona a la vista almacen/categoria
    */
       public function destroy($id){

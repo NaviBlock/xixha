@@ -22,6 +22,12 @@
     use Illuminate\Support\Facades\Validator;
     use Symfony\Component\HttpFoundation\File\UploadedFile;
     use Illuminate\Database\Eloquent\Model;
+/*
+|--------------------------------------------------------------------------
+| Controlador ProveedorController
+|--------------------------------------------------------------------------
+*/
+class ProveedorController extends Controller{ 
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
@@ -29,18 +35,16 @@
     | Crea una nueva instancia en middleware que verifica
     | los permisos en auth 
     */
-        class ProveedorController extends Controller
-        { 
-            public function __construct(){
-                $this->middleware('auth');
-            }
+        public function __construct(){
+            $this->middleware('auth');
+        }
     /*
     |--------------------------------------------------------------------------
     | Componente padrón
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista index al usuario al ser llamado por el route, 
+    | la consulta hecha por el usuario y la instancia  
     */ 
         public function index(Request $request){
             if ($request){

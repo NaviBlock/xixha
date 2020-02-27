@@ -15,24 +15,29 @@
     use DB;
     use Response;
     use Illuminate\Support\Collection;
+/*
+|--------------------------------------------------------------------------
+| Controlador VentaController
+|--------------------------------------------------------------------------
+*/
+class VentaController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos del administrador en auth 
+    | Crea una nueva instancia a middleware que verifica
+    | los permisos del usuario en auth 
     */
-class VentaController extends Controller{
     public function __construct(){
         $this->middleware('auth');
     } 
     /*
     |--------------------------------------------------------------------------
-    | Componente padrón
+    | Componente index
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista index, con la consulta hecha por el usuario
+    | y la instancia de referencia
     */
         public function index(Request $request){
             if ($request){
@@ -64,7 +69,7 @@ class VentaController extends Controller{
     |--------------------------------------------------------------------------
     | Componente create
     |--------------------------------------------------------------------------
-    | Regresa la vista de create al usuario 
+    | Regresa la vista de create al usuario cuando es llamado por el route
     | 
     */
         public function create(){
@@ -84,9 +89,10 @@ class VentaController extends Controller{
     |--------------------------------------------------------------------------
     | Componente store
     |--------------------------------------------------------------------------
-    | EL componente store guarda los cambios realizado en el componente create
-    | y lo redirecciona a la vista compras/ingreso, pero primero realiza un
-    | beginTransaction para que los datos a procesar seran correctamente almacenados
+    | EL componente almacena guarda los cambios realizado en el componente create
+    | y lo redirecciona a la vista ventas/venta, realizando una Transaction
+    | a la consulta a procesar
+    |
     */   
         public function store(VentaFormRequest $request){
             try{
@@ -127,8 +133,8 @@ class VentaController extends Controller{
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | Regresa la vista de show, que recibe como parametro el $id del usuario
-    | que retorna un query.
+    | Regresa la vista show al usuario cuando es llamado por el route 
+    |
     */
         public function show($id){
             $venta = DB::table('venta as v')
@@ -149,7 +155,7 @@ class VentaController extends Controller{
     |--------------------------------------------------------------------------
     | Componente destroy
     |--------------------------------------------------------------------------
-    | EL componente destroy actualiza el estado estoado a C
+    | EL componente destroy actualiza el estado estado a C
     | y lo redirecciona a la vista ventas/venta
     */ 
         public function destroy($id){

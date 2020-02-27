@@ -24,14 +24,19 @@
     use Illuminate\Support\Facades\Validator;
     use Symfony\Component\HttpFoundation\File\UploadedFile;
     use Illuminate\Database\Eloquent\Model;
+/*
+|--------------------------------------------------------------------------
+| Controlador AdminController
+|--------------------------------------------------------------------------| 
+*/  
+class AdminController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
+    | Crea una nueva instancia a middleware que verifica
     | los permisos del administrador en auth 
     */
-        class AdminController extends Controller{
         public function __construct(){
             $this->middleware('auth');
         }
@@ -40,8 +45,8 @@
     | Componente padrón
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista padron, con la consulta hecha por el usuario
+    | y una instancia de referencia
     */
         public function padron(Request $request){
             if ($request){
@@ -77,7 +82,7 @@
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Regresa la vista de index al administrador
+    | Regresa la vista index al administrador cuando es llamado por el route
     | 
     */
         public function index(){  
@@ -87,8 +92,9 @@
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | Regresa la vista de show, que recibe como parametro el $id del usuario
-    | que retorna un query.
+    | Regresa la vista show al administrador cuando es llamado por el route,
+	| recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
+    |
     */
         public function show($id){
             return view('administradors.show',['persona'=>Persona::findOrFail($id)]);
@@ -97,7 +103,7 @@
     |--------------------------------------------------------------------------
     | Componente create
     |--------------------------------------------------------------------------
-    | Regresa la vista de create al usuario
+    | Regresa la vista create al administrador cuando es llamado por el route
     | 
     */
         public function create(){  
@@ -107,8 +113,7 @@
     |--------------------------------------------------------------------------
     | Componente edit
     |--------------------------------------------------------------------------
-    | Regresa la vista de edit, que recibe como parametro el $id del usuario
-    | que retorna un dato de referencia.
+    | Regresa la vista edit al administrador cuando es llamado por el route    
     | 
     */
         public function edit($id){
@@ -118,8 +123,9 @@
     |--------------------------------------------------------------------------
     | Componente store
     |--------------------------------------------------------------------------
-    | EL componente store guarda los cambios realizado en el componente create
+    | EL componente store almacena los cambios realizado en el componente create
     | y lo redirecciona a la vista administradors/padron
+    |
     */
         public function store(PersonaFormRequest $request){
                 $personas = new Persona;        
@@ -147,16 +153,25 @@
                 $personas->donde=$request->get('donde');
                 $personas->observacion=$request->get('observacion');        
                 $personas->tipo_persona ='Apicultor';
-                $personas->estado ='Activo';                                
+                $personas->estado ='Activo';
                     if(Input::hasFile('img_perfil')) {
-                    $file=Input::file('img_perfil');                    
-                    $extension=$file->getClientOriginalExtension();                                           
-                    $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension; 
-                    $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';                 
-                    $file->move(public_path().'/imagenes/perfil',$newnombre);                                
-                    $personas->img_perfil=$file->getClientOriginalName($newnombre);             
-                    $personas->img_perfil=$newnombre;    
-                    $personas->folio=$new_Nombre_Folio;             
+                    //Almacenamos el valor del archivo de entrada
+                    $file=Input::file('img_perfil');
+                    //recupera la extension original del archivo
+                    $extension=$file->getClientOriginalExtension();   
+                    //Almacenamos el folio personalizado con la extension
+                    $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension;
+                    //Almacenamos el folio personalizado sin la extension
+                    $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';
+                    //Enviamos el archivo imagen al directorio /imagenes/perfil, 
+                    //con el nombre nuevo nombre 
+                    $file->move(public_path().'/imagenes/perfil',$newnombre);
+                    //recuperamos el nombre original del archivo
+                    $personas->img_perfil=$file->getClientOriginalName($newnombre);
+                    //Almacenamos en nombre de la imagen del valor $newnombre
+                    $personas->img_perfil=$newnombre;
+                    //Almacenamos en folio del valor de la variable $new_Nombre_Folio
+                    $personas->folio=$new_Nombre_Folio;
             }
                 $personas->save();
             return Redirect::to('administradors/padron');

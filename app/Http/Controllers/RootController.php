@@ -23,24 +23,29 @@
     use Illuminate\Support\Facades\Validator;
     use Symfony\Component\HttpFoundation\File\UploadedFile;
     use Illuminate\Database\Eloquent\Model;
+/*
+|--------------------------------------------------------------------------
+| Controlador RootController
+|--------------------------------------------------------------------------
+*/
+class RootController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos en auth 
-    */
-        class RootController extends Controller{
-            public function __construct(){
-                $this->middleware('auth');
+    | Crea una nueva instancia a middleware que verifica
+    | los permisos de root en auth 
+    */            
+        public function __construct(){
+            $this->middleware('auth');
         }
     /*
     |--------------------------------------------------------------------------
     | Componente padrón
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista padron a root
+    |    
     */
         public function padron(Request $request){
             if ($request){
@@ -76,7 +81,7 @@
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Regresa la vista de index al administrador
+    | Regresa la vista de index a root cuando es llamado por el route
     | 
     */
         public function index(){  
@@ -86,8 +91,9 @@
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | Regresa la vista de show, que recibe como parametro el $id del usuario
-    | que retorna un query.
+    | Regresa la vista de show a root cuando es llamado por el route,
+    | recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
+    |
     */
         public function show($id){
             return view('root.show',['persona'=>Persona::findOrFail($id)]);
@@ -108,7 +114,7 @@
     |--------------------------------------------------------------------------
     | Componente create
     |--------------------------------------------------------------------------
-    | Regresa la vista de create al usuario
+    | Regresa la vista de create a root cuando es llamado por el route
     | 
     */        
         public function create(){  
@@ -118,8 +124,7 @@
     |--------------------------------------------------------------------------
     | Componente edit
     |--------------------------------------------------------------------------
-    | Regresa la vista de edit, que recibe como parametro el $id del usuario
-    | que retorna un dato de referencia.
+    | Regresa la vista edit a root cuando es llamado por el route, 
     | 
     */
         public function edit($id){
@@ -130,7 +135,7 @@
     | Componente store
     |--------------------------------------------------------------------------
     | EL componente store guarda los cambios realizado en el componente create
-    | y lo redirecciona a la vista administradors/padron
+    | y lo redirecciona a la vista root/padron
     */
         public function store(PersonaFormRequest $request){
             $personas = new Persona;        
@@ -209,7 +214,7 @@
     | Componente destroy
     |--------------------------------------------------------------------------
     | EL componente destroy actualiza el estado tipo_persona a Inactivo
-    | y lo redirecciona a la vista provroot/padron
+    | y lo redirecciona a la vista root/padron
     */
         public function destroy($id){
             $persona = Persona::findOrFail($id);    

@@ -21,17 +21,22 @@
     use Illuminate\Support\Facades\Validator;
     use Symfony\Component\HttpFoundation\File\UploadedFile;
     use Illuminate\Database\Eloquent\Model;
+/*
+|--------------------------------------------------------------------------
+| Controlador StoryController
+|--------------------------------------------------------------------------
+*/
+class StoryController extends Controller{ 
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos del administrador en auth 
+    | Crea una nueva instancia a middleware que verifica
+    | los permisos del usuario en auth 
     */
-        class StoryController extends Controller{ 
-            public function __construct(){
-                $this->middleware('auth');
-            }
+        public function __construct(){
+            $this->middleware('auth');
+        }
     /*
     |--------------------------------------------------------------------------
     | Componente padrón

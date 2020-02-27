@@ -11,22 +11,28 @@
     use Illuminate\Support\Facades\Redirect;
     use xixha\Http\Requests\UsuarioFormRequest;
     use DB;
+/*
+|--------------------------------------------------------------------------
+| Controlador HomeController
+|--------------------------------------------------------------------------
+*/
+class HomeController extends Controller{  
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos del administrador en auth 
+    | Crea una nueva instancia a middleware que verifica
+    | los permisos del usuario en auth 
+    |
     */
-        class HomeController extends Controller{  
-            public function __construct(){
-                $this->middleware('auth');
-            }
+        public function __construct(){
+            $this->middleware('auth');
+        }
      /*
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Regresa la vista de index al usuario
+    | Regresa la vista index al usuario cuando es llamado por el route
     | 
     */
         public function index(){

@@ -11,25 +11,31 @@
     use Illuminate\Support\Facades\Redirect;
     use xixha\Http\Requests\PersonaFormRequest;
     use DB;
+
+/*
+|--------------------------------------------------------------------------
+| Controlador ClienteController
+|--------------------------------------------------------------------------
+*/ 
+class ClienteController extends Controller{
+
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
     | Crea una nueva instancia en middleware que verifica
-    | los permisos en auth 
-    */ 
-        class ClienteController extends Controller
-        {
-            public function __construct(){
-                $this->middleware('auth');
+    | los permisos del usuario en auth 
+    */             
+        public function __construct(){
+            $this->middleware('auth');
         }
     /*
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista index, la consulta hecha por el usuario
+    | y la instancia de referencia
     */
         public function index(Request $request){
             if ($request){
@@ -52,7 +58,7 @@
     |--------------------------------------------------------------------------
     | Componente create
     |--------------------------------------------------------------------------
-    | Regresa la vista de create al usuario
+    | Regresa la vista create al usuario cuando es llamado por el route
     | 
     */
         public function create(){
@@ -62,7 +68,7 @@
     |--------------------------------------------------------------------------
     | Componente store
     |--------------------------------------------------------------------------
-    | EL componente store guarda los cambios realizado en el componente create
+    | EL componente store almacena los cambios realizado en el componente create
     | y lo redirecciona a la vista ventas/cliente
     */
         public function store(PersonaFormRequest $request){
@@ -81,8 +87,9 @@
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | Regresa la vista de show, que recibe como parametro el $id del usuario
-    | que retorna un query.
+    | Regresa la vista show al usuario cuando es llamado por el roure,
+    | recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
+    |
     */
         public function show($id){
             return view('ventas.cliente.show',['persona'=>Persona::findOrFail($id)]);
@@ -91,9 +98,8 @@
     |--------------------------------------------------------------------------
     | Componente edit
     |--------------------------------------------------------------------------
-    | Regresa la vista de edit, que recibe como parametro el $id del usuario
-    | que retorna un dato de referencia.
-    | 
+    | Regresa la vista edit al usuario cuando es llamado por el route,
+    |
     */
         public function edit($id){
             return view('ventas.cliente.edit',['persona'=>Persona::findOrFail($id)]);
@@ -103,7 +109,7 @@
     | Componente update
     |--------------------------------------------------------------------------
     | EL componente update actualiza los cambios realizado en el componente edit
-    | y lo redirecciona a la vista administradors/padron
+    | y lo redirecciona a la vista ventas/cliente
     */
         public function update(PersonaFormRequest $request,$id){
             $persona = Persona::findOrFail($id); 

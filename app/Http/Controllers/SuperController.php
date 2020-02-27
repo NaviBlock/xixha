@@ -25,22 +25,27 @@
     use Illuminate\Database\Eloquent\Model;
     /*
     |--------------------------------------------------------------------------
-    | Componente constructor
+    | Controlador SuperController
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos del administrador en auth 
     */
         class SuperController extends Controller{
-            public function __construct(){
-                $this->middleware('auth');
-            }
+    /*
+    |--------------------------------------------------------------------------
+    | Componente constructor
+    |--------------------------------------------------------------------------
+    | Crea una nueva instancia a middleware que verifica
+    | los permisos del supervisor en auth 
+    */            
+        public function __construct(){
+            $this->middleware('auth');
+        }
     /*
     |--------------------------------------------------------------------------
     | Componente padrón
     |--------------------------------------------------------------------------
     | Si request es true, realiza una consulta a la DB
-    | regresando la vista, la consulta hecha por el usuario
-    | y la instancia  
+    | regresando la vista padron, con la consulta hecha por el usuario
+    | y la instancia de referencia
     */    
         public function padron(Request $request){
             if ($request){
@@ -76,7 +81,7 @@
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Regresa la vista de index al supervisors
+    | Regresa la vista index al supervisor cuando es llamado por el route
     | 
     */
         public function index(){
@@ -86,8 +91,9 @@
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | Regresa la vista de show, que recibe como parametro el $id del usuario
-    | que retorna un query.
+    | Regresa la vista show al supervisor  cuando es llamado por el route,
+    | recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
+    |
     */
         public function show($id){
             return view('supervisors.show',['persona'=>Persona::findOrFail($id)]);
