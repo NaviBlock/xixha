@@ -7,9 +7,8 @@
     <title>SIPAX</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">    
 </head>
-
 <body>
     <div class="card">
         <div class="card-body">
@@ -34,10 +33,6 @@
         </a>
     </div>
 
-    <!--video id="myvideo">
-    <source src="video.mp4" type="video/mp4">
-    </video-->
-
     <!-- #Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -49,33 +44,35 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
-    <!-- #annyang-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <script>
-        if (annyang) {
-            var comands = {
-                'hola': function () {
-                    //$("#password").click();
-                    //$("#email").click();
-                    $("#botonEnviar").click();
-                }
-            };
-            annyang.addCommands(comands);
-            annyang.setLanguage('es-MX');
-            annyang.start();
-        }
-    </script>
-
-    <script src="https://raw.githubusercontent.com/TalAter/UpUp/master/dist/upup.min.js"></script>
-    <script src="https://raw.githubusercontent.com/TalAter/UpUp/master/dist/upup.sw.min.js"></script>
-
-    <script>
-        UpUp.start({
-            'content': '<html><body><h1>SIPAX</h1><p>SIPAX</p><p>SIPAX</p></body></html>'
-        });
-    </script>
-
-
+  <!------------------------------------------------------>
+  <!--#Utilizamos la propiedad URL para hacer referencia al directorio-->
+  <!--#Script de la configuración dark en el directorio/ js--->
+  <script src="{{URL('js/mainx.js')}}"></script>
+  <!--#script annyang--->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script>
+    //condicionamos si la libreria esta disponible 
+    if (annyang) {
+      //definimos la variable comands, que guardaran los valores en objeto
+      var comands = {
+        //definimmos nuestro objeto hola
+        //que desplegara el menu
+        'hola': function () {
+          $("#menux").click();
+        },
+        //definimos nuestro objeto noche que llamara 
+        //a la funcion #switch
+        'noche': function () {
+          $("#switch").click();
+        },
+      };
+      annyang.addCommands(comands);
+      //definimmos el set de lenguage
+      annyang.setLanguage('es-MX');
+      //inializamos la funcion
+      annyang.start();
+    }
+  </script>
 </body>
 
 </html>
