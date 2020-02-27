@@ -9,15 +9,17 @@
   <meta name="generator" content="Sipax, Xixhá">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SIPAX</title>
-  <!--# Estilos-->
-  <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
-  <!--# Modal-->
+  <?php //#Script para ejecutar el modal-->?>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- #libreria fuente Google Font-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <!-- #libreria de elemento fontawesome-->
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <!--#Utilizamos la propiedad asset para hacer referencia al directorio del archivo css-->
+  <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
   <link href="{{asset('css/ex.css')}}" rel="stylesheet">
 </head>
 
