@@ -1,8 +1,8 @@
 <?php/*
 |--------------------------------------------------------------------------
-| Plantilla User
+| Vista User
 |--------------------------------------------------------------------------
-| Muestra el contenedor en donde se visualizara la informacion de las vista 
+| En esta vista se invoca el HEAD del documento HTML 
 */?>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,18 +24,15 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
   <!-- #libreria de elemento fontawesome-->
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-  <!--#Utilizamos la propiedad asset para hacer referencia al directorio del archivo css-->
+  <?php //#Utilizamos la propiedad asset para llamar los recursos nuestros estilos CSS?>
   <link href="{{asset('css/e-estilo.css')}}" rel="stylesheet">
   <link href="{{asset('css/ex.css')}}" rel="stylesheet">
 </head>
 
 <body>
-  <!-- #Contenedor-->
   <div class="container">
     <div class="container-fluid">
-      <!--# Menu-->
       <nav class="navbar navbar-expand-auto navbar-light">
-        <!-- #Similar a la propiedad asset, solo que hacer referencia el direccionamiento -->
         <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/sipaxQ.png')}}" width="90"
             height="75" alt="Xixha Logo"></a>
         <button id="menux" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -43,10 +40,8 @@
             class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
-            <!-- #Propiedad url-->
             <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4"
                 href="{{url('home')}}">Inicio</a></li>
-            <!-- #Propiedad url-->
             <li class="nav-item active"><a class="dropdown-item e-coloresx text-center te4"
                 href="{{url('users/perfil')}}">Perfil</a></li>
             <div class="contenedor">
@@ -59,43 +54,32 @@
             </div>
           </ul>
           <span class="navbar-item">
-            <!-- #Propiedad url-->
             <a class="dropdown-item e-coloresx text-center te3" href="{{url('logout')}}">Salir</a>
           </span>
         </div>
       </nav>
-      <!------------------------------------------------->
-      <!--#Contenido-->
+      <?php //#llamamos en cada contenido a nuestra vista user?>
       @yield('contenido')
       <!-------------->
     </div>
   </div>
-  <!------------------------------------------------------>
-  <!--#Utilizamos la propiedad URL para hacer referencia al directorio-->
-  <!--#Script de la configuración dark en el directorio/ js--->
+  <?php //#Archivo de configuración del modo dark?>
   <script src="{{URL('js/mainx.js')}}"></script>
-  <!--#script annyang--->
+  <?php //#Libreria annyang para realizar funciones programable con voz?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <?php //#Definimos nuestro objeto comands, para invocar nuestra funciones personalizada, solo si el navegador es compatible?>
   <script>
-    //condicionamos si la libreria esta disponible 
     if (annyang) {
-      //definimos la variable comands, que guardaran los valores en objeto
       var comands = {
-        //definimmos nuestro objeto hola
-        //que desplegara el menu
         'hola': function () {
           $("#menux").click();
         },
-        //definimos nuestro objeto noche que llamara 
-        //a la funcion #switch
         'noche': function () {
           $("#switch").click();
-        },
+        }
       };
       annyang.addCommands(comands);
-      //definimmos el set de lenguage
       annyang.setLanguage('es-MX');
-      //inializamos la funcion
       annyang.start();
     }
   </script>

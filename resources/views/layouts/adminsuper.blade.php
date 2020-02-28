@@ -1,8 +1,8 @@
 <?php/*
 |--------------------------------------------------------------------------
-| Plantilla Supervisor
+| Vista  Supervisor
 |--------------------------------------------------------------------------
-| Muestra el contenedor en donde se visualizara la informacion de las vista 
+| En esta vista se invoca el HEAD del documento HTML 
 */?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,18 +12,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SIPAX</title>
+  <?php //#Bootstrap?>
   <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
+  <?php //#Utilizamos la propiedad asset para llamar los recursos nuestros estilos CSS?>
   <link rel="stylesheet" href="{{asset('css/iman.css')}}">
   <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
-  <!--link rel="stylesheet" href="{ {asset('css/estilo.css')}}"-->
+  <?php //#Jquery?>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 </head>
 
 <body>
-  <!-- #Contenedor-->
   <div class="container">
     <div class="container-fluid">
-      <!-- #Menu-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a href="{{url('/')}}"><img class="navbar-brand-minimized" src="{{asset('img/brand/sygnet.svg')}}" width="90"
             height="90" alt="Xixha Logo"></a>
@@ -48,44 +48,33 @@
           </ul>
         </div>
       </nav>
-      <!------------------------------------------------->
-      <!--#Contenido-->
+      <?php //#llamamos en cada contenido a nuestra vista supervisor?>
       @yield('contenido')
       <!-------------->
     </div>
   </div>
-  <!------------------------------------------------------>
   <!--#Bootstrap-->
   <script src="{{asset('js/jquery-3.3.1.slim-cnd.min.js')}}"></script>
   <script src="{{asset('js/popper-cnd.min.js')}}"></script>
   <script src="{{asset('js/bootstrap-cnd.min.js')}}"></script>
   <script src="{{asset('js/js.js')}}"></script>
-  <!------------------------------------------------------>
-  <!--#Utilizamos la propiedad URL para hacer referencia al directorio-->
-  <!--#Script de la configuración dark en el directorio/ js--->
+  <?php //#Archivo de configuración del modo dark?>
   <script src="{{URL('js/mainx.js')}}"></script>
-  <!--#script annyang--->
+  <?php //#Libreria annyang para realizar funciones programable con voz?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <?php //#Definimos nuestro objeto comands, para invocar nuestra funciones personalizada, solo si el navegador es compatible?>
   <script>
-    //condicionamos si la libreria esta disponible 
     if (annyang) {
-      //definimos la variable comands, que guardaran los valores en objeto
       var comands = {
-        //definimmos nuestro objeto hola
-        //que desplegara el menu
         'hola': function () {
           $("#menux").click();
         },
-        //definimos nuestro objeto noche que llamara 
-        //a la funcion #switch
         'noche': function () {
           $("#switch").click();
-        },
+        }
       };
       annyang.addCommands(comands);
-      //definimmos el set de lenguage
       annyang.setLanguage('es-MX');
-      //inializamos la funcion
       annyang.start();
     }
   </script>
