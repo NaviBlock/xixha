@@ -1,4 +1,10 @@
-
+<?php/*
+|--------------------------------------------------------------------------
+| vista supervisors/index
+|--------------------------------------------------------------------------
+| La vista index se utiliza para definir la direccion principal del directorio
+| en el controlador
+*/?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -8,8 +14,9 @@
     <meta name="author" content="Alejandro Hernández Valle">
     <meta name="generator" content="Sipax, Xixhá">
     <title>SIPAX</title> 
-    <!-- #Utilizamos la propiedad asset para ubicar el directorio-->
+    <?php //#Utilizamos la propiedad asset para llamar los recursos de bootstrap.css?>
     <link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
+    <?php //#Utilizamos la propiedad asset para llamar los recursos nuestros estilos CSS?>
     <link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
  
     <style>
@@ -28,7 +35,7 @@
         }
       }
     </style>  
-    <!-- #libreria jumbotron de bootstrap-->
+    <?php //#Utilizamos la propiedad asset para llamar los recursos de jumbotron CSS?>
     <link href="{{asset('css/cssx/jumbotron.css')}}" rel="stylesheet">
   </head>
   <body>
@@ -44,8 +51,8 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuración</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <!-- #Utilizamos la propiedad URL para ubicar nuestra vista-->
+        <div class="dropdown-menu" aria-labelledby="dropdown01">        
+          <?php //#Utilizamos la propiedad URL para ubicar el directorio de la vista?>  
           <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{url('supervisors')}}">Inicio</a>
           <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-y" href="{{url('supervisors/padron')}}">Padrón</a>
           <a class="dropdown-item btn btn-primary btn-responsive text-center e-text-color-r"  href="{{url('logout')}}">Salir</a>
@@ -57,7 +64,7 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <!-- #llamamos por medio de middleware el nombre del usuario-->
+      <?php //#llamamos por medio de middleware el name del usuario?>
       <h1 class="display-3 e-coloresx">Hola, Amigo Supervisor {{ auth()->user()->name }}!</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolore quos, accusamus quidem quas maiores assumenda ipsa, aliquam id deserunt voluptas voluptates ratione laudantium maxime excepturi porro eum eos hic!
       Minus voluptate quasi, recusandae perferendis ad veritatis iusto id sit repudiandae, quo animi magni ipsa, totam laboriosam deserunt nemo neque quos facere quaerat a rerum. Dolorum, distinctio harum. Necessitatibus, molestias.
@@ -90,7 +97,7 @@
 <footer class="container">
   <p class="e-coloresx">&copy;Xixhá 2019</p>
 </footer>
-  <!-- #Libreria Bootstrap-->
+<?php //#Utilizamos la propiedad asset para llamar los recursos de bootstrap JS?>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="{{asset('js/jsx/jquery-slim.min.js')}}"></script>
   <script src="{{asset('js/jsx//bootstrap.bundle.min.js')}}"></script>

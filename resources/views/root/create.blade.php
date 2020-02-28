@@ -1,6 +1,14 @@
+<?php
+/*
+|--------------------------------------------------------------------------
+| Vista root/create
+|--------------------------------------------------------------------------
+| En esta vista llamamos un formulario que contiene informacion del root,
+| Este proceso se obtiene la realizar una consulta en el controlador RootController 
+| 
+*/
 @extends ('layouts.admin')
 @section ('contenido')
-
 <div class="row container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
 	@if(count($errors)>0)
 	<div class="alert alert-danger">
@@ -12,11 +20,11 @@
 	</div>
 	@endif
 </div>
-
+<?php //#Inicio del formulario?>
 {!!Form::open(array('url'=>'root','method'=>'POST','autocomplete'=>'off','files'=>'true','enctype'=>'multipart/form-data'))!!}
+<?php //#Token de seguridad que se aplica al formulario?>
 {{Form::token()}}
 
-<!-- #Datos de Registro-->
 <!-- #Titulo-->
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-lg-3 offset-md-3 offset-sm-3 offset-xs-3 text-center">
 	<h3 class="e-text-color text-bor top-al">Alta del Apicultor</h3>

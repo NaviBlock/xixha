@@ -1,8 +1,15 @@
-<!-- #llamamos nuestra vista del supervisor--->
+<?php/*
+|--------------------------------------------------------------------------
+| Vista supervisors/padron
+|--------------------------------------------------------------------------
+| En esta vista llamamos al contenido de la vista search y realizamos un 
+| ciclo foreach para buscar cada elemento de la tabla
+| 
+*/?>
+
 @extends ('layouts.adminsuper')
-<!-- #definimmos nuestro contenido para que el motor 
-    Blade pueda procesar la vista principal-->
 @section ('contenido')
+<?php //#Buscador?>
 <div class="row">
     <div class="container-fluid">
         <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12 border-warning mx-auto">
@@ -10,7 +17,7 @@
                 <h5 class="card-title">Padrón de Apicultores.</h5>
                 <div class="text-center">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <!-- #llamamos nuestro modulo search-->
+                        <?php //#incluimos la vista serach para relizar la busqueda en el padron?>
                         @include('supervisors.search')
                     </div>
                 </div>
@@ -20,7 +27,8 @@
                     <div class="mx-auto">
                         <div class="input-group-prepend">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                                <div class="table-responsive ">
+                                <div class="table-responsive">
+                                    <?php //#Tabla de Resultado?>
                                     <table class="table table-hover table-condensed table-sm text-dark table-bordered">
                                         <thead class="table-color">
                                             <th scope="col">Folio</th>
@@ -36,11 +44,10 @@
                                             <th scope="col">Opciones</th>
                                         </thead>
                                         <tbody>
-                                            <!-- #Realizamos un ciclo foreach que itera en la base de datos, 
-                                                  en donde cada iteracion llama alcontrolador regresando en 
-                                                  la tabla resutado-->
+                                            <?php //#Realizamos un ciclo foreach en la tabla del padron, de un modo sencillo itera sobre arrays que se genera en el controlador, en cada iteración, el valor del elemento actual se asigna a $valor y el puntero interno del array avanza una posicion de cada item de la tabla hasta terminar el ciclo.?>
+                                            <?php //#Inicio del ciclo foreach?>
                                             @foreach($personas as $per)
-                                            <tr><!--#Variable de interación, valor-->
+                                            <tr>
                                                 <td scope="row">{{ $per->folio }}</td>
                                                 <td><img src="{{asset('imagenes/perfil/'.$per->img_perfil)}}"
                                                         alt="{{$per->img_perfil}}" height="100px" width="100px"
@@ -53,6 +60,7 @@
                                                 <td>{{ $per->prod_anual." Kg" }}</td>
                                                 <td>{{ $per->temp_cosecha}}</td>
                                                 <td>{{ $per->certificacion }}</td>
+                                                <?php //#Boton Detalles?>
                                                 <td class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
                                                     <div>
                                                         <div class="btn-group mr-4" role="group"
@@ -66,11 +74,11 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <!-- #Fin del ciclo foreach-->
+                                            <?php //#Fin del ciclo foreach?>
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    <!-- #renderizamos la tabla-->
+                                    <?php //#Renderizamos la tabla con los valores del controlador?>
                                     {{$personas->render()}}
                                 </div>
                             </div>
@@ -78,6 +86,7 @@
                     </div>
                 </div>
             </div>
+            <?php //#Footer?>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
                 <div class="card-footer mx-auto e-alineacion">
                     <span class="text-muted">XIXHÁ 2019</span>

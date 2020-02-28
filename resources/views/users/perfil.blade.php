@@ -1,7 +1,9 @@
 <?php/*
 |--------------------------------------------------------------------------
-| Plantilla del contenido Users
+| vista users/perfil
 |--------------------------------------------------------------------------
+| #En esta vista esta en proceso
+| Esta vista llama 
 */?>
 <!doctype html>
 <html lang="es">
@@ -13,16 +15,13 @@
 	<meta name="author" content="Alejandro Hernández Valle">
 	<meta name="generator" content="Sipax, Xixhá">
 	<title>SIPAX</title>
-
-	<!--#Bootstrp -->
+	<?php //#Utilizamos la propiedad asset para llamar los recursos de bootstrap.css?>
 	<link href="{{asset('css/cssx/bootstrap.min.css')}}" rel="stylesheet">
-	<!--#Google Font-->
+	<?php //#Google Font?>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-	<!-- #Fontawesome-->
+	<?php //#Fontawesome?>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<!--#Estilo--->
-	<!-- #Utilizamos la propiedad asset para ubicar nuestro 
-		estilos en la aplicación-->
+	<?php //#Utilizamos la propiedad asset para llamar los recursos nuestros estilos CSS?>
 	<link rel="stylesheet" href="{{asset('css/e-estilo.css')}}">
 	<link rel="stylesheet" href="{{asset('css/ex.css')}}">
 </head>
@@ -88,7 +87,7 @@
 	</div--->
 
 	<!-- #Annyang-->
-		<!--script src="{ {URL('js/mainx.js')}}"></script>
+	<!--script src="{ {URL('js/mainx.js')}}"></script>
 		<-- #annyang>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 		<script>
@@ -107,4 +106,5 @@
 			}
 		</script--->
 </body>
+
 </html>

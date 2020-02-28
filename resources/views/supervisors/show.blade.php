@@ -1,17 +1,16 @@
 <?php/*
 |--------------------------------------------------------------------------
-| Plantilla del contenido Supervisor
+| Vista supervisors/show
 |--------------------------------------------------------------------------
-| Muestra el contenido que el supervisor puede visualizar, llamando el controlador
-| SuperController de la funcion padron, pasando por parametro un identifiicado a 
-|update
+| En esta vista llamamos un formulario que contiene informacion del apicultor,
+| Este proceso se obtiene la realizar una consulta en el controlador SuperController 
+| 
 */?>
 @extends ('layouts.adminsuper')
 @section ('contenido')
 <div class="row">
 	<div class="container-fluid">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-			<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
 			<h3>Datos del Apicultor: {{$persona->nombre}}</h3>
 			@if(count($errors)>0)
 			<div class="alert alert-danger">
@@ -26,25 +25,21 @@
 	</div>
 </div>
 
-<!-- #Iniciamos la llamada del formulario--->
+<?php //#Inicio del formulario?>
 {!!Form::model($persona,['method'=>'PATCH','route'=>['supervisors.update',$persona->idpersona]]) !!}
-<!-- #Token de seguridad que se aplica al formulario--->
+<?php //#Token de seguridad que se aplica al formulario?>
 {{Form::token()}}
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="main col-md-12 ml-sm-auto col-lg-12 py-4">
-
-			<!---Titulo---->
 			<div class="text-center">
 				<h3 class="e-text-color">Datos Personales del Apicultor</h3>
 			</div>
-
-			<!---Nombre del apicultor---->
+			<!---Nombre del Apicultor---->
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center ">
 				<div class="input-group mx-auto">
 					<div class="input-group-prepend">
-						<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
 						<span class="text-center input-group-text btn btn-warning" id="basic-addon101">Folio de:
 							{{$persona->nombre}} {{$persona->apellidopa}} {{$persona->apellidoma}}</span>
 						<input type="text" name="folio" value="{{$persona->folio}}" disabled="true"
@@ -60,7 +55,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="text-center input-group-text btn btn-warning" id="basic-addon102">Estado</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="estadoP" value="{{$persona->estadoP}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon102">
@@ -76,7 +71,7 @@
 						<div class="input-group-prepend">
 							<span class="text-center input-group-text btn btn-warning"
 								id="basic-addon103">Municipio</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="municipio" value="{{$persona->municipio}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon103">
@@ -92,7 +87,7 @@
 						<div class="input-group-prepend">
 							<span class="text-center input-group-text btn btn-warning"
 								id="basic-addon104">Colonia</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="colonia" value="{{$persona->colonia}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon104">
@@ -107,7 +102,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="text-center input-group-text btn btn-warning" id="basic-addon105">Calle</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="calle" value="{{$persona->calle}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon105">
@@ -123,7 +118,7 @@
 						<div class="input-group-prepend">
 							<span class="text-center input-group-text btn btn-warning"
 								id="basic-addon106">Telefono</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="telefono" value="{{$persona->telefono}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon106">
@@ -139,7 +134,7 @@
 						<div class="input-group-prepend">
 							<span class="text-center input-group-text btn btn-warning" id="basic-addon107">Correo
 								electronico</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="email" value="{{$persona->email}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon107">
@@ -154,7 +149,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="text-center input-group-text btn btn-warning" id="basic-addon108">SEXO</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="sexo" value="{{$persona->sexo}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon108">
@@ -169,7 +164,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon110">CURP</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="curp" value="{{$persona->curp}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon109">
@@ -184,7 +179,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon2">RFC</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="rfc" value="{{$persona->rfc}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon110">
@@ -206,7 +201,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon111">Folio</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="folio" value="{{$persona->folio}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon111">
@@ -222,7 +217,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon112">Tipo de
 								Certificación</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="certificacion" value="{{$persona->certificacion}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon112">
@@ -238,7 +233,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon113">Temporada de
 								Cosecha</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="temp_cosecha" value="{{$persona->temp_cosecha}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon113">
@@ -254,7 +249,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon114">N° Colmenas,
 								Chapetas</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="num_colmena" value="{{$persona->num_colmena}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon114">
@@ -269,7 +264,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon115">UPP</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="upp" value="{{$persona->upp}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon115">
@@ -284,7 +279,7 @@
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mx-auto">
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon116">PGN</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="pgn" value="{{$persona->pgn}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon116">
@@ -300,7 +295,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon117">Producción
 								anual</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="prod_anual" value="{{$persona->prod_anual}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon117">
@@ -316,7 +311,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addon118">Clave de
 								Rasteabilidad</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="clave_rast" value="{{$persona->clave_rast}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon118">
@@ -332,7 +327,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center" id="basic-addto119">Localización
 								de los Apiarios</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="loc_api" value="{{$persona->loc_api}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addto119">
@@ -348,7 +343,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text btn btn-warning text-center"
 								id="basic-addon120">Observación</span>
-							<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
+
 							<input type="text" name="observacion" value="{{$persona->observacion}}" disabled="true"
 								class="e-border md-textarea form-control lineA btn btn-warning"
 								aria-describedby="basic-addon120">
@@ -371,7 +366,7 @@
 				</div>
 			</div>
 
-			<!-- Modal -->
+			<?php //#Modal?>
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
 					<div class="mx-auto">
@@ -393,7 +388,6 @@
 													<div class="input-group-prepend">
 														<div
 															class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-															<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
 															<p>Nombre del Titular: {{$persona->nombre}}</p>
 															<p>No. de Cuenta: {{$persona->nCuenta}}</p>
 															<p>Clave Interbancaria: {{$persona->clave}}</p>
@@ -411,7 +405,7 @@
 				</div>
 			</div><br><br><br><br>
 
-			<!---Datos del Tabla--->
+			<?php //#Datos del Tabla?>
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
 					<div class="mx-auto">
@@ -425,7 +419,7 @@
 				</div>
 			</div>
 
-			<!-- Modal Tabla-->
+			<?php //#Modal Tabla?>
 			<div class="form-group amber-textarea active-amber-textarea-2 input-group e-border text-center">
 				<div class="input-group mx-auto">
 					<div class="mx-auto">
@@ -447,7 +441,7 @@
 													<div class="input-group-prepend">
 														<div
 															class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-															<!--Tabla-->
+															<?php //#Tabla?>
 															<div class="table-responsive">
 																<table
 																	class="table table-hover table-condensed table-sm text-white">
@@ -460,7 +454,6 @@
 																	</thead>
 																	<tbody>
 																		<tr>
-																			<!-- #llamamos nuestro objeto del controlador persona para que nos devuelva la consulta decuerdo con el $id--->
 																			<td scope="row" class="bg-warning">
 																				{{$persona->noOperacion}}</td>
 																			<td scope="row" class="bg-warning">
@@ -488,6 +481,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- #Fin del formulario--->
+		<?php //#Fin del formulario?>
 		{!!Form::Close()!!}
 		@endsection
