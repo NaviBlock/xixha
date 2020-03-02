@@ -6,5 +6,7 @@ El sistema sipax utiliza varios componentes para su desarrollado como el framewo
 
 ### Estado
 Autor:Alejandro Hernández Valle
+
 Versión 1
+
 Estado de compilación [Beta](#).
