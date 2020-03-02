@@ -1,3 +1,13 @@
+<?php
+/*
+|--------------------------------------------------------------------------
+| Vista banx/create
+|--------------------------------------------------------------------------
+| En esta vista llamamos un formulario que contiene informacion del banx,
+| Este proceso se obtiene la realizar una consulta en el controlador BanxController
+| que llama a la funcion store para almacenar los datos 
+| 
+*/
 @extends ('layouts.banx')
 @section ('contenido')
 

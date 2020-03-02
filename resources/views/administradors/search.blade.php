@@ -1,3 +1,12 @@
+<?php/*
+|--------------------------------------------------------------------------
+| vista administradors/search
+|--------------------------------------------------------------------------
+| En la vista administradors/index se llama a esta vista que contiene un formulario
+| de busqueda, que llama al controlador administradorsController que invoca la funcion
+| padron, que retorna el resultado de la consulta a la vista administradors/index
+*/?>
+<?php //#Inicio del formulario?>
 {!! Form::open(array('url'=>'administradors/padron','method'=>'GET','autocomplete'=>'off','role'=>'search')) !!}
 <div class="form-group e-border text-center">
 	<div class="input-group mx-auto">
@@ -11,4 +20,5 @@
 		</div>
 	</div>
 </div>
+<?php //#Fin del formulario?>
 {{Form::close()}}

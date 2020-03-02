@@ -1,3 +1,11 @@
+<?php/*
+|--------------------------------------------------------------------------
+| Vista root/padron
+|--------------------------------------------------------------------------
+| En esta vista llamamos al contenido de la vista search y realizamos un 
+| ciclo foreach para buscar cada elemento de la tabla
+| 
+*/?>
 @extends ('layouts.adminadmin')
 @section ('contenido') 
 <div class="row"> 
@@ -7,6 +15,7 @@
                 <h5 class="card-title">Padrón de Apicultores.</h5>                
                 <div class="text-center">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <?php //#Buscador?>
                         @include('administradors.search')
                     </div>
                 </div>
@@ -64,6 +73,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+                                    <?php //#Renderizamos la tabla con los valores del controlador?>
                                     {{$personas->render()}}
                                 </div>
                             </div>
@@ -79,4 +89,5 @@
         </div>
     </div>
 </div>
+<?php //#Fin del contenido?>
 @endsection

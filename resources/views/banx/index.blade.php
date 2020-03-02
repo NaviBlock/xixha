@@ -1,3 +1,10 @@
+<?php/*
+|--------------------------------------------------------------------------
+| vista banx/index
+|--------------------------------------------------------------------------
+| La vista index se utiliza para definir la direccion principal del directorio
+| en el controlador
+*/?>
 @extends ('layouts.banx')
 @section ('contenido')
 
@@ -13,7 +20,9 @@
                 <th scope="col">Token del administrador</th>
                 <th scope="col">Rol</th>
                 <th scope="col">Tóken</th>
-            </thead>            
+            </thead>
+            <?php //#Realizamos un ciclo foreach en la tabla del padron, de un modo sencillo itera sobre arrays que se genera en el controlador, en cada iteración, el valor del elemento actual se asigna a $valor y el puntero interno del array avanza una posicion de cada item de la tabla hasta terminar el ciclo.?>
+            <?php //#Inicio del ciclo foreach?>
             @foreach($banx as $bx)
             <tbody class="rest2">
                 
@@ -27,6 +36,7 @@
                 <td scope="row">{{$bx->token}}</td>
                 
             <tbody>
+                <?php //#Fin del foreach?>
                 @endforeach
         </table>
         {{$banx->render()}}

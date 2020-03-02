@@ -77,4 +77,5 @@
 <div class="container foorter-color-e col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto card-footer mx-auto e-alineacion">
     <span>XIXHÁ 2019</span>
 </div>
+<?php //#Fin del contenido?>
 @endsection

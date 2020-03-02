@@ -1,4 +1,11 @@
-<!doctype html>
+
+<?php/*
+|--------------------------------------------------------------------------
+| vista adminstradors/index
+|--------------------------------------------------------------------------
+| La vista index se utiliza para definir la direccion principal del directorio
+| en el controlador
+*/?><!doctype html>
 <html lang="es">
   <head> 
     <meta charset="utf-8">
