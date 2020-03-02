@@ -1,9 +1,4 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Componente a librerias
-|--------------------------------------------------------------------------| 
-*/
     namespace xixha\Console\Commands;
     use Illuminate\Console\Command;
     use Illuminate\Foundation\Inspiring;

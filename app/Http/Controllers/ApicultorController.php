@@ -25,15 +25,17 @@
 /*
 |--------------------------------------------------------------------------
 | Controlador ApicultorController
-|--------------------------------------------------------------------------| 
+|--------------------------------------------------------------------------
+| # Este controlador añade un capa de logica al manejar las solicitudes URL 
+|   por parte del usuario Apicultor.
 */  
 class ApicultorController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia a middleware que verifica
-    | los permisos de users en auth 
+    | # Crea una nueva instancia a middleware que verifica los permisos de user
+    |   en auth.
     */ 
         public function __construct(){
             $this->middleware('auth');
@@ -42,9 +44,8 @@ class ApicultorController extends Controller{
     |--------------------------------------------------------------------------
     | Componente padrón
     |--------------------------------------------------------------------------
-    | Si request es true, realiza una consulta a la DB
-    | regresando la vista padron, con la consulta hecha por el usuario
-    | y la instancia de referencia
+    | # Si request es true, realiza una consulta a la DB regresando la respuesta 
+    | al usuario apicultor.
     */ 
         public function padron(Request $request){
             if ($request){
@@ -73,6 +74,9 @@ class ApicultorController extends Controller{
                 ->where('tipo_persona','=','Apicultor')
                 ->orderBy('idpersona','desc')
                 ->paginate(10);
+                /*# Regresamos a la vista users.padron al usuario y enviamos la variable 
+                    $persona mas el query de la consulta realizada, en una paginacion de 10 elementos
+                    en pantalla.*/
                 return view('users.padron',['personas'=>$personas,'searchText'=>$query]);
             }
         }
@@ -80,8 +84,7 @@ class ApicultorController extends Controller{
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Regresa la vista de index al Users cuando es llamado por el route
-    |
+    | # Regresa la vista de index al Users cuando es invocado por el route.
     */
         public function index(){
             return view("users.index");

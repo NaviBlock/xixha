@@ -15,14 +15,17 @@
 |--------------------------------------------------------------------------
 | Controlador BanxController
 |--------------------------------------------------------------------------
+| # Este controlador añade un capa de logica al manejar las solicitudes URL 
+|   por parte del usuario administrador al mostrar los datos bancarios de cada
+|   apicultor que tenga una operacion.
 */     
     class BanxController extends Controller {
     /*
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia en middleware que verifica
-    | los permisos en auth 
+    | # Crea una nueva instancia en middleware que verifica
+    |   los permisos en auth 
     */            
         public function __construct() {
             $this->middleware('auth');
@@ -30,8 +33,10 @@
     /*
     |--------------------------------------------------------------------------
     | Componente en Testing 
-    |--------------------------------------------------------------------------| 
-    */            
+    |--------------------------------------------------------------------------
+    | # Controlador no terminado # 
+    */        
+    /**/    
         /*public function index(Request $request) {
             return view('banx.index');        
         }*/

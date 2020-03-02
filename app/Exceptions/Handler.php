@@ -1,8 +1,12 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Componente a librerias
+| Manejo de errores
 |--------------------------------------------------------------------------| 
+| # Componente librerias.
+| # El manejador de errores y excepciones en laravel viene predefinido para manejar cualquier
+|   tipo de evento, los errores se visualizara en el navegador si APP_DEBUG es true de caso 
+|   false no se visualizara nada en el navegador.
 */
     namespace xixha\Exceptions;
     use Exception;
@@ -11,6 +15,7 @@
     use Illuminate\Database\Eloquent\ModelNotFoundException;
     use Symfony\Component\HttpKernel\Exception\HttpException;
     use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+
 class Handler extends ExceptionHandler{
     protected $dontReport = [
         AuthorizationException::class,

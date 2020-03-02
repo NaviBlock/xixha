@@ -15,6 +15,7 @@
 |--------------------------------------------------------------------------
 | Controlador CategoriaController
 |--------------------------------------------------------------------------
+|
 */      
    class CategoriaController extends Controller{
    /*
@@ -77,7 +78,7 @@
    |--------------------------------------------------------------------------
    | Componente show
    |--------------------------------------------------------------------------
-   | Regresa la vista show al usuario cuando es llamado por el route, 
+   | # Regresa la vista show al usuario cuando es llamado por el route, 
    | recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
    |
    */
@@ -89,8 +90,9 @@
    |--------------------------------------------------------------------------
    | Componente edit
    |--------------------------------------------------------------------------
-   | Regresa la vista edit al usuario cuando es llamado por el route,
-   | 
+   | # El componente edit regresa la vista edit al administrador cuando es 
+   |   invocado por el route, recibe como parametro un identificado que permite modificar
+   |   los datos con la funcion update.
    */   
    public function edit($id)
    {
@@ -100,8 +102,8 @@
    |--------------------------------------------------------------------------
    | Componente update
    |--------------------------------------------------------------------------
-   | EL componente update actualiza los cambios realizado en el componente edit
-   | y lo redirecciona a la vista almacen/categoria
+   | # El componente update actualiza los cambios realizado por el administrador
+   |   en el componente edit y lo redirecciona a la vista almacen/categoria
    */      
    public function update(CategoriaFormRequest $request,$id)
    {
@@ -115,8 +117,8 @@
    |--------------------------------------------------------------------------
    | Componente destroy
    |--------------------------------------------------------------------------
-   | EL componente destroy actualiza el estado la condicion a 0
-   | y lo redirecciona a la vista almacen/categoria
+   | # El componente destroy actualiza el estado del objeto a la condicion 0
+   |   y lo redirecciona a la vista almacen/categoria.
    */
       public function destroy($id){
          $categoria = Categoria::findOrFail($id);

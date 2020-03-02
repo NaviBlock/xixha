@@ -1,8 +1,8 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Componentes a librerias
-|--------------------------------------------------------------------------| 
+| Componentes librerias
+|--------------------------------------------------------------------------
 */
     namespace xixha\Http\Controllers\Auth;
     use xixha\User;
@@ -14,25 +14,27 @@
 /*
 |--------------------------------------------------------------------------
 | Controlador AuthController
-|--------------------------------------------------------------------------| 
+|--------------------------------------------------------------------------
+| Es una capa de seguridad entre las peticiones URL del usuario y los componentes 
+| del marco de desarrollo ya que autentifica el estado de cada componente por 
+| medio de guards y providers.
 */    
 class AuthController extends Controller{
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
     /*
     |--------------------------------------------------------------------------
-    | Componente login
+    | Componente redirectTo
     |--------------------------------------------------------------------------
-    | El componente Auth verifica el tipo de usuario y el password, si son correctos envia 
-    |  al usuario a /home
-    |
+    | # El componente redirectTo despues de verifica el tipo de usuario y el password,
+    |   redirigirmos al usuario a /home.
     */
         protected $redirectTo = '/home';    
+
     /*
     |--------------------------------------------------------------------------
-    | Componente auth
+    | Componente constructor
     |--------------------------------------------------------------------------
-    | Crea una nueva instancia al controlador auth, para verificar el estatus con el middleware
-    | 
+    | # Crea una nueva instancia a middleware que verifica los permisos en auth.
     */
         public function __construct(){
             $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
@@ -41,8 +43,8 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Componente validación de campos
     |--------------------------------------------------------------------------
-    | Verifica los requerimiento de name, email, password en el campo del formulario    
-    |
+    | # Verifica los requerimientos y reglas de cada componente del formulario 
+    |   name, email, password.    
     */
         protected function validator(array $data){
             return Validator::make($data, [
@@ -55,8 +57,8 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Componente validacion del registro
     |--------------------------------------------------------------------------
-    | Componente que se utiliza para instanciar la validacion de un nuevo registro
-    | 
+    | # Este componente se utiliza para instanciar la validacion de un nuevo registro
+    |   en del formulario.
     */
         protected function create(array $data){
             return User::create([
@@ -69,9 +71,11 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Acceso a Registro
     |--------------------------------------------------------------------------
-    | #Hay que descomentar las siguientes componente para deshabilitar de registro.
+    | # Para habilitar el registro hay que comentar el siguiente componente para 
+    |   que el usuario pueda dar de alta sin el permiso del admnistrador.
     |
-    | #Hay que comentar el siguiente componente para habilitar de registro.
+    | # Para deshabilitar el registro hay que descomentar el siguientes componente 
+    |   para que el administrador pueda dar de alta a los usuarios.    
     */
         protected function showRegistrationForm(){
             return redirect('login');
@@ -80,9 +84,8 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Acceso a login
     |--------------------------------------------------------------------------
-    | Verifica el componente el user con el middleware, si es autenticado 
-    | lo redirecciona a raiz(/) pagina de inicio, si no enviar al usuario a login.
-    |
+    | # Verifica el middleware a user, si es autentificado lo redirecciona a raiz(/)
+    |   del directorio o pagina de inicio, si no lo envia a /login.
     */
         public function redirectPath(){
             if(auth()->user()){
