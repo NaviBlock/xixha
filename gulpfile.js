@@ -1,12 +1,11 @@
-
 /*
-    Compilador laravel
+|--------------------------------------------------------------------------
+| # Compilador laravel
+|--------------------------------------------------------------------------
+| Compilador css gulpfile
 */
-/*
-Compilador css gulpfile
-*/
-var elixir = require('laravel-elixir');
+    var elixir = require('laravel-elixir');
 
-elixir(function(mix) {
-    mix.sass('app.scss');
-});
+    elixir(function(mix) {
+        mix.sass('app.scss');
+    });
