@@ -11,6 +11,6 @@ El sistema sipax esta formado por varios componentes para el  desarrollo agil en
 [Repositorio](https://github.com/NaviBlock/xixha).
 
 ### Estado
-Autor: [Alejandro Hernández Valle]().
+Autor: [Alejandro Hernández Valle](https://github.com/alejandrohernandezvalle).
 
 Estado de compilación [Beta](#).
