@@ -2,7 +2,7 @@
 $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
 /*
-Condicionamos si es direferente el directorio raiz
+Condicionamos si no es el directorio raiz
 y si esta en el directorio public regresamos un false
 */
 if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
