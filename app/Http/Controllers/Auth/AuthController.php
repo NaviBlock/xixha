@@ -15,9 +15,9 @@
 |--------------------------------------------------------------------------
 | Controlador AuthController
 |--------------------------------------------------------------------------
-| Es una capa de seguridad entre las peticiones URL del usuario y los componentes 
-| del marco de desarrollo ya que autentifica el estado de cada componente por 
-| medio de guards y providers.
+| Funciona como una capa de seguridad entre las peticiones URL del 
+| usuario y los componentes del marco de desarrollo ya que autentifica el 
+| estado de cada componente por medio de guards.
 */    
 class AuthController extends Controller{
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
@@ -25,8 +25,8 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Componente redirectTo
     |--------------------------------------------------------------------------
-    | # El componente redirectTo despues de verifica el tipo de usuario y el password,
-    |   redirigirmos al usuario a /home.
+    | # El componente redirectTo despues de verifica el usuario y el password,
+    |   redirecciona al usuario a la direccion /home.
     */
         protected $redirectTo = '/home';    
 

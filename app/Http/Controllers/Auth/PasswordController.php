@@ -15,8 +15,8 @@ use Illuminate\Foundation\Auth\ResetsPasswords;
 class PasswordController extends Controller{
     /*
     |--------------------------------------------------------------------------
-    | # Componente ResetsPasswords crea una nueva instancia al controlador para 
-    |   un nuevo password.
+    | # Este componente ResetsPasswords crea una nueva instancia al controlador 
+    |   para un nuevo password.
     |--------------------------------------------------------------------------
     */    
     use ResetsPasswords;

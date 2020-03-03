@@ -45,7 +45,7 @@ class ApicultorController extends Controller{
     | Componente padrón
     |--------------------------------------------------------------------------
     | # Si request es true, realiza una consulta a la DB regresando la respuesta 
-    | al usuario apicultor.
+    | al usuario apicultor de forma de un array.
     */ 
         public function padron(Request $request){
             if ($request){
@@ -74,8 +74,8 @@ class ApicultorController extends Controller{
                 ->where('tipo_persona','=','Apicultor')
                 ->orderBy('idpersona','desc')
                 ->paginate(10);
-                /*# Regresamos a la vista users.padron al usuario y enviamos la variable 
-                    $persona mas el query de la consulta realizada, en una paginacion de 10 elementos
+                /*# Regresamos la vista users.padron al usuario y enviamos la variable 
+                    $persona mas el array de la consulta realizada, en una paginacion de 10 elementos
                     en pantalla.*/
                 return view('users.padron',['personas'=>$personas,'searchText'=>$query]);
             }
