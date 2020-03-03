@@ -1,6 +1,7 @@
 # XIXHÁ
 ![](https://github.com/NaviBlock/xixha/blob/toor/public/img/svg/code.svg).
 Registro de padrón de apicultores del estado del guerrero [SIPAX](http://sipax.xixha.com/login).
+![Versión 1](https://github.com/NaviBlock/xixha/blob/toor/public/img/svg/version.svg).
 
 ![Screenshot](https://github.com/NaviBlock/xixha/blob/toor/public/img/sipaxQ.png).
 
@@ -10,7 +11,5 @@ El sistema sipax utiliza varios componentes para su desarrollado como el framewo
 
 ### Estado
 Autor: Alejandro Hernández Valle
-
-Versión 1
 
 Estado de compilación [Beta](#).
