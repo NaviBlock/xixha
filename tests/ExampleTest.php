@@ -3,9 +3,10 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-/*Modulo de implementación de Modelo de Test*/
+/*Modulo para implementar un modelo de Test*/
 class ExampleTest extends TestCase
 {
+    //Prototipo de un modelo de testing
     /*public function test()
     {
         $this->visit('/')

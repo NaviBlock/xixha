@@ -3,7 +3,7 @@ return [
     /*Variable en modo ejecución*/
     'env' => env('APP_ENV', 'production'),
     /*Variable para activar el modo debug*/
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
     /*Variable de la URL*/
     'url' => env('APP_URL', 'http://localhost'),
     /*Variable del tiempo de la zona*/
@@ -14,7 +14,7 @@ return [
     'fallback_locale' => 'en',
     /*Variable APP_KEY*/
     'key' => env('APP_KEY'),
-    /*Variable del nivel de seguridad*/
+    /*Metodo de enccriptación*/
     'cipher' => 'AES-256-CBC',
     /*Variable para el registro del LOG*/
     'log' => env('APP_LOG', 'single'),
