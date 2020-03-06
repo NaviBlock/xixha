@@ -27,8 +27,8 @@
 | Controlador ApicultorController
 |--------------------------------------------------------------------------
 | # Este controlador añade un capa de logica al manejar las solicitudes URL 
-|   por parte del usuario Apicultor.
-*/  
+|   por parte del usuario Apicultor cuando ees llamado por el routes.
+*/
 class ApicultorController extends Controller{
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ class ApicultorController extends Controller{
         public function __construct(){
             $this->middleware('auth');
         }
-      /*
+    /*
     |--------------------------------------------------------------------------
     | Componente padrón
     |--------------------------------------------------------------------------
@@ -49,7 +49,13 @@ class ApicultorController extends Controller{
     */ 
         public function padron(Request $request){
             if ($request){
+                // #Variable $query toma el valor de searchText
                 $query = trim($request->get('searchText'));
+                /*
+                |   # La variable $personas realiza una consulta y
+                |     almacena un array decuardo al valor de la 
+                |     variable $query.
+                */                
                 $personas = DB::table('persona')
                 ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','estado','telefono','email','upp','pgn','clave_rast','num_colmena','prod_anual','certificacion','fecha_hora','sexo','rfc','estadoP','municipio','calle','colonia','temp_cosecha','loc_api','mov_col','donde','observacion','folio','img_perfil')
                 ->where('nombre','LIKE','%'.$query.'%')
@@ -74,9 +80,10 @@ class ApicultorController extends Controller{
                 ->where('tipo_persona','=','Apicultor')
                 ->orderBy('idpersona','desc')
                 ->paginate(10);
-                /*# Regresamos la vista users.padron al usuario y enviamos la variable 
-                    $persona mas el array de la consulta realizada, en una paginacion de 10 elementos
-                    en pantalla.*/
+                /*
+                    # Regresamos la vista users.padron al usuario apicultor instanciando
+                      la variable $persona al array de la consulta realizada.
+                */
                 return view('users.padron',['personas'=>$personas,'searchText'=>$query]);
             }
         }
@@ -84,7 +91,8 @@ class ApicultorController extends Controller{
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | # Regresa la vista de index al Users cuando es invocado por el route.
+    | # Por medio de la función index regresamos la vista de index al Users cuando
+    |   es invocado por el route.
     */
         public function index(){
             return view("users.index");

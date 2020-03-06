@@ -23,7 +23,7 @@
    | Componente constructor
    |--------------------------------------------------------------------------
    | Crea una nueva instancia a middleware que verifica
-   | los permisos del usuario en auth 
+   | los permisos del administrador en auth 
    */         
       public function __construct(){
          $this->middleware('auth');
@@ -32,18 +32,27 @@
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Si request es true, realiza una consulta a la DB
-    | regresando la vista index , con la consulta hecha por el usuario
-    | y la instancia de referencia
+    | Si request es true, realiza una consulta a la DB regresando la respuesta
+    | al usuario administrador de forma de array.
     */
       public function index(Request $request){
          if ($request) {
+            // #Variable $consulta toma el valor de searchText
             $consulta = trim($request->get('searchText'));
+				/*
+            |   # La variable $categorias realiza una consulta y
+            |     almacena un array decuardo al valor de la 
+            |     variable $consulta.
+            */            
             $categorias = DB::table('categoria')
             ->where('nombre','LIKE','%'.$consulta.'%')
             ->where('condicion','=','1')
             ->orderBy('idcategoria','desc')
             ->paginate(5);
+				/*
+            |   # Regresamos la vista almacen.categoria.index al usuario administrador
+            |     instanciando la variable $categoria al array de la consulta realizada.
+            */              
             return view('almacen.categoria.index',['categorias'=>$categorias,'searchText'=>$consulta]);
          }
       }
@@ -51,7 +60,8 @@
    |--------------------------------------------------------------------------
    | Componente create
    |--------------------------------------------------------------------------
-   | Regresa la vista de create al usuario cuando es llamada por el route
+   | Por medio de la función cretate regresamos la vista de create al usuario 
+   |  cuando es llamada por el routes.
    | 
    */      
       public function create()
@@ -62,8 +72,8 @@
    |--------------------------------------------------------------------------
    | Componente store
    |--------------------------------------------------------------------------
-   | EL componente store almacena los cambios realizado en el componente create
-   | y lo redirecciona a la vista almacen/categoria
+   | Por medio de la función store almacena los cambios realizado en el componente create
+   | y redireccionamos la vista almacen/categoria al administrador.
    */   
    public function store(CategoriaFormRequest $request)
    {
@@ -78,21 +88,21 @@
    |--------------------------------------------------------------------------
    | Componente show
    |--------------------------------------------------------------------------
-   | # Regresa la vista show al usuario cuando es llamado por el route, 
-   | recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
-   |
-   */
-      public function show($id)
-      {
-         return view('almacen.categoria.show',['categoria'=>Categoria::findOrFail($id)]);
-      }
+   | # Por medio de la función show regresamos la vista show al usuario cuando 
+   |  es llamado por el route, recibe como parametro un $id la 
+	|   función findOrFail que nos permite obtener un registro de la DB.
+	*/   
+   public function show($id)
+   {
+      return view('almacen.categoria.show',['categoria'=>Categoria::findOrFail($id)]);
+   }
    /*
    |--------------------------------------------------------------------------
    | Componente edit
    |--------------------------------------------------------------------------
-   | # El componente edit regresa la vista edit al administrador cuando es 
-   |   invocado por el route, recibe como parametro un identificado que permite modificar
-   |   los datos con la funcion update.
+   | # Por medio de la función edit regresamos la vista edit al administrador cuando es 
+   |   invocado por el routes, recibe como parametro un $id la 
+	|   función findOrFail que nos permite obtener un registro de la DB.
    */   
    public function edit($id)
    {
@@ -102,8 +112,9 @@
    |--------------------------------------------------------------------------
    | Componente update
    |--------------------------------------------------------------------------
-   | # El componente update actualiza los cambios realizado por el administrador
-   |   en el componente edit y lo redirecciona a la vista almacen/categoria
+   | # Por medio de la función update actualiza los cambios realizado por el 
+   |  administrador en el componente edit y lo redireccionamos la vista 
+   |  almacen/categoria al administrador.
    */      
    public function update(CategoriaFormRequest $request,$id)
    {
@@ -117,8 +128,8 @@
    |--------------------------------------------------------------------------
    | Componente destroy
    |--------------------------------------------------------------------------
-   | # El componente destroy actualiza el estado del objeto a la condicion 0
-   |   y lo redirecciona a la vista almacen/categoria.
+   | # Por medio de la funcion destroy actualiza el estado del objeto a la 
+   |  condición 0 y lo redireccionamos la vista almacen/categoria al administrador.
    */
       public function destroy($id){
          $categoria = Categoria::findOrFail($id);

@@ -3,10 +3,10 @@
 |--------------------------------------------------------------------------
 | Manejo de errores
 |--------------------------------------------------------------------------| 
-| # Componente librerias.
-| # El manejador de errores y excepciones en laravel viene predefinido para manejar cualquier
-|   tipo de evento, los errores se visualizara en el navegador si APP_DEBUG es true de caso 
-|   false no se visualizara nada en el navegador.
+| # El manejador de errores y excepciones en laravel esta definido para manejar
+|   cualquier tipo de eventos y errores se visualizara en el navegador si 
+|   APP_DEBUG es true, de caso false no se visualizara nada en el navegador, 
+|   pero laravel genera un archivo log en cual se registra todos eventos.
 */
     namespace xixha\Exceptions;
     use Exception;

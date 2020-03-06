@@ -1,5 +1,10 @@
 <?php
 return [
+    /*
+    | # Este es un archivo de traducción en español de validation.php,
+    |   cuando se llama el modulo validation.php en ingles se reliza 
+    |   el intercambio de palabras.
+    */
     'accepted'             => 'El campo :attribute debe ser aceptado.',
     'active_url'           => 'El campo :attribute no es una URL válida.',
     'after'                => 'El campo :attribute debe ser una fecha posterior a :date.',

@@ -16,7 +16,9 @@
 |--------------------------------------------------------------------------
 | Controlador ClienteController
 |--------------------------------------------------------------------------
-*/ 
+| # Este controlador añade una capa de logica al manejar las solicituddes URL
+|   por parte del administrador.
+*/
 class ClienteController extends Controller{
 
     /*
@@ -24,7 +26,7 @@ class ClienteController extends Controller{
     | Componente constructor
     |--------------------------------------------------------------------------
     | Crea una nueva instancia en middleware que verifica
-    | los permisos del usuario en auth 
+    | los permisos del administrador en auth 
     */             
         public function __construct(){
             $this->middleware('auth');
@@ -33,13 +35,18 @@ class ClienteController extends Controller{
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | Si request es true, realiza una consulta a la DB
-    | regresando la vista index, la consulta hecha por el usuario
-    | y la instancia de referencia
+    | # Si request es true, realiza una consulta a la DB regresando la respuesta 
+    |   al usuario administrador de forma de array.
     */
         public function index(Request $request){
             if ($request){
+                // #Variable $consulta toma el valor de searchText
                 $consulta=trim($request->get('searchText'));
+				/*
+                |   # La variable $personas realiza una consulta y
+                |     almacena un array decuardo al valor de la 
+                |     variable $consulta.
+                */                
                 $personas=DB::table('persona')
                 ->where('nombre','LIKE','%'.$consulta.'%')
                 ->where('tipo_persona','=','cliente')
@@ -51,6 +58,10 @@ class ClienteController extends Controller{
                 ->where('tipo_persona','=','cliente')
                 ->orderBy('idpersona','desc')
                 ->paginate(5);
+				/*
+                |   # Regresamos la vista ventas.cliente.index al usuario administrador
+                |     instanciando la variable $personas al array de la consulta realizada.
+                */                   
                 return view('ventas.cliente.index',['personas'=>$personas,'searchText'=>$consulta]);
             }
         }
@@ -58,8 +69,8 @@ class ClienteController extends Controller{
     |--------------------------------------------------------------------------
     | Componente create
     |--------------------------------------------------------------------------
-    | Regresa la vista create al usuario cuando es llamado por el route
-    | 
+    | # Por medio de la función create regresamos la vista create al usuario 
+    |   cuando es llamado por el routes.    
     */
         public function create(){
             return view('ventas.cliente.create');
@@ -68,8 +79,8 @@ class ClienteController extends Controller{
     |--------------------------------------------------------------------------
     | Componente store
     |--------------------------------------------------------------------------
-    | EL componente store almacena los cambios realizado en el componente create
-    | y lo redirecciona a la vista ventas/cliente
+    | #Por de la función store almacenamos los cambios realizado en el 
+    |   componente create y redireccionamos a la vista ventas/cliente al administrador.
     */
         public function store(PersonaFormRequest $request){
             $persona = new Persona;
@@ -87,9 +98,9 @@ class ClienteController extends Controller{
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | Regresa la vista show al usuario cuando es llamado por el roure,
-    | recibe como parametro un $id para realizar la consulta en el controlador de la tabla.
-    |
+    | # Por medio de la función show regresamos la vista show al administrador 
+    |   cuando es llamado por el roure, recibe como parametro un $id la función 
+    |   función findOrFail que nos permite obtener un registro de la DB.
     */
         public function show($id){
             return view('ventas.cliente.show',['persona'=>Persona::findOrFail($id)]);
@@ -98,7 +109,9 @@ class ClienteController extends Controller{
     |--------------------------------------------------------------------------
     | Componente edit
     |--------------------------------------------------------------------------
-    | Regresa la vista edit al usuario cuando es llamado por el route,
+    | # Por medio de la función edit regresamos la vista edit al usuario cuando 
+    |   es invocado por el routes, recibe como parametro un $id la 
+    |   función findOrFail que nos permite obtener un registro de la DB.
     |
     */
         public function edit($id){
@@ -109,7 +122,7 @@ class ClienteController extends Controller{
     | Componente update
     |--------------------------------------------------------------------------
     | EL componente update actualiza los cambios realizado en el componente edit
-    | y lo redirecciona a la vista ventas/cliente
+    | y lo redirecciona la vista ventas/cliente al administrador.
     */
         public function update(PersonaFormRequest $request,$id){
             $persona = Persona::findOrFail($id); 
@@ -127,7 +140,7 @@ class ClienteController extends Controller{
    | Componente destroy
    |--------------------------------------------------------------------------
    | EL componente destroy actualiza el estado la tipo_persona a Inactivo
-   | y lo redirecciona a la vista ventas/cliente
+   | y lo redirecciona la vista ventas/cliente al administrador
    */
         public function destroy($id){
             $persona=Persona::findOrFail($id);

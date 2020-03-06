@@ -15,9 +15,9 @@
 |--------------------------------------------------------------------------
 | Controlador AuthController
 |--------------------------------------------------------------------------
-| Funciona como una capa de seguridad entre las peticiones URL del 
-| usuario y los componentes del marco de desarrollo ya que autentifica el 
-| estado de cada componente por medio de guards.
+| # Funciona como una capa de seguridad entre las peticiones URL del 
+|   usuario y los componentes de laravel ya que autentifica el estado
+|   de cada componente por medio de guards.
 */    
 class AuthController extends Controller{
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
@@ -26,7 +26,8 @@ class AuthController extends Controller{
     | Componente redirectTo
     |--------------------------------------------------------------------------
     | # El componente redirectTo despues de verifica el usuario y el password,
-    |   redirecciona al usuario a la direccion /home.
+    |   redirecciona al usuario a la dirección /home, /index, /, para definir
+        direccion destino despues de iniciar.
     */
         protected $redirectTo = '/home';    
 
@@ -34,7 +35,8 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Componente constructor
     |--------------------------------------------------------------------------
-    | # Crea una nueva instancia a middleware que verifica los permisos en auth.
+    | # Crea una nueva instancia a middleware que verifica los permisos en auth,
+    |   si no envia al usuario a logout.
     */
         public function __construct(){
             $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
@@ -43,8 +45,8 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Componente validación de campos
     |--------------------------------------------------------------------------
-    | # Verifica los requerimientos y reglas de cada componente del formulario 
-    |   name, email, password.    
+    | # Verifica los requerimientos y reglas de cada componentes del formulario 
+    |   name, email, password para que pueda dar de alta en la base de datos.
     */
         protected function validator(array $data){
             return Validator::make($data, [
@@ -57,7 +59,7 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Componente validacion del registro
     |--------------------------------------------------------------------------
-    | # Este componente se utiliza para instanciar la validacion de un nuevo registro
+    | # Este componente se utiliza para instanciar la validación de un nuevo registro
     |   en del formulario.
     */
         protected function create(array $data){
@@ -70,7 +72,7 @@ class AuthController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | Acceso a Registro
-    |--------------------------------------------------------------------------
+    |--------------------------------------------------------------------------    
     | # Para habilitar el registro hay que comentar el siguiente componente para 
     |   que el usuario pueda dar de alta sin el permiso del admnistrador.
     |
@@ -84,8 +86,9 @@ class AuthController extends Controller{
     |--------------------------------------------------------------------------
     | Acceso a login
     |--------------------------------------------------------------------------
-    | # Verifica el middleware a user, si es autentificado lo redirecciona a raiz(/)
-    |   del directorio o pagina de inicio, si no lo envia a /login.
+    | # Verifica el middleware en user, si es autentificado lo redirecciona al 
+    |   directorio a raiz(/), o una dirección personalizada, en caso contrario
+    |   lo envia a /login.
     */
         public function redirectPath(){
             if(auth()->user()){

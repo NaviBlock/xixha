@@ -29,7 +29,7 @@
 | Controlador AdminController
 |--------------------------------------------------------------------------
 | # Este controlador añade un capa de logica al manejar las solicitudes URL 
-|   por parte del usuario administrador.
+|   por parte del usuario administrador cuando es llamado por el routes.
 */  
 class AdminController extends Controller{
     /*
@@ -51,8 +51,13 @@ class AdminController extends Controller{
     */
         public function padron(Request $request){
             if ($request){
+                // #Variable $query toma el valor de searchText
                 $query = trim($request->get('searchText'));
-                //la variable $personas almacena un array 
+                /*
+                |   # La variable $personas realiza una consulta y
+                |     almacena un array decuardo al valor de la 
+                |     variable $query.
+                */
                 $personas = DB::table('persona')
                 ->select('idpersona','tipo_persona','nombre','apellidopa','apellidoma','curp','estado','telefono','email','upp','pgn','clave_rast','num_colmena','prod_anual','certificacion','fecha_hora','sexo','rfc','estadoP','municipio','calle','colonia','temp_cosecha','loc_api','mov_col','donde','observacion','folio','img_perfil')
                 ->where('nombre','LIKE','%'.$query.'%')
@@ -77,11 +82,10 @@ class AdminController extends Controller{
                 ->where('tipo_persona','=','Apicultor')
                 ->orderBy('idpersona','desc')
                 ->paginate(10);
-                /*# Regresamos a la vista administradors.padron al usuario y enviamos la variable 
-                    $persona mas el array de la consulta realizada, con una paginacion de 10 elementos
-                    en pantalla.
-                */
-                //regresa la vista administradors.padro
+                /*
+                |   # Regresamos la vista administradors.padron al usuario administrador
+                |     instanciando la variable $persona al array de la consulta realizada.
+                */                
                 return view('administradors.padron',['personas'=>$personas,'searchText'=>$query]);
             }
         }
@@ -89,7 +93,8 @@ class AdminController extends Controller{
     |--------------------------------------------------------------------------
     | Componente index
     |--------------------------------------------------------------------------
-    | # Regresamos la vista index al administrador cuando es invocado por el route.
+    | # Por medio de la función index regresamos la vista index al administrador 
+    |   cuando es invocado por el routes.
     */
         public function index(){  
             return view("administradors.index");
@@ -98,9 +103,9 @@ class AdminController extends Controller{
     |--------------------------------------------------------------------------
     | Componente show
     |--------------------------------------------------------------------------
-    | # Regresamos la vista show al administrador cuando es invocado por el route,
-    |   recibe como parametro un $id que lo pasamo a findOrFail que nos permite 
-    |   realizar una consulta en la DB.
+    | # Por medio de la función show regresamos la vista show al administrador 
+    |   cuando es invocado por el route, recibe como parametro un $id la 
+    |   función findOrFail que nos permite obtener un registro de la DB.
     */
         public function show($id){
             return view('administradors.show',['persona'=>Persona::findOrFail($id)]);
@@ -109,7 +114,8 @@ class AdminController extends Controller{
     |--------------------------------------------------------------------------
     | Componente create
     |--------------------------------------------------------------------------
-    | # Regresa la vista create al administrador cuando es invocado por el route.
+    | # Por medio de la función create regresamos la vista create al administrador
+    |   cuando es invocado por el routes.
     */
         public function create(){  
             return view("administradors.create");
@@ -118,9 +124,9 @@ class AdminController extends Controller{
     |--------------------------------------------------------------------------
     | Componente edit
     |--------------------------------------------------------------------------
-    | # Regresa la vista edit al administrador cuando es invocado por el route,
-    |   recibe como parametro un $id que lo pasamo a findOrFail que nos permite 
-    |   realizar una consulta en la DB.
+    | # Por medio de la función edit regresamos la vista edit al administrador
+    |   cuando es invocado por el route, recibe como parametro un $id la 
+    |   función findOrFail que nos permite obtener un registro de la DB.
     */
         public function edit($id){
             return view('administradors.edit',['persona'=>Persona::findOrFail($id)]);
@@ -129,13 +135,13 @@ class AdminController extends Controller{
     |--------------------------------------------------------------------------
     | Componente store
     |--------------------------------------------------------------------------
-    | # EL componente store almacena los cambios realizado en la funcion create
-    |   y redirecciona la vista administradors/padron al administrador.    
+	| # Por medio de la función store almacenamos los cambios realizado en el 
+	|	componente create y redireccionamos la vista administradors/padron al administrador.
     */
         public function store(PersonaFormRequest $request){
-                // nuevo objeto Persona
+                // #Nuevo objeto Persona
                 $personas = new Persona;
-                //asignamos el dato del item nombre y lo almacenamos en el array 
+                // #Asignamos los datos en cada item lo almacenamos en el objeto. 
                 $personas->nombre=$request->get('nombre');
                 $personas->apellidopa=$request->get('apellidopa');
                 $personas->apellidoma=$request->get('apellidoma');
@@ -163,23 +169,22 @@ class AdminController extends Controller{
                 $personas->estado ='Activo';                
                     if(Input::hasFile('img_perfil')) {                    
                     $file=Input::file('img_perfil');
-                    //recupera la extension original del archivo
+                    // #Recupera la extension original del archivo
                     $extension=$file->getClientOriginalExtension();   
-                    //Almacenamos el folio personalizado con la extension
+                    // #Almacenamos el folio personalizado con la extension
                     $newnombre = 'XIX-'.$personas->curp.'-HA'.".".$extension;
-                    //Almacenamos el folio personalizado sin la extension
+                    // #Almacenamos el folio personalizado sin la extension
                     $new_Nombre_Folio = 'XIX-'.$personas->curp.'-HA';
-                    //Enviamos el archivo imagen al directorio /imagenes/perfil, 
-                    //con el nombre nuevo nombre 
+                    /*#Enviamos el archivo imagen al directorio /imagenes/perfil, con el nombre nuevo nombre*/
                     $file->move(public_path().'/imagenes/perfil',$newnombre);
-                    //recuperamos el nombre original del archivo
+                    // #Recuperamos el nombre original del archivo
                     $personas->img_perfil=$file->getClientOriginalName($newnombre);
-                    //Almacenamos en nombre de la imagen del valor $newnombre
+                    // #Almacenamos en nombre de la imagen del valor $newnombre
                     $personas->img_perfil=$newnombre;
-                    //Almacenamos en folio del valor de la variable $new_Nombre_Folio
+                    // #Almacenamos en folio del valor de la variable $new_Nombre_Folio
                     $personas->folio=$new_Nombre_Folio;
             }
-                //almacena los datos con la funcion save()
+                // #almacena los datos de los items con la función save()
                 $personas->save();
             return Redirect::to('administradors/padron');
         }
@@ -187,8 +192,8 @@ class AdminController extends Controller{
     |--------------------------------------------------------------------------
     | Componente update
     |--------------------------------------------------------------------------
-    | # EL componente update actualiza los cambios realizado en el componente edit
-    |   y redirecciona la vista administradors/padron al administrador.
+    | # Por medio de la función update actualizamos los cambios realizado en el vista
+    |   edit y redireccionamos la vista administradors/padron al administrador.
     */
         public function update(PersonaFormRequest $request,$id){
             $persona = Persona::findOrFail($id);

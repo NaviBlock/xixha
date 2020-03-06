@@ -11,14 +11,14 @@ use Illuminate\Foundation\Auth\ResetsPasswords;
 |--------------------------------------------------------------------------
 | Controlador PasswordController
 |--------------------------------------------------------------------------
-*/  
+*/
 class PasswordController extends Controller{
     /*
     |--------------------------------------------------------------------------
     | # Este componente ResetsPasswords crea una nueva instancia al controlador 
     |   para un nuevo password.
     |--------------------------------------------------------------------------
-    */    
+    */
     use ResetsPasswords;
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ class PasswordController extends Controller{
     |--------------------------------------------------------------------------
     | # Crea una nueva instancia a middleware que verifica los permisos del usuario
     |   en auth.
-    */ 
+    */
         public function __construct(){
             $this->middleware('guest');
         }

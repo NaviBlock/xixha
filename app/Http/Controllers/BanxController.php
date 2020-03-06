@@ -25,7 +25,7 @@
     | Componente constructor
     |--------------------------------------------------------------------------
     | # Crea una nueva instancia en middleware que verifica
-    |   los permisos en auth 
+    |   los permisos del administradr en auth.
     */            
         public function __construct() {
             $this->middleware('auth');
